@@ -1,0 +1,75 @@
+from talon import actions, Module, Context
+
+steps = {
+    "zero": 5,
+    "alpha": 50,
+    "bravo": 100,
+    "charlie": 150,
+    "delta": 200,
+    "echo": 250,
+    "foxtrot": 300,
+    "golf": 350,
+    "hotel": 400,
+    "india": 450,
+    "juliet": 500,
+    "kilo": 550,
+    "lima": 600,
+    "mike": 650,
+    "november": 700,
+    "oscar": 750,
+    "papa": 800,
+    "quebec": 850,
+    "romeo": 900,
+    "sierra": 950,
+    "tango": 1000,
+    "uniform": 1050,
+    "victor": 1100,
+    "whiskey": 1150,
+    "xray": 1200,
+    "yankee": 1250,
+    "zulu": 1300,
+    "one":1350,
+    "two":1400,
+    "three":1450,
+    "four":1500,
+    "five":1550,
+    "six":1600,
+    "seven":1650,
+    "eight":1700,
+    "nine":1750,
+    "ten":1790,
+    "eleven":1840,
+    "twelve":1890,
+    "thirteen":1940,
+    "fourteen":1990,
+    "fifteen":2040,
+    "sixteen":2090,
+    "seventeen":2130,
+    "eighteen":2180,
+    "nineteen":2230,
+    "twenty":2280,
+    "twenty one":2330,
+    "twenty two":2380,
+    "twenty three":2430,
+    "twenty four":2480,
+    "twenty five":2530,
+    "twenty six":2570,
+    "twenty seven":2620,
+    "twenty eight":2670, 
+    "twenty nine":2720,
+    "thirty":2770,
+    "thirty one":2810,
+    "thirty two":2860,
+    "thirty three":2910,
+    "thirty four":2960,
+}
+
+mod = Module()
+mod.list("screen_step", desc="location on screen edge")
+
+ctx = Context()
+ctx.lists["user.screen_step"] = list(steps.keys())
+
+@mod.capture(rule="{user.screen_step}")
+def screen_step(m) -> int:
+    return steps[m.screen_step]
