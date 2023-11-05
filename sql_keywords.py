@@ -56,6 +56,7 @@ ctx_default.lists["user.sql_keywords"] = {
     "descending": " DESC ",
     "limit": " LIMIT ",
     "offset": " OFFSET ",
+    "set": " SET ",
     "distinct": " DISTINCT ",
     "primary key": " PRIMARY KEY ",
     "foreign key": " FOREIGN KEY ",

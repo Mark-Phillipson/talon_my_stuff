@@ -12,7 +12,11 @@ tag(): user.multiple_cursors
 
 # Panels
 (solution explorer) | (panel solution): key(ctrl-alt-shift-r)
-panel properties: key(f4)
+solution explorer collapse: 
+    key(ctrl-shift-p)
+    sleep(100ms)
+    key(ctrl-shift-w)
+[panel] properties: key(f4)
 panel output: key(ctrl-alt-o)
 panel class: key(ctrl-shift-c)
 panel errors: key(ctrl-\ ctrl-e)
@@ -50,7 +54,7 @@ show recent [projects | solutions]:
     key(j)
 # Language Features
 hint show: key(ctrl-shift-space)
-definition show: key(f12)
+(go to definition) | (definition show): key(f12)
 definition peek: key(alt-f12)
 references find: key(shift-f12)
 format that: key(ctrl-k ctrl-d)
@@ -93,11 +97,13 @@ go next mark: key(ctrl-k ctrl-n)
 go last mark: key(ctrl-k ctrl-p)
 
 # Folding
-fold toggle: key(ctrl-m ctrl-m)
-fold toggle all: key(ctrl-m ctrl-l)
-fold definitions: key(ctrl-m ctrl-o)
+(toggle collapse) | (fold toggle) | (toggle expand): key(ctrl-m ctrl-m)
+(collapse all) | (fold toggle all): key(ctrl-m ctrl-l)
+(collapse) | (fold) definitions: key(ctrl-m ctrl-o)
 
 #Debugging
+build solution: key(ctrl-shift-b)
+build project: key(ctrl-b)
 start application: key(ctrl-f5)
 (reset code) | (stop application): key(shift-f5)
 (start debugging) | (debug application): key(f5)
@@ -123,23 +129,24 @@ find following [<user.text>]:
     insert(text or "")
     key(escape)
 #navigation    
-(go to line) | (line) :
-    key(ctrl-g)
+(go line) | (go to line) | (line) : key(ctrl-g)
 navigate : key(ctrl-,)
 navigate <user.text>:
     key(ctrl-,)
     sleep(100ms)
     insert(text or "")
-jump codes: key(ctrl-shift-j)    
+#DevExpress CodeRush jump codes/Marker functionality
+jump [codes]: key(ctrl-shift-j)    
 land carrot: key(enter)
 select token: key(shift-enter)
 right side: key(alt-enter)
 in brackets: key(ctrl-enter)
-(quick actions) | (open smart tag):    key(ctrl-.)
-save all: key(ctrl-shift-s)
 collect marker: key(alt-end)
 drop marker: key(alt-home)
 swap marker: key(alt-shift-home)
+#DevExpress CodeRush jump codes functionality end
+(quick actions) | (open smart tag):    key(ctrl-.)
+save all: key(ctrl-shift-s)
 search code: key(ctrl-f)
 search code [<user.text>]:
     key(ctrl-f)
@@ -152,7 +159,26 @@ find again: key(f3)
 parameter info: key(ctrl-shift-space)
 show error [list]: key(ctrl-\ ctrl-e)
 expand selection: key(alt-shift-=)
-
+shrink selection: key(alt-shift--)
+go to view: key(ctrl-m ctrl-g)
+(hunt this) | (search code): key(ctrl-f)
+format document: key(ctrl-k ctrl-d)
+format code: key(ctrl-k ctrl-e)
+format selection: key(ctrl-k ctrl-f)
+next method: key(ctrl-shift-m)
+previous method: key(ctrl-shift-alt-m)
+move [the] line up [<user.number_signed_small>]:
+    key(ctrl-f1 ctrl-f2)
+    repeat(number_signed_small)
+move [the] line down [<user.number_signed_small>]:
+        key(ctrl-f1 ctrl-f4)
+        repeat(number_signed_small)
+commit changes: key(ctrl-alt-f7)
+commit and sink: 
+    key(ctrl-alt-shift-k)
+    sleep(100ms)
+    key(ctrl-alt-shift-m)
+show navigation menu: key(alt-')    
 
 
 

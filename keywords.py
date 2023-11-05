@@ -5,23 +5,6 @@ mod.list("keywords", desc="Programming Keywords")
 
 ctx_default = Context()
 ctx_default.lists["user.keywords"] = {
-    "private": " private "
-}
-
-ctx_python = Context()
-# code.language is a Talon defined scope which can be set to indicate
-# the programming language you're currently editing
-ctx_python.matches = "code.language: python"
-ctx_python.lists["user.keywords"] = {
-    "define function": " def ",
-    "string": " str ",
-    "integer": " int ",
-    "boolean": " bool ",
-}
-
-ctx_csharp = Context()
-ctx_csharp.matches = "code.language: csharp"
-ctx_csharp.lists["user.keywords"] = {
     "null": " null ",
     "public": " public ",
     "private": " private ",
@@ -103,4 +86,21 @@ ctx_csharp.lists["user.keywords"] = {
     "name of": " nameof ",
     "global": " global ",
     "type of": " typeof ",
+}
+
+ctx_python = Context()
+# code.language is a Talon defined scope which can be set to indicate
+# the programming language you're currently editing
+ctx_python.matches = "code.language: python"
+ctx_python.lists["user.keywords"] = {
+    "define function": " def ",
+    "string": " str ",
+    "integer": " int ",
+    "boolean": " bool ",
+}
+
+ctx_csharp = Context()
+ctx_csharp.matches = "code.language: csharp"
+ctx_csharp.lists["user.keywords"] = {
+"private": " private "
 }
