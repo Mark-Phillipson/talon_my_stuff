@@ -1,6 +1,8 @@
 os: windows
 app: visual_studio
 app: devenv.exe
+app: remote_desktop_connection
+app: mstsc.exe
 -
 
 tag(): user.tabs
@@ -179,6 +181,7 @@ commit and sink:
     sleep(100ms)
     key(ctrl-alt-shift-m)
 show navigation menu: key(alt-')    
+
 
 
 
