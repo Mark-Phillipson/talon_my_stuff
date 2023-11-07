@@ -19,3 +19,8 @@ disconnect:
 #this is not working when in window mode
 system menu: 
     key(ctrl-alt-home)
+pull changes    : 
+    key(ctrl-k)
+    sleep(200ms)
+    key(ctrl-g)
+    

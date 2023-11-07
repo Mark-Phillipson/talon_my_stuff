@@ -80,4 +80,5 @@ fluent search <user.text>:
     sleep(300ms)
     insert(text)
     sleep(300ms)
-    
+pause some: sleep(500ms)        
+select rest of line: key(shift-end)

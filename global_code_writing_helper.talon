@@ -54,5 +54,95 @@ angle brackets out: insert("<>")
 pipes out: insert(" || ")    
 ampersands out: insert(" && ")
 equals out: insert(" == ")
-
-       
+order by: 
+    insert('.OrderBy(x => x)')
+    sleep(100ms)
+    key(left)
+    sleep(100ms)
+    insert('.')
+order by descending:
+    insert('.OrderByDescending(x => x)')
+    sleep(100ms)
+    key(left)    
+    sleep(100ms)
+    insert('.')
+group by: 
+    insert('.GroupBy(x => x)')
+    sleep(100ms)
+    key(left)
+    sleep(100ms)
+    insert('.')    
+select:
+    insert('.Select(x => x)')
+    sleep(100ms)
+    key(left)
+    sleep(100ms)
+    insert('.')
+where [clause]:
+    insert('.Where(x => x)')
+    sleep(100ms)
+    key(left)
+    sleep(100ms)
+    insert('.')    
+first or default:
+    insert('.FirstOrDefault()')
+    sleep(100ms)
+    key(left)
+first or default async:
+    insert('.FirstOrDefaultAsync()')
+    sleep(100ms)
+    key(left)
+lambda operator: insert(" => ")    
+lambda operator <user.text>:
+    insert(text + " => " + text)
+    sleep(100ms)
+    key(left)
+to string    :
+    insert('.ToString()')
+    sleep(100ms)
+    key(left)
+contains:
+    insert('.Contains("")')
+    sleep(100ms)
+    key(left left)
+    sleep(100ms)
+to lower    :
+    insert('.ToLower()')
+to list: insert(".ToList()")
+to array: insert(".ToArray()")
+to dictionary: insert(".ToDictionary()")
+sub string: 
+    insert(".Substring()")
+    sleep(100ms)
+    key(left)
+then by: 
+    insert('.ThenBy(x => x)')
+    sleep(100ms)
+    key(left)
+    sleep(100ms)
+    insert('.')
+then by descending:
+    insert('.ThenByDescending(x => x)')
+    sleep(100ms)
+    key(left)    
+    sleep(100ms)
+    insert('.')    
+if statement: 
+    insert("if")
+    sleep(100ms)
+    key(ctrl-j)
+    sleep(100ms)
+    key(tab tab)
+if statement razor: 
+    insert("@if (true) { }")
+    sleep(100ms)
+    key(escape) #dismiss copilot
+    sleep(100ms)
+    key(left left left left left)
+    key(shift-ctrl-left)
+for each loop: 
+    insert("foreach")
+    sleep(100ms)
+    key(ctrl-j)
+    sleep(100ms)
+    key(tab tab)

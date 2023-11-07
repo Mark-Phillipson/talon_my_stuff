@@ -74,4 +74,8 @@ down <user.number_signed_small> click:
         position_y=user.query_mouse_position_y()
         mouse_move(position_x , position_y + number_signed_small)
         mouse_click(0)
+mouse down: user.mouse_drag(0)        
+left mouse down: user.mouse_drag(0)
+right mouse down: user.mouse_drag(1)
+command show cursor: user.mouse_show_cursor()
     
