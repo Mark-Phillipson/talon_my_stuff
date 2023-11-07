@@ -37,7 +37,7 @@ mouse up <user.number_signed_small>:
 mouse down <user.number_signed_small>:
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
-    mouse_move(position_x , position_y + number_signed_small)
+    mouse_move(position_x, position_y + number_signed_small)
 mouse lower left <user.number_signed_small>:
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
