@@ -13,9 +13,13 @@ taskbar <user.screen_step> <user.number_signed_small>:
     mouse_move(screen_step, 1030)
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
-    mouse_move(position_x + number_signed_small, position_y)
+    adjustment= number_signed_small * 5
+    mouse_move(position_x + adjustment, position_y)
     mouse_click(0)                
-(stripe) | (ribbon) | (menu) <user.screen_step>:
+menu <user.screen_step>:
+    mouse_move(screen_step, 80)
+    mouse_click(0)                          
+ribbon <user.screen_step>:
     mouse_move(screen_step, 80)
     mouse_click(0)                          
 mouse left <user.number_signed_small>:

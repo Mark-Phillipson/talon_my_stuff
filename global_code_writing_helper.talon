@@ -53,4 +53,6 @@ angle brackets in:
 angle brackets out: insert("<>")
 pipes out: insert(" || ")    
 ampersands out: insert(" && ")
+equals out: insert(" == ")
+
        

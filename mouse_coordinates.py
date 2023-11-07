@@ -5,7 +5,7 @@ mod = Module()
 
 class POINT(Structure):
     _fields_ = [("x", c_long), ("y", c_long)]
-@mod.action_class
+@modaction_class
 class Actions:
     def query_mouse_position_x()->int:
         "Returns the current position of the mouse cursor"

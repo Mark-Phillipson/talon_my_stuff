@@ -6,18 +6,18 @@ app: mstsc.exe
 -
 
 tag(): user.tabs
-tag(): user.line_commands
+#tag(): user.line_commands
 tag(): user.find_and_replace
-tag(): user.snippets
+#tag(): user.snippets
 tag(): user.multiple_cursors
 #multiple_cursor.py support end
 
 # Panels
 (solution explorer) | (panel solution): key(ctrl-alt-shift-r)
 solution explorer collapse: 
-    key(ctrl-shift-p)
-    sleep(100ms)
-    key(ctrl-shift-w)
+key(ctrl-shift-p)
+sleep(100ms)
+key(ctrl-shift-w)
 [panel] properties: key(f4)
 panel output: key(ctrl-alt-o)
 panel class: key(ctrl-shift-c)
@@ -40,27 +40,26 @@ wrap switch: key(ctrl-e ctrl-w)
 
 # File Commands
 (find files) | (file hunt) [<user.text>]:
-    key(ctrl-shift-t)
-    insert(text or "")
+key(ctrl-shift-t)
+insert(text or "")
 file create: key(ctrl-n)
 #file open folder:
 file rename: key(ctrl-[ s f2)
 file reveal: key(ctrl-[ s)
 show recent files: 
-    key(alt-f)
-    sleep(100ms)
-    key(f)
+key(alt-f)
+sleep(100ms)
+key(f)
 show recent [projects | solutions]:
-    key(alt-f)
-    sleep(100ms)
-    key(j)
+key(alt-f)
+sleep(100ms)
+key(j)
 # Language Features
 hint show: key(ctrl-shift-space)
 (go to definition) | (definition show): key(f12)
 definition peek: key(alt-f12)
 references find: key(shift-f12)
 format that: key(ctrl-k ctrl-d)
-format selection: key(ctrl-k ctrl-f)
 imports fix: key(ctrl-r ctrl-g)
 
 # problem next:
@@ -74,22 +73,22 @@ refactor remove parameters: key(ctrl-r ctrl-v)
 refactor that: key(ctrl-r ctrl-r)
 
 #code navigation
-(go declaration | follow): key(ctrl-f12)
+(go to declaration | follow): key(f12)
 (last position) | (go back): key(ctrl--)
 go forward: key(ctrl-shift--)
-go [to] implementation: key(f12)
+go [to] implementation: key(ctrl-f12)
 go recent [<user.text>]:
-    key(ctrl-. ctrl-r)
-    sleep(100ms)
-    insert(text or "")
+key(ctrl-. ctrl-r)
+sleep(100ms)
+insert(text or "")
 go type [<user.text>]:
-    key(ctrl-1 ctrl-t)
-    sleep(100ms)
-    insert(text or "")
+key(ctrl-1 ctrl-t)
+sleep(100ms)
+insert(text or "")
 go member [<user.text>]:
-    key(alt-\)
-    sleep(100ms)
-    insert(text or "")
+key(alt-\)
+sleep(100ms)
+insert(text or "")
 go usage: key(shift-f12)
 
 # Bookmarks.
@@ -110,9 +109,9 @@ start application: key(ctrl-f5)
 (reset code) | (stop application): key(shift-f5)
 (start debugging) | (debug application): key(f5)
 show code places:
-    key(ctrl-alt-shift-h)
-    sleep(100ms)
-    key(ctrl-alt-shift-z)
+key(ctrl-alt-shift-h)
+sleep(100ms)
+key(ctrl-alt-shift-z)
 list members: key(ctrl-j)    
 break point: key(f9)
 step over: key(f10)
@@ -126,17 +125,22 @@ debug continue: key(f5)
 (hunt next) | (find next): key(f3)
 (hunt last) | (find last): key(shift-f3)
 find following [<user.text>]:
-    key(ctrl-f)
-    sleep(100ms)
-    insert(text or "")
-    key(escape)
+key(ctrl-f)
+sleep(100ms)
+insert(text or "")
+key(escape)
 #navigation    
-(go line) | (go to line) | (line) : key(ctrl-g)
+(go line) | (go to line): key(ctrl-g)
+go [to line] <user.number_string>:    
+key(ctrl-g)
+sleep(100ms)
+insert(number_string)
+key(enter)
 navigate : key(ctrl-,)
 navigate <user.text>:
-    key(ctrl-,)
-    sleep(100ms)
-    insert(text or "")
+key(ctrl-,)
+sleep(100ms)
+insert(text or "")
 #DevExpress CodeRush jump codes/Marker functionality
 jump [codes]: key(ctrl-shift-j)    
 land carrot: key(enter)
@@ -151,10 +155,10 @@ swap marker: key(alt-shift-home)
 save all: key(ctrl-shift-s)
 search code: key(ctrl-f)
 search code [<user.text>]:
-    key(ctrl-f)
-    sleep(100ms)
-    insert(text or "")
-    key(escape)
+key(ctrl-f)
+sleep(100ms)
+insert(text or "")
+key(escape)
 find again: key(f3)
 (next) | (following) issue: key(alt-pagedown)
 (last) | (previous) issue: key(alt-pageup)
@@ -170,18 +174,18 @@ format selection: key(ctrl-k ctrl-f)
 next method: key(ctrl-shift-m)
 previous method: key(ctrl-shift-alt-m)
 move [the] line up [<user.number_signed_small>]:
-    key(ctrl-f1 ctrl-f2)
-    repeat(number_signed_small)
+key(ctrl-f1 ctrl-f2)
+repeat(number_signed_small)
 move [the] line down [<user.number_signed_small>]:
-        key(ctrl-f1 ctrl-f4)
-        repeat(number_signed_small)
+    key(ctrl-f1 ctrl-f4)
+    repeat(number_signed_small)
 commit changes: key(ctrl-alt-f7)
 commit and sink: 
-    key(ctrl-alt-shift-k)
-    sleep(100ms)
-    key(ctrl-alt-shift-m)
+key(ctrl-alt-shift-k)
+sleep(100ms)
+key(ctrl-alt-shift-m)
 show navigation menu: key(alt-')    
-
+quick watch: key(shift-f9)
 
 
 
