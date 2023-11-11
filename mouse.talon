@@ -1,5 +1,11 @@
 move [to] <user.screen_step> <user.screen_step>:
     mouse_move(screen_step_1, screen_step_2)
+go [to] <user.screen_step> <user.screen_step>:
+        mouse_move(screen_step_1, screen_step_2)
+left [to] <user.screen_step> <user.screen_step>:
+            mouse_move(screen_step_1, screen_step_2)    
+right [to] <user.screen_step> <user.screen_step>:
+            mouse_move(screen_step_1, screen_step_2)    
 click [at] <user.screen_step> <user.screen_step>:
     mouse_move(screen_step_1, screen_step_2)
     mouse_click(0)
@@ -38,19 +44,19 @@ mouse down <user.number_signed_small>:
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
     mouse_move(position_x, position_y + number_signed_small)
-mouse lower left <user.number_signed_small>:
+lower left <user.number_signed_small>:
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
     mouse_move(position_x - number_signed_small, position_y + number_signed_small)
-mouse lower right <user.number_signed_small>:
+lower right <user.number_signed_small>:
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
     mouse_move(position_x + number_signed_small, position_y + number_signed_small)
-mouse upper left <user.number_signed_small>:
+upper left <user.number_signed_small>:
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
     mouse_move(position_x - number_signed_small, position_y - number_signed_small)    
-mouse upper right <user.number_signed_small>:    
+upper right <user.number_signed_small>:    
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
     mouse_move(position_x + number_signed_small, position_y - number_signed_small)        

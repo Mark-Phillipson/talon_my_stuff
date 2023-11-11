@@ -11,3 +11,13 @@ toggle results:
     key(ctrl-shift-r)
     sleep(100ms)
     key(ctrl-shift-r)
+go to definition: key(f12)
+close tab: key(ctrl-w)
+find following <user.text>:
+    key(ctrl-f)
+    sleep(100ms)
+    insert(text)
+    key(enter)
+    key(escape)
+go to line: key(ctrl-g)    
+toggle sidebar: key(ctrl-b)

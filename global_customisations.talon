@@ -58,7 +58,7 @@ launch preview:
     insert("visual studio 2022 preview")
     sleep(900ms)
     key(enter)
-show numbers: key(ctrl-super-alt-m)
+(show letters) | (show numbers): key(ctrl-super-alt-m)
 control abbreviation: insert("ctrl")
 (computer sleep) | (sleep computer): 
     key(super-r)
@@ -82,3 +82,17 @@ fluent search <user.text>:
     sleep(300ms)
 pause some: sleep(500ms)        
 select rest of line: key(shift-end)
+move <user.arrows> <user.number_signed_small>:
+    key(arrows)
+    repeat(number_signed_small-1)
+double home:
+    key(home)
+    sleep(100ms)
+    key(home)    
+remove last space:
+    key(ctrl-left)    
+    sleep(100ms)
+    key(backspace)
+    sleep(100ms)
+    key(end)
+tab backwards: key(shift-tab)

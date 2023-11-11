@@ -15,7 +15,8 @@ tag(): user.multiple_cursors
 # Panels
 (solution explorer) | (panel solution): key(ctrl-alt-shift-r)
 solution explorer collapse: key(ctrl-shift-p)
-search solution explorer: key(ctrl-;)
+search solution explorer: 
+    key(ctrl-;)
     key(ctrl-shift-p)
     sleep(100ms)
     key(ctrl-shift-w)
@@ -153,6 +154,7 @@ land carrot: key(enter)
 select token: key(shift-enter)
 right side: key(alt-enter)
 in brackets: key(ctrl-enter)
+hover token: key(ctrl-space)
 collect marker: key(alt-end)
 drop marker: key(alt-home)
 swap marker: key(alt-shift-home)
@@ -198,8 +200,47 @@ ask copilot [<user.text>]:
     sleep(100ms)
     insert(text or "")
     key(enter)
-    
-
+rename token: key(ctrl-r ctrl-r)    
+rename token [<user.text>]:
+    key(ctrl-r ctrl-r)
+    sleep(100ms)
+    insert(text or "")
+    key(enter)
+run test: key(ctrl-t ctrl-r)    
+debug test: key(ctrl-t ctrl-d)
+copilot create unit test:
+    key(alt-/)
+    insert("create a unittest for this method using XUnit")
+    key(enter)
+apply code changes | hot reload: 
+    key(ctrl-shift-s)
+    key(alt-f10)    
+step into: key(f11)    
+step out: key(shift-f11)
+step over : key(f10)
+step over <user.number_small> times:
+    key(f10)   
+    repeat(number_small - 1)   
+(reset code) | (stop debugging): key(shift-f5)
+continue: key(f5)
+toggle breakpoint: key(f9)
+delete [all] breakpoints: key(ctrl-shift-f9)
+copilot chat: 
+    key(ctrl-w)
+    sleep(100ms)
+    key(i)
+copy with quick watch:
+    key(menu)
+    sleep(100ms)
+    key(q)
+    sleep(100ms)
+    key(alt-v)
+    sleep(100ms)
+    key(menu)
+    sleep(100ms)
+    key(v)
+zoom in: key(ctrl-shift->)
+zoom out: key(ctrl-shift-<)
 
 
 

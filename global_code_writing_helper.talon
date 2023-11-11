@@ -92,9 +92,11 @@ first or default async:
     insert('.FirstOrDefaultAsync()')
     sleep(100ms)
     key(left)
-lambda operator: insert(" => ")    
+arrow operator: insert(" => ")    
 lambda operator <user.text>:
-    insert(text + " => " + text)
+    insert(text)
+    sleep(100ms)
+    insert(" => " + text)
     sleep(100ms)
     key(left)
 to string    :
@@ -136,7 +138,7 @@ if statement:
 if statement razor: 
     insert("@if (true) { }")
     sleep(100ms)
-    key(escape) #dismiss copilot
+    key(escape)
     sleep(100ms)
     key(left left left left left)
     key(shift-ctrl-left)
@@ -146,3 +148,8 @@ for each loop:
     key(ctrl-j)
     sleep(100ms)
     key(tab tab)
+not equal empty: insert(" != null ")
+to upper: insert(".ToUpper()")
+build like <user.text>:
+    clause=" LIKE '%{text}%'"
+    insert(clause)
