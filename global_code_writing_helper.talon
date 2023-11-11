@@ -3,38 +3,42 @@ sharp <user.text>:
 (ad tag) | (add tag) <user.text>:
     user.run_application_csharp_database_command("add tag " + text)
 fresh line : 
-        key(end)
-        key(enter)
+    key(end)
+    key(enter)
 fresh line above: 
-       key(home)
-       key(home)
-       key(enter)        
-       key(up)
+    key(home)
+    key(home)
+    key(enter)        
+    key(up)
 left select: key( ctrl-shift-left)
 right select: key( ctrl-shift-right)
-left <user.number_signed_small> items :
+<number_small> items:
+    key(shift-down)
+    repeat(number_small-1)
+left <number_small> items :
     key(shift-left)
-    repeat(number_signed_small-1)
-right <user.number_signed_small> items :
+    repeat(number_small-1)
+right <number_small> items :
     key(shift-right)
-    repeat(number_signed_small-1)        
-move down <user.number_signed_small> :
+    repeat(number_small-1)        
+move down <number_small> :
     key(down)
-    repeat(number_signed_small-1)            
-move up <user.number_signed_small> :
+    repeat(number_small-1)            
+move up <number_small> :
     key(up)
-    repeat(number_signed_small-1)                            
-select matching <user.number_signed_small> :
-        key( shift-alt-.)
-        repeat(number_signed_small-1)
-select matching: key( shift-alt-.)    
-select matching all: key(shift-alt-;)
+    repeat(number_small-1)                            
+move left <number_small> :
+    key(left)
+    repeat(number_small-1)                            
+move right <number_small> :
+    key(right)
+    repeat(number_small-1)                                
 search list <user.text>:
-        user.run_application_search_intellisense(text)
+    user.run_application_search_intellisense(text)
 (double quotes in) | (quotes in): 
-            insert("\"\"")
-            sleep(300ms)
-            key(left)
+    insert("\"\"")
+    sleep(300ms)
+    key(left)
 (double quotes out) | (quotes out): insert("\"\"")
 brackets in: 
     insert("()")
@@ -72,12 +76,6 @@ group by:
     key(left)
     sleep(100ms)
     insert('.')    
-select:
-    insert('.Select(x => x)')
-    sleep(100ms)
-    key(left)
-    sleep(100ms)
-    insert('.')
 where [clause]:
     insert('.Where(x => x)')
     sleep(100ms)

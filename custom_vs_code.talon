@@ -10,10 +10,10 @@ search files [by name] :
 expand selection: user.vscode("editor.action.smartSelect.expand")
 shrink selection: user.vscode("editor.action.smartSelect.shrink")
 rename [file] : key(f2)
-select matching: user.vscode("editor.action.selectHighlights")
+select matching all: user.vscode("editor.action.selectHighlights")
 select matching <user.number_signed_small>: 
     user.vscode("editor.action.addSelectionToNextFindMatch")
-    repeat(number_signed_small)
+    repeat(number_signed_small-1)
 select matching next: user.vscode("editor.action.addSelectionToNextFindMatch")
 save as: user.vscode("workbench.action.files.saveAs")
 format code: user.vscode("editor.action.formatDocument")

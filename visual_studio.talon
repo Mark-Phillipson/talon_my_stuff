@@ -241,6 +241,12 @@ copy with quick watch:
     key(v)
 zoom in: key(ctrl-shift->)
 zoom out: key(ctrl-shift-<)
+select matching <number_small> :
+    key(shift-alt-.)
+    repeat(number_small-1)
+select matching next: key(shift-alt-.)    
+select matching all: key(shift-alt-;)
+
 
 
 

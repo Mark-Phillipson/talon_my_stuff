@@ -33,9 +33,6 @@ switch [window]:
 move to top: key( ctrl-home)
 move to bottom: key( ctrl-end)
 window monitor switch: key( super-shift-right)
-<user.number_signed_small> items:
-     key(shift-down)
-     repeat(number_signed_small-1)
 focus system tray: key( super-b)    
 focus desktop: key( super-d)
 focus taskbar: key( super-t)
@@ -82,9 +79,9 @@ fluent search <user.text>:
     sleep(300ms)
 pause some: sleep(500ms)        
 select rest of line: key(shift-end)
-move <user.arrows> <user.number_signed_small>:
-    key(arrows)
-    repeat(number_signed_small-1)
+move up <number_small>:
+    key(up)
+    repeat(number_small-1)
 double home:
     key(home)
     sleep(100ms)
