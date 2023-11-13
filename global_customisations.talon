@@ -93,3 +93,4 @@ remove last space:
     sleep(100ms)
     key(end)
 tab backwards: key(shift-tab)
+focus studio: user.switcher_focus("devenv.exe")

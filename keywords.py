@@ -16,6 +16,7 @@ ctx_default.lists["user.keywords"] = {
     "class": " class ",
     "struct": " struct ",
     "new": " new ",
+    "required": " required ",
     "return": " return ",
     "if": " if ",
     "else": " else ",

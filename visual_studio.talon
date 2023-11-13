@@ -246,6 +246,11 @@ select matching <number_small> :
     repeat(number_small-1)
 select matching next: key(shift-alt-.)    
 select matching all: key(shift-alt-;)
+previous tab:
+    key(alt-w)
+    sleep(100ms)
+    key(2)
+(view code) | (view page): key(f7)    
 
 
 

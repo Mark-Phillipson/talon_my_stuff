@@ -75,6 +75,7 @@ heavy bomber:
     sleep(100ms)
     mouse_click(0)    
 six o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -83,6 +84,7 @@ six o'clock:
     sleep(700ms)
     mouse_click(1)
 twelve o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -91,6 +93,7 @@ twelve o'clock:
     sleep(700ms)
     mouse_click(1)
 nine o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -99,6 +102,7 @@ nine o'clock:
     sleep(700ms)
     mouse_click(1)
 three o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -107,6 +111,7 @@ three o'clock:
     sleep(700ms)
     mouse_click(1)
 one o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -115,6 +120,7 @@ one o'clock:
     sleep(700ms)
     mouse_click(1)
 two o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -123,6 +129,7 @@ two o'clock:
     sleep(700ms)
     mouse_click(1)
 four o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -131,6 +138,7 @@ four o'clock:
     sleep(700ms)
     mouse_click(1)
 five o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -139,6 +147,7 @@ five o'clock:
     sleep(700ms)
     mouse_click(1)
 seven o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -147,6 +156,7 @@ seven o'clock:
     sleep(700ms)
     mouse_click(1)
 eight o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -155,6 +165,7 @@ eight o'clock:
     sleep(700ms)
     mouse_click(1)
 ten o'clock:
+    mouse_click(1)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -244,7 +255,10 @@ squad <number_small>: key(number_small)
 stand up: key(w)
 stop: key(s)
 unload: key(,)
-recon: key(f3)
+recon: 
+    key(f3)
+    sleep(100ms)
+    mouse_click(0)
 repair: key(y)
 resupply: key(h)
 reverse: 

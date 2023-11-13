@@ -151,3 +151,9 @@ to upper: insert(".ToUpper()")
 build like <user.text>:
     clause=" LIKE '%{text}%'"
     insert(clause)
+generic list: 
+    insert("List<>()")    
+    key(left left left)
+    sleep(100ms)
+    insert("string")
+    key(shift-ctrl-left)
