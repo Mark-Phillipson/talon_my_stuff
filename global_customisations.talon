@@ -94,3 +94,7 @@ remove last space:
     key(end)
 tab backwards: key(shift-tab)
 focus studio: user.switcher_focus("devenv.exe")
+focus data: user.switcher_focus("azuredatastudio.exe")
+dictation <user.text>: insert(text)
+cap <user.text>: insert(text)
+click: mouse_click(0)
