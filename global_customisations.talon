@@ -98,3 +98,15 @@ focus data: user.switcher_focus("azuredatastudio.exe")
 dictation <user.text>: insert(text)
 cap <user.text>: insert(text)
 click: mouse_click(0)
+go up <number_small>:
+    key(up)
+    repeat(number_small-1)
+go down <number_small>:
+        key(down)
+        repeat(number_small-1)    
+go left <number_small>:
+    key(left)
+    repeat(number_small-1)
+go right <number_small>:
+    key(right)
+    repeat(number_small-1)        

@@ -14,7 +14,10 @@ tag(): user.multiple_cursors
 
 # Panels
 (solution explorer) | (panel solution): key(ctrl-alt-shift-r)
-solution explorer collapse: key(ctrl-shift-p)
+solution explorer collapse: 
+    key(ctrl-shift-p)
+    sleep(100ms)
+    key(ctrl-shift-w)
 search solution explorer: 
     key(ctrl-;)
     key(ctrl-shift-p)
@@ -252,6 +255,7 @@ previous tab:
     key(2)
 (view code) | (view page): key(f7)    
 (begin comment) | (start comment): insert("// ")
+
 
 
 
