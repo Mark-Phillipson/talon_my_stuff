@@ -255,23 +255,4 @@ previous tab:
     key(2)
 (view code) | (view page): key(f7)    
 (begin comment) | (start comment): insert("// ")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+visual studio clipboard: key(ctrl-shift-insert)

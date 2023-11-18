@@ -83,5 +83,8 @@ down <user.number_signed_small> click:
 (arrow) | (mouse) down: user.mouse_drag(0)        
 left mouse down: user.mouse_drag(0)
 right mouse down: user.mouse_drag(1)
-command show cursor: user.mouse_show_cursor()
+command show cursor: 
+    user.mouse_show_cursor()
+    #this does not seem to work even though it's been enabled
+
     

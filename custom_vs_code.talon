@@ -22,4 +22,5 @@ previous tab: user.vscode("workbench.action.previousEditor")
 next tab: user.vscode("workbench.action.nextEditor")
 switch files: user.vscode("workbench.action.quickOpenPreviousRecentlyUsedEditor")
 ide navigate: key(alt-f7)
-focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
+focus editor: user.vscode("workbench.action.focusActiveEditorGroup")125
+toggle hats: user.vscode("cursorless.toggleDecorations")

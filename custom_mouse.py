@@ -85,6 +85,20 @@ steps = {
     "thirty two":2860,
     "thirty three":2910,
     "thirty four":2960,
+    "thirty five":3010,
+    "thirty six":3060,
+    "thirty seven":3100,
+    "thirty eight":3150,
+    "thirty nine":3200,
+    "forty":3250,
+    "forty one":3300,
+    "forty two":3350,
+    "forty three":3400,
+    "forty four":3450,
+    "forty five":3490,
+    "forty six":3540,
+    "forty seven":3590,
+    "forty eight":3640,
 }
 
 mod = Module()
