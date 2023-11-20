@@ -110,5 +110,14 @@ go left <number_small>:
 go right <number_small>:
     key(right)
     repeat(number_small-1)        
-
-    
+test method:
+    methodName=clip.text()
+    key(super-r)
+    sleep(300ms)
+    insert("cmd")
+    sleep(300ms)
+    key(enter)
+    sleep(600ms)
+    insert("dotnet test --filter Name~{methodName} -- Playwright.LaunchOptions.Headless=false")
+    sleep(300ms)
+    key(enter)
