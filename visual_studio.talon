@@ -197,12 +197,10 @@ commit and sink:
     key(ctrl-alt-shift-m)
 show navigation menu: key(alt-')    
 quick watch: key(shift-f9)
-ask copilot: key(alt-/)
 ask copilot [<user.text>]:
     key(alt-/)
     sleep(100ms)
     insert(text or "")
-    key(enter)
 rename token: key(ctrl-r ctrl-r)    
 rename token [<user.text>]:
     key(ctrl-r ctrl-r)
@@ -229,9 +227,11 @@ continue: key(f5)
 toggle breakpoint: key(f9)
 delete [all] breakpoints: key(ctrl-shift-f9)
 copilot chat: 
-    key(ctrl-w)
+    key(ctrl-q)
     sleep(100ms)
-    key(i)
+    insert("GitHub copilot chat")
+    sleep(100ms)
+    key(enter)
 copy with quick watch:
     key(menu)
     sleep(100ms)
@@ -256,3 +256,7 @@ previous tab:
 (view code) | (view page): key(f7)    
 (begin comment) | (start comment): insert("// ")
 visual studio clipboard: key(ctrl-shift-insert)
+jump to symbol [<user.text>]:
+    key(ctrl-shift-q)
+    sleep(100ms)
+    insert(text or "")

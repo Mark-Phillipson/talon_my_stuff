@@ -24,3 +24,23 @@ switch files: user.vscode("workbench.action.quickOpenPreviousRecentlyUsedEditor"
 ide navigate: key(alt-f7)
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")125
 toggle hats: user.vscode("cursorless.toggleDecorations")
+maximize editor : 
+    key(f1)
+    sleep(100ms)
+    insert("View: Toggle Primary Sidebar Visibility")
+    key(enter)
+solution explorer: user.vscode("solutionExplorer.focus")    
+debug application: user.vscode("workbench.action.debug.start")
+start application:key(shift-f5)
+stop application: user.vscode("workbench.action.debug.stop")
+step over: user.vscode("workbench.action.debug.stepOver")
+step into: user.vscode("workbench.action.debug.stepInto")
+step out: user.vscode("workbench.action.debug.stepOut")
+continue: user.vscode("workbench.action.debug.continue")
+restart: user.vscode("workbench.action.debug.restart")
+toggle breakpoint: user.vscode("editor.debug.action.toggleBreakpoint")
+run test: user.vscode("dotnet.test.run")
+open folder: user.vscode("workbench.action.files.openFolder")
+parameter info: user.vscode("editor.action.triggerParameterHints")
+ 
+
