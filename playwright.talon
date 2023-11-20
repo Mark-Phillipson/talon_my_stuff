@@ -1,3 +1,4 @@
 app: chrome.exe
 -
-step over: key(f8)
+resume: key(f8)
+step over: key(f10)
