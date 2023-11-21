@@ -123,3 +123,6 @@ test method:
     insert("dotnet test --filter Name~{methodName} -- Playwright.LaunchOptions.Headless=false")
     sleep(300ms)
     key(enter)
+clear message:
+    mouse_move(1500, 900)
+    mouse_click(0)

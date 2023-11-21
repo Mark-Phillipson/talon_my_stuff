@@ -158,6 +158,8 @@ generic list:
     insert("string")
     key(shift-ctrl-left)
 new block brackets: 
+    key(end)
+    key(enter)
     insert("{}")
     key(left)
     sleep(100ms)
