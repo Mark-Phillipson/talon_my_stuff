@@ -13,8 +13,11 @@ righty [at] <user.screen_step> <user.screen_step>:
     mouse_move(screen_step_1, screen_step_2)
     mouse_click(1)
 taskbar <user.screen_step>:
-    mouse_move(screen_step, 1030)
+    mouse_move(screen_step, 1035)
     mouse_click(0)
+taskbar right <user.screen_step>:
+        mouse_move(screen_step, 1035)
+        mouse_click(0)
 taskbar <user.screen_step> <user.number_signed_small>:
     mouse_move(screen_step, 1030)
     position_x=user.query_mouse_position_x()

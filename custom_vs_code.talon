@@ -42,5 +42,16 @@ toggle breakpoint: user.vscode("editor.debug.action.toggleBreakpoint")
 run test: user.vscode("dotnet.test.run")
 open folder: user.vscode("workbench.action.files.openFolder")
 parameter info: user.vscode("editor.action.triggerParameterHints")
- 
+search in edge:
+    user.vscode("editor.action.selectAll")
+    user.vscode("editor.action.clipboardCopyAction")
+    clipboard=clip.text()
+    user.switcher_focus("msedge.exe") 
+    key(ctrl-t)
+    sleep(900ms)
+    sleep(100ms)
+    insert(clipboard)
+    sleep(100ms)
+    key(enter)
+
 

@@ -37,8 +37,8 @@ panel marks: key(ctrl-k ctrl-w)
 panel breakpoints: key(ctrl-alt-b)
 window position: key(alt-minus)
 close tool window: key(shift-escape)
-(close tab) | (closed tab): key(ctrl-alt-f6)
-
+close tab: key(ctrl-alt-f6)
+closed tab: key(ctrl-alt-f6)
 # Settings
 show settings: key(alt-t o)
 #show shortcuts:
@@ -260,3 +260,6 @@ jump to symbol [<user.text>]:
     key(ctrl-shift-q)
     sleep(100ms)
     insert(text or "")
+close message:
+    mouse_move(1665, 80)
+    mouse_click(0)

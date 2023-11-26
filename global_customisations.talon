@@ -15,7 +15,7 @@ use dragon :
     speech.disable()
     key(keypad_plus)
 #for dragon
-microphone (off) | (on) | (toggle): key(keypad_plus)    
+#microphone (off) | (on) | (toggle): key(keypad_plus)    
 maximise [window]: 
     key(alt-space)
     sleep(300ms)
@@ -126,3 +126,6 @@ test method:
 clear message:
     mouse_move(1500, 900)
     mouse_click(0)
+twitch message:
+    mouse_move(1300, 920)
+    mouse_click(0)    
