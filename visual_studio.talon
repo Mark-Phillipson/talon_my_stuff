@@ -13,7 +13,7 @@ tag(): user.multiple_cursors
 #multiple_cursor.py support end
 
 # Panels
-(solution explorer) | (panel solution): key(ctrl-alt-shift-r)
+solution explorer: key(ctrl-alt-shift-r)
 solution explorer collapse: 
     key(ctrl-shift-p)
     sleep(100ms)
@@ -29,12 +29,6 @@ search solution explorer [<user.text>]:
     insert(text or "")    
 new empty file: key(shift-f2)
 [panel] properties: key(f4)
-panel output: key(ctrl-alt-o)
-panel class: key(ctrl-shift-c)
-panel errors: key(ctrl-\ ctrl-e)
-panel design: key(shift-f7)
-panel marks: key(ctrl-k ctrl-w)
-panel breakpoints: key(ctrl-alt-b)
 window position: key(alt-minus)
 close tool window: key(shift-escape)
 close tab: key(ctrl-alt-f6)
@@ -49,7 +43,7 @@ fullscreen switch: key(shift-alt-enter)
 wrap switch: key(ctrl-e ctrl-w)
 
 # File Commands
-(find files) | (file hunt) [<user.text>]:
+(find files | file hunt) [<user.text>]:
     key(ctrl-shift-t)
     insert(text or "")
 file create: key(ctrl-n)
@@ -66,7 +60,7 @@ show recent [projects | solutions]:
     key(j)
 # Language Features
 hint show: key(ctrl-shift-space)
-(go to definition) | (definition show): key(f12)
+(go to definition | definition show): key(f12)
 definition peek: key(alt-f12)
 references find: key(shift-f12)
 format that: key(ctrl-k ctrl-d)
@@ -83,8 +77,7 @@ refactor remove parameters: key(ctrl-r ctrl-v)
 refactor that: key(ctrl-r ctrl-r)
 
 #code navigation
-(go to declaration | follow): key(f12)
-(last position) | (go back): key(ctrl--)
+(last position | go back): key(ctrl--)
 go forward: key(ctrl-shift--)
 go [to] implementation: key(ctrl-f12)
 go recent [<user.text>]:
@@ -108,39 +101,37 @@ go next mark: key(ctrl-k ctrl-n)
 go last mark: key(ctrl-k ctrl-p)
 
 # Folding
-(toggle collapse) | (fold toggle) | (toggle expand): key(ctrl-m ctrl-m)
-(collapse all) | (fold toggle all): key(ctrl-m ctrl-l)
-(collapse) | (fold) definitions: key(ctrl-m ctrl-o)
+(toggle collapse | fold toggle | toggle expand): key(ctrl-m ctrl-m)
+(collapse all | fold toggle all): key(ctrl-m ctrl-l)
+(collapse | fold) definitions: key(ctrl-m ctrl-o)
 
 #Debugging
 build solution: key(ctrl-shift-b)
 build project: key(ctrl-b)
 start application: key(ctrl-f5)
-(reset code) | (stop application): key(shift-f5)
-(start debugging) | (debug application): key(f5)
+(reset code | stop application): key(shift-f5)
+(start debugging | debug application): key(f5)
 show code places:
     key(ctrl-alt-shift-h)
     sleep(100ms)
     key(ctrl-alt-shift-z)
 list members: key(ctrl-j)    
 break point: key(f9)
-step over: key(f10)
 debug step into: key(f11)
-debug step out [of]: key(f10)
 debug start: key(f5)
 debug stopper: key(shift-f5)
 debug continue: key(f5)
 
 # findinghing the code
-(hunt next) | (find next): key(f3)
-(hunt last) | (find last): key(shift-f3)
+(hunt next | find next): key(f3)
+(hunt last | find last): key(shift-f3)
 find following [<user.text>]:
     key(ctrl-f)
     sleep(100ms)
     insert(text or "")
     key(escape)
 #navigation    
-(go line) | (go to line): key(ctrl-g)
+(go line | go to line): key(ctrl-g)
 go [to line] <user.number_string>:    
     key(ctrl-g)
     sleep(100ms)
@@ -162,7 +153,7 @@ collect marker: key(alt-end)
 drop marker: key(alt-home)
 swap marker: key(alt-shift-home)
 #DevExpress CodeRush jump codes functionality end
-(quick actions) | (open smart tag):    key(ctrl-.)
+(quick actions | open smart tag):    key(ctrl-.)
 save all: key(ctrl-shift-s)
 search code: key(ctrl-f)
 search code [<user.text>]:
@@ -171,14 +162,14 @@ search code [<user.text>]:
     insert(text or "")
     key(escape)
 find again: key(f3)
-(next) | (following) issue: key(alt-pagedown)
-(last) | (previous) issue: key(alt-pageup)
+(next | following) issue: key(alt-pagedown)
+(last | previous) issue: key(alt-pageup)
 parameter info: key(ctrl-shift-space)
 show error [list]: key(ctrl-\ ctrl-e)
 expand selection: key(alt-shift-=)
 shrink selection: key(alt-shift--)
 go to view: key(ctrl-m ctrl-g)
-(hunt this) | (search code): key(ctrl-f)
+(hunt this | search code): key(ctrl-f)
 format document: key(ctrl-k ctrl-d)
 format code: key(ctrl-k ctrl-e)
 format selection: key(ctrl-k ctrl-f)
@@ -218,11 +209,10 @@ apply code changes | hot reload:
     key(alt-f10)    
 step into: key(f11)    
 step out: key(shift-f11)
-step over : key(f10)
-step over <user.number_small> times:
-    key(f10)   
-    repeat(number_small - 1)   
-(reset code) | (stop debugging): key(shift-f5)
+step over: 
+    key(f10)
+    sleep(50ms)
+(reset code | stop debugging): key(shift-f5)
 continue: key(f5)
 toggle breakpoint: key(f9)
 delete [all] breakpoints: key(ctrl-shift-f9)
@@ -253,8 +243,8 @@ previous tab:
     key(alt-w)
     sleep(100ms)
     key(2)
-(view code) | (view page): key(f7)    
-(begin comment) | (start comment): insert("// ")
+(view code | view page): key(f7)    
+(begin comment | start comment): insert("// ")
 visual studio clipboard: key(ctrl-shift-insert)
 jump to symbol [<user.text>]:
     key(ctrl-shift-q)
@@ -263,3 +253,8 @@ jump to symbol [<user.text>]:
 close message:
     mouse_move(1665, 80)
     mouse_click(0)
+surround with: key(ctrl-k ctrl-s)    
+add property: 
+    insert("prop")
+    key(tab)
+    key(tab)

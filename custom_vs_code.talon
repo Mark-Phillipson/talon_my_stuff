@@ -1,6 +1,6 @@
 app: vscode
 -
-(closed tab) | (close tab) : user.vscode("workbench.action.closeActiveEditor")
+(closed tab | close tab) : user.vscode("workbench.action.closeActiveEditor")
 focus open [files | tab]: user.vscode("workbench.files.action.focusOpenEditorsView")
 command [palette]: user.vscode("workbench.action.showCommands")
 search files [by name] :  
