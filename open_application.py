@@ -40,6 +40,17 @@ class Actions:
         print(commandline)
         print(searchTerm)
         ui.launch(path=commandline,args=arguments)
+    def run_application_voice_admin_windows_forms(language:  str,category:  str ):
+        "runs the voice admin windows forms application with the given language and category"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net8.0-windows\\WinFormsApp.exe"
+        args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
+        args2 = '' + r'/' + language + ''
+        args3 = '' + r'/' + category + ''
+        arguments=[args1, args2, args3]
+        print(commandline)
+        print(language)
+        print(category)
+        ui.launch(path=commandline,args=arguments)
     def open_application_custom(commandline:  str ,args:  str) -> str:
         "Opens an application with the given command line"
         print(commandline)

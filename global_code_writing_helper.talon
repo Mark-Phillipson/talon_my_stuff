@@ -2,6 +2,11 @@ sharp <user.text>:
     user.run_application_csharp_database_command(text)    
 (ad tag) | (add tag) <user.text>:
     user.run_application_csharp_database_command("add tag " + text)
+search old list <user.text>:
+    user.run_application_search_intellisense(text)
+search list <user.text>:
+    user.run_application_voice_admin_windows_forms(text)
+blazor snippet:  user.run_application_voice_admin_windows_forms("Blazor","snippet")    
 fresh line : 
     key(end)
     key(enter)
@@ -33,10 +38,6 @@ move left <number_small> :
 move right <number_small> :
     key(right)
     repeat(number_small-1)                                
-search old list <user.text>:
-    user.run_application_search_intellisense(text)
-search list <user.text>:
-    user.run_application_voice_admin_windows_forms(text)
 (double quotes in) | (quotes in): 
     insert("\"\"")
     sleep(300ms)

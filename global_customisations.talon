@@ -110,19 +110,6 @@ go left <number_small>:
 go right <number_small>:
     key(right)
     repeat(number_small-1)        
-test method:
-    methodName=clip.text()
-    key(super-r)
-    sleep(300ms)
-    insert("cmd")
-    key(enter)
-    sleep(900ms)
-    insert("CD C:\\Users\\MPhil\\source\\repos\\ARM_MIG\\PlaywrightTests")
-    key(enter)
-    sleep(600ms)
-    insert("dotnet test --filter Name~{methodName} -- Playwright.LaunchOptions.Headless=false")
-    sleep(300ms)
-    key(enter)
 clear message:
     mouse_move(1500, 900)
     mouse_click(0)

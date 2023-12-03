@@ -175,12 +175,10 @@ format code: key(ctrl-k ctrl-e)
 format selection: key(ctrl-k ctrl-f)
 next method: key(ctrl-shift-m)
 previous method: key(ctrl-shift-alt-m)
-move [the] line up [<user.number_signed_small>]:
+move [the] line up:
     key(ctrl-f1 ctrl-f2)
-    repeat(number_signed_small)
-move [the] line down [<user.number_signed_small>]:
+move [the] line down:
     key(ctrl-f1 ctrl-f4)
-    repeat(number_signed_small)
 commit changes: key(ctrl-alt-f7)
 commit and sink: 
     key(ctrl-alt-shift-k)
@@ -258,3 +256,17 @@ add property:
     insert("prop")
     key(tab)
     key(tab)
+test method:
+    methodName=clip.text()
+    key(super-r)
+    sleep(300ms)
+    insert("cmd")
+    key(enter)
+    sleep(900ms)
+    insert("CD C:\\Users\\MPhil\\source\\repos\\ARM_MIG\\PlaywrightTests")
+    key(enter)
+    sleep(600ms)
+    insert("dotnet test --filter Name~{methodName} -- Playwright.LaunchOptions.Headless=false")
+    sleep(300ms)
+    key(enter)
+add existing item: key(shift-alt-a)    
