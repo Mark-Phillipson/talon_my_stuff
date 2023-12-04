@@ -6,7 +6,7 @@ search old list <user.text>:
     user.run_application_search_intellisense(text)
 search list <user.text>:
     user.run_application_voice_admin_windows_forms(text)
-blazor snippet:  user.run_application_voice_admin_windows_forms("Blazor","snippet")    
+{user.snippet_language} {user.snippet_category}:  user.run_application_voice_admin_windows_forms(snippet_language,snippet_category)    
 fresh line : 
     key(end)
     key(enter)

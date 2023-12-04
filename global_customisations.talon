@@ -118,3 +118,4 @@ twitch message:
     mouse_click(0)    
 email address    : insert("MPhillipson0@Gmail.com")
 test email: insert("firstlastname@domain.co.uk")
+alternate: key(alt)
