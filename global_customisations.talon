@@ -117,7 +117,7 @@ twitch message:
     mouse_move(1300, 920)
     mouse_click(0)    
 email address    : insert("MPhillipson0@Gmail.com")
-test email: ("firstlastname@domain.co.uk")
+test email: insert("firstlastname@domain.co.uk")
 alternate: key(alt)
 fake email:
     emailAddress=user.fake_email()
