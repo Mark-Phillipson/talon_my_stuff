@@ -241,7 +241,7 @@ previous tab:
     key(alt-w)
     sleep(100ms)
     key(2)
-(view code | view page): key(f7)    
+(view code | view page | view component): key(f7)    
 (begin comment | start comment): insert("// ")
 visual studio clipboard: key(ctrl-shift-insert)
 jump to symbol [<user.text>]:

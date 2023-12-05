@@ -22,27 +22,18 @@ class Actions:
         print(commandline)
         print(searchTerm)
         ui.launch(path=commandline,args=arguments)
-    def run_application_voice_admin_maiu(searchTerm:  str ):
-        "runs the voice admin maui application with the given search term"
-        commandline = r'C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceAdminMAUI\\bin\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\VoiceAdminMAUI.exe'
-        args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
-        args2 = '' + r'/' + searchTerm + ''
-        arguments=[args1, args2]
-        print(commandline)
-        print(searchTerm)
-        ui.launch(path=commandline,args=arguments)
     def run_application_voice_admin_windows_forms(searchTerm:  str ):
         "runs the voice admin windows forms application with the given search term"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net8.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\x64\\Release\\net8.0-windows\\WinFormsApp.exe"
         args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
         args2 = '' + r'/' + searchTerm + ''
         arguments=[args1, args2]
         print(commandline)
         print(searchTerm)
         ui.launch(path=commandline,args=arguments)
-    def run_application_voice_admin_windows_forms(language:  str,category:  str ):
+    def run_application_voice_admin_windows_forms_language_category(language:  str,category:  str ):
         "runs the voice admin windows forms application with the given language and category"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net8.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\x64\\Release\\net8.0-windows\\WinFormsApp.exe"
         args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
         args2 = '' + r'/' + language + ''
         args3 = '' + r'/' + category + ''
