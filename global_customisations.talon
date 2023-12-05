@@ -122,3 +122,6 @@ alternate: key(alt)
 fake email:
     emailAddress=user.fake_email()
     insert(emailAddress)
+fake phone number:
+    phoneNumber=user.generate_random_number()
+    insert(phoneNumber)
