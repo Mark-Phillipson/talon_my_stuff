@@ -207,9 +207,9 @@ apply code changes | hot reload:
     key(alt-f10)    
 step into: key(f11)    
 step out: key(shift-f11)
-step over: 
+step across: 
     key(f10)
-    sleep(50ms)
+    sleep(100ms)
 (reset code | stop debugging): key(shift-f5)
 continue: key(f5)
 toggle breakpoint: key(f9)
