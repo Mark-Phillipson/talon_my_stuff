@@ -104,3 +104,7 @@ skip:
     mouse_move(1510, 955)
     mouse_click(0)            
 
+<user.screen_step> <user.screen_step>:
+    mouse_move(screen_step_1, screen_step_2)
+    mouse_click(0)
+    

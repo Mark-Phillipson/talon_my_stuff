@@ -43,6 +43,7 @@ fullscreen switch: key(shift-alt-enter)
 wrap switch: key(ctrl-e ctrl-w)
 
 # File Commands
+find in files: key(ctrl-shift-alt-y)
 (find files | file hunt) [<user.text>]:
     key(ctrl-shift-t)
     insert(text or "")
@@ -210,6 +211,7 @@ step out: key(shift-f11)
 step across: 
     key(f10)
     sleep(100ms)
+step over: key(f10)    
 (reset code | stop debugging): key(shift-f5)
 continue: key(f5)
 toggle breakpoint: key(f9)

@@ -1,3 +1,4 @@
+
 (save [that]) | (save file) : key( ctrl-s)
 default box : key(ctrl-shift-alt-b)
 redo : key( ctrl-y)
@@ -36,6 +37,7 @@ window monitor switch: key( super-shift-right)
 focus system tray: key( super-b)    
 focus desktop: key( super-d)
 focus taskbar: key( super-t)
+find again: key( f3)
 context menu: key(shift-f10)
 #for the upwork tracking application
 (start) | (begin) tracking: key( ctrl-alt-])
@@ -93,8 +95,13 @@ remove last space:
     sleep(100ms)
     key(end)
 tab backwards: key(shift-tab)
+#switch to <user.running_applications>: user.switcher_focus(running_applications)
+#This one not working:
+focus data: user.switcher_focus("azure data studio")
+focus code: user.switcher_focus("Visual Studio code")
 focus studio: user.switcher_focus("devenv.exe")
-focus data: user.switcher_focus("azuredatastudio.exe")
+focus edge: user.switcher_focus("msedge.exe")
+focus chrome: user.switcher_focus("chrome.exe")
 dictation <user.text>: insert(text)
 cap <user.text>: insert(text)
 click: mouse_click(0)
@@ -125,3 +132,4 @@ fake email:
 fake phone number:
     phoneNumber=user.generate_random_number()
     insert(phoneNumber)
+enter timestamp: insert(user.time_format("%Y-%m-%d %H:%M:%S"))    

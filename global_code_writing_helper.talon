@@ -1,5 +1,11 @@
 sharp <user.text>:
     user.run_application_csharp_database_command(text)    
+capital smash <user.text>:
+    result=user.capital_strip(text)    
+    insert(result)
+capital <user.letter> <user.letter> <user.letter>:
+    result=user.capital_letters(letter_1,letter_2,letter_3)    
+    insert(result)
 (ad tag) | (add tag) <user.text>:
     user.run_application_csharp_database_command("add tag " + text)
 search old list <user.text>:

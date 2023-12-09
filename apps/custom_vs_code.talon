@@ -53,5 +53,5 @@ search in edge:
     insert(clipboard)
     sleep(100ms)
     key(enter)
-
+ask copilot: key(ctrl-i)
 

@@ -21,3 +21,4 @@ find following <user.text>:
     key(escape)
 go to line: key(ctrl-g)    
 toggle sidebar: key(ctrl-b)
+focus server: user.vscode("dataExplorer.servers.focus")

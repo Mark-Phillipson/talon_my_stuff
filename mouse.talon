@@ -1,15 +1,14 @@
-move [to] <user.screen_step> <user.screen_step>:
+<user.screen_step> <user.screen_step> move:
     mouse_move(screen_step_1, screen_step_2)
-go [to] <user.screen_step> <user.screen_step>:
-        mouse_move(screen_step_1, screen_step_2)
-left [to] <user.screen_step> <user.screen_step>:
+#commands still in my head from dragon    
+left <user.screen_step> <user.screen_step>:
             mouse_move(screen_step_1, screen_step_2)    
-right [to] <user.screen_step> <user.screen_step>:
+right <user.screen_step> <user.screen_step>:
             mouse_move(screen_step_1, screen_step_2)    
-click [at] <user.screen_step> <user.screen_step>:
+<user.screen_step> <user.screen_step> (click | touch):
     mouse_move(screen_step_1, screen_step_2)
     mouse_click(0)
-righty [at] <user.screen_step> <user.screen_step>:
+<user.screen_step> <user.screen_step> righty:
     mouse_move(screen_step_1, screen_step_2)
     mouse_click(1)
 taskbar <user.screen_step>:
