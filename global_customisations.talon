@@ -60,6 +60,7 @@ launch preview:
 (show letters | show numbers): key(ctrl-super-alt-m)
 control abbreviation: insert("ctrl")
 (computer sleep) | (sleep computer): 
+    speech.disable()
     key(super-r)
     sleep(300ms)
     insert("cmd")
@@ -133,3 +134,7 @@ fake phone number:
     phoneNumber=user.generate_random_number()
     insert(phoneNumber)
 enter timestamp: insert(user.time_format("%Y-%m-%d %H:%M:%S"))    
+reset mouse: 
+    user.mouse_sleep()
+    #Disables control mouse, zoom mouse, and re-enables cursor
+    user.mouse_show_cursor()
