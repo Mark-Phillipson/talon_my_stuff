@@ -8,13 +8,13 @@ undo <user.number_signed_small> :
     repeat(number_signed_small-1)
 backspace : key(backspace)
 delete : key(delete)
-copy : key( ctrl-c)
-paste : key( ctrl-v)
-cut : key( ctrl-x)
+# copy : key( ctrl-c)
+# paste : key( ctrl-v)
+# cut : key( ctrl-x)
 voice coding wake : speech.enable()
-use dragon : 
-    speech.disable()
-    key(keypad_plus)
+# use dragon : 
+#     speech.disable()
+#     key(keypad_plus)
 #for dragon
 #microphone (off) | (on) | (toggle): key(keypad_plus)    
 maximise [window]: 
@@ -38,7 +38,7 @@ focus system tray: key( super-b)
 focus desktop: key( super-d)
 focus taskbar: key( super-t)
 find again: key( f3)
-context menu: key(shift-f10)
+#context menu: key(shift-f10)
 #for the upwork tracking application
 (start) | (begin) tracking: key( ctrl-alt-])
 (end tracking) | (stop tracking): key( ctrl-alt-[)
@@ -71,8 +71,8 @@ control abbreviation: insert("ctrl")
     insert("rundll32.exe powrprof.dll, SetSuspendState Sleep")
     sleep(300ms)
     key(enter)
-toggle mouse: key(ctrl-alt-f9)    
-centre mouse: key(ctrl-alt-f1)
+# toggle mouse: key(ctrl-alt-f9)    
+# centre mouse: key(ctrl-alt-f1)
 tabby : key(tab)
 fluent search: key(super-ctrl-shift)
 fluent search <user.text>:
@@ -82,9 +82,6 @@ fluent search <user.text>:
     sleep(300ms)
 pause some: sleep(500ms)        
 select rest of line: key(shift-end)
-move up <number_small>:
-    key(up)
-    repeat(number_small-1)
 double home:
     key(home)
     sleep(100ms)
@@ -106,6 +103,9 @@ focus chrome: user.switcher_focus("chrome.exe")
 dictation <user.text>: insert(text)
 cap <user.text>: insert(text)
 click: mouse_click(0)
+move up <number_small>:
+    key(up)
+    repeat(number_small-1)
 go up <number_small>:
     key(up)
     repeat(number_small-1)
@@ -118,12 +118,10 @@ go left <number_small>:
 go right <number_small>:
     key(right)
     repeat(number_small-1)        
+#Clears the message in Visual Studio
 clear message:
     mouse_move(1500, 900)
     mouse_click(0)
-twitch message:
-    mouse_move(1300, 920)
-    mouse_click(0)    
 email address    : insert("MPhillipson0@Gmail.com")
 test email: insert("firstlastname@domain.co.uk")
 alternate: key(alt)
@@ -138,3 +136,10 @@ reset mouse:
     user.mouse_sleep()
     #Disables control mouse, zoom mouse, and re-enables cursor
     user.mouse_show_cursor()
+select and copy:
+    key(ctrl-a)
+    sleep(100ms)
+    key(ctrl-c)
+    sleep(100ms)    
+insert values:
+    user.open_url("http://localhost:5000/valuestoinsert")

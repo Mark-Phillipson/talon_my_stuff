@@ -100,12 +100,11 @@ first or default async:
     sleep(100ms)
     key(left)
 arrow operator: insert(" => ")    
-lambda operator <user.text>:
-    insert(text)
+lambda operator <user.letter>:
+    insert(letter)
     sleep(100ms)
-    insert(" => " + text)
+    insert(" => " + letter)
     sleep(100ms)
-    key(left)
 to string    :
     insert('.ToString()')
     sleep(100ms)
@@ -161,8 +160,8 @@ build like <user.text>:
     clause=" LIKE '%{text}%'"
     insert(clause)
 generic list: 
-    insert("List<>()")    
-    key(left left left)
+    insert("List<>")    
+    key(left left)
     sleep(100ms)
     insert("string")
     key(shift-ctrl-left)
