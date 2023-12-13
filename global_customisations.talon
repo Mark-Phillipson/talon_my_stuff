@@ -143,3 +143,7 @@ select and copy:
     sleep(100ms)    
 insert values:
     user.open_url("http://localhost:5000/valuestoinsert")
+voice typing:
+    key(super-h)
+    speech.disable()
+enter my name: insert("Mark Phillipson")    

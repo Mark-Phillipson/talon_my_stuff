@@ -1,9 +1,7 @@
 <user.screen_step> <user.screen_step> move:
     mouse_move(screen_step_1, screen_step_2)
 #commands still in my head from dragon    
-left <user.screen_step> <user.screen_step>:
-            mouse_move(screen_step_1, screen_step_2)    
-right <user.screen_step> <user.screen_step>:
+(move | left | right) <user.screen_step> <user.screen_step>:
             mouse_move(screen_step_1, screen_step_2)    
 <user.screen_step> <user.screen_step> (click | touch):
     mouse_move(screen_step_1, screen_step_2)
@@ -62,22 +60,22 @@ upper right <user.number_signed_small>:
     position_x=user.query_mouse_position_x()
     position_y=user.query_mouse_position_y()
     mouse_move(position_x + number_signed_small, position_y - number_signed_small)        
-left <user.number_signed_small> click:
+left <user.number_signed_small> (click | touch):
         position_x=user.query_mouse_position_x()
         position_y=user.query_mouse_position_y()
         mouse_move(position_x - number_signed_small, position_y)
         mouse_click(0)
-right <user.number_signed_small> click:
+right <user.number_signed_small> (click | touch):
         position_x=user.query_mouse_position_x()
         position_y=user.query_mouse_position_y()
         mouse_move(position_x + number_signed_small, position_y)
         mouse_click(0)
-up <user.number_signed_small> click:
+up <user.number_signed_small> (click | touch):
         position_x=user.query_mouse_position_x()
         position_y=user.query_mouse_position_y()
         mouse_move(position_x , position_y - number_signed_small)
         mouse_click(0)
-down <user.number_signed_small> click:
+down <user.number_signed_small> (click | touch):
         position_x=user.query_mouse_position_x()
         position_y=user.query_mouse_position_y()
         mouse_move(position_x , position_y + number_signed_small)
