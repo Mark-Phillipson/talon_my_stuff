@@ -173,3 +173,13 @@ new block brackets:
     sleep(100ms)
     key(enter)
     key(up)    
+move line into braces:
+    key(end)
+    key(down down)
+    key(home)
+    key(shift-end)
+    key(delete)
+    key(delete)
+    sleep(50ms)
+    key(ctrl-f1)
+    key(ctrl-f4)

@@ -70,7 +70,7 @@ right <user.number_signed_small> (click | touch):
         position_y=user.query_mouse_position_y()
         mouse_move(position_x + number_signed_small, position_y)
         mouse_click(0)
-up <user.number_signed_small> (click | touch):
+(up | raise) <user.number_signed_small> (click | touch):
         position_x=user.query_mouse_position_x()
         position_y=user.query_mouse_position_y()
         mouse_move(position_x , position_y - number_signed_small)

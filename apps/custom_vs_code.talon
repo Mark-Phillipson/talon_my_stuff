@@ -22,7 +22,7 @@ previous tab: user.vscode("workbench.action.previousEditor")
 next tab: user.vscode("workbench.action.nextEditor")
 switch files: user.vscode("workbench.action.quickOpenPreviousRecentlyUsedEditor")
 ide navigate: key(alt-f7)
-focus editor: user.vscode("workbench.action.focusActiveEditorGroup")125
+focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
 toggle hats: user.vscode("cursorless.toggleDecorations")
 maximize editor : 
     key(f1)
@@ -42,7 +42,7 @@ toggle breakpoint: user.vscode("editor.debug.action.toggleBreakpoint")
 run test: user.vscode("dotnet.test.run")
 open folder: user.vscode("workbench.action.files.openFolder")
 parameter info: user.vscode("editor.action.triggerParameterHints")
-search in edge:
+search [in] edge:
     user.vscode("editor.action.selectAll")
     user.vscode("editor.action.clipboardCopyAction")
     clipboard=clip.text()
