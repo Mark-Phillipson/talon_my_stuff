@@ -190,22 +190,22 @@ lay mine:
     sleep(100ms)
     mouse_click(0)
 (laydown) | (standup): key(w)    
-group one:
-    mouse_move(510,860)
-    sleep(100ms)
-    mouse_click(0)
-group two:
-    mouse_move(540,860)
-    sleep(100ms)
-    mouse_click(0)
-group three:
-    mouse_move(580,860)
-    sleep(100ms)
-    mouse_click(0)
-group four:
-    mouse_move(615,860)
-    sleep(100ms)
-    mouse_click(0)
+# group one:
+#     mouse_move(510,860)
+#     sleep(100ms)
+#     mouse_click(0)
+# group two:
+#     mouse_move(540,860)
+#     sleep(100ms)
+#     mouse_click(0)
+# group three:
+#     mouse_move(580,860)
+#     sleep(100ms)
+#     mouse_click(0)
+# group four:
+#     mouse_move(615,860)
+#     sleep(100ms)
+#     mouse_click(0)
 objectives:
     mouse_move(1370,150)
     sleep(100ms)
@@ -246,7 +246,7 @@ rotate left:
 scatter: key(f)
 select <number_small>:
     total=number_small * 60
-    x= 470 + total
+    x= (1680+470) + total
     mouse_move(x,915)
     sleep(100ms)
     mouse_click(0)

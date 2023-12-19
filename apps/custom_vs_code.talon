@@ -54,4 +54,4 @@ search [in] edge:
     sleep(100ms)
     key(enter)
 ask copilot: key(ctrl-i)
-
+toggle sidebar: user.vscode("workbench.action.toggleSidebarVisibility") 

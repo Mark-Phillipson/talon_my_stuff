@@ -161,7 +161,7 @@ build like <user.text>:
     insert(clause)
 generic list: 
     insert("List<>")    
-    key(left left)
+    key(left)
     sleep(100ms)
     insert("string")
     key(shift-ctrl-left)

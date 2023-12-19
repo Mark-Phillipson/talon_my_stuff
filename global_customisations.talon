@@ -147,31 +147,14 @@ voice typing:
     key(super-h)
     speech.disable()
 enter my name: insert("Mark Phillipson")    
-six o'clock:
-    user.mouse_drag(0)
-    sleep(100ms)
-    position_x=user.query_mouse_position_x()
-    position_y=user.query_mouse_position_y()
-    mouse_move(position_x , position_y + 50 )
-twelve o'clock:
-    user.mouse_drag(0)
-    sleep(100ms)
-    position_x=user.query_mouse_position_x()
-    position_y=user.query_mouse_position_y()
-    mouse_move(position_x , position_y - 50 )
-nine o'clock:
-    user.mouse_drag(0)
-    sleep(100ms)
-    position_x=user.query_mouse_position_x()
-    position_y=user.query_mouse_position_y()
-    mouse_move(position_x -50, position_y )
-three o'clock:
-    user.mouse_drag(0)
-    sleep(100ms)
-    position_x=user.query_mouse_position_x()
-    position_y=user.query_mouse_position_y()
-    mouse_move(position_x + 50 , position_y )
-    
+hold down alternate: key('alt', down=True)
+hold down control: key('ctrl', down=True)
+hold down shift: key('shift', down=True)
+hold down super: key('super', down=True)
+release alternate: key('alt', up=True)
+release control: key('ctrl', up=True)
+release shift: key('shift', up=True)
+release super: key('super', up=True)
         
         
     

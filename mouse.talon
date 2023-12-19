@@ -86,5 +86,28 @@ right mouse down: user.mouse_drag(1)
 command show cursor: 
     user.mouse_show_cursor()
     #this does not seem to work even though it's been enabled
-
+six o'clock:
+    user.mouse_drag(0)
+    sleep(100ms)
+    position_x=user.query_mouse_position_x()
+    position_y=user.query_mouse_position_y()
+    mouse_move(position_x , position_y + 50 )
+twelve o'clock:
+    user.mouse_drag(0)
+    sleep(100ms)
+    position_x=user.query_mouse_position_x()
+    position_y=user.query_mouse_position_y()
+    mouse_move(position_x , position_y - 50 )
+nine o'clock:
+    user.mouse_drag(0)
+    sleep(100ms)
+    position_x=user.query_mouse_position_x()
+    position_y=user.query_mouse_position_y()
+    mouse_move(position_x -50, position_y )
+three o'clock:
+    user.mouse_drag(0)
+    sleep(100ms)
+    position_x=user.query_mouse_position_x()
+    position_y=user.query_mouse_position_y()
+    mouse_move(position_x + 50 , position_y )
     

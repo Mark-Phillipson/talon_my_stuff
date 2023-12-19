@@ -30,7 +30,7 @@ search solution explorer [<user.text>]:
 new empty file: key(shift-f2)
 [panel] properties: key(f4)
 window position: key(alt-minus)
-close tool window: key(shift-escape)
+close tool [window]: key(shift-escape)
 close tab: key(ctrl-alt-f6)
 closed tab: key(ctrl-alt-f6)
 # Settings
