@@ -9,7 +9,9 @@ previous tab: key(ctrl-shift-tab)
 next tab: key(ctrl-tab)
 skip ads:
     mouse_move(3546, 970)
-destroy drone: insert("!drone -1")
+destroy drone: 
+    insert("!drone -1")
+    key(enter)
 start drone:
     insert("!drone")
     key(enter)    
@@ -17,9 +19,26 @@ drone diagonal:
     insert("!D56")
     sleep(100ms)
     key(enter)  
+    sleep(1000ms)
     insert("!R55")
     sleep(100ms)
     key(enter)  
+drone left:
+    insert("!L55")
+    sleep(100ms)
+    key(enter)
+drone right:
+    insert("!R55")
+    sleep(100ms)
+    key(enter)
+drone up:
+    insert("!U55")
+    sleep(100ms)
+    key(enter)
+drone down:
+    insert("!D55")
+    sleep(100ms)
+    key(enter)            
 smoke black:
     insert("!smokecolor black")
     sleep(100ms)

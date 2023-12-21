@@ -272,3 +272,8 @@ test method:
     sleep(300ms)
     key(enter)
 add existing item: key(shift-alt-a)    
+surround with:
+    key(ctrl-k ctrl-s)
+    sleep(100ms)
+    insert("v")    
+    key(enter)
