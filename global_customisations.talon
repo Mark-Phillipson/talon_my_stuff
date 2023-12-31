@@ -124,6 +124,10 @@ clear message:
     mouse_click(0)
 email address    : insert("MPhillipson0@Gmail.com")
 test email: insert("firstlastname@domain.co.uk")
+enter username: 
+    insert("MPhil")
+    sleep(100ms)
+    key(tab)
 alternate: key(alt)
 fake email:
     emailAddress=user.fake_email()
