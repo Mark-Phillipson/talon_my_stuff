@@ -310,3 +310,11 @@ fly <user.arrow_key>:
     key(arrow_key)
     repeat(100)
     sleep(100ms)    
+select box:
+    position_x=user.query_mouse_position_x()
+    position_y=user.query_mouse_position_y()
+    user.mouse_drag(0)
+    sleep(100ms)
+    mouse_move(position_x + 500, position_y + 500)
+    sleep(100ms)
+    mouse_click(0)
