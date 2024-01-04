@@ -6,6 +6,10 @@ dotnet watch:
     insert("dotnet watch")
     sleep(100ms)
     key(enter)
+dotnet run:
+    insert("dotnet run")
+    sleep(100ms)
+    key(enter)
 clear screen: 
     insert("cls")
     sleep(100ms)

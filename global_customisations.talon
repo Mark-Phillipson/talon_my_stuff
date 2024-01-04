@@ -122,7 +122,7 @@ go right <number_small>:
 clear message:
     mouse_move(1500, 900)
     mouse_click(0)
-email address    : insert("MPhillipson0@Gmail.com")
+[enter] email address    : insert("MPhillipson0@Gmail.com")
 test email: insert("firstlastname@domain.co.uk")
 enter username: 
     insert("MPhil")

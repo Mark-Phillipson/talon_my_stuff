@@ -100,8 +100,8 @@ ctx_python.lists["user.keywords"] = {
     "boolean": " bool ",
 }
 
-ctx_csharp = Context()
-ctx_csharp.matches = "code.language: csharp"
-ctx_csharp.lists["user.keywords"] = {
-"private": " private "
-}
+# ctx_csharp = Context()
+# ctx_csharp.matches = "code.language: csharp"
+# ctx_csharp.lists["user.keywords"] = {
+# "private": " private "
+# }
