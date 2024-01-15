@@ -94,3 +94,8 @@ if statement:
 move line down: user.vscode("editor.action.moveLinesDownAction")
 move line up: user.vscode("editor.action.moveLinesUpAction")
 comment line: user.vscode("editor.action.commentLine")
+view problem: user.vscode("editor.action.marker.next")
+find next [<user.text>]: 
+    key(ctrl-f)
+    sleep(100ms)
+    insert(text or "")
