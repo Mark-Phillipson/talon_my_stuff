@@ -63,3 +63,5 @@ smoke pink:
     insert("!smokecolor pink")
     sleep(100ms)
     key(enter)
+local host chan of custody:
+    user.open_url("https://localhost:44343/")

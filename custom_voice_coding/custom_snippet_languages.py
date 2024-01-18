@@ -21,6 +21,5 @@ ctx_default.lists["user.snippet_language"] = {
 "Transact SQL": "Transact SQL",
 "Twitch": "Twitch",
 "Visual Basic": "Visual Basic",
-
 }
 

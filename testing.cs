@@ -7,6 +7,5 @@ foreach (var word in wordLetters)
     {
         Console.WriteLine(word);
     }
-(// source="([{[<TESTING>]}])"
 }
-   
+    
