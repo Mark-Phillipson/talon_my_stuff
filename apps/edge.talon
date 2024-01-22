@@ -39,8 +39,8 @@ drone down:
     insert("!D55")
     sleep(100ms)
     key(enter)            
-smoke black:
-    insert("!smokecolor black")
+smoke on:
+    insert("!smokeon")
     sleep(100ms)
     key(enter)  
 smoke white:

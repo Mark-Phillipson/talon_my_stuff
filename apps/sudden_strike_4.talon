@@ -85,6 +85,7 @@ six o'clock:
     mouse_click(1)
 twelve o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -94,6 +95,7 @@ twelve o'clock:
     mouse_click(1)
 nine o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -103,6 +105,7 @@ nine o'clock:
     mouse_click(1)
 three o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -112,6 +115,7 @@ three o'clock:
     mouse_click(1)
 one o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -121,6 +125,7 @@ one o'clock:
     mouse_click(1)
 two o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -130,6 +135,7 @@ two o'clock:
     mouse_click(1)
 four o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -139,6 +145,7 @@ four o'clock:
     mouse_click(1)
 five o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -148,6 +155,7 @@ five o'clock:
     mouse_click(1)
 seven o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -157,6 +165,7 @@ seven o'clock:
     mouse_click(1)
 eight o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -166,6 +175,7 @@ eight o'clock:
     mouse_click(1)
 ten o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -174,6 +184,8 @@ ten o'clock:
     sleep(700ms)
     mouse_click(1)
 eleven o'clock:
+    mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
