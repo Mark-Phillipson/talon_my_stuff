@@ -76,6 +76,7 @@ heavy bomber:
     mouse_click(0)    
 six o'clock:
     mouse_click(1)
+    sleep(100ms)
     user.mouse_drag(1)
     sleep(100ms)
     position_x=user.query_mouse_position_x()
@@ -215,7 +216,7 @@ lay mine:
 #     sleep(100ms)
 #     mouse_click(0)
 # group four:
-#     mouse_move(615,860)
+#     mouse_move4(615,860)
 #     sleep(100ms)
 #     mouse_click(0)
 objectives:

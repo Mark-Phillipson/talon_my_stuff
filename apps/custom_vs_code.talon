@@ -109,3 +109,4 @@ find next [<user.text>]:
     insert(text or "")
 toggle panel:   user.vscode("workbench.action.togglePanel")
 toggle zen mode: user.vscode("workbench.action.toggleZenMode")
+restart debugging: user.vscode("workbench.action.debug.restart")
