@@ -65,3 +65,4 @@ smoke pink:
     key(enter)
 local host chan of custody:
     user.open_url("https://localhost:44343/")
+toggle voice:    key(ctrl-shift-u)

@@ -7,6 +7,7 @@ ctx_default = Context()
 ctx_default.lists["user.snippet_category"] = {
 "Access":"Access",
 "Action Filters":"Action Filters",
+"Action":"Action",
 "ActiveX Data Objects":"ActiveX Data Objects",
 "Attributes":"Attributes",
 "Bald Bearded Builder":"Bald Bearded Builder",

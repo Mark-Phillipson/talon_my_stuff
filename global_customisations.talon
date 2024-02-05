@@ -159,6 +159,7 @@ release alternate: key('alt', up=True)
 release control: key('ctrl', up=True)
 release shift: key('shift', up=True)
 release super: key('super', up=True)
-        
+start recording: key(alt-shift-9)        
+stop recording: key(alt-shift-0)
         
     
