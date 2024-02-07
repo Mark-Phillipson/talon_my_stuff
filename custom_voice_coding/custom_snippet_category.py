@@ -68,6 +68,7 @@ ctx_default.lists["user.snippet_category"] = {
 "Useful Sub Routines":"Useful Sub Routines",
 "Usernames":"Usernames",
 "VBA":"VBA",
+"Value":"Value",
 "Words":"Words",
 
 }
