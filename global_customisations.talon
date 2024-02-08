@@ -8,15 +8,6 @@ undo <user.number_signed_small> :
     repeat(number_signed_small-1)
 backspace : key(backspace)
 delete : key(delete)
-# copy : key( ctrl-c)
-# paste : key( ctrl-v)
-# cut : key( ctrl-x)
-voice coding wake : speech.enable()
-# use dragon : 
-#     speech.disable()
-#     key(keypad_plus)
-#for dragon
-#microphone (off) | (on) | (toggle): key(keypad_plus)    
 maximise [window]: 
     key(alt-space)
     sleep(300ms)
@@ -43,7 +34,7 @@ find again: key( f3)
 (start) | (begin) tracking: key( ctrl-alt-])
 (end tracking) | (stop tracking): key( ctrl-alt-[)
 open clipboard: key(super-v)
-clipboard insert: key(ctrl-shift-v)
+(clipboard insert) | (clipboard enter): key(ctrl-shift-v)
 clipboard manager: key(ctrl-shift-e)
 windows start <user.text>:
     key(super)
@@ -151,7 +142,15 @@ insert values:
 voice typing:
     key(super-h)
     speech.disable()
+voice typing in code:
+    #user.switcher_launch("visual studio code")
+    user.switcher_focus("Visual Studio code")    
+    speech.disable()
+    sleep(300ms)
+    key(ctrl-n)
+    key(super-h)
 enter my name: insert("Mark Phillipson")    
+enter my last name: insert("Phillipson")
 hold down alternate: key('alt', down=True)
 hold down control: key('ctrl', down=True)
 hold down shift: key('shift', down=True)

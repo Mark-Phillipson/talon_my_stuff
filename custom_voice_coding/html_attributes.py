@@ -24,6 +24,7 @@ ctx_default.lists["user.html_attributes"] = {
     "tab index": " tabindex=''",
     "target": " target=''",
     "rel": " rel=''",
+    "rows": " rows=''",
     "download": " download=''",
     "access key":" accesskey=''",
     "at bind": " @bind=''",
