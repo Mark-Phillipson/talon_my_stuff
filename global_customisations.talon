@@ -143,10 +143,9 @@ voice typing:
     key(super-h)
     speech.disable()
 voice typing in code:
-    #user.switcher_launch("visual studio code")
     user.switcher_focus("Visual Studio code")    
     speech.disable()
-    sleep(300ms)
+    sleep(500ms)
     key(ctrl-n)
     key(super-h)
 enter my name: insert("Mark Phillipson")    

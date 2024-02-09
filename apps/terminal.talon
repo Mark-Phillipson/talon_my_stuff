@@ -118,3 +118,4 @@ dotnet publish voice admin:
     insert("dotnet publish -c Release --output C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net8.0\\publish")
     sleep(100ms)
     key(enter)    
+git clone: insert("git clone ")
