@@ -66,7 +66,9 @@ def update():
         image = mime.image
     except Exception:
         image = None
-
+#Avoid Rango Messages Being Added to the History
+    if text.startswith("{\"version\": ") or text.startswith("{\"type\""):
+        return
     if not text:
         if image is not None:
             text = f"Image(width={image.width}, height={image.height})"

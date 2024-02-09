@@ -119,3 +119,4 @@ dotnet publish voice admin:
     sleep(100ms)
     key(enter)    
 git clone: insert("git clone ")
+make directory: insert("mkdir ")
