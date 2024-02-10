@@ -8,11 +8,11 @@ from dataclasses import dataclass
 
 FONT_FAMILY = "Segoe UI Symbol"
 FONT_SIZE = 14
-background_color = "ffffff"
+background_color = "2E0F2A"
 border_color = "000000"
-text_color = "444444"
+text_color = "DFDBDE"
 button_bg_color = "aaaaaa"
-button_text_color = "000000"
+button_text_color = "DFDBDE"
 border_radius = 8
 button_radius = 4
 MAX_IMAGE_WIDTH = 1 / 5
