@@ -3,7 +3,7 @@ app: vscode
 (closed tab | close tab):   user.vscode("workbench.action.closeActiveEditor")
 focus open [files | tab]:   user.vscode("workbench.files.action.focusOpenEditorsView")
 command [palette]:          user.vscode("workbench.action.showCommands")
-search files [by name]:
+(search files [by name]) | (navigate [to]):
     user.vscode("workbench.action.showCommands")
     key(left)
     key(delete)
