@@ -1,4 +1,3 @@
-(save [that]) | (save file): key(ctrl-s)
 default box:                key(ctrl-shift-alt-b)
 redo:                       key(ctrl-y)
 undo:                       key(ctrl-z)
@@ -136,8 +135,6 @@ select and copy:
     sleep(100ms)
     key(ctrl-c)
     sleep(100ms)
-insert values:
-    user.open_url("http://localhost:5000/valuestoinsert")
 voice typing:
     key(super-h)
     speech.disable()
@@ -149,6 +146,7 @@ voice typing in code:
     key(super-h)
 enter my name:              insert("Mark Phillipson")
 enter my last name:         insert("Phillipson")
+enter army number:          insert("24593308")
 hold down alternate:        key('alt', down=True)
 hold down control:          key('ctrl', down=True)
 hold down shift:            key('shift', down=True)
@@ -162,3 +160,7 @@ stop recording:             key(alt-shift-0)
 key(keypad_plus):           speech.disable()
 key(keypad_minus):          speech.enable()
 key(keypad_multiply):       speech.enable()
+mouse grid:
+    user.grid_select_screen(2)
+    user.grid_activate()
+ziggy <user.text>: #do nothing calling amazon echo device

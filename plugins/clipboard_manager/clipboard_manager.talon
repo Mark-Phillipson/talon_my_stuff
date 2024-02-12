@@ -1,5 +1,5 @@
 settings():
-    user.clipboard_manager_max_rows = 20
+    user.clipboard_manager_max_rows = 15
 
 clippy:                     user.clipboard_manager_toggle()
 
