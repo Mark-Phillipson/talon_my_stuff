@@ -48,7 +48,7 @@ launch preview:
     key(enter)
 show letters:               key(ctrl-super-alt-m)
 control abbreviation:       insert("ctrl")
-(computer sleep) | (sleep computer):
+computer sleep confirm:
     speech.disable()
     key(super-r)
     sleep(300ms)
@@ -163,4 +163,7 @@ key(keypad_multiply):       speech.enable()
 mouse grid:
     user.grid_select_screen(2)
     user.grid_activate()
-ziggy <user.text>: #do nothing calling amazon echo device
+ziggy <user.text>: #do nothing calling amazon echo' device
+drowse:
+    #app.notify('I feel drowsy.', 'Talon Now Sleeping', 'DROWSE', true)
+    speech.disable()
