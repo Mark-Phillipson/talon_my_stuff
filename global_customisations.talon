@@ -160,10 +160,13 @@ stop recording:             key(alt-shift-0)
 key(keypad_plus):           speech.disable()
 key(keypad_minus):          speech.enable()
 key(keypad_multiply):       speech.enable()
-mouse grid:
+grid one:
+    user.grid_select_screen(1)
+    user.grid_activate()
+grid two:
     user.grid_select_screen(2)
     user.grid_activate()
-ziggy <user.text>: #do nothing calling amazon echo' device
+ziggy <user.text>: #do nothing calling amazon Echo' device
 drowse:
     #app.notify('I feel drowsy.', 'Talon Now Sleeping', 'DROWSE', true)
     speech.disable()

@@ -23,3 +23,6 @@ class Actions:
     def capital_letters(word1: str, word2: str, word3: str) -> str:
         """Convert to uppercase single letters Example: alpha bravo charlie = ABC"""
         return word1[0].upper() + word2[0].upper() + word3[0].upper() 
+    def replaced_text(text: str, old: str, new: str) -> str:
+        """Replace text"""
+        return text.replace(old, new)

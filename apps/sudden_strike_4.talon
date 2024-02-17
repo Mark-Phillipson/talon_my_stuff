@@ -20,43 +20,43 @@ diffuse mine:
     sleep(100ms)
     mouse_click(0)
 fire at will:               key(q)
-follow one:
+(follow | focus) one:
     key(1)
     sleep(100ms)
     key(1)
-follow two:
+(follow | focus) two:
     key(2)
     sleep(100ms)
     key(2)
-follow three:
+(follow | focus) three:
     key(3)
     sleep(100ms)
     key(3)
-follow four:
+(follow | focus) four:
     key(4)
     sleep(100ms)
     key(4)
-follow five:
+(follow | focus) five:
     key(5)
     sleep(100ms)
     key(5)
-follow six:
+(follow | focus) six:
     key(6)
     sleep(100ms)
     key(6)
-follow seven:
+(follow | focus) seven:
     key(7)
     sleep(100ms)
     key(7)
-follow eight:
+(follow | focus) eight:
     key(8)
     sleep(100ms)
     key(8)
-follow nine:
+(follow | focus) nine:
     key(9)
     sleep(100ms)
     key(9)
-follow zero:
+(follow | focus) zero:
     key(0)
     sleep(100ms)
     key(0)
@@ -220,7 +220,7 @@ lay mine:
 #     sleep(100ms)
 #     mouse_click(0)
 objectives:
-    mouse_move(3190, 150)
+    mouse_move(1370, 150)
     sleep(100ms)
     mouse_click(0)
 open hatch:                 key(c)
@@ -230,6 +230,7 @@ paratroops:
     mouse_click(0)
 pause:                      key(space)
 <user.screen_step> <user.screen_step>:
+    # This can sometimes cause the mouse to leave the computer screen!
     mouse_move(screen_step_1, screen_step_2)
     mouse_click(0)
 (fortify) | (sandbags):     key(f)
@@ -257,12 +258,6 @@ rotate left:
     sleep(100ms)
     key(i)
 scatter:                    key(f)
-select <number_small>:
-    total = number_small * 60
-    x = (1680+470) + total
-    mouse_move(x, 915)
-    sleep(100ms)
-    mouse_click(0)
 smoke:                      key(h)
 squad <number_small>:       key(number_small)
 stand up:                   key(w)
@@ -281,15 +276,63 @@ reverse:
 rotate:                     key(r)
 save game:                  key(ctrl-f7)
 select all:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(1810, 10)
+    mouse_move(110, 10)
     sleep(100ms)
     user.mouse_drag(0)
     sleep(100ms)
-    mouse_move(1950, 250)
+    mouse_move(1650, 250)
     sleep(100ms)
-    mouse_move(3480, 979)
+    mouse_move(1650, 979)
+    sleep(100ms)
+    mouse_click(0)
+select middle:
+    mouse_move(550, 350)
+    sleep(100ms)
+    user.mouse_drag(0)
+    sleep(100ms)
+    mouse_move(1650, 250)
+    sleep(100ms)
+    mouse_move(1100, 650)
+    sleep(100ms)
+    mouse_click(0)
+select top left:
+    mouse_move(110, 10)
+    sleep(100ms)
+    user.mouse_drag(0)
+    sleep(100ms)
+    mouse_move(820, 250)
+    sleep(100ms)
+    mouse_move(820, 450)
+    sleep(100ms)
+    mouse_click(0)
+select top right:
+    mouse_move(1650, 10)
+    sleep(100ms)
+    user.mouse_drag(0)
+    sleep(100ms)
+    mouse_move(820, 250)
+    sleep(100ms)
+    mouse_move(820, 450)
+    sleep(100ms)
+    mouse_click(0)
+select bottom left:
+    mouse_move(20, 1030)
+    sleep(100ms)
+    user.mouse_drag(0)
+    sleep(100ms)
+    mouse_move(820, 250)
+    sleep(100ms)
+    mouse_move(750, 500)
+    sleep(100ms)
+    mouse_click(0)
+select bottom right:
+    mouse_move(1650, 1030)
+    sleep(100ms)
+    user.mouse_drag(0)
+    sleep(100ms)
+    mouse_move(820, 250)
+    sleep(100ms)
+    mouse_move(820, 450)
     sleep(100ms)
     mouse_click(0)
 smoke:
@@ -329,7 +372,7 @@ select box:
     user.mouse_drag(0)
     sleep(100ms)
     mouse_move(position_x + 500, position_y + 500)
-    sleep(100ms)
+    sleep(500ms)
     mouse_click(0)
 select box above:
     position_x = user.query_mouse_position_x()
@@ -337,49 +380,181 @@ select box above:
     user.mouse_drag(0)
     sleep(100ms)
     mouse_move(position_x - 500, position_y - 500)
-    sleep(100ms)
+    sleep(500ms)
     mouse_click(0)
 take unit one:
-    mouse_move(2315, 938)
+    mouse_move(530, 920)
     sleep(100ms)
     mouse_click(0)
 take unit two:
-    mouse_move(2385, 938)
+    mouse_move(530+60, 920)
     sleep(100ms)
     mouse_click(0)
 take unit three:
-    mouse_move(2455, 938)
+    mouse_move(530+120, 920)
     sleep(100ms)
     mouse_click(0)
 take unit four:
-    mouse_move(2500, 938)
+    mouse_move(530+180, 920)
     sleep(100ms)
     mouse_click(0)
 take unit five:
-    mouse_move(2560, 938)
+    mouse_move(530+240, 920)
     sleep(100ms)
     mouse_click(0)
 take unit six:
-    mouse_move(2620, 938)
+    mouse_move(530+300, 920)
     sleep(100ms)
     mouse_click(0)
 take unit seven:
-    mouse_move(2680, 938)
+    mouse_move(530+360, 920)
     sleep(100ms)
     mouse_click(0)
 take unit eight:
-    mouse_move(2760, 938)
+    mouse_move(530+420, 920)
     sleep(100ms)
     mouse_click(0)
 take unit nine:
-    mouse_move(2820, 938)
+    mouse_move(530+490, 920)
     sleep(100ms)
     mouse_click(0)
 take unit ten:
-    mouse_move(2880, 938)
+    mouse_move(530+550, 920)
     sleep(100ms)
     mouse_click(0)
 take unit eleven:
-    mouse_move(2950, 938)
+    mouse_move(530+610, 920)
     sleep(100ms)
     mouse_click(0)
+take unit twelve:
+    mouse_move(530, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit thirteen:
+    mouse_move(530+62, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit fourteen:
+    mouse_move(530+124, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit fifteen:
+    mouse_move(530+186, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit sixteen:
+    mouse_move(530+248, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit seventeen:
+    mouse_move(530+310, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit eighteen:
+    mouse_move(530+372, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit nineteen:
+    mouse_move(530+434, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit twenty:
+    mouse_move(530+496, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit twenty one:
+    mouse_move(530+558, 980)
+    sleep(100ms)
+    mouse_click(0)
+take unit twenty two:
+    mouse_move(530+620, 980)
+    sleep(100ms)
+    mouse_click(0)
+go west:
+    mouse_move(350, 500)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 200, position_y)
+    sleep(700ms)
+    mouse_click(1)
+go east:
+    mouse_move(1200, 550)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 200, position_y)
+    sleep(700ms)
+    mouse_click(1)
+go north:
+    mouse_move(800, 400)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x, position_y - 200)
+    sleep(700ms)
+    mouse_click(1)
+go south:
+    mouse_move(800, 800)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x, position_y + 200)
+    sleep(700ms)
+    mouse_click(1)
+go northeast:
+    mouse_move(800, 400)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 200, position_y - 200)
+    sleep(700ms)
+    mouse_click(1)
+go northwest:
+    mouse_move(800, 400)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 200, position_y - 200)
+    sleep(700ms)
+    mouse_click(1)
+go southeast:
+    mouse_move(800, 800)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 200, position_y + 200)
+    sleep(700ms)
+    mouse_click(1)
+go southwest:
+    mouse_move(800, 800)
+    mouse_click(1)
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 200, position_y + 200)
+    sleep(700ms)
+    mouse_click(1)
