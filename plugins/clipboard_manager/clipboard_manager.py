@@ -119,12 +119,12 @@ class EditActions:
             actions.user.clipboard_manager_resume_updating()
 
 
-@ctx.action_class("user")
-class UserActions:
-    def paste_text(text: str):
-        actions.user.clipboard_manager_stop_updating()
-        actions.next(text)
-        actions.user.clipboard_manager_resume_updating()
+# @ctx.action_class("user")
+# class UserActions:
+#     def paste_text(text: str):
+#         actions.user.clipboard_manager_stop_updating()
+#         actions.next(text)
+#         actions.user.clipboard_manager_resume_updating()
 
 
 @mod.action_class
