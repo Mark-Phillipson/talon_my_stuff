@@ -163,3 +163,4 @@ ziggy <user.text>: #do nothing calling amazon Echo' device
 drowse:
     #app.notify('I feel drowsy.', 'Talon Now Sleeping', 'DROWSE', true)
     speech.disable()
+press alt: key(alt)    

@@ -515,7 +515,7 @@ go south:
     sleep(700ms)
     mouse_click(1)
 go northeast:
-    mouse_move(800, 400)
+    mouse_move(1000, 400)
     mouse_click(1)
     sleep(100ms)
     user.mouse_drag(1)
@@ -526,7 +526,7 @@ go northeast:
     sleep(700ms)
     mouse_click(1)
 go northwest:
-    mouse_move(800, 400)
+    mouse_move(600, 400)
     mouse_click(1)
     sleep(100ms)
     user.mouse_drag(1)
@@ -537,7 +537,7 @@ go northwest:
     sleep(700ms)
     mouse_click(1)
 go southeast:
-    mouse_move(800, 800)
+    mouse_move(1000, 800)
     mouse_click(1)
     sleep(100ms)
     user.mouse_drag(1)
@@ -548,7 +548,7 @@ go southeast:
     sleep(700ms)
     mouse_click(1)
 go southwest:
-    mouse_move(800, 800)
+    mouse_move(600, 800)
     mouse_click(1)
     sleep(100ms)
     user.mouse_drag(1)
