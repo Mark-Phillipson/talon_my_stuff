@@ -31,7 +31,7 @@ steps = {
     "oscar": 750,
     "pit": 800,
     "papa": 800,
-    "quelch": 850,
+    "quench": 850,
     "quebec": 850,
     "red": 900,
     "romeo": 900,

@@ -229,9 +229,8 @@ paratroops:
     sleep(100ms)
     mouse_click(0)
 pause:                      key(space)
-<user.screen_step> <user.screen_step>:
-    # This can sometimes cause the mouse to leave the computer screen!
-    mouse_move(screen_step_1, screen_step_2)
+<user.screen_step_screen_one> <user.screen_step_screen_one>:
+    mouse_move(screen_step_screen_one_1, screen_step_screen_one_2)
     mouse_click(0)
 (fortify) | (sandbags):     key(f)
 repair:                     key(y)
@@ -258,7 +257,6 @@ rotate left:
     sleep(100ms)
     key(i)
 scatter:                    key(f)
-smoke:                      key(h)
 squad <number_small>:       key(number_small)
 stand up:                   key(w)
 stop:                       key(s)
@@ -267,8 +265,6 @@ recon:
     key(f3)
     sleep(100ms)
     mouse_click(0)
-repair:                     key(y)
-resupply:                   key(h)
 reverse:
     key(w)
     sleep(100ms)
@@ -558,3 +554,18 @@ go southwest:
     mouse_move(position_x - 200, position_y + 200)
     sleep(700ms)
     mouse_click(1)
+centre:
+    mouse_move(800, 500)
+campaigns:
+    mouse_move(200, 350)
+    sleep(100ms)
+    mouse_click(0)
+road to dunkirk:
+    mouse_move(230, 420)
+    sleep(100ms)
+    mouse_click(0)
+load game:
+    mouse_move(930, 970)
+    sleep(100ms)
+    mouse_click(0)
+continue:                   key(space-2)
