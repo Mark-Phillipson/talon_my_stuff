@@ -126,3 +126,5 @@ execute query:              user.vscode("mssql.runQuery")
 bar connections:            user.vscode("objectExplorer.focus")
 query history:              user.vscode("queryHistory.focus")
 connections:                user.vscode("workbench.view.connections")
+<user.formatters> {user.cursorless_reformat_action} <user.cursorless_target>:
+    user.private_cursorless_reformat(cursorless_target, formatters)

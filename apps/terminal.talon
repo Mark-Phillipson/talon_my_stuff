@@ -48,7 +48,7 @@ run code:
 settings:                   key(ctrl-,)
 shutdown:                   key(ctrl-c)
 split pain:                 key(shift-alt-d)
-dotnet build:
+(dotnet build) | (build project):
     insert("dotnet build")
     sleep(100ms)
     key(enter)
