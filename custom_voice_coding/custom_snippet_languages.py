@@ -15,7 +15,7 @@ ctx_default.lists["user.snippet_language"] = {
 "JavaScript": "JavaScript",
 "jQuery": "jQuery",
 "Markdown": "Markdown",
-"IntelliSense": "Not Applicable",
+"Snip": "Not Applicable",
 "Power Shell": "Power Shell",
 "Razor": "Razor",
 "Talon": "Talon",

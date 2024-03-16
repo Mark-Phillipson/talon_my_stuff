@@ -1,5 +1,5 @@
 # Select all text and runs a model prompt on the text and pastes the results BELOW.
-model this:
+model (this | that):
     key(ctrl-a)
     text = edit.selected_text()
     result = user.gpt_apply_prompt("", text)

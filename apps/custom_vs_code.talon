@@ -128,3 +128,4 @@ query history:              user.vscode("queryHistory.focus")
 connections:                user.vscode("workbench.view.connections")
 <user.formatters> {user.cursorless_reformat_action} <user.cursorless_target>:
     user.private_cursorless_reformat(cursorless_target, formatters)
+toggle pilot:               user.vscode("github.copilot.toggleCopilot")

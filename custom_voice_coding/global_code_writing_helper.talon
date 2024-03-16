@@ -106,24 +106,11 @@ lambda operator <user.letter>:
     sleep(100ms)
     insert(" => " + letter)
     sleep(100ms)
-to string:
-    insert('.ToString()')
-    sleep(100ms)
-    key(left)
-contains:
+funk contains:
     insert('.Contains("")')
     sleep(100ms)
     key(left left)
     sleep(100ms)
-to lower:
-    insert('.ToLower()')
-to list:                    insert(".ToList()")
-to array:                   insert(".ToArray()")
-to dictionary:              insert(".ToDictionary()")
-sub string:
-    insert(".Substring()")
-    sleep(100ms)
-    key(left)
 then by:
     insert('.ThenBy(x => x)')
     sleep(100ms)
