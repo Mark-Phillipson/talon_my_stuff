@@ -120,3 +120,7 @@ dotnet publish voice admin:
     key(enter)
 git clone:                  insert("git clone ")
 make directory:             insert("mkdir ")
+dotnet build release:
+    insert("dotnet build -c Release")
+    sleep(100ms)
+    key(enter)

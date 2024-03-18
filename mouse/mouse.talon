@@ -23,7 +23,7 @@ taskbar <user.screen_step> <user.number_signed_small>:
     mouse_move(position_x + adjustment, position_y)
     mouse_click(0)
 menu <user.screen_step>:
-    mouse_move(screen_step, 80)
+    mouse_move(screen_step, 52)
     mouse_click(0)
 ribbon <user.screen_step>:
     mouse_move(screen_step, 80)

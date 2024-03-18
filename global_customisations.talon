@@ -160,3 +160,8 @@ press alt: key(alt)
 click drowse:
     speech.disable()
     mouse_click(0)
+#SmartNav Mouse Commands
+center mouse:               key(ctrl-alt-f12)
+toggle pause mouse:         key(ctrl-alt-f9)
+scroll mouse:               key(ctrl-alt-f11)
+precision mode:             key(ctrl-alt-f8)
