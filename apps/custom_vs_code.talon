@@ -123,7 +123,7 @@ show code lens:             user.vscode("codelens.showLensesInCurrentLine")
 cancel test run:            key("ctrl-; ctrl-x")
 tab by hint:                user.vscode("andreas.focusTab")
 execute query:              user.vscode("mssql.runQuery")
-bar connections:            user.vscode("objectExplorer.focus")
+object explorer focus:      user.vscode("objectExplorer.focus")
 query history:              user.vscode("queryHistory.focus")
 connections:                user.vscode("workbench.view.connections")
 <user.formatters> {user.cursorless_reformat_action} <user.cursorless_target>:

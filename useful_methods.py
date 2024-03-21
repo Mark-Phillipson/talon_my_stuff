@@ -15,7 +15,6 @@ class Actions:
         for _ in range(10):
             l_random_number = random.randint(1, 9)
             random_number += str(l_random_number)
-        
         return random_number
     def capital_strip(text: str) -> str:
         """Remove all spaces and convert to uppercase"""
