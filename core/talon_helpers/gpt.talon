@@ -24,3 +24,7 @@ define (this | that):
     key(enter)
     key(enter)
     user.paste(result)
+read that:
+    #This command relies on text being selected and will read the text out loud
+    text = edit.selected_text()
+    user.tts(text)
