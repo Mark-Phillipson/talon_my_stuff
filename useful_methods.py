@@ -12,7 +12,7 @@ class Actions:
     def generate_random_number()->str:
         """make random number"""
         random_number = ""
-        for _ in range(10):
+        for _ in range(4):
             l_random_number = random.randint(1, 9)
             random_number += str(l_random_number)
         return random_number

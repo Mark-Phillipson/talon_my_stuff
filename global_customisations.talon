@@ -8,15 +8,15 @@ backspace:                  key(backspace)
 delete:                     key(delete)
 maximise [window]:
     key(alt-space)
-    sleep(300ms)
+    sleep(400ms)
     key(x)
 restore [window]:
     key(alt-space)
-    sleep(300ms)
+    sleep(400ms)
     key(r)
 minimise [window]:
     key(alt-space)
-    sleep(300ms)
+    sleep(400ms)
     key(n)
 switch [window]:
     key(alt-tab)
