@@ -1,6 +1,8 @@
 os: windows
-#code.language: csharp
+code.language: csharp
 app: vscode
+app: visual studio
+#force code.language: csharp
 -
 
 order by:
@@ -58,12 +60,6 @@ then by descending:
     key(left)
     sleep(100ms)
     insert('.')
-if statement:
-    insert("if")
-    sleep(100ms)
-    key(ctrl-j)
-    sleep(100ms)
-    key(tab tab)
 for each loop:
     insert("foreach")
     sleep(100ms)

@@ -7,7 +7,7 @@ from typing import Callable, Optional, Union
 from dataclasses import dataclass
 
 FONT_FAMILY = "Segoe UI Symbol"
-FONT_SIZE = 14
+FONT_SIZE = 12
 background_color = "2E0F2A"
 border_color = "000000"
 text_color = "DFDBDE"

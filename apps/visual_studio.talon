@@ -271,3 +271,9 @@ command:
 dictation:
     speech.disable()
     key(rctrl:down)
+if statement:
+    insert("if")
+    sleep(100ms)
+    key(ctrl-j)
+    sleep(100ms)
+    key(tab tab)

@@ -213,6 +213,7 @@ paratroops:
     sleep(100ms)
     mouse_click(0)
 pause:                      key(space)
+space:                      key(space:6)
 <user.screen_step_screen_one> <user.screen_step_screen_one>:
     mouse_move(screen_step_screen_one_1, screen_step_screen_one_2)
     mouse_click(0)

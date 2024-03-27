@@ -129,3 +129,13 @@ connections:                user.vscode("workbench.view.connections")
 <user.formatters> {user.cursorless_reformat_action} <user.cursorless_target>:
     user.private_cursorless_reformat(cursorless_target, formatters)
 toggle pilot:               user.vscode("github.copilot.toggleCopilot")
+copy code link:
+    user.vscode("gitlens.copyDeepLinkToLines")
+code link <user.ordinals_small> [and <user.ordinals_small>]*:
+    #Will only be the first option first second third 4th 5th 6th 7th etc and gitlens will have to be installed
+    user.switcher_focus("msedge.exe")
+    key(ctrl-t)
+    sleep(900ms)
+    user.clipboard_manager_paste(ordinals_small_list)
+    sleep(100ms)
+    key(enter)

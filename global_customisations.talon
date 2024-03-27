@@ -1,4 +1,3 @@
-default box:                key(ctrl-shift-alt-b)
 redo:                       key(ctrl-y)
 undo:                       key(ctrl-z)
 undo <user.number_signed_small>:
@@ -20,10 +19,10 @@ minimise [window]:
     key(n)
 switch [window]:
     key(alt-tab)
-move to top:                key(ctrl-home)
-move to bottom:             key(ctrl-end)
-window monitor switch:      key(super-shift-right)
-focus system tray:          key(super-b)
+move [to] top:                key(ctrl-home)
+move [to] bottom:             key(ctrl-end)
+window monitor [switch]:      key(super-shift-right)
+[focus] system tray:          key(super-b)
 focus desktop:              key(super-d)
 focus taskbar:              key(super-t)
 find again:                 key(f3)
@@ -86,7 +85,7 @@ tab backwards:              key(shift-tab)
 #This one not working:
 focus data:                 user.switcher_focus("azure data studio")
 focus terminal:             user.switcher_focus("WindowsTerminal.exe")
-focus code:                 user.switcher_focus("Visual Studio code")
+focus code:                 user.switcher_focus("code.exe")
 focus studio:               user.switcher_focus("devenv.exe")
 focus edge:                 user.switcher_focus("msedge.exe")
 focus chrome:               user.switcher_focus("chrome.exe")

@@ -43,7 +43,7 @@ settings():
     sleep(100ms)
     key(escape)
     speech.enable()
-    key("ctrl-shift-left")
+    #key("ctrl-shift-left")
 ^(release)+$:
     user.run_application_csharp_database_command("Release Control")
     speech.enable()
