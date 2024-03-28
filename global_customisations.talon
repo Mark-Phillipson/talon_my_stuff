@@ -4,7 +4,13 @@ undo <user.number_signed_small>:
     key(ctrl-z)
     repeat(number_signed_small-1)
 backspace:                  key(backspace)
+backspace <user.number_signed_small>:
+    key(backspace)
+    repeat(number_signed_small-1)
 delete:                     key(delete)
+delete <user.number_signed_small>:
+    key(delete)
+    repeat(number_signed_small-1)
 maximise [window]:
     key(alt-space)
     sleep(400ms)
