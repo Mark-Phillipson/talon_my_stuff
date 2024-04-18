@@ -141,3 +141,8 @@ code link <user.ordinals_small> [and <user.ordinals_small>]*:
     sleep(100ms)
     key(enter)
 reset code:                 user.vscode("workbench.action.debug.stop")
+please dotnet:  key(f1)
+                sleep(300ms)
+                insert(".NET")
+                sleep(100ms)
+                key(enter)

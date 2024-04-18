@@ -51,6 +51,12 @@ launch preview:
     insert("visual studio 2022 preview")
     sleep(900ms)
     key(enter)
+launch code:
+    key(super)
+    sleep(900ms)
+    insert("visual studio code")
+    sleep(900ms)
+    key(enter)
 show letters:               key(ctrl-super-alt-m)
 control abbreviation:       insert("ctrl")
 computer sleep confirm:

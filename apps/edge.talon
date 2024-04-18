@@ -3,26 +3,26 @@ app: microsoft_edge
 tag(): browser
 tag(): user.tabs
 
-(closed tab) | (close tab) : key(ctrl-w)
-theatre mode: key(alt-t)
-previous tab: key(ctrl-shift-tab)
-next tab: key(ctrl-tab)
+(closed tab) | (close tab): key(ctrl-w)
+theatre mode:               key(alt-t)
+previous tab:               key(ctrl-shift-tab)
+next tab:                   key(ctrl-tab)
 skip ads:
     mouse_move(3546, 970)
-destroy drone: 
+destroy drone:
     insert("!drone -1")
     key(enter)
 start drone:
     insert("!drone")
-    key(enter)    
+    key(enter)
 drone diagonal:
     insert("!D56")
     sleep(100ms)
-    key(enter)  
+    key(enter)
     sleep(1000ms)
     insert("!R55")
     sleep(100ms)
-    key(enter)  
+    key(enter)
 drone left:
     insert("!L55")
     sleep(100ms)
@@ -38,16 +38,16 @@ drone up:
 drone down:
     insert("!D55")
     sleep(100ms)
-    key(enter)            
+    key(enter)
 smoke on:
     insert("!smokeon")
     sleep(100ms)
-    key(enter)  
+    key(enter)
 smoke white:
     insert("!smokecolor white")
     sleep(100ms)
     key(enter)
-smoke red:  
+smoke red:
     insert("!smokecolor red")
     sleep(100ms)
     key(enter)
@@ -58,11 +58,26 @@ smoke green:
 smoke blue:
     insert("!smokecolor blue")
     sleep(100ms)
-    key(enter)    
+    key(enter)
 smoke pink:
     insert("!smokecolor pink")
     sleep(100ms)
     key(enter)
 local host chan of custody:
     user.open_url("https://localhost:44343/")
-toggle voice:    key(ctrl-shift-u)
+toggle voice:               key(ctrl-shift-u)
+pop out chat:
+    key(alt-d right)
+    sleep(100ms)
+    insert("/chat")
+    sleep(100ms)
+    key(shift-home)
+    sleep(100ms)
+    key(ctrl-c)
+    sleep(100ms)
+    key(ctrl-t)
+    sleep(200ms)
+    key(ctrl-v)
+    sleep(100ms)
+    key(enter)
+    mimic("tab split")

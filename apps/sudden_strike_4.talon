@@ -1,5 +1,8 @@
 app: suddenstrike4.exe
 -
+settings():
+    user.mode_indicator_show = 0
+
 antitank grenade:
     key(x)
     mouse_click(0)

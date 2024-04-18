@@ -1,5 +1,6 @@
 app: steeldivision2.exe
 -
+
 camera left:
     key(a:down)
     sleep(100ms)
