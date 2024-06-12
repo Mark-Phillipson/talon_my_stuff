@@ -8,6 +8,7 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 50
+
 expand:
     key(shift:down)
     sleep(100ms)
@@ -25,6 +26,7 @@ antitank grenade:
     mouse_click(0)
 attack:
     key(a)
+    sleep(100ms)
     mouse_click(0)
 attack ground:
     key(g)
