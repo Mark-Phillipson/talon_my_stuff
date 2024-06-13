@@ -4,7 +4,7 @@ settings():
     # Works with any API with the same schema as OpenAI's (i.e. Azure, llamafiles, etc.)
     user.model_endpoint = "https://api.openai.com/v1/chat/completions"
 
-    user.model_system_prompt = "You are an offensive assistant helping an office worker to be more productive."
+    user.model_system_prompt = "You are a helpful assistant helping an office worker to be more productive."
 
     # Change to 'gpt-4' for GPT-4
     # NOTE, you may not have access to GPT-4 yet: https://help.openai.com/en/articles/7102672-how-can-i-access-gpt-4

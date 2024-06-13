@@ -252,11 +252,7 @@ rotate left:
     key(o)
     sleep(100ms)
     key(o)
-    sleep(100ms)
-    key(o)
 rotate right:
-    key(i)
-    sleep(100ms)
     key(i)
     sleep(100ms)
     key(i)
@@ -279,7 +275,7 @@ reverse:
     mouse_click(0)
 rotate: key(r)
 save game: key(ctrl-f7)
-take all | tail:
+take [all]:
     mouse_move(110, 10)
     sleep(100ms)
     user.mouse_drag(0)

@@ -31,3 +31,8 @@ read that:
 read clipboard:
     text = clip.text()
     user.tts(text)
+question:
+    # will take the current selection as a question and reply with voice
+    text = edit.selected_text()
+    result = user.gpt_apply_prompt("", text)
+    user.tts(result)
