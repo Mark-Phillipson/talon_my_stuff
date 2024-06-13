@@ -21,7 +21,7 @@ take step:
     mouse_click(1)
     sleep(100ms)
     key(shift:up)
-antitank grenade:
+antitank:
     key(x)
     mouse_click(0)
 attack:
@@ -244,17 +244,17 @@ space: key(space)
 repair: key(y)
 resupply: key(h)
 right click: mouse_click(1)
-rotate right:
-    key(o)
-    sleep(100ms)
-    key(o)
-    sleep(100ms)
-    key(o)
-    sleep(100ms)
-    key(o)
-    sleep(100ms)
-    key(o)
 rotate left:
+    key(o)
+    sleep(100ms)
+    key(o)
+    sleep(100ms)
+    key(o)
+    sleep(100ms)
+    key(o)
+    sleep(100ms)
+    key(o)
+rotate right:
     key(i)
     sleep(100ms)
     key(i)
@@ -470,7 +470,7 @@ zoom out:
     user.mouse_scroll_down(5000)
     user.mouse_scroll_down(5000)
     user.mouse_scroll_down(5000)
-zoom in:
+zoom:
     user.mouse_scroll_up(5000)
     user.mouse_scroll_up(5000)
     user.mouse_scroll_up(5000)
