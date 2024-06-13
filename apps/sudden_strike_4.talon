@@ -279,7 +279,7 @@ reverse:
     mouse_click(0)
 rotate: key(r)
 save game: key(ctrl-f7)
-take all:
+take all | tail:
     mouse_move(110, 10)
     sleep(100ms)
     user.mouse_drag(0)
