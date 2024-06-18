@@ -31,8 +31,13 @@ read that:
 read clipboard:
     text = clip.text()
     user.tts(text)
-question:
+model speak:
     # will take the current selection as a question and reply with voice
     text = edit.selected_text()
+    result = user.gpt_apply_prompt("", text)
+    user.tts(result)
+model <user.cursorless_target>:
+    # model on a cursorless target
+    text = user.cursorless_get_text(cursorless_target, true)
     result = user.gpt_apply_prompt("", text)
     user.tts(result)
