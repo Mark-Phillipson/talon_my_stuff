@@ -16,14 +16,10 @@ model chat (this | that):
     user.tts(result)
     clip.set_text(result)
 define (this | that):
-    #This command relies on a word being selected and will paste the definition below
+    #This command relies on a word being selected and will speak the definition
     text = edit.selected_text()
     result = user.gpt_apply_prompt("Define This Word", text)
-    key(down)
-    sleep(100ms)
-    key(enter)
-    key(enter)
-    user.paste(result)
+    user.tts(result)
 read that:
     #This command relies on text being selected and will read the text out loud
     text = edit.selected_text()
@@ -40,4 +36,9 @@ model <user.cursorless_target>:
     # model on a cursorless target
     text = user.cursorless_get_text(cursorless_target, true)
     result = user.gpt_apply_prompt("", text)
+    user.tts(result)
+define <user.cursorless_target>:
+    #This command relies on a cursorless target and will speak the definition
+    text = user.cursorless_get_text(cursorless_target, true)
+    result = user.gpt_apply_prompt("Define This Word", text)
     user.tts(result)
