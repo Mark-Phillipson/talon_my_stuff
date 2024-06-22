@@ -37,7 +37,7 @@ model <user.cursorless_target>:
     text = user.cursorless_get_text(cursorless_target, true)
     result = user.gpt_apply_prompt("", text)
     user.tts(result)
-define <user.cursorless_target>:
+model define <user.cursorless_target>:
     #This command relies on a cursorless target and will speak the definition
     text = user.cursorless_get_text(cursorless_target, true)
     result = user.gpt_apply_prompt("Define This Word", text)
