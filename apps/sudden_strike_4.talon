@@ -15,7 +15,7 @@ expand:
     mouse_click(0)
     sleep(100ms)
     key(shift:up)
-take step:
+path:
     key(shift:down)
     sleep(100ms)
     mouse_click(1)

@@ -27,10 +27,15 @@ read that:
 read clipboard:
     text = clip.text()
     user.tts(text)
-model speak:
-    # will take the current selection as a question and reply with voice
-    text = edit.selected_text()
-    result = user.gpt_apply_prompt("", text)
+computer <user.text>:
+    # will take the argument as a question and reply with voice
+    text = user.text
+    result = user.gpt_apply_prompt("Please reply in summary only in the English language", text)
+    user.tts(result)
+computer define <user.text>:
+    # will take the argument as a question and reply with voice
+    text = user.text
+    result = user.gpt_apply_prompt("Define This Word", text)
     user.tts(result)
 model <user.cursorless_target>:
     # model on a cursorless target
