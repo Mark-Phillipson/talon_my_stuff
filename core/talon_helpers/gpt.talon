@@ -30,8 +30,13 @@ read clipboard:
 computer <user.text>:
     # will take the argument as a question and reply with voice
     text = user.text
-    result = user.gpt_apply_prompt("Please reply in summary only in the English language", text)
+    result = user.gpt_apply_prompt("Please reply in summary only", text)
     user.tts(result)
+# computer <user.text>:
+#     # will take the argument as a question and reply with voice
+#     text = user.text
+#     result = user.maintain_conversation_history(text)
+#     user.tts(result)
 computer define <user.text>:
     # will take the argument as a question and reply with voice
     text = user.text

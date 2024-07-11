@@ -156,6 +156,7 @@ voice typing in code:
 enter my name:              insert("Mark Phillipson")
 enter my last name:         insert("Phillipson")
 enter army number:          insert("24593308")
+enter default Github:       insert("https://github.com/Mark-Phillipson/BlazorCRUD_UIGenerator")
 start recording:            key(alt-shift-9)
 stop recording:             key(alt-shift-0)
 key(keypad_plus):           speech.disable()

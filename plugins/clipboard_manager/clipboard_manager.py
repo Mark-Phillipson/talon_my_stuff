@@ -34,10 +34,12 @@ class ClipItem:
 
 
 clip_history: list[ClipItem] = []
+
 sticky: bool = False
 stopped: bool = False
 last_mime = None
 clicked_num = 0
+
 
 
 def update():
@@ -259,6 +261,7 @@ def is_image(mime: MimeData):
         if f.startswith("image/") and len(mime[f]):
             return True
     return False
+
 
 
 app.register("ready", lambda: cron.interval("100ms", update))

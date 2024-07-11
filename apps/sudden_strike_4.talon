@@ -694,3 +694,7 @@ load game:
     mouse_click(0)
 continue: key(space-2)
 eighty: key(8)
+#Disable Load Game to prevent calling it by mistake
+key(f9): key(f21)
+hate: key(8)
+nothing: key(0)
