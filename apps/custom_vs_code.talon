@@ -148,3 +148,6 @@ please dotnet:  key(f1)
                 key(enter)
 terminal history:           user.vscode("workbench.action.terminal.runRecentCommand")                
 take all:                   key(ctrl-a)
+{user.search_engine} scout <user.cursorless_target>:
+    text = user.cursorless_get_text(cursorless_target)
+    user.search_with_search_engine(search_engine, text)
