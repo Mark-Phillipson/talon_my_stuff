@@ -41,10 +41,10 @@ previous unit:
 <user.screen_step_screen_one> <user.screen_step_screen_one>:
     mouse_move(screen_step_screen_one_1, screen_step_screen_one_2)
 #mouse_click(1)
-game forward:
+game (forward | up):
     key(w)
     repeat(8)
-fly forward:
+fly (forward | up):
     key(w)
     repeat(7)
     sleep(50ms)
@@ -54,10 +54,10 @@ fly forward:
     key(w)
     repeat(7)
     sleep(50ms)
-game back:
+game (back | down):
     key(s)
     repeat(8)
-fly back:
+fly (back | down):
     key(s)
     repeat(7)
     sleep(50ms)
