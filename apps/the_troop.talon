@@ -1,4 +1,4 @@
-app name: The Troop.exe
+app: The Troop.exe
 -
 settings():
     user.mode_indicator_show = 0
@@ -8,7 +8,6 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 50
-
 
 forward:
     key(w)
@@ -33,14 +32,15 @@ down <number_small>:
 zoom:
     key(keypad_divide)
 zoom out:
-    key(keypad_multiply)    
+    key(keypad_multiply)
 next unit:
     key(tab)
 previous unit:
-    key(ctrl)        
+    key(ctrl)
+
 <user.screen_step_screen_one> <user.screen_step_screen_one>:
     mouse_move(screen_step_screen_one_1, screen_step_screen_one_2)
-    #mouse_click(1)
+#mouse_click(1)
 game forward:
     key(w)
     repeat(8)
