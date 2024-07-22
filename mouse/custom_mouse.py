@@ -11,6 +11,7 @@ steps = {
     "drum": 200,
     "delta" : 200,
     "echo": 250,
+    "eve": 250,
     "fox": 300,
     "foxtrot": 300,
     "golf": 350,

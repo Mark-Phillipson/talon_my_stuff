@@ -66,7 +66,7 @@ focus search:               user.vscode("workbench.view.search")
 focus extensions:           user.vscode("workbench.view.extensions")
 focus explorer:             user.vscode("workbench.view.explorer")
 focus debug:                user.vscode("workbench.view.debug")
-focus source control:       user.vscode("workbench.view.scm")
+[focus] source control:       user.vscode("workbench.view.scm")
 open talon log:
     user.vscode("workbench.action.files.openFile")
     sleep(400ms)

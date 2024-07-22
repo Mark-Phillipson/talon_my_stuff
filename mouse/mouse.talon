@@ -44,19 +44,19 @@ mouse down <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y + number_signed_small)
-lower left <user.number_signed_small>:
+(lower | low) left <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x - number_signed_small, position_y + number_signed_small)
-lower right <user.number_signed_small>:
+(lower | low) right <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x + number_signed_small, position_y + number_signed_small)
-upper left <user.number_signed_small>:
+(upper | high) left <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x - number_signed_small, position_y - number_signed_small)
-upper right <user.number_signed_small>:
+(upper | high) right <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x + number_signed_small, position_y - number_signed_small)
@@ -80,9 +80,9 @@ down <user.number_signed_small> (click | touch):
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y + number_signed_small)
     mouse_click(0)
-(arrow) | (mouse) down:     user.mouse_drag(0)
-left mouse down:            user.mouse_drag(0)
-right mouse down:           user.mouse_drag(1)
+(arrow) | (mouse) down: user.mouse_drag(0)
+left mouse down: user.mouse_drag(0)
+right mouse down: user.mouse_drag(1)
 drag six o'clock:
     user.mouse_drag(0)
     sleep(100ms)
