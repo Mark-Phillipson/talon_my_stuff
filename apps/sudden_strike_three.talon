@@ -1,4 +1,4 @@
-app: suddenstrike4.exe
+app: ss3game.exe
 -
 settings():
     user.mode_indicator_show = 0
@@ -8,6 +8,69 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 50
+(go | stay): user.civilization_vi_mouse_movement_toggle()
+test touch: user.noise_trigger_pop()
+test righty: user.noise_trigger_pop_right()
+touch:
+    # The click doesn't seem to work unless you move the mouse just before it
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 1, position_y + 1)
+    sleep(10ms)
+    mouse_move(position_x + 2, position_y + 2)
+    sleep(10ms)
+    mouse_move(position_x + 3, position_y + 3)
+    sleep(10ms)
+    mouse_move(position_x + 4, position_y + 4)
+    sleep(10ms)
+    mouse_move(position_x - 1, position_y - 1)
+    sleep(10ms)
+    mouse_move(position_x - 2, position_y - 2)
+    sleep(10ms)
+    mouse_move(position_x - 3, position_y - 3)
+    sleep(10ms)
+    mouse_move(position_x - 4, position_y - 4)
+    sleep(10ms)
+    user.mouse_drag(1)
+    sleep(10ms)
+    mouse_click(1)
+    mouse_move(position_x, position_y)
+    sleep(10ms)
+    # mouse_click(0, up=True)
+    sleep(10ms)
+    #mouse_click(0, hold=16000 )
+    #mouse_click(0,down=True)
+    sleep(100ms)
+    mouse_click(0)
+    #mouse_click(0,up=True)
+    sleep(100ms)
+    mouse_click(0)
+righty:
+    # The click doesn't seem to work unless you move the mouse just before it
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 3, position_y + 3)
+    sleep(50ms)
+    mouse_move(position_x - 3, position_y - 3)
+    sleep(50ms)
+    user.mouse_drag(1)
+    sleep(50ms)
+    mouse_move(position_x, position_y)
+    sleep(50ms)
+    mouse_click(1)
+    sleep(50ms)
+    mouse_click(1)
+    sleep(50ms)
+    mouse_click(1)
+deck(pedal_left): mouse_click(0)
+zoom out:
+    user.mouse_scroll_down(5)
+    sleep(50ms)
+    user.mouse_scroll_down(5)
+zoom in:
+    user.mouse_scroll_up(5)
+    sleep(50ms)
+    user.mouse_scroll_up(5)
 
 expand:
     key(shift:down)
@@ -15,18 +78,6 @@ expand:
     mouse_click(0)
     sleep(100ms)
     key(shift:up)
-expand <user.number_string>:
-    key(number_string)
-    sleep(100ms)
-    key(shift:down)
-    sleep(100ms)
-    mouse_click(0)
-    sleep(100ms)
-    key(shift:up)
-    sleep(100ms)
-    key(ctrl:down)
-    key(number_string)
-    key(ctrl:up)
 path:
     key(shift:down)
     sleep(100ms)
@@ -255,7 +306,7 @@ space: key(space)
 (fortify) | (sandbags): key(f)
 repair: key(y)
 resupply: key(h)
-(right click | move here): mouse_click(1)
+right click: mouse_click(1)
 rotate left:
     key(o)
     sleep(100ms)
@@ -273,7 +324,7 @@ rotate right:
     sleep(100ms)
     key(i)
 scatter: key(f)
-#squad <number_small>: key(number_small)
+squad <number_small>: key(number_small)
 stand up: key(w)
 stop: key(s)
 unload: key(,)
@@ -706,7 +757,5 @@ load game:
     mouse_click(0)
 continue: key(space-2)
 eighty: key(8)
-#Disable Load Game to prevent calling it by mistake
-key(f9): key(f21)
 hate: key(8)
 nothing: key(0)
