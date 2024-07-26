@@ -93,7 +93,7 @@ remove last space:
 tab backwards:              key(shift-tab)
 #switch to <user.running_applications>: user.switcher_focus(running_applications)
 #This one not working:
-focus data:                 user.switcher_focus("azure data studio")
+focus data:                 user.switcher_focus("Azure Data Studio")
 focus terminal:             user.switcher_focus("WindowsTerminal.exe")
 focus code:                 user.switcher_focus("code.exe")
 focus studio:               user.switcher_focus("devenv.exe")
@@ -146,13 +146,21 @@ select and copy:
 voice typing:
     key(super-h)
     speech.disable()
-voice typing in code:
-    user.switcher_focus("Visual Studio code")
+(voice typing in code) | (draft in code):
+    user.switcher_focus("code")
     speech.disable()
     sleep(500ms)
     key(ctrl-n)
     sleep(500ms)
     key(super-h)
+draft submit:
+    key(ctrl-a)
+    sleep(100ms)
+    key(ctrl-c)
+    sleep(100ms)
+    key(alt-tab)
+    sleep(100ms)
+    key(ctrl-v)
 enter my name:              insert("Mark Phillipson")
 enter my last name:         insert("Phillipson")
 enter army number:          insert("24593308")

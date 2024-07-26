@@ -1,10 +1,6 @@
-os: windows
-code.language: csharp
 app: vscode
-app: visual studio
-#force code.language: csharp
+app: devenv.exe
 -
-
 order by:
     insert('.OrderBy(x => x)')
     sleep(100ms)
@@ -37,7 +33,7 @@ first or default async:
     insert('.FirstOrDefaultAsync()')
     sleep(100ms)
     key(left)
-arrow operator:             insert(" => ")
+arrow operator: insert(" => ")
 lambda operator <user.letter>:
     insert(letter)
     sleep(100ms)
@@ -66,8 +62,9 @@ for each loop:
     key(ctrl-j)
     sleep(100ms)
     key(tab tab)
-not equal empty:            insert(" != null ")
-to upper:                   insert(".ToUpper()")
+not equal empty: insert(" != null ")
+to upper: insert(".ToUpper()")
+to lower: insert(".ToLower()")
 generic list:
     insert("List<>")
     key(left)

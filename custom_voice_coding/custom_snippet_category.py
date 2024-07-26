@@ -20,6 +20,7 @@ ctx_default.lists["user.snippet_category"] = {
 "Commands":"Commands",
 "Computer Names":"Computer Names",
 "Connection Strings":"Connection Strings",
+"Cursorless":"Cursorless",
 "Data Access Objects":"Data Access Objects",
 "Data Annotations":"Data Annotations",
 "Data Definition Language":"Data Definition Language",

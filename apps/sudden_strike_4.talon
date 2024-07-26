@@ -8,7 +8,17 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 50
-
+#experimental
+single: key(1)
+pair | pear: key(2)
+trio: key(3)
+quartet: key(4)
+quintet: key(5)
+sextet: key(6)
+septet: key(7)
+octet: key(8)
+nonet: key(9)
+decade: key(0)
 expand:
     key(shift:down)
     sleep(100ms)
@@ -273,7 +283,7 @@ rotate right:
     sleep(100ms)
     key(i)
 scatter: key(f)
-#squad <number_small>: key(number_small)
+squad <user.number_string>: key(number_string)
 stand up: key(w)
 stop: key(s)
 unload: key(,)
@@ -285,7 +295,6 @@ reverse:
     key(w)
     sleep(100ms)
     mouse_click(0)
-rotate: key(r)
 save game: key(ctrl-f7)
 take [all]:
     mouse_move(110, 10)
