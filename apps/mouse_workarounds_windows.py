@@ -53,7 +53,7 @@ class Actions:
         # toggle eye tracking off
         actions.tracking.control_toggle(False)
         # nudge slightly from current position so it detects cursor
-        mouse_move_windows(2, 0)
+        mouse_move_windows(2, 2)
         ctrl.mouse_click(button=0, hold=16000)
         # toggle eye tracker on
         actions.tracking.control_toggle(True)
@@ -61,6 +61,6 @@ class Actions:
         # actions.next()
     def noise_trigger_pop_right():
         actions.tracking.control_toggle(False)
-        mouse_move_windows(2, 0)
+        mouse_move_windows(2, 2)
         ctrl.mouse_click(button=1, hold=16000)
         actions.tracking.control_toggle(True)

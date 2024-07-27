@@ -12,7 +12,9 @@ settings():
 test touch: user.noise_trigger_pop()
 test righty: user.noise_trigger_pop_right()
 touch:
-    # The click doesn't seem to work unless you move the mouse just before it
+    # The click doesn't seem to work unless you physically move the mouse just before it
+    # Note when you do move the mouse cursor changes to a particular image to indicate what action you're doing
+    # Single click appears to be working with the test above but not right click
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x + 1, position_y + 1)
