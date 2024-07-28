@@ -99,15 +99,62 @@ steps = {
     "forty five":3490,
     "forty six":3540,
     "forty seven":3590,
-    "forty eight":3640,
 }
-
+steps_vertical = {
+    "zero": 5,
+    "act": 50,
+    'alpha': 50,
+    "bat": 100,
+    "bravo": 100,
+    "cat": 150,
+    "charlie": 150,
+    "drum": 200,
+    "delta" : 200,
+    "echo": 250,
+    "eve": 250,
+    "fox": 300,
+    "foxtrot": 300,
+    "golf": 350,
+    "hot": 400,
+    "hotel": 400,
+    "sit": 450,
+    "india": 450,
+    "jury": 500,
+    "juliet": 500,
+    "crunch": 550,
+    "kilo": 550,
+    "look": 600,
+    "lima": 600,
+    "mike": 650,
+    "near": 700,
+    "November": 700,
+    "odd": 750,
+    "oscar": 750,
+    "pit": 800,
+    "papa": 800,
+    "quench": 850,
+    "quebec": 850,
+    "red": 900,
+    "romeo": 900,
+    "sun": 950,
+    "sierra": 950,
+    "trap": 1000,
+    "tango": 1000,
+    "urge": 1050,
+    "uniform": 1050,
+}
 mod = Module()
 mod.list("screen_step", desc="location on screen edge")
+mod.list("screen_step_vertical", desc="location on screen Vertical edge")
 
 ctx = Context()
 ctx.lists["user.screen_step"] = list(steps.keys())
+ctx.lists["user.screen_step_vertical"] = list(steps_vertical.keys())
 
 @mod.capture(rule="{user.screen_step}")
 def screen_step(m) -> int:
     return steps[m.screen_step]
+                        #screen_step_vertical
+@mod.capture(rule="{user.screen_step_vertical}")
+def screen_step_vertical(m) -> int:
+    return steps_vertical[m.screen_step_vertical]    

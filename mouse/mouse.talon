@@ -1,13 +1,13 @@
-<user.screen_step> <user.screen_step> move:
-    mouse_move(screen_step_1, screen_step_2)
+<user.screen_step> <user.screen_step_vertical> move:
+    mouse_move(screen_step, screen_step_vertical)
 #commands still in my head from dragon
-(move | left | right) <user.screen_step> <user.screen_step>:
-    mouse_move(screen_step_1, screen_step_2)
-<user.screen_step> <user.screen_step> (click | touch):
-    mouse_move(screen_step_1, screen_step_2)
+(move | left | right) <user.screen_step> <user.screen_step_vertical>:
+    mouse_move(screen_step, screen_step_vertical)
+<user.screen_step> <user.screen_step_vertical> (click | touch):
+    mouse_move(screen_step, screen_step_vertical)
     mouse_click(0)
-<user.screen_step> <user.screen_step> righty:
-    mouse_move(screen_step_1, screen_step_2)
+<user.screen_step> <user.screen_step_vertical> righty:
+    mouse_move(screen_step, screen_step_vertical)
     mouse_click(1)
 taskbar <user.screen_step>:
     mouse_move(screen_step, 1035)
