@@ -187,7 +187,7 @@ activate first: key(ctrl-a)
 activate second: key(ctrl-s)
 activate third: key(ctrl-d)
 activate fourth: key(ctrl-f)
-touch:
+attack:
     key(a)
     sleep(50ms)
     mouse_click(0)

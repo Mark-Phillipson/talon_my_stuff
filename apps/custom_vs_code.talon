@@ -162,3 +162,5 @@ new file:
     key(menu)
     sleep(100ms)
     key(down)
+focus editors: user.vscode("workbench.files.action.focusOpenEditorsView")
+pilot new chat: key(ctrl-l)

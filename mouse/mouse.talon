@@ -12,9 +12,6 @@
 taskbar <user.screen_step>:
     mouse_move(screen_step, 1035)
     mouse_click(0)
-taskbar right <user.screen_step>:
-    mouse_move(screen_step, 1035)
-    mouse_click(0)
 taskbar <user.screen_step> <user.number_signed_small>:
     mouse_move(screen_step, 1030)
     position_x = user.query_mouse_position_x()
