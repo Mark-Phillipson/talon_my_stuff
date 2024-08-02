@@ -6,18 +6,18 @@ tag(): terminal
 tag(): user.tabs
 #tag(): user.find
 
-split cross:                key(alt-shift-d)
-split right:                key(alt-shift-+)
-split down:                 key(alt-shift--)
+split cross: key(alt-shift-d)
+split right: key(alt-shift-+)
+split down: key(alt-shift--)
 
-cross:                      key(ctrl-alt-left)
-focus down:                 key(alt-down)
-focus left:                 key(alt-left)
-focus right:                key(alt-right)
-focus up:                   key(alt-up)
-resize up:                  key(alt-shift-up)
-resizes down:               key(alt-shift-down)
-resize left:                key(alt-shift-left)
+cross: key(ctrl-alt-left)
+focus down: key(alt-down)
+focus left: key(alt-left)
+focus right: key(alt-right)
+focus up: key(alt-up)
+resize up: key(alt-shift-up)
+resizes down: key(alt-shift-down)
+resize left: key(alt-shift-left)
 
 dotnet watch:
     insert("dotnet watch")
@@ -33,8 +33,6 @@ clear screen:
     key(enter)
 dotnet add package:
     insert("dotnet add package ")
-command palette:
-    key(ctrl-shift-p)
 (previous folder) | (previous directory):
     insert("cd ..")
     sleep(100ms)
@@ -45,9 +43,9 @@ run code:
     insert("code .")
     sleep(100ms)
     key(enter)
-settings:                   key(ctrl-,)
-shutdown:                   key(ctrl-c)
-split pain:                 key(shift-alt-d)
+settings: key(ctrl-,)
+shutdown: key(ctrl-c)
+split pain: key(shift-alt-d)
 (dotnet build) | (build project):
     insert("dotnet build")
     sleep(100ms)
@@ -56,7 +54,7 @@ list directory:
     insert("dir")
     sleep(100ms)
     key(enter)
-current directory:          insert("cd ")
+current directory: insert("cd ")
 dotnet clean:
     insert("dotnet clean")
     sleep(100ms)
@@ -105,7 +103,7 @@ playwright generate code:
     insert("pwsh bin/Debug/net8.0/playwright.ps1 codegen --viewport-size=1680,1050 https://localhost:7164/")
     sleep(300ms)
     key(enter)
-hunt terminal:              key(ctrl-shift-f)
+hunt terminal: key(ctrl-shift-f)
 dotnet ef create script:
     insert("dotnet ef migrations script --output migrations.sql --idempotent --context")
 dotnet ef migrations add:
@@ -120,8 +118,8 @@ dotnet publish voice admin:
     insert("dotnet publish -c Release --output C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net8.0\\publish")
     sleep(100ms)
     key(enter)
-git clone:                  insert("git clone ")
-make directory:             insert("mkdir ")
+git clone: insert("git clone ")
+make directory: insert("mkdir ")
 dotnet build release:
     insert("dotnet build -c Release")
     sleep(100ms)

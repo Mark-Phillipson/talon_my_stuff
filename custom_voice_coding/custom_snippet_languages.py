@@ -9,7 +9,6 @@ ctx_default.lists["user.snippet_language"] = {
 "Bootstrap": "Bootstrap",
 "C sharp": "C sharp",
 "CSS": "CSS",
-"Cursorless": "Cursorless",
 "Docker": "Docker",
 "Entity": "Entity",
 "HTML": "HTML",

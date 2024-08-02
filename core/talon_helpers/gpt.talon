@@ -52,3 +52,30 @@ model define <user.cursorless_target>:
     text = user.cursorless_get_text(cursorless_target, true)
     result = user.gpt_apply_prompt("Define This Word", text)
     user.tts(result)
+chatbot <user.text>:
+    # will take the argument as a question and reply with voice
+    text = user.text
+    prompt = """
+    Convert natural language into C# code. Include inline comments when appropriate to explain what the code is doing.
+
+    Do not under any circumstances include anything else other than C# code and inline code comments.
+    
+    The intended use of the results is to be able to use the text directly in a code editor so it should compile flawlessly.
+    
+    Also please do not include any markdown formatting in the code.
+    
+    For example do not start the results with the word Certainly blah blah blah or at the end happy coding. As this text just gets in the way of the code.
+    
+    Furthermore expect the input to have certain errors because voice recognition is being used to create the text for example the word four might mean the word for.
+    
+    Example: Please create a four loop that loops through ten times and prints the current index to the console.
+    Result:
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+    
+    Natural Language to Be Converted Into valid C sharp code: 
+        """
+    result = user.gpt_apply_prompt(prompt, text)
+    user.paste(result)
