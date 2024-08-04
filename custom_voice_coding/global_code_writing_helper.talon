@@ -100,3 +100,4 @@ move line into braces:
 custom languages: user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/bd0e11dac2957e8cfe1061d0097e832fc10514cd/custom_voice_coding/custom_snippet_languages.py#L7-L8")
 custom categories: user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/a484bf45e95df7d5aa22a28fc92a01b8635ef60d/custom_voice_cohding/custom_snippet_category.py#L7-L8")
 custom launcher categories: user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/a3ca27e064553a88fdb597584b89622b5630533c/custom_voice_coding/custom_launcher_category.py#L7-L8")
+custom attributes: user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/4492ceb5a75c6d4978d43106bc6a9e351596ef0e/custom_voice_coding/html_attributes.py#L7")

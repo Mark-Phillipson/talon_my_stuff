@@ -224,3 +224,6 @@ table of contents: user.vscode("markdown.extension.toc.create")
 markdown preview: user.vscode("markdown.showPreview")
 toggle task: user.vscode("markdown.extension.checkTaskList")
 copy Github link: user.vscode("issue.copyGithubPermalink")
+
+#Error Lens Extension
+error lens toggle: user.vscode("errorLens.toggle")

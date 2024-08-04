@@ -4,9 +4,9 @@ tag(): browser
 tag(): user.tabs
 
 (closed tab) | (close tab): key(ctrl-w)
-theatre mode:               key(alt-t)
-previous tab:               key(ctrl-shift-tab)
-next tab:                   key(ctrl-tab)
+theatre mode: key(alt-t)
+previous tab: key(ctrl-shift-tab)
+next tab: key(ctrl-tab)
 skip ads:
     mouse_move(3546, 970)
 destroy drone:
@@ -65,7 +65,7 @@ smoke pink:
     key(enter)
 local host chan of custody:
     user.open_url("https://localhost:44343/")
-toggle voice:               key(ctrl-shift-u)
+toggle voice: key(ctrl-shift-u)
 pop out chat:
     key(alt-d right)
     sleep(100ms)
@@ -81,3 +81,4 @@ pop out chat:
     sleep(100ms)
     key(enter)
     mimic("tab split")
+tab filter: key(ctrl-shift-a)
