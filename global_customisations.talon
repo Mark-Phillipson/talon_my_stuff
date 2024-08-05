@@ -13,7 +13,7 @@ delete <user.number_signed_small>:
     repeat(number_signed_small-1)
 maximise [window]:
     key(alt-space)
-    sleep(400ms)
+    sleep(700ms)
     key(x)
 restore [window]:
     key(alt-space)

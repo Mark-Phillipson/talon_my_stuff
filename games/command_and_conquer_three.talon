@@ -8,7 +8,7 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 50
-buildings: key(e)
+buildings | production: key(e)
 power plant:
     key(e)
     key(f1)
