@@ -19,7 +19,7 @@ ctx_default.lists["user.launcher_category"] = {
 "Specific Apps": "Specific Apps",
 "Speech Recognition Utilities": "Speech Recognition Utilities",
 "Talon": "Talon",
-"VS Projects": "VS Projects",
+"Code Projects": "Code Projects",
 "Web Links": "Web Links",
 "Work Links": "Work Links"
 }

@@ -82,3 +82,5 @@ pop out chat:
     key(enter)
     mimic("tab split")
 tab filter: key(ctrl-shift-a)
+go [to] top: key(ctrl-home)
+go [to] bottom: key(ctrl-end)

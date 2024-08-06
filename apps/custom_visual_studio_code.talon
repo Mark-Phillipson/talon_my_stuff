@@ -92,6 +92,8 @@ maximize editor:
     insert("View: Toggle Primary Sidebar Visibility")
     key(enter)
 ide navigate: key(alt-f7)
+sidebar narrow: user.vscode("workbench.action.increaseViewWidth")
+sidebar wide: user.vscode("workbench.action.decreaseViewWidth")
 
 # Cursorless
 
