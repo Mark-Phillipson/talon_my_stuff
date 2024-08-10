@@ -80,6 +80,10 @@ comment line: user.vscode("editor.action.commentLine")
 comment line: user.vscode("editor.action.commentLine")
 parameter info: user.vscode("editor.action.triggerParameterHints")
 symbol rename: user.vscode("editor.action.rename")
+update tag: user.vscode("editor.emmet.action.updateTag")
+take tag: user.vscode("editor.emmet.action.balanceOut")
+take next: user.vscode("editor.emmet.action.selectNextItem")
+take previous: user.vscode("editor.emmet.action.selectPrevItem")
 
 #Tab Management
 
@@ -93,7 +97,15 @@ maximize editor:
     key(enter)
 ide navigate: key(alt-f7)
 sidebar narrow: user.vscode("workbench.action.increaseViewWidth")
-sidebar wide: user.vscode("workbench.action.decreaseViewWidth")
+sidebar widen: user.vscode("workbench.action.decreaseViewWidth")
+zoom in small: 
+    key(ctrl:down)
+    user.mouse_scroll_up()
+    key(ctrl:up)
+zoom out small: 
+    key(ctrl:down)
+    user.mouse_scroll_down()
+    key(ctrl:up)
 
 # Cursorless
 

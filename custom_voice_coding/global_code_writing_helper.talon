@@ -13,7 +13,7 @@ search old list <user.text>:
 search list <user.text>:
     user.run_application_voice_admin_windows_forms(text)
 {user.snippet_language} {user.snippet_category}: user.run_application_voice_admin_windows_forms_language_category(snippet_language, snippet_category)
-launcher {user.launcher_category}: user.run_application_voice_admin_windows_forms_launcher(launcher_category)
+launch {user.launcher_category}: user.run_application_voice_admin_windows_forms_launcher(launcher_category)
 launch voice admin: user.launch_voice_admin()
 fresh line:
     key(end)

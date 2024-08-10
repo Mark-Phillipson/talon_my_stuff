@@ -2,10 +2,6 @@ app: cnc3ep1.dat
 -
 settings():
     user.mode_indicator_show = 0
-    # Choose how pop click should work in 'control mouse' mode
-    # 0 = off
-    # 1 = on with eyetracker but not zoom mouse mode
-    # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 50
 buildings | production: key(e)
@@ -30,7 +26,7 @@ war factory:
 (secret shrine) | armory:
     key(e)
     key(f7)
-tec lab:
+tec center:
     key(e)
     key(f8)
 chemical plant:
@@ -74,7 +70,7 @@ emissary:
     key(r)
     key(f10)
 infantry: key(t)
-[militant] squad:
+i [militant] squad:
     key(t)
     key(f1)
 (militant rocket squad) | rocket:
@@ -90,13 +86,13 @@ black hand:
     key(t)
     key(f5)
 vehicles: key(y)
-attack bike:
+(attack bike) | pitbull:
     key(y)
     key(f1)
-raider buggy:
+buggy | predator:
     key(y)
     key(f2)
-[scorpion] tank:
+([scorpion] tank) | APC:
     key(y)
     key(f3)
 stealth tank:
@@ -114,16 +110,19 @@ flame tank:
 reckoner:
     key(y)
     key(f7)
-beam cannon:
+(beam cannon) | rig:
     key(y)
     key(f8)
 aircraft: key(u)
-venom:
+venom | orca:
     key(u)
     key(f1)
-[vertigo] bomber:
+([vertigo] bomber) | hammerhead:
     key(u)
     key(f2)
+firehawk:
+    key(u)
+    key(f3)
 cell mode: key(z)
 power mode: key(x)
 repair mode: key(c)
@@ -175,12 +174,12 @@ zoom: key(keypad_8)
 zoom out: key(keypad_2)
 rotate left: key(keypad_4)
 rotate right: key(keypad_6)
-aggressive stance: key(alt-a)
-defensive stance: key(alt-s)
+aggressive [stance]: key(alt-a)
+defensive [stance]: key(alt-s)
 hold ground: key(alt-d)
 hold fire: key(alt-f)
 status: key(o)
-Toggle heads up display: key(end)
+tpoggle heads up display: key(end)
 sub tab: key(tab)
 previous tab: key(ctrl-tab)
 activate first: key(ctrl-a)
