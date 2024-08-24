@@ -122,6 +122,7 @@ clear message:
     mouse_click(0)
 [enter] email address:      insert("MPhillipson0@Gmail.com")
 test email:                 insert("firstlastname@domain.co.uk")
+enter office username:      insert("Phillipson@MSPSystems.onmicrosoft.com")
 enter username:
     insert("MPhil")
     sleep(100ms)
@@ -203,3 +204,13 @@ stop recording:
     key(ctrl-super-shift-s)
     sleep(50ms)
     app.notify('Running OBS stop record command', 'Message From Talon Voice', 'TALON', true)
+take line: 
+    key(end)
+    sleep(50ms)
+    key(shift-home)
+bing chat [<user.text>]:    
+    user.open_url("https://www.bing.com/chat?form=NTPCHB")
+number <number> dot <number>:
+    "{number_1}.{number_2}"
+number <number>:
+    "{number}"

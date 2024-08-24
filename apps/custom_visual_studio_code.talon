@@ -163,7 +163,8 @@ find next [<user.text>]:
 
 set selection: user.vscode("editor.action.setSelectionAnchor")
 get selection: user.vscode("editor.action.goToSelectionAnchor")
-
+cursor up: user.vscode("editor.action.insertCursorAbove")
+cursor down: user.vscode("editor.action.insertCursorBelow")
 list members: user.vscode("editor.action.triggerSuggest")
 duplicate line: user.vscode("editor.action.copyLinesDownAction")
 search code: user.vscode("actions.find")
@@ -222,8 +223,8 @@ remove tag: user.vscode("editor.emmet.action.removeTag")
 #copilot
 
 pilot new chat: key(ctrl-l)
-ask pilot: key(ctrl-i)
-toggle pilot: user.vscode("github.copilot.toggleCopilot")
+pilot ask: key(ctrl-i)
+pilot toggle: user.vscode("github.copilot.toggleCopilot")
 accept [word]: key(ctrl-right)
 
 #Rainbow CSV

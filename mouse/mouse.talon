@@ -25,22 +25,22 @@ menu <user.screen_step>:
 ribbon <user.screen_step>:
     mouse_move(screen_step, 80)
     mouse_click(0)
-mouse left <user.number_signed_small>:
+mouse left <number>:
+    position_x = mouse_x()
+    position_y = mouse_y()
+    mouse_move(position_x - number, position_y)
+mouse right <number>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x - number_signed_small, position_y)
-mouse right <user.number_signed_small>:
+    mouse_move(position_x + number, position_y)
+mouse up <number>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x + number_signed_small, position_y)
-mouse up <user.number_signed_small>:
+    mouse_move(position_x, position_y - number)
+mouse down <number>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y - number_signed_small)
-mouse down <user.number_signed_small>:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y + number_signed_small)
+    mouse_move(position_x, position_y + number)
 (lower | low) left <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
@@ -77,7 +77,7 @@ down <user.number_signed_small> (click | touch):
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y + number_signed_small)
     mouse_click(0)
-(arrow) | (mouse) down: user.mouse_drag(0)
+#(arrow) | (mouse) down: user.mouse_drag(0)
 left mouse down: user.mouse_drag(0)
 right mouse down: user.mouse_drag(1)
 drag six o'clock:

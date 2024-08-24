@@ -79,10 +79,10 @@ i [militant] squad:
 saboteur | engineer:
     key(t)
     key(f3)
-fanatics:
+fanatics | grenadier:
     key(t)
     key(f4)
-black hand:
+(black hand) | sniper:
     key(t)
     key(f5)
 vehicles: key(y)
@@ -104,15 +104,21 @@ harvester:
 construction vehicle:
     key(y)
     key(f5)
-flame tank:
+(flame tank) | shatterer:
     key(y)
     key(f6)
-reckoner:
+reckoner | slingshot:
     key(y)
     key(f7)
 (beam cannon) | rig:
     key(y)
     key(f8)
+(avatar) | mammoth:
+    key(y)
+    key(f9)
+juggernaut:
+    key(y)
+    key(f10)
 aircraft: key(u)
 venom | orca:
     key(u)
@@ -155,6 +161,7 @@ take [all]:
     mouse_click(0)
 pause: key(esc)
 units: key(q)
+select matching: key(w)
 matching units: key(w)
 stop: key(s)
 scatter: key(ctrl-x)
@@ -190,3 +197,69 @@ attack:
     key(a)
     sleep(50ms)
     mouse_click(0)
+power slot first: key(ctrl-f1)
+power slot second: key(ctrl-f2)
+power slot third: key(ctrl-f3)
+power slot forth: key(ctrl-f4)
+power slot fifth: key(ctrl-f5)
+power slot sixth: key(ctrl-f6)
+power slot seventh: key(ctrl-f7)
+power slot eighth: key(ctrl-f8)
+power slot ninth: key(ctrl-f9)
+power slot tenth: key(ctrl-f10)
+power slot eleventh: key(ctrl-f11)
+power slot twelfth: key(ctrl-f12)
+power slot thirteenth: key(ctrl-1)
+power slot fourteenth: key(ctrl-2)
+power slot fifteenth: key(ctrl-3)
+release keys:
+    key(alt:up)
+    key(ctrl:up)
+    key(shift:up)
+    key(d:up)
+    key(a:up)
+force attack: key(ctrl:down)
+reverse: key(d:down)
+attack move: key(a:down)
+waypoint: key(alt:down)
+planning: key(ctrl-z)
+select unit first:
+    key(q)
+    key(f1)
+select unit second:
+    key(q)
+    key(f2)
+select unit third:
+    key(q)
+    key(f3)
+select unit four:
+    key(q)
+    key(f4)
+select unit fifth:
+    key(q)
+    key(f5)
+select unit sixth:
+    key(q)
+    key(f6)
+select unit seventh:
+    key(q)
+    key(f7)
+select unit eighth:
+    key(q)
+    key(f8)
+select unit ninth:
+    key(q)
+    key(f9)
+select unit tenth:
+    key(q)
+    key(f10)
+select unit eleventh:
+    key(q)
+    key(f11)
+select unit twelfth:
+    key(q)
+    key(f12)
+context: key(.)
+power mode: key(x)
+database | message: key(i)
+objectives: key(o)

@@ -28,3 +28,4 @@ export text:
     key(enter)
 (command palette) | please:
     key(ctrl-shift-p)
+hunt this: key(ctrl-shift-f)

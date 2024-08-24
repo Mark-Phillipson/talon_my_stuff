@@ -1,4 +1,4 @@
-from talon import Module, ui
+from talon import Module, actions
 import random
 mod = Module()
 
@@ -20,8 +20,19 @@ class Actions:
         """Remove all spaces and convert to uppercase"""
         return text.replace(" ", "").upper()
     def capital_letters(word1: str, word2: str, word3: str) -> str:
-        """Convert to uppercase single letters Example: alpha bravo charlie = ABC"""
+        """Convert to uppercase single letters Example: alpha bravo = ABC"""
         return word1[0].upper() + word2[0].upper() + word3[0].upper() 
     def replaced_text(text: str, old: str, new: str) -> str:
         """Replace text"""
         return text.replace(old, new)
+    def cancel_current_speech():
+        """Cancel current speech Note this does not work!"""
+        # Not all tts engines support canceling
+        # Easier to just catch the exception
+        try:
+            actions.user.cancel_current_speaker()
+            print("Cancelled current speech")
+        except Exception as e:
+            print("Failed to cancel current speech")
+            print(e)
+            pass
