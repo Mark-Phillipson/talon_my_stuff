@@ -214,3 +214,7 @@ number <number> dot <number>:
     "{number_1}.{number_2}"
 number <number>:
     "{number}"
+development template: key(ctrl-alt-shift-t)
+[talon] my stuff: key(ctrl-alt-shift-m)
+Blazor CRUD: key(ctrl-alt-shift-c)
+voice admin: key(ctrl-alt-shift-v)
