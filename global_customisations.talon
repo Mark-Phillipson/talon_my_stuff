@@ -204,6 +204,8 @@ stop recording:
     key(ctrl-super-shift-s)
     sleep(50ms)
     app.notify('Running OBS stop record command', 'Message From Talon Voice', 'TALON', true)
+{user.naughty_words}:
+        app.notify("That's quite enough of that", "More Money for the Sware Jar!", "TALON", true)
 take line: 
     key(end)
     sleep(50ms)
@@ -219,3 +221,6 @@ focus [talon] my stuff: key(ctrl-alt-shift-m)
 focus [talon] community: key(ctrl-alt-shift-y)
 focus Blazor CRUD: key(ctrl-alt-shift-c)
 focus voice admin: key(ctrl-alt-shift-v)
+click and sleep: 
+    mouse_click(0)
+    speech.disable()

@@ -84,3 +84,23 @@ pop out chat:
 tab filter: key(ctrl-shift-a)
 go [to] top: key(ctrl-home)
 go [to] bottom: key(ctrl-end)
+
+#Developer Tools
+
+console focus: key(ctrl-l)
+console toggle: key(ctrl-`)
+toggle breakpoint input window: key(ctrl-alt-b)
+console evaluate text: key(ctrl-shift-e)
+frame next: key(ctrl-.)
+frame previous: key(ctrl-,)
+snippet run: key(ctrl-enter)
+step over: key(f9)
+step into: key(f11)
+step out: key(shift-f11)
+step over: key(f10)
+continue: key(f8)
+[toggle] breakpoint: key(ctrl-b)
+panel next: key(ctrl-])
+panel previous: key(ctrl-[)
+hunt this: key(ctrl-f)
+(find again) | (hunt next): key(f3)
