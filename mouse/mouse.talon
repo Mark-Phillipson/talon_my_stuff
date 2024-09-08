@@ -1,29 +1,43 @@
-<user.screen_step> <user.screen_step_vertical> move:
-    mouse_move(screen_step, screen_step_vertical)
+<user.screen_step_one> <user.screen_step_vertical> move:
+    mouse_move(screen_step_one, screen_step_vertical)
+<user.screen_step_two> <user.screen_step_vertical> move:
+    mouse_move(screen_step_two, screen_step_vertical)
 #commands still in my head from dragon
-(move | left | right) <user.screen_step> <user.screen_step_vertical>:
-    mouse_move(screen_step, screen_step_vertical)
-<user.screen_step> <user.screen_step_vertical> (click | touch):
-    mouse_move(screen_step, screen_step_vertical)
+(move | left) <user.screen_step_one> <user.screen_step_vertical>:
+    mouse_move(screen_step_one, screen_step_vertical)
+<user.screen_step_one> <user.screen_step_vertical> (click | touch):
+    mouse_move(screen_step_one, screen_step_vertical)
     mouse_click(0)
-<user.screen_step> <user.screen_step_vertical> righty:
-    mouse_move(screen_step, screen_step_vertical)
+<user.screen_step_two> <user.screen_step_vertical> (click | touch):
+    mouse_move(screen_step_two, screen_step_vertical)
+    mouse_click(0)
+<user.screen_step_one> <user.screen_step_vertical> righty:
+    mouse_move(screen_step_one, screen_step_vertical)
     mouse_click(1)
-taskbar <user.screen_step>:
-    mouse_move(screen_step, 1035)
+<user.screen_step_two> <user.screen_step_vertical> righty:
+    mouse_move(screen_step_two, screen_step_vertical)
+    mouse_click(1)
+taskbar <user.screen_step_one>:
+    mouse_move(screen_step_one, 1025)
     mouse_click(0)
-taskbar <user.screen_step> <user.number_signed_small>:
-    mouse_move(screen_step, 1030)
+taskbar <user.screen_step_two>:
+    mouse_move(screen_step_two, 1020)
+    mouse_click(0)
+taskbar <user.screen_step_one> <user.number_signed_small>:
+    mouse_move(screen_step_one, 1025)
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     adjustment = number_signed_small * 5
     mouse_move(position_x + adjustment, position_y)
     mouse_click(0)
-menu <user.screen_step>:
-    mouse_move(screen_step, 52)
+menu <user.screen_step_one>:
+    mouse_move(screen_step_one, 52)
     mouse_click(0)
-ribbon <user.screen_step>:
-    mouse_move(screen_step, 80)
+menu <user.screen_step_two>:
+    mouse_move(screen_step_two, 32)
+    mouse_click(0)
+ribbon <user.screen_step_one>:
+    mouse_move(screen_step_one, 80)
     mouse_click(0)
 mouse left <number>:
     position_x = mouse_x()

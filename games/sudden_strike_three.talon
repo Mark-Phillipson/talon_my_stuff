@@ -524,13 +524,6 @@ smoke:
     key(h)
     sleep(100ms)
     mouse_click(0)
-zoom out:
-    user.mouse_scroll_down(5000)
-    user.mouse_scroll_down(5000)
-    user.mouse_scroll_down(5000)
-    user.mouse_scroll_down(5000)
-    user.mouse_scroll_down(5000)
-    user.mouse_scroll_down(5000)
 zoom:
     user.mouse_scroll_up(5000)
     user.mouse_scroll_up(5000)

@@ -1,6 +1,6 @@
 from talon import actions, Module, Context
 
-steps = {
+steps_monitor_one = {
     "zero": 5,
     "act": 50,
     'alpha': 50,
@@ -59,7 +59,9 @@ steps = {
     "five":1550,
     "six":1600,
     "seven":1650,
-    "eight":1700,
+}
+steps_monitor_two = {
+        "eight":1700,
     "nine":1750,
     "ten":1790,
     "eleven":1840,
@@ -98,8 +100,109 @@ steps = {
     "forty four":3450,
     "forty five":3490,
     "forty six":3540,
-    "forty seven":3590,
+    "forty seven":3590
+    }
+is_second_monitor = {
+    "zero": False,
+    "act": False,
+    'alpha': False,
+    "bat": False,
+    "bravo": False,
+    "cat": False,
+    "charlie": False,
+    "drum": False,
+    "delta" : False,
+    "echo": False,
+    "eve": False,
+    "fox": False,
+    "foxtrot": False,
+    "golf": False,
+    "hot": False,
+    "hotel": False,
+    "sit": False,
+    "india": False,
+    "jury": False,
+    "juliet": False,
+    "crunch": False,
+    "kilo": False,
+    "look": False,
+    "lima": False,
+    "mike": False,
+    "near": False,
+    "November": False,
+    "odd": False,
+    "oscar": False,
+    "pit": False,
+    "papa": False,
+    "quench": False,
+    "quebec": False,
+    "red": False,
+    "romeo": False,
+    "sun": False,
+    "sierra": False,
+    "trap": False,
+    "tango": False,
+    "urge": False,
+    "uniform": False,
+    "vest": False,
+    "victor": False,
+    "whale": False,
+    "whiskey": False,
+    "plex": False,
+    "xray": False,
+    "yank": False,
+    "yankee": False,
+    "zip": False,
+    "zulu": False,
+    "one":False,
+    "two":False,
+    "three":False,
+    "four":False,
+    "five":False,
+    "six":False,
+    "seven":False,
+    "eight":True,
+    "nine":True,
+    "ten":True,
+    "eleven":True,
+    "twelve":True,
+    "thirteen":True,
+    "fourteen":True,
+    "fifteen":True,
+    "sixteen":True,
+    "seventeen":True,
+    "eighteen":True,
+    "nineteen":True,
+    "twenty":True,
+    "twenty one":True,
+    "twenty two":True,
+    "twenty three":True,
+    "twenty four":True,
+    "twenty five":True,
+    "twenty six":True,
+    "twenty seven":True,
+    "twenty eight":True, 
+    "twenty nine":True,
+    "thirty":True,
+    "thirty one":True,
+    "thirty two":True,
+    "thirty three":True,
+    "thirty four":True,
+    "thirty five":True,
+    "thirty six":True,
+    "thirty seven":True,
+    "thirty eight":True,
+    "thirty nine":True,
+    "forty":True,
+    "forty one":True,
+    "forty two":True,
+    "forty three":True,
+    "forty four":True,
+    "forty five":True,
+    "forty six":True,
+    "forty seven":True,
 }
+
 steps_vertical = {
     "zero": 5,
     "act": 50,
@@ -144,17 +247,28 @@ steps_vertical = {
     "uniform": 1050,
 }
 mod = Module()
-mod.list("screen_step", desc="location on screen edge")
+mod.list("screen_step_one", desc="location on screen edge monitor one")
+mod.list("screen_step_two", desc="location on screen edge monitor two")
 mod.list("screen_step_vertical", desc="location on screen Vertical edge")
 
 ctx = Context()
-ctx.lists["user.screen_step"] = list(steps.keys())
+ctx.lists["user.screen_step_one"] = list(steps_monitor_one.keys())
+ctx.lists["user.screen_step_two"] = list(steps_monitor_two.keys())
 ctx.lists["user.screen_step_vertical"] = list(steps_vertical.keys())
 
-@mod.capture(rule="{user.screen_step}")
-def screen_step(m) -> int:
-    return steps[m.screen_step]
-                        #screen_step_vertical
+@mod.capture(rule="{user.screen_step_one}")
+def screen_step_one(m) -> int:
+    return steps_monitor_one[m.screen_step_one]
+
+@mod.capture(rule="{user.screen_step_two}")
+def screen_step_two(m) -> int:
+    return steps_monitor_two[m.screen_step_two]
+
 @mod.capture(rule="{user.screen_step_vertical}")
 def screen_step_vertical(m) -> int:
     return steps_vertical[m.screen_step_vertical]    
+
+@mod.capture(rule="{user.is_second_monitor}")
+def is_second_monitor(m) -> bool:
+    return is_second_monitor[m.is_second_monitor]
+

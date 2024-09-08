@@ -224,3 +224,4 @@ focus voice admin: key(ctrl-alt-shift-v)
 click and sleep: 
     mouse_click(0)
     speech.disable()
+talon relaunch: talon_relaunch()

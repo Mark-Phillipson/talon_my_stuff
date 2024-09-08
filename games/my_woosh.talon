@@ -24,7 +24,7 @@ garage:
 home:
     mouse_move(80, 60)
     mouse_click(0)
-belgium:        
+belgium:
     mouse_move(250, 450)
     mouse_click(0)
 menu:
@@ -43,10 +43,10 @@ you turn:
     mouse_move(565, 1000)
     mouse_click(0)
 toggle interface:
-    key(alt-h)    
+    key(alt-h)
 close menu:
     mouse_move(190, 1000)
-    mouse_click(0)            
+    mouse_click(0)
 toggle chat:
     mouse_move(1110, 990)
     mouse_click(0)
@@ -58,7 +58,7 @@ give thumbs up:
     mouse_click(0)
     sleep(100ms)
     mouse_move(700, 400)
-    mouse_click(0)            
+    mouse_click(0)
 send message <user.text>:
     mouse_move(950, 980)
     mouse_click(0)
@@ -66,7 +66,7 @@ send message <user.text>:
     insert(text)
 confirm message:
     mouse_move(1025, 985)
-    mouse_click(0)    
+    mouse_click(0)
 channel:
     mouse_move(270, 1000)
     mouse_click(0)
@@ -102,9 +102,8 @@ join event:
     mouse_click(0)
 skip:
     mouse_move(1510, 955)
-    mouse_click(0)            
-
-<user.screen_step> <user.screen_step>:
-    mouse_move(screen_step_1, screen_step_2)
     mouse_click(0)
-    
+
+<user.screen_step_one> <user.screen_step_vertical>:
+    mouse_move(screen_step_one, screen_step_vertical)
+    mouse_click(0)
