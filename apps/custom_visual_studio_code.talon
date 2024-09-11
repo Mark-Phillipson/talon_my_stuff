@@ -50,6 +50,17 @@ select matching next: user.vscode("editor.action.addSelectionToNextFindMatch")
     user.vscode("workbench.action.showCommands")
     key(left)
     key(delete)
+search files <user.cursorless_target>:
+    value = user.cursorless_get_text(cursorless_target, true)
+    user.vscode("workbench.action.showCommands")
+    key(left)
+    key(delete)
+    insert(value)
+search files [<user.text>]:
+    user.vscode("workbench.action.showCommands")
+    key(left)
+    key(delete)
+    insert(text)
 open folder: user.vscode("workbench.action.files.openFolder")
 save as: user.vscode("workbench.action.files.saveAs")
 focus open [files | tab]: user.vscode("workbench.files.action.focusOpenEditorsView")
@@ -241,6 +252,7 @@ copy Github link: user.vscode("issue.copyGithubPermalink")
 
 #Error Lens Extension
 error lens toggle: user.vscode("errorLens.toggle")
+#C# Dev Kit
 explorer build:
     user.vscode("solutionExplorer.focus")
     sleep(100ms)

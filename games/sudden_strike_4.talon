@@ -261,7 +261,6 @@ spacy: key(space:6)
 space: key(space)
 <user.screen_step_screen_one> <user.screen_step_screen_one_vertical>:
     mouse_move(screen_step_screen_one, screen_step_screen_one_vertical)
-    #mouse_click(1)
 (fortify) | (sandbags): key(f)
 repair: key(y)
 resupply: key(h)

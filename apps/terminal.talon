@@ -33,7 +33,7 @@ clear screen:
     key(enter)
 dotnet add package:
     insert("dotnet add package ")
-(previous folder) | (previous directory):
+previous [directory]:
     insert("cd ..")
     sleep(100ms)
     key(enter)
@@ -50,11 +50,11 @@ split pain: key(shift-alt-d)
     insert("dotnet build")
     sleep(100ms)
     key(enter)
-list directory:
+list [directory]:
     insert("dir")
     sleep(100ms)
     key(enter)
-current directory: insert("cd ")
+current [directory]: insert("cd ")
 dotnet clean:
     insert("dotnet clean")
     sleep(100ms)
@@ -103,7 +103,7 @@ playwright generate code:
     insert("pwsh bin/Debug/net8.0/playwright.ps1 codegen --viewport-size=1680,1050 https://localhost:7164/")
     sleep(300ms)
     key(enter)
-hunt terminal: key(ctrl-shift-f)
+hunt [terminal]: key(ctrl-shift-f)
 dotnet ef create script:
     insert("dotnet ef migrations script --output migrations.sql --idempotent --context")
 dotnet ef migrations add:
@@ -126,7 +126,7 @@ dotnet publish voice admin:
     key(enter)
 git clone: insert("git clone ")
 git pull: insert("git pull")
-make directory: insert("mkdir ")
+make [directory]: insert("mkdir ")
 dotnet build release:
     insert("dotnet build -c Release")
     sleep(100ms)

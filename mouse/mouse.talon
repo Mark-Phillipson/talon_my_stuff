@@ -1,7 +1,8 @@
 <user.screen_step_one> <user.screen_step_vertical> move:
     mouse_move(screen_step_one, screen_step_vertical)
 <user.screen_step_two> <user.screen_step_vertical> move:
-    mouse_move(screen_step_two, screen_step_vertical)
+    vertical = screen_step_vertical - 30
+    mouse_move(screen_step_two, vertical)
 #commands still in my head from dragon
 (move | left) <user.screen_step_one> <user.screen_step_vertical>:
     mouse_move(screen_step_one, screen_step_vertical)
@@ -9,13 +10,15 @@
     mouse_move(screen_step_one, screen_step_vertical)
     mouse_click(0)
 <user.screen_step_two> <user.screen_step_vertical> (click | touch):
-    mouse_move(screen_step_two, screen_step_vertical)
+    vertical = screen_step_vertical - 30
+    mouse_move(screen_step_two, vertical)
     mouse_click(0)
 <user.screen_step_one> <user.screen_step_vertical> righty:
     mouse_move(screen_step_one, screen_step_vertical)
     mouse_click(1)
 <user.screen_step_two> <user.screen_step_vertical> righty:
-    mouse_move(screen_step_two, screen_step_vertical)
+    vertical = screen_step_vertical - 30
+    mouse_move(screen_step_two, vertical)
     mouse_click(1)
 taskbar <user.screen_step_one>:
     mouse_move(screen_step_one, 1025)
@@ -34,7 +37,7 @@ menu <user.screen_step_one>:
     mouse_move(screen_step_one, 52)
     mouse_click(0)
 menu <user.screen_step_two>:
-    mouse_move(screen_step_two, 32)
+    mouse_move(screen_step_two, 12)
     mouse_click(0)
 ribbon <user.screen_step_one>:
     mouse_move(screen_step_one, 80)

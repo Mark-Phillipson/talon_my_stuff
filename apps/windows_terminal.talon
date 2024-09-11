@@ -1,5 +1,8 @@
 app: WindowsTerminal.exe
 -
+tag(): terminal
+tag(): user.tabs
+
 new tab: key(ctrl-shift-t)
 close tab: key(ctrl-shift-w)
 split pane: key(ctrl-shift-d)

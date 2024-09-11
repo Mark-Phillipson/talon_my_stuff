@@ -104,18 +104,14 @@ click:                      mouse_click(0)
 move up <number_small>:
     key(up)
     repeat(number_small-1)
-go up <number_small>:
+go up:
     key(up)
-    repeat(number_small-1)
-go down <number_small>:
+go down:
     key(down)
-    repeat(number_small-1)
-go left <number_small>:
+go left:
     key(left)
-    repeat(number_small-1)
-go right <number_small>:
+go right:
     key(right)
-    repeat(number_small-1)
 #Clears the message in Visual Studio
 clear message:
     mouse_move(1500, 900)
