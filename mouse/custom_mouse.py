@@ -61,7 +61,7 @@ steps_monitor_one = {
     "seven":1650,
 }
 steps_monitor_two = {
-        "eight":1700,
+    "eight":1700,
     "nine":1750,
     "ten":1790,
     "eleven":1840,
@@ -102,6 +102,50 @@ steps_monitor_two = {
     "forty six":3540,
     "forty seven":3590
     }
+
+steps_monitor_two_commandconquer = {
+    "eight":1700,
+    "nine":1740,
+    "ten":1770,
+    "eleven":1800,
+    "twelve":1870,
+    "thirteen":1940,
+    "fourteen":1980,
+    "fifteen":2000,
+    "sixteen":2040,
+    "seventeen":2070,
+    "eighteen":2120,
+    "nineteen":2140,
+    "twenty":2210,
+    "twenty one":2250,
+    "twenty two":2300,
+    "twenty three":2340,
+    "twenty four":2390,
+    "twenty five":2430,
+    "twenty six":2470,
+    "twenty seven":2510,
+    "twenty eight":2550, 
+    "twenty nine":2590,
+    "thirty":2640,
+    "thirty one":2608,
+    "thirty two":2720,
+    "thirty three":2760,
+    "thirty four":2800,
+    "thirty five":2850,
+    "thirty six":2890,
+    "thirty seven":2920,
+    "thirty eight":2970,
+    "thirty nine":3020,
+    "forty":3060,
+    "forty one":3100,
+    "forty two":3140,
+    "forty three":3190,
+    "forty four":3230,
+    "forty five":3270,
+    "forty six":3310,
+    "forty seven":3350
+    }
+
 is_second_monitor = {
     "zero": False,
     "act": False,
@@ -206,7 +250,7 @@ is_second_monitor = {
 steps_vertical = {
     "zero": 5,
     "act": 50,
-    'alpha': 50,
+    "alpha": 50,
     "bat": 100,
     "bravo": 100,
     "cat": 150,
@@ -249,23 +293,36 @@ steps_vertical = {
 mod = Module()
 mod.list("screen_step_one", desc="location on screen edge monitor one")
 mod.list("screen_step_two", desc="location on screen edge monitor two")
+mod.list("screen_step_two_commandconquer", desc="location on screen edge monitor two with 1680 width in old game C&C")
 mod.list("screen_step_vertical", desc="location on screen Vertical edge")
 
 ctx = Context()
 ctx.lists["user.screen_step_one"] = list(steps_monitor_one.keys())
 ctx.lists["user.screen_step_two"] = list(steps_monitor_two.keys())
+ctx.lists["user.screen_step_two_commandconquer"] = list(steps_monitor_two_commandconquer.keys())
 ctx.lists["user.screen_step_vertical"] = list(steps_vertical.keys())
 
 @mod.capture(rule="{user.screen_step_one}")
 def screen_step_one(m) -> int:
-    return steps_monitor_one[m.screen_step_one]
+    "Get horizontal pixel screen coordinate for monitor one"
+    actual=steps_monitor_one[m.screen_step_one] - 1680
+    return actual
 
 @mod.capture(rule="{user.screen_step_two}")
 def screen_step_two(m) -> int:
-    return steps_monitor_two[m.screen_step_two]
+    "Get horizontal pixel screen coordinate for monitor two"
+    actual=steps_monitor_two[m.screen_step_two] - 1680
+    return actual
+
+@mod.capture(rule="{user.screen_step_two_commandconquer}")
+def screen_step_two_commandconquer(m) -> int:
+    "Get horizontal pixel screen coordinate for monitor two with 1680 width in old game C&C"
+    actual=steps_monitor_two_commandconquer[m.screen_step_two_commandconquer] - 1680
+    return actual
 
 @mod.capture(rule="{user.screen_step_vertical}")
 def screen_step_vertical(m) -> int:
+    "Get vertical pixel screen coordinate"
     return steps_vertical[m.screen_step_vertical]    
 
 @mod.capture(rule="{user.is_second_monitor}")

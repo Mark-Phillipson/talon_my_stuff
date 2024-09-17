@@ -74,11 +74,12 @@ new file:
     key(menu)
     sleep(100ms)
     key(down)
-please dotnet:  key(f1)
-                sleep(300ms)
-                insert(".NET")
-                sleep(100ms)
-                key(enter)
+please dotnet:
+    key(f1)
+    sleep(300ms)
+    insert(".NET")
+    sleep(100ms)
+    key(enter)
 
 # Manipulate Code
 
@@ -86,7 +87,6 @@ focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
 format code: user.vscode("editor.action.formatDocument")
 expand selection: user.vscode("editor.action.smartSelect.expand")
 shrink selection: user.vscode("editor.action.smartSelect.shrink")
-comment line: user.vscode("editor.action.commentLine")
 comment line: user.vscode("editor.action.commentLine")
 parameter info: user.vscode("editor.action.triggerParameterHints")
 symbol rename: user.vscode("editor.action.rename")
@@ -108,11 +108,11 @@ maximize editor:
 ide navigate: key(alt-f7)
 sidebar narrow: user.vscode("workbench.action.increaseViewWidth")
 sidebar widen: user.vscode("workbench.action.decreaseViewWidth")
-zoom in small: 
+zoom in small:
     key(ctrl:down)
     user.mouse_scroll_up()
     key(ctrl:up)
-zoom out small: 
+zoom out small:
     key(ctrl:down)
     user.mouse_scroll_down()
     key(ctrl:up)
@@ -264,6 +264,10 @@ explorer debug:
     sleep(100ms)
     key(menu)
     sleep(100ms)
-    key(up:1)    
+    key(up:1)
     sleep(100ms)
     key(right)
+
+te for inject:
+    insert("<#= #>")
+    key(left:2)

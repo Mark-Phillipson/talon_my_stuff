@@ -206,7 +206,7 @@ take line:
     key(end)
     sleep(50ms)
     key(shift-home)
-bing chat [<user.text>]:    
+(bing chat) | (copilot) [<user.text>]:    
     user.open_url("https://www.bing.com/chat?form=NTPCHB")
 number <number> dot <number>:
     "{number_1}.{number_2}"
@@ -221,3 +221,15 @@ click and sleep:
     mouse_click(0)
     speech.disable()
 talon relaunch: talon_relaunch()
+calculate <user.number_string> minus <user.number_string>:
+    value = user.calculate_minus(number_string_1, number_string_2)
+    insert(value)
+calculate <user.number_string> plus <user.number_string>:
+    value = user.calculate_plus(number_string_1, number_string_2)
+    insert(value)
+calculate <user.number_string> times <user.number_string>:
+    value = user.calculate_multiply(number_string_1, number_string_2)
+    insert(value)
+calculate <user.number_string> divided by <user.number_string>:
+    value = user.calculate_divide(number_string_1, number_string_2)
+    insert(value)
