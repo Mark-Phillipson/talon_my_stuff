@@ -261,8 +261,10 @@ council | counsel | cancel:
     mouse_click(1)
     sleep(50ms)
     mouse_click(1)
-take [all]:
-    mouse_move(110, 10)
+centre:
+    mouse_move(800, 500)
+    take [all]:
+    mouse_move(110, 50)
     sleep(100ms)
     user.mouse_drag(0)
     sleep(100ms)

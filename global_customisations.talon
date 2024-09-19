@@ -27,7 +27,7 @@ switch [window]:
     key(alt-tab)
 move [to] top:                key(ctrl-home)
 move [to] bottom:             key(ctrl-end)
-window monitor [switch]:      key(super-shift-left)
+window [monitor] switch:      key(super-shift-left)
 [focus] system tray:          key(super-b)
 focus desktop:              key(super-d)
 focus taskbar:              key(super-t)
