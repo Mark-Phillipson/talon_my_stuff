@@ -263,7 +263,7 @@ council | counsel | cancel:
     mouse_click(1)
 centre:
     mouse_move(800, 500)
-    take [all]:
+take [all]:
     mouse_move(110, 50)
     sleep(100ms)
     user.mouse_drag(0)
@@ -377,3 +377,4 @@ context: key(.)
 power mode: key(x)
 database | message: key(i)
 objectives: key(o)
+dot net attack: key(alt)
