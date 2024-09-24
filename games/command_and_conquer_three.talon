@@ -1,3 +1,4 @@
+app: cnc3game.dat
 app: cnc3ep1.dat
 -
 settings():
