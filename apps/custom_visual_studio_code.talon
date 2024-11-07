@@ -65,7 +65,6 @@ open folder: user.vscode("workbench.action.files.openFolder")
 save as: user.vscode("workbench.action.files.saveAs")
 focus open [files | tab]: user.vscode("workbench.files.action.focusOpenEditorsView")
 rename [file]: key(f2)
-
 new file here: user.vscode("fileutils.newFile")
 new folder: user.vscode("explorer.newFolder")
 switch files: user.vscode("workbench.action.quickOpenPreviousRecentlyUsedEditor")
@@ -267,7 +266,7 @@ explorer debug:
     key(up:1)
     sleep(100ms)
     key(right)
-
+#T4 Templates
 te for inject:
     insert("<#= #>")
     key(left:2)

@@ -3,9 +3,9 @@ app: WindowsTerminal.exe
 tag(): terminal
 tag(): user.tabs
 
-new tab: key(ctrl-shift-t)
-close tab: key(ctrl-shift-w)
-split pane: key(ctrl-shift-d)
+tab new: key(ctrl-shift-t)
+tab close: key(ctrl-shift-w)
+pane split: key(ctrl-shift-d)
 move focus: key(ctrl-shift-')
 move focus <number_small>:
     key(ctrl-shift-')
@@ -32,3 +32,22 @@ export text:
 (command palette) | please:
     key(ctrl-shift-p)
 hunt this: key(ctrl-shift-f)
+# pilot explain <user.text>:
+#     insert("gh copilot explain ")
+#     insert(user.text)
+# pilot suggest <user.text>:
+#     insert("gh copilot suggest ")
+#     insert(user.text)
+create issue [<user.text>]:
+    insert("gh issue create ")
+    insert(user.text)
+dotnet restore:
+    insert("dotnet restore")
+    sleep(100ms)
+    key(enter)
+start rails server:
+    insert("rails server")
+    sleep(100ms)
+    key(enter)
+create rails controller:
+    insert("rails generate controller name action ")

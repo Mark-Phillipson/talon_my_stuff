@@ -56,7 +56,7 @@ screen reader heading 2: key(2)
 screen reader heading 3: key(3)
 screen reader form field: key(f)
 screen reader link: key(k)
-screen leader landmark: key(d)
+screen reader landmark: key(d)
 screen reader list: key(l)
 screen reader table: key(t)
 screen reader elements list:

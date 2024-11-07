@@ -1,6 +1,7 @@
 app: WindowsTerminal.exe
 app: devenv.exe
 app: vscode
+app: c:\windows\system32\cmd.exe
 -
 tag(): terminal
 tag(): user.tabs
@@ -71,7 +72,7 @@ test method:
     insert("cmd")
     key(enter)
     sleep(900ms)
-    insert("CD C:\\Users\\MPhil\\source\\repos\\ARM_MIG\\PlaywrightTests")
+    insert("CD C:\\Users\\MPhil\\source\\repos\\DevelopmentTemplate_24\\PlaywrightTests")
     key(enter)
     sleep(600ms)
     insert("dotnet test --filter Name~{methodName} -- Playwright.LaunchOptions.Headless=false")
@@ -85,7 +86,7 @@ test method headless:
     insert("cmd")
     key(enter)
     sleep(900ms)
-    insert("CD C:\\Users\\MPhil\\source\\repos\\ARM_MIG\\PlaywrightTests")
+    insert("CD C:\\Users\\MPhil\\source\\repos\\DevelopmentTemplate_24\\PlaywrightTests")
     key(enter)
     sleep(600ms)
     insert("dotnet test --filter Name~{methodName} -- Playwright.LaunchOptions.Headless=true")
@@ -97,12 +98,20 @@ playwright generate code:
     insert("cmd")
     key(enter)
     sleep(900ms)
-    insert("CD C:\\Users\\MPhil\\source\\repos\\ARM_MIG\\PlaywrightTests")
+    insert("CD C:\\Users\\MPhil\\source\\repos\\DevelopmentTemplate_24\\PlaywrightTests")
     key(enter)
     sleep(600ms)
-    insert("pwsh bin/Debug/net8.0/playwright.ps1 codegen --viewport-size=1680,1050 https://localhost:7164/")
+    insert("pwsh bin/Debug/net8.0/playwright.ps1 codegen --viewport-size=1680,1050 http://localhost:5016/")
     sleep(300ms)
     key(enter)
+playwright headless:
+    insert("$env:HEADED=\"0\"")
+playwright headed:
+    insert("$env:HEADED=\"1\"")
+playwright webkit:
+    insert("$env:BROWSER=\"webkit\"")
+playwright debug:
+    insert("$env:PWDEBUG=\"1\"")
 hunt [terminal]: key(ctrl-shift-f)
 dotnet ef create script:
     insert("dotnet ef migrations script --output migrations.sql --idempotent --context")

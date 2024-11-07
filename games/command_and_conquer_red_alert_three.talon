@@ -1,5 +1,4 @@
-app: cnc3game.dat
-app: cnc3ep1.dat
+app: ra3ep1_1.0.game
 -
 settings():
     user.mode_indicator_show = 0
@@ -8,6 +7,8 @@ settings():
 <user.screen_step_two> <user.screen_step_vertical> move: key(control)
 <user.screen_step_two_commandconquer> <user.screen_step_vertical>:
     mouse_move(screen_step_two_commandconquer, screen_step_vertical)
+formation:
+    key(f)
 follow zero:
     key(0)
     sleep(50ms)
@@ -124,125 +125,129 @@ power plant:
     key(f1)
 refinery:
     key(e)
-    key(f2)
+    key(f3)
 barracks:
     key(e)
-    key(f3)
+    key(f2)
 war factory:
     key(e)
     key(f4)
-(operations centre) | (command post):
+(seaport) | (dock):
     key(e)
     key(f5)
 (air tower) | airfield:
     key(e)
     key(f6)
-(secret shrine) | armory:
+defense bureau:
     key(e)
     key(f7)
-tec center:
+upgrade:
     key(e)
     key(f8)
-chemical plant:
-    key(e)
-    key(f9)
-crane:
-    key(e)
-    key(f10)
-engineering facility:
-    key(e)
-    key(f11)
 support: key(r)
-(turret) | (watchtower):
+[fortress] wall:
     key(r)
     key(f1)
-(laser turret) | (cannon):
+turret:
     key(r)
     key(f2)
-(sam turret) | (AA battery):
+tower:
     key(r)
     key(f3)
-[tiberian] silo:
+chromosphere:
     key(r)
     key(f4)
-(tower) | (sonic):
+proton collider:
     key(r)
     key(f5)
-(voice of Caine) | (ion cannon):
-    key(r)
-    key(f6)
-(obelisk) | (air pad):
-    key(r)
-    key(f7)
-(temple of nod) | (surveyor):
-    key(r)
-    key(f8)
-air support [tower]:
-    key(r)
-    key(f9)
-emissary:
-    key(r)
-    key(f10)
 infantry: key(t)
-i [militant] squad:
+attack dog:
     key(t)
     key(f1)
-(militant rocket squad) | rocket:
+peacekeeper:
     key(t)
     key(f2)
-saboteur | engineer:
+javelin:
     key(t)
     key(f3)
-fanatics | grenadier:
+engineer:
     key(t)
     key(f4)
-(black hand) | sniper:
+spy:
     key(t)
     key(f5)
+legionnaire:
+    key(t)
+    key(f6)
+tonya:
+    key(t)
+    key(f7)
 vehicles: key(y)
-(attack bike) | pitbull:
+prospector:
     key(y)
     key(f1)
-buggy | predator:
+vehicle riptide:
     key(y)
     key(f2)
-([scorpion] tank) | APC:
+multi gunnar:
     key(y)
     key(f3)
-stealth tank:
+[guardian] tank:
     key(y)
     key(f4)
-harvester:
-    key(y)
-    key(f4)
-construction vehicle:
+cannon:
     key(y)
     key(f5)
-(flame tank) | shatterer:
+mirage tank:
     key(y)
     key(f6)
-reckoner | slingshot:
+pacifier:
     key(y)
     key(f7)
-(beam cannon) | rig:
+future tank:
     key(y)
     key(f8)
-(avatar) | mammoth:
+vehicle mvc:
     key(y)
     key(f9)
-juggernaut:
-    key(y)
-    key(f10)
 aircraft: key(u)
-venom | orca:
+vindicator:
     key(u)
     key(f1)
-([vertigo] bomber) | hammerhead:
+[apollo] fighter:
     key(u)
     key(f2)
-firehawk:
+helicopter:
     key(u)
     key(f3)
+bomber:
+    key(u)
+    key(f4)
+gunship:
+    key(u)
+    key(f5)
+navy: key(i)
+prospector:
+    key(i)
+    key(f1)
+dolphin:
+    key(i)
+    key(f2)
+riptide:
+    key(i)
+    key(f3)
+hydrofoil:
+    key(i)
+    key(f4)
+destroyer:
+    key(i)
+    key(f5)
+carrier:
+    key(i)
+    key(f6)
+mvc:
+    key(i)
+    key(f7)
 cell mode: key(z)
 repair mode: key(c)
 game <user.arrow_key>:
@@ -276,28 +281,31 @@ take [all]:
     mouse_click(0)
 pause: key(esc)
 units: key(q)
+everything: key(e)
+next unit: key(n)
 select matching: key(w)
 matching units: key(w)
 stop: key(s)
-scatter: key(ctrl-x)
+scatter: key(x)
 assault move: key(f)
 next harvester: key(n)
 home: key(h)
-[go] bookmark one: key(j)
-[go] bookmark two: key(k)
-[go] bookmark three: key(l)
-[go] bookmark four: key(;)
-set bookmark one: key(ctrl-j)
-set bookmark two: key(ctrl-k)
-set bookmark three: key(ctrl-l)
-set bookmark four: key(ctrl-;)
+center: key(home)
+[go] bookmark one: key(f9)
+[go] bookmark two: key(f10)
+[go] bookmark three: key(f11)
+[go] bookmark four: key(f12)
+set bookmark one: key(ctrl-f9)
+set bookmark two: key(ctrl-f10)
+set bookmark three: key(ctrl-f11)
+set bookmark four: key(ctrl-f12)
 reset camera: key(keypad_5)
 zoom: key(keypad_8)
 zoom out: key(keypad_2)
 rotate left: key(keypad_4)
 rotate right: key(keypad_6)
 aggressive [stance]: key(alt-a)
-defensive [stance]: key(alt-s)
+guard [stance]: key(g)
 hold ground: key(alt-d)
 hold fire: key(alt-f)
 status: key(o)
@@ -389,3 +397,4 @@ repair this:
     mouse_click(0)
     sleep(50ms)
     key(c)
+special: key(`)

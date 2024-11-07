@@ -1,7 +1,7 @@
 <user.screen_step_one> <user.screen_step_vertical> move:
     vertical = screen_step_vertical + 30
     mouse_move(screen_step_one, vertical)
-<user.screen_step_two> <user.screen_step_vertical> move:
+<user.screen_step_two> <user.screen_step_vertical> [move]:
     mouse_move(screen_step_two, screen_step_vertical)
 <user.screen_step_one> <user.screen_step_vertical> (click | touch):
     vertical = screen_step_vertical + 30
