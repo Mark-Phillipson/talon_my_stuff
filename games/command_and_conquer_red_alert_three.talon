@@ -157,7 +157,7 @@ tower:
 chromosphere:
     key(r)
     key(f4)
-proton collider:
+[proton] collider:
     key(r)
     key(f5)
 infantry: key(t)
@@ -167,7 +167,7 @@ attack dog:
 peacekeeper:
     key(t)
     key(f2)
-javelin:
+javelin | rocket:
     key(t)
     key(f3)
 engineer:
@@ -291,14 +291,14 @@ assault move: key(f)
 next harvester: key(n)
 home: key(h)
 center: key(home)
-[go] bookmark one: key(f9)
-[go] bookmark two: key(f10)
-[go] bookmark three: key(f11)
-[go] bookmark four: key(f12)
-set bookmark one: key(ctrl-f9)
-set bookmark two: key(ctrl-f10)
-set bookmark three: key(ctrl-f11)
-set bookmark four: key(ctrl-f12)
+[go] bookmark one: key(j)
+[go] bookmark two: key(k)
+[go] bookmark three: key(l)
+[go] bookmark four: key(;)
+set bookmark one: key(ctrl-j)
+set bookmark two: key(ctrl-k)
+set bookmark three: key(ctrl-l)
+set bookmark four: key(ctrl-;)
 reset camera: key(keypad_5)
 zoom: key(keypad_8)
 zoom out: key(keypad_2)
@@ -320,21 +320,16 @@ attack:
     key(a)
     sleep(50ms)
     mouse_click(0)
-[power] slot first: key(ctrl-f1)
-[power] slot second: key(ctrl-f2)
-[power] slot third: key(ctrl-f3)
-[power] slot forth: key(ctrl-f4)
-[power] slot fifth: key(ctrl-f5)
-[power] slot sixth: key(ctrl-f6)
-[power] slot seventh: key(ctrl-f7)
-[power] slot eighth: key(ctrl-f8)
-[power] slot ninth: key(ctrl-f9)
-[power] slot tenth: key(ctrl-f10)
-[power] slot eleventh: key(ctrl-f11)
-[power] slot twelfth: key(ctrl-f12)
-[power] slot thirteenth: key(ctrl-1)
-[power] slot fourteenth: key(ctrl-2)
-[power] slot fifteenth: key(ctrl-3)
+[power] slot first: key(alt-q)
+[power] slot second: key(alt-w)
+[power] slot third: key(alt-e)
+[power] slot forth: key(alt-r)
+[power] slot fifth: key(alt-t)
+[power] slot sixth: key(alt-y)
+[power] slot seventh: key(alt-u)
+[power] slot eighth: key(alt-i)
+[power] slot ninth: key(alt-o)
+[power] slot tenth: key(alt-p)
 release keys:
     key(alt:up)
     key(ctrl:up)
@@ -346,40 +341,40 @@ reverse: key(d:down)
 attack move: key(a:down)
 waypoint: key(alt:down)
 planning: key(ctrl-z)
-select unit first:
+select [unit] first:
     key(q)
     key(f1)
-select unit second:
+select [unit] second:
     key(q)
     key(f2)
-select unit third:
+select [unit] third:
     key(q)
     key(f3)
-select unit four:
+select [unit] four:
     key(q)
     key(f4)
-select unit fifth:
+select [unit] fifth:
     key(q)
     key(f5)
-select unit sixth:
+select [unit] sixth:
     key(q)
     key(f6)
-select unit seventh:
+select [unit] seventh:
     key(q)
     key(f7)
-select unit eighth:
+select [unit] eighth:
     key(q)
     key(f8)
-select unit ninth:
+select [unit] ninth:
     key(q)
     key(f9)
-select unit tenth:
+select [unit] tenth:
     key(q)
     key(f10)
-select unit eleventh:
+select [unit] eleventh:
     key(q)
     key(f11)
-select unit twelfth:
+select [unit] twelfth:
     key(q)
     key(f12)
 context: key(.)
