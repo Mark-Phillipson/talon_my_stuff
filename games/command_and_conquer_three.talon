@@ -171,12 +171,21 @@ support: key(r)
 (voice of Caine) | (ion cannon):
     key(r)
     key(f6)
-(obelisk) | (air pad):
+(obelisk):
     key(r)
     key(f7)
-(temple of nod) | (surveyor):
+air pad:
     key(r)
     key(f8)
+wall:
+    key(r)
+    key(f7)
+(temple of nod):
+    key(r)
+    key(f8)
+surveyor:
+    key(r)
+    key(f9)
 air support [tower]:
     key(r)
     key(f9)
@@ -193,22 +202,46 @@ i [militant] squad:
 saboteur | engineer:
     key(t)
     key(f3)
-fanatics | grenadier:
+fanatics:
     key(t)
     key(f4)
-(black hand) | sniper:
+scout:
+    key(t)
+    key(f4)
+grenadier:
     key(t)
     key(f5)
+(black hand):
+    key(t)
+    key(f5)
+sniper:
+    key(t)
+    key(f6)
+[zone] trooper:
+    key(t)
+    key(f7)
+commando:
+    key(t)
+    key(f8)
 vehicles: key(y)
 (attack bike) | pitbull:
     key(y)
     key(f1)
-buggy | predator:
+bulldog:
     key(y)
     key(f2)
-([scorpion] tank) | APC:
+buggy:
+    key(y)
+    key(f2)
+predator:
     key(y)
     key(f3)
+([scorpion] tank):
+    key(y)
+    key(f3)
+APC:
+    key(y)
+    key(f6)
 stealth tank:
     key(y)
     key(f4)
@@ -218,21 +251,33 @@ harvester:
 construction vehicle:
     key(y)
     key(f5)
-(flame tank) | shatterer:
+(flame tank):
     key(y)
     key(f6)
-reckoner | slingshot:
+shatterer:
     key(y)
     key(f7)
-(beam cannon) | rig:
+reckoner:
+    key(y)
+    key(f7)
+slingshot:
     key(y)
     key(f8)
-(avatar) | mammoth:
+beam cannon:
+    key(y)
+    key(f8)
+rig:
     key(y)
     key(f9)
-juggernaut:
+avatar:
+    key(y)
+    key(f9)
+mammoth:
     key(y)
     key(f10)
+juggernaut:
+    key(y)
+    key(f11)
 aircraft: key(u)
 venom | orca:
     key(u)
@@ -243,20 +288,23 @@ venom | orca:
 firehawk:
     key(u)
     key(f3)
+kodiak:
+    key(u)
+    key(f4)
 cell mode: key(z)
 repair mode: key(c)
 game <user.arrow_key>:
     key(arrow_key)
-    repeat(2)
+    repeat(4)
 fly <user.arrow_key>:
     key(arrow_key)
-    repeat(2)
+    repeat(4)
     sleep(50ms)
     key(arrow_key)
-    repeat(2)
+    repeat(4)
     sleep(50ms)
     key(arrow_key)
-    repeat(2)
+    repeat(4)
     sleep(50ms)
 council | counsel | cancel:
     mouse_click(1)
@@ -338,40 +386,40 @@ reverse: key(d:down)
 attack move: key(a:down)
 waypoint: key(alt:down)
 planning: key(ctrl-z)
-select unit first:
+select [unit] first:
     key(q)
     key(f1)
-select unit second:
+select [unit] second:
     key(q)
     key(f2)
-select unit third:
+select [unit] third:
     key(q)
     key(f3)
-select unit four:
+select [unit] four:
     key(q)
     key(f4)
-select unit fifth:
+select [unit] fifth:
     key(q)
     key(f5)
-select unit sixth:
+select [unit] sixth:
     key(q)
     key(f6)
-select unit seventh:
+select [unit] seventh:
     key(q)
     key(f7)
-select unit eighth:
+select [unit] eighth:
     key(q)
     key(f8)
-select unit ninth:
+select [unit] ninth:
     key(q)
     key(f9)
-select unit tenth:
+select [unit] tenth:
     key(q)
     key(f10)
-select unit eleventh:
+select [unit] eleventh:
     key(q)
     key(f11)
-select unit twelfth:
+select [unit] twelfth:
     key(q)
     key(f12)
 context: key(.)
@@ -389,3 +437,105 @@ repair this:
     mouse_click(0)
     sleep(50ms)
     key(c)
+select one:
+    key(f1)
+    sleep(50ms)
+    key(f1)
+select two:
+    key(f2)
+    sleep(50ms)
+    key(f2)
+select three:
+    key(f3)
+    sleep(50ms)
+    key(f3)
+select four:
+    key(f4)
+    sleep(50ms)
+    key(f4)
+select five:
+    key(f5)
+    sleep(50ms)
+    key(f5)
+select six:
+    key(f6)
+    sleep(50ms)
+    key(f6)
+select seven:
+    key(f7)
+    sleep(50ms)
+    key(f7)
+select eight:
+    key(f8)
+    sleep(50ms)
+    key(f8)
+select nine:
+    key(f9)
+    sleep(50ms)
+    key(f9)
+select ten:
+    key(f10)
+    sleep(50ms)
+    key(f10)
+hover first:
+    mouse_move(40, 205)
+hover second:
+    mouse_move(40, 285)
+hover third:
+    mouse_move(40, 365)
+hover fourth:
+    mouse_move(40, 445)
+hover fifth:
+    mouse_move(40, 525)
+hover sixth:
+    mouse_move(40, 605)
+hover seventh:
+    mouse_move(40, 685)
+hover eighth:
+    mouse_move(40, 765)
+hover ninth:
+    mouse_move(40, 845)
+hover tenth:
+    mouse_move(110, 245)
+hover eleventh:
+    mouse_move(110, 325)
+hover twelfth:
+    mouse_move(110, 405)
+hover thirteenth:
+    mouse_move(110, 485)
+hover fourteenth:
+    mouse_move(110, 565)
+hover fifteenth:
+    mouse_move(110, 645)
+hover weapon first:
+    mouse_move(25, 30)
+hover weapon second:
+    mouse_move(85, 30)
+hover weapon third:
+    mouse_move(145, 30)
+hover weapon fourth:
+    mouse_move(205, 30)
+hover build first:
+    mouse_move(1420, 450)
+hover build second:
+    mouse_move(1500, 450)
+hover build third:
+    mouse_move(1590, 540)
+hover build fourth:
+    mouse_move(1420, 550)
+hover build fifth:
+    mouse_move(1510, 550)
+hover build sixth:
+    mouse_move(1590, 550)
+hover build seventh:
+    mouse_move(1420, 630)
+hover build eighth:
+    mouse_move(1510, 620)
+hover build ninth:
+    mouse_move(1590, 620)
+hover build tenth:
+    mouse_move(1420, 710)
+hover build eleventh:
+    mouse_move(1500, 710)
+hover build twelfth:
+    mouse_move(1580, 710)

@@ -1,4 +1,4 @@
-from talon import Module, ui, ctrl
+from talon import Module, ctrl
 
 mod = Module()
 

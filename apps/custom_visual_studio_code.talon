@@ -115,6 +115,7 @@ zoom out small:
     key(ctrl:down)
     user.mouse_scroll_down()
     key(ctrl:up)
+toggle secondary: user.vscode("workbench.action.closeAuxiliaryBar")
 
 # Cursorless
 
@@ -267,6 +268,8 @@ explorer debug:
     sleep(100ms)
     key(right)
 #T4 Templates
-te for inject:
+T4 for inject:
     insert("<#= #>")
     key(left:2)
+make code bigger: user.vscode("editor.action.fontZoomIn")
+make code smaller: user.vscode("editor.action.fontZoomOut")
