@@ -89,10 +89,6 @@ shrink selection: user.vscode("editor.action.smartSelect.shrink")
 comment line: user.vscode("editor.action.commentLine")
 parameter info: user.vscode("editor.action.triggerParameterHints")
 symbol rename: user.vscode("editor.action.rename")
-update tag: user.vscode("editor.emmet.action.updateTag")
-take tag: user.vscode("editor.emmet.action.balanceOut")
-take next: user.vscode("editor.emmet.action.selectNextItem")
-take previous: user.vscode("editor.emmet.action.selectPrevItem")
 
 #Tab Management
 
@@ -227,15 +223,31 @@ complete task: key(alt-d)
 
 terminal: user.vscode("workbench.action.createTerminalEditor")
 terminal history: user.vscode("workbench.action.terminal.runRecentCommand")
+
 #Emmet
 remove tag: user.vscode("editor.emmet.action.removeTag")
+update tag: user.vscode("editor.emmet.action.updateTag")
+take tag: user.vscode("editor.emmet.action.balanceOut")
+take next: user.vscode("editor.emmet.action.selectNextItem")
+take previous: user.vscode("editor.emmet.action.selectPrevItem")
+wrap with abbreviation: user.vscode("editor.emmet.action.wrapWithAbbreviation")
+expand abbreviation: user.vscode("editor.emmet.action.expandAbbreviation")
+balance (inward): user.vscode("editor.emmet.action.balanceIn")
+balance (outward): user.vscode("editor.emmet.action.balanceOut")
+toggle close tag: user.vscode("editor.emmet.action.splitJoinTag")
+merge lines: user.vscode("editor.emmet.action.mergeLines")
+toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
 
-pilot new chat: key(ctrl-l)
+pilot new chat:
+    user.copilot_chat("")
+    sleep(100ms)
+    key(ctrl-l)
 pilot ask: key(ctrl-i)
 pilot toggle: user.vscode("github.copilot.toggleCopilot")
-accept [word]: key(ctrl-right)
+pilot accept [word]: key(ctrl-right)
+pilot edit: user.vscode("workbench.action.chat.openEditSession")
 
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
