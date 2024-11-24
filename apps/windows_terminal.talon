@@ -51,3 +51,5 @@ start rails server:
     key(enter)
 create rails controller:
     insert("rails generate controller name action ")
+select all: key(ctrl-shift-a)
+copy that: key(ctrl-c)

@@ -19,3 +19,5 @@ context menu: key(menu)
 help search clipboard:
     text = clip.text()
     user.help_search(text)
+new paragraph: key(enter)
+new line: key(enter)

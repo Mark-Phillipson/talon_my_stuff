@@ -248,6 +248,15 @@ pilot ask: key(ctrl-i)
 pilot toggle: user.vscode("github.copilot.toggleCopilot")
 pilot accept [word]: key(ctrl-right)
 pilot edit: user.vscode("workbench.action.chat.openEditSession")
+pilot chat workspace:
+    user.copilot_chat("")
+    sleep(300ms)
+    insert("@workspace ")
+pilot chat file:
+    user.copilot_chat("")
+    sleep(300ms)
+    insert("#f")
+pilot chat fix error: user.copilot_chat("#selection How can I /fix this error")
 
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")

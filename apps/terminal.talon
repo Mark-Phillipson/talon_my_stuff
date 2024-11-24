@@ -28,10 +28,6 @@ dotnet run:
     insert("dotnet run")
     sleep(100ms)
     key(enter)
-clear screen:
-    insert("cls")
-    sleep(100ms)
-    key(enter)
 dotnet add package:
     insert("dotnet add package ")
 previous [directory]:
@@ -52,7 +48,7 @@ split pain: key(shift-alt-d)
     sleep(100ms)
     key(enter)
 list [directory]:
-    insert("dir")
+    insert("ls")
     sleep(100ms)
     key(enter)
 current [directory]: insert("cd ")
@@ -138,5 +134,9 @@ git pull: insert("git pull")
 make directory: insert("mkdir ")
 dotnet build release:
     insert("dotnet build -c Release")
+    sleep(100ms)
+    key(enter)
+clear screen:
+    insert("clear")
     sleep(100ms)
     key(enter)
