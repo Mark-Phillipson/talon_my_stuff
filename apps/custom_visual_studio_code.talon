@@ -47,19 +47,13 @@ select matching next: user.vscode("editor.action.addSelectionToNextFindMatch")
 #File Management
 
 (search files [by name]) | (navigate [to]):
-    user.vscode("workbench.action.showCommands")
-    key(left)
-    key(delete)
+    user.vscode("workbench.action.quickOpen")
 search files <user.cursorless_target>:
     value = user.cursorless_get_text(cursorless_target, true)
-    user.vscode("workbench.action.showCommands")
-    key(left)
-    key(delete)
+    user.vscode("workbench.action.quickOpen")
     insert(value)
 search files [<user.text>]:
-    user.vscode("workbench.action.showCommands")
-    key(left)
-    key(delete)
+    user.vscode("workbench.action.quickOpen")
     insert(text)
 open folder: user.vscode("workbench.action.files.openFolder")
 save as: user.vscode("workbench.action.files.saveAs")

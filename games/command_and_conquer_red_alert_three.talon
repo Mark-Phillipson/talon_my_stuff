@@ -433,3 +433,28 @@ select ten:
     key(f10)
     sleep(50ms)
     key(f10)
+slide right:
+    key(right:down)
+    key(left:up)
+    key(up:up)
+    key(down:up)
+slide left:
+    key(left:down)
+    key(right:up)
+    key(up:up)
+    key(down:up)
+slide up:
+    key(up:down)
+    key(right:up)
+    key(left:up)
+    key(down:up)
+slide down:
+    key(down:down)
+    key(right:up)
+    key(left:up)
+    key(up:up)
+slide stop:
+    key(right:up)
+    key(left:up)
+    key(up:up)
+    key(down:up)
