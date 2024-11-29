@@ -44,8 +44,10 @@ select matching <user.number_signed_small>:
     user.vscode("editor.action.addSelectionToNextFindMatch")
     repeat(number_signed_small-1)
 select matching next: user.vscode("editor.action.addSelectionToNextFindMatch")
+
 #File Management
 
+collapse folders: user.vscode("workbench.files.action.collapseExplorerFolders")
 (search files [by name]) | (navigate [to]):
     user.vscode("workbench.action.quickOpen")
 search files <user.cursorless_target>:

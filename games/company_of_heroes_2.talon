@@ -73,7 +73,7 @@ toggle map:
     key(.)
 reset camera:
     key(backspace)
-pause [game]:
+[game] pausej:
     key(pause)
 [game] menu:
     key(f10)
@@ -87,3 +87,14 @@ take [all]:
     mouse_move(1200, 979)
     sleep(30ms)
     mouse_click(0)
+save game: key(f5)
+unit one: key(1)
+unit two: key(2)
+unit three: key(3)
+unit four: key(4)
+unit five: key(5)
+unit six: key(6)
+unit seven: key(7)
+unit eight: key(8)
+unit nine: key(9)
+unit zero: key(0)

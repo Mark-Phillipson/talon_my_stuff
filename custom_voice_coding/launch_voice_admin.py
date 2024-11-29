@@ -19,3 +19,4 @@ class Actions:
                                 creationflags=subprocess.CREATE_NEW_CONSOLE)
 
         subprocess.Popen(["start", uri], shell=True)
+    
