@@ -7,6 +7,6 @@ get similar [phrase] <user.text>:
 get [meaning] phrase <user.text>: 
     result=user.get_result_from_open_ai(text,"Please return a phrase to this one with the same meaning")    
     insert(result)
-get opposite [word:] <user.text>: 
+get opposite [word] <user.text>: 
     result=user.get_result_from_open_ai(text,"Please return a word that is the opposite of the given word.")    
     insert(result)
