@@ -51,6 +51,10 @@ list [directory]:
     insert("ls")
     sleep(100ms)
     key(enter)
+list all [directory]:
+    insert("ls -a")
+    sleep(100ms)
+    key(enter)
 current [directory]: insert("cd ")
 dotnet clean:
     insert("dotnet clean")
@@ -148,3 +152,4 @@ clear screen:
     insert("clear")
     sleep(100ms)
     key(enter)
+Linux update: insert("sudo apt-get update")

@@ -1,28 +1,29 @@
 <user.screen_step_one> <user.screen_step_vertical> move:
     vertical = screen_step_vertical + 30
     mouse_move(screen_step_one, vertical)
-<user.screen_step_two> <user.screen_step_vertical> [move]:
-    mouse_move(screen_step_two, screen_step_vertical)
+<user.screen_step_two> <user.screen_step_vertical_monitor_two> move:
+    vertical = screen_step_vertical_monitor_two
+    mouse_move(screen_step_two, vertical)
 <user.screen_step_one> <user.screen_step_vertical> (click | touch):
     vertical = screen_step_vertical + 30
     mouse_move(screen_step_one, vertical)
     mouse_click(0)
-<user.screen_step_two> <user.screen_step_vertical> (click | touch):
-    mouse_move(screen_step_two, screen_step_vertical)
+<user.screen_step_two> <user.screen_step_vertical_monitor_two> (click | touch):
+    mouse_move(screen_step_two, screen_step_vertical_monitor_two)
     mouse_click(0)
 <user.screen_step_one> <user.screen_step_vertical> righty:
     vertical = screen_step_vertical + 30
     mouse_move(screen_step_one, vertical)
     mouse_click(1)
-<user.screen_step_two> <user.screen_step_vertical> righty:
-    mouse_move(screen_step_two, screen_step_vertical)
+<user.screen_step_two> <user.screen_step_vertical_monitor_two> righty:
+    mouse_move(screen_step_two, screen_step_vertical_monitor_two)
     mouse_click(1)
 taskbar <user.screen_step_one>:
     mouse_move(screen_step_one, 1050)
     mouse_click(0)
-taskbar <user.screen_step_two>:
-    mouse_move(screen_step_two, 1050)
-    mouse_click(0)
+# taskbar <user.screen_step_two>:
+#     mouse_move(screen_step_two, 1050)
+#     mouse_click(0)
 taskbar <user.screen_step_two> <user.number_signed_small>:
     mouse_move(screen_step_two, 1050)
     position_x = user.query_mouse_position_x()

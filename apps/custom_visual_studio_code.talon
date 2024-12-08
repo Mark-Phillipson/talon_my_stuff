@@ -85,9 +85,11 @@ shrink selection: user.vscode("editor.action.smartSelect.shrink")
 comment line: user.vscode("editor.action.commentLine")
 parameter info: user.vscode("editor.action.triggerParameterHints")
 symbol rename: user.vscode("editor.action.rename")
-
+drop anchor: user.vscode("editor.action.setSelectionAnchor")
+collect anchor: user.vscode("editor.action.goToSelectionAnchor")
+select from anchor: user.vscode("editor.action.selectFromAnchorToCursor")
+open accessible view: user.vscode("editor.action.accessibleView")
 #Tab Management
-
 previous tab: user.vscode("workbench.action.previousEditor")
 next tab: user.vscode("workbench.action.nextEditor")
 (closed tab | close tab): user.vscode("workbench.action.closeActiveEditor")
@@ -215,10 +217,12 @@ take all: key(ctrl-a)
 (new task) | (checkbox): key(ctrl-enter)
 complete task: key(alt-d)
 
-#terminal
+#terminal (integrated)
 
 terminal: user.vscode("workbench.action.createTerminalEditor")
 terminal history: user.vscode("workbench.action.terminal.runRecentCommand")
+terminal recent commands: user.vscode("workbench.action.terminal.runRecentCommand")
+terminal recent directory: user.vscode("workbench.action.terminal.goToRecentDirectory")
 
 #Emmet
 remove tag: user.vscode("editor.emmet.action.removeTag")
@@ -290,3 +294,8 @@ T4 for inject:
     key(left:2)
 make code bigger: user.vscode("editor.action.fontZoomIn")
 make code smaller: user.vscode("editor.action.fontZoomOut")
+
+#Walkie Talkie
+
+hay code:
+    speech.disable()

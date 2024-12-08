@@ -233,3 +233,6 @@ calculate <user.number_string> times <user.number_string>:
 calculate <user.number_string> divided by <user.number_string>:
     value = user.calculate_divide(number_string_1, number_string_2)
     insert(value)
+# Microsoft Power Toys Voice Commands
+shortcut guide: key(super-shift-/)    
+color picker: key(super-shift-c)

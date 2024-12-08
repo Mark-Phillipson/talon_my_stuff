@@ -290,17 +290,68 @@ steps_vertical = {
     "urge": 1050,
     "uniform": 1050,
 }
+
+steps_vertical_monitor_two = {
+    "zero": 5,
+    "act": 50,
+    "alpha": 50,
+    "bat": 85,
+    "bravo": 85,
+    "cat": 140,
+    "charlie": 140,
+    "drum": 195,
+    "delta" : 195,
+    "echo": 250,
+    "eve": 250,
+    "fox": 300,
+    "foxtrot": 300,
+    "golf": 350,
+    "hot": 405,
+    "hotel": 405,
+    "sit": 455,
+    "india": 455,
+    "jury": 505,
+    "juliet": 505,
+    "crunch": 555,
+    "kilo": 555,
+    "look": 605,
+    "lima": 605,
+    "mike": 655,
+    "near": 705,
+    "November": 705,
+    "odd": 755,
+    "oscar": 755,
+    "pit": 805,
+    "papa": 805,
+    "quench": 855,
+    "quebec": 855,
+    "red": 905,
+    "romeo": 905,
+    "sun": 955,
+    "sierra": 955,
+    "trap": 1005,
+    "tango": 1005,
+    "urge": 1055,
+    "uniform": 1055,
+}
+
 mod = Module()
 mod.list("screen_step_one", desc="location on screen edge monitor one")
 mod.list("screen_step_two", desc="location on screen edge monitor two")
 mod.list("screen_step_two_commandconquer", desc="location on screen edge monitor two with 1680 width in old game C&C")
+
 mod.list("screen_step_vertical", desc="location on screen Vertical edge")
+
+mod.list("screen_step_vertical_monitor_two", desc="location on screen Vertical edge monitor two")
 
 ctx = Context()
 ctx.lists["user.screen_step_one"] = list(steps_monitor_one.keys())
 ctx.lists["user.screen_step_two"] = list(steps_monitor_two.keys())
 ctx.lists["user.screen_step_two_commandconquer"] = list(steps_monitor_two_commandconquer.keys())
+
 ctx.lists["user.screen_step_vertical"] = list(steps_vertical.keys())
+
+ctx.lists["user.screen_step_vertical_monitor_two"] = list(steps_vertical_monitor_two.keys())
 
 @mod.capture(rule="{user.screen_step_one}")
 def screen_step_one(m) -> int:
@@ -324,6 +375,11 @@ def screen_step_two_commandconquer(m) -> int:
 def screen_step_vertical(m) -> int:
     "Get vertical pixel screen coordinate"
     return steps_vertical[m.screen_step_vertical]    
+
+@mod.capture(rule="{user.screen_step_vertical_monitor_two}")
+def screen_step_vertical_monitor_two(m) -> int:
+    "Get vertical pixel screen coordinate"
+    return steps_vertical_monitor_two[m.screen_step_vertical_monitor_two]    
 
 @mod.capture(rule="{user.is_second_monitor}")
 def is_second_monitor(m) -> bool:
