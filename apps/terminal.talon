@@ -153,3 +153,4 @@ clear screen:
     sleep(100ms)
     key(enter)
 Linux update: insert("sudo apt-get update")
+include paging: insert(" | more")

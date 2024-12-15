@@ -1,4 +1,4 @@
-app: cnc3ep1.dat
+app: cnc3game.dat
 -
 settings():
     user.mode_indicator_show = 0

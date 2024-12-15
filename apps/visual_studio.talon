@@ -156,7 +156,6 @@ drop marker: key(alt-home)
 swap marker: key(alt-shift-home)
 #DevExpress CodeRush jump codes functionality end
 (quick actions | open smart tag): key(ctrl-.)
-save all: key(ctrl-shift-s)
 search code: key(ctrl-f)
 search code [<user.text>]:
     key(ctrl-f)

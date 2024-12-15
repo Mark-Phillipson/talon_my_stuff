@@ -29,3 +29,4 @@ new line: key(enter)
 <number> <user.text>: key(ctrl)
 taskbar toggle:
     user.toggle_taskbar()
+snipping tool: key(super-shift-s)
