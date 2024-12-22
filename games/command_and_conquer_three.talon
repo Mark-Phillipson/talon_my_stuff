@@ -4,9 +4,6 @@ settings():
     user.mode_indicator_show = 0
     user.mouse_enable_pop_click = 0
     key_hold = 50
-<user.screen_step_two> <user.screen_step_vertical> move: key(control)
-<user.screen_step_two_commandconquer> <user.screen_step_vertical>:
-    mouse_move(screen_step_two_commandconquer, screen_step_vertical)
 follow zero:
     key(0)
     sleep(50ms)

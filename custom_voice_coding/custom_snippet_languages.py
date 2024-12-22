@@ -11,6 +11,7 @@ ctx_default.lists["user.snippet_language"] = {
 "CSS": "CSS",
 "Docker": "Docker",
 "Entity": "Entity",
+"Git": "git",
 "HTML": "HTML",
 "JavaScript": "JavaScript",
 "jQuery": "jQuery",

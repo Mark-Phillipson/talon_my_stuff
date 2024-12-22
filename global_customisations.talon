@@ -206,12 +206,10 @@ take line:
     key(end)
     sleep(50ms)
     key(shift-home)
-(bing chat) | (copilot) [<user.text>]:    
-    user.open_url("https://www.bing.com/chat?form=NTPCHB")
-number <number> dot <number>:
-    "{number_1}.{number_2}"
-number <number>:
-    "{number}"
+# bing chat [<user.text>]:    
+#     user.open_url("https://www.bing.com/chat?form=NTPCHB")
+#     sleep(500ms)
+#     insert(text)
 [focus] development template: key(ctrl-alt-shift-t)
 focus [talon] my stuff: key(ctrl-alt-shift-m)
 focus [talon] community: key(ctrl-alt-shift-y)

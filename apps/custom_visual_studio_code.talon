@@ -258,6 +258,10 @@ pilot chat file:
     sleep(300ms)
     insert("#f")
 pilot chat fix error: user.copilot_chat("#selection How can I /fix this error")
+pilot list commands: 
+    key(ctrl-shift-p)
+    sleep(100ms)
+    insert("GitHub Copilot: ")
 
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
