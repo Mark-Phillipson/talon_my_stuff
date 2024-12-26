@@ -31,6 +31,12 @@ camera right: key(d)
 camera up: key(w)
 camera down: key(s)
 save game: key(f5)
+deck(pedal_left): 
+    mouse_drag(0)
+deck(pedal_middle): speech.toggle()
+deck(pedal_right): 
+    mouse_click(0)
+
 select box:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
