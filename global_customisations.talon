@@ -234,3 +234,4 @@ calculate <user.number_string> divided by <user.number_string>:
 # Microsoft Power Toys Voice Commands
 shortcut guide: key(super-shift-/)    
 color picker: key(super-shift-c)
+date insert: insert(user.time_format("%d-%m-%Y"))

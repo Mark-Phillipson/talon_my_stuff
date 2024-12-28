@@ -23,5 +23,3 @@ toggle sidebar:
 delete chat: 
     key(ctrl-shift-backspace)
 
-show shortcuts: 
-    key(ctrl-/)
