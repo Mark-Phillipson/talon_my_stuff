@@ -13,6 +13,7 @@ ctx_default.lists["user.keywords"] = {
     "string": " string ",
     "integer": " int ",
     "boolean": " bool ",
+    "double": " double ",
     "class": " class ",
     "struct": " struct ",
     "new": " new ",
@@ -87,6 +88,9 @@ ctx_default.lists["user.keywords"] = {
     "name of": " nameof ",
     "global": " global ",
     "type of": " typeof ",
+    "protected": " protected ",
+    "default": " default ",
+    "interface": " interface ",
 }
 
 ctx_python = Context()

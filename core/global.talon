@@ -12,7 +12,7 @@ pick <user.letters>:
     key(enter)
 deck(pedal_middle): 
     speech.toggle()
-    user.microphone_toggle()
+    # user.microphone_toggle()
 [save to] disk: key(ctrl-s)
 context menu: key(menu)
 help search clipboard:

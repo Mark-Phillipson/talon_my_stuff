@@ -13,7 +13,7 @@ class Actions:
         """Drags the mouse smoothly from start to end."""
         ctrl.mouse_move(start_x, start_y)        # Move to starting position
         actions.sleep(delay)                     # Apply delay
-        #ctrl.mouse_click(button=0, down=True)    # Press mouse button
+        ctrl.mouse_click(button=0, down=True)    # Press mouse button
         actions.mouse_drag(0)
         actions.sleep(delay)                     # Apply delay
 

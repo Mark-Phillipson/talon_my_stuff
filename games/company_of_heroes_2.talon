@@ -160,3 +160,5 @@ slot fifth:
     mouse_move(752, 855)
     sleep(30ms)
     mouse_click(0)
+zoom out: user.mouse_scroll_down()
+zoom: user.mouse_scroll_up()

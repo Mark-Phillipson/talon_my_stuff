@@ -11,8 +11,8 @@ class Actions:
         """Toggle the microphone between None and System Default"""
         global mic_state
         if mic_state == "None":
-            actions.sound.set_microphone("System Default")
-            mic_state = "System Default"
+            actions.sound.set_microphone("Headset Microphone (Sennheiser SC30 for Lync)")
+            mic_state = "Headset Microphone (Sennheiser SC30 for Lync)"
         else:
             actions.sound.set_microphone("None")
             mic_state = "None"

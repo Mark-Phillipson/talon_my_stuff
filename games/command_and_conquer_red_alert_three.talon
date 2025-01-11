@@ -227,9 +227,6 @@ gunship:
     key(u)
     key(f5)
 navy: key(i)
-prospector:
-    key(i)
-    key(f1)
 dolphin:
     key(i)
     key(f2)

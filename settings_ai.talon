@@ -12,5 +12,5 @@ settings():
     #user.openai_model = 'gpt-3.5-turbo'
 
 # Only uncomment the line below if you want experimental behavior to parse Talon files
- tag(): user.gpt_beta
+# tag(): user.gpt_beta
  user.model_shell_default = "cmd"

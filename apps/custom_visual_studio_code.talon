@@ -2,6 +2,7 @@ app: vscode
 -
 # Navigation
 
+terminal tab: user.vscode("workbench.action.terminal.focus")
 solution explorer: user.vscode("solutionExplorer.focus")
 symbols: user.vscode("workbench.action.showAllSymbols")
 [go to] definition: user.vscode("editor.action.revealDefinition")
