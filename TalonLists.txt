@@ -1,0 +1,637 @@
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user\community created: 15/01/2025 16:43:42
+List: user.system_paths
+  - -
+  - user: C:\Users\MPhil
+  - profile: C:\Users\MPhil
+  - desktop: C:\Users\MPhil\OneDrive\Desktop
+  - desk: C:\Users\MPhil\Desktop
+  - documents: C:\Users\MPhil\OneDrive\lsDocuments
+  - docks: C:\Users\MPhil\Documents
+  - downloads: C:\Users\MPhil\Downloads
+  - music: C:\Users\MPhil\Music
+  - pictures: C:\Users\MPhil\OneDrive\Pictures
+  - videos: C:\Users\MPhil\Videos
+  - talon home: C:\Users\MPhil\AppData\Roaming\talon
+  - talon user: C:\Users\MPhil\AppData\Roaming\talon\user
+  - one drive: C:\Users\MPhil\OneDrive
+
+List: user.git_argument
+  - abort: --abort
+  - all: --all
+  - allow empty: --allow-empty
+  - amend: --amend
+  - cached: --cached
+  - cashed: --cached
+  - color words: --color-words
+  - colour words: --color-words
+  - continue: --continue
+  - copy: --copy
+  - create: --create
+  - delete: --delete
+  - detach: --detach
+  - dir diff: --dir-diff
+  - directory diff: --dir-diff
+  - dry run: --dry-run
+  - edit: --edit
+  - fast forward only: --ff-only
+  - force: --force
+  - force create: --force-create
+  - force with lease: --force-with-lease
+  - global: --global
+  - global: --global
+  - hard: --hard
+  - ignore case: --ignore-case
+  - include untracked: --include-untracked
+  - interactive: --interactive
+  - keep index: --keep-index
+  - list: --list
+  - local: --local
+  - mixed: --mixed
+  - move: --move
+  - no edit: --no-edit
+  - no keep index: --no-keep-index
+  - no rebase: --no-rebase
+  - no track: --no-track
+  - no verify: --no-verify
+  - orphan: --orphan
+  - patch: --patch
+  - prune: --prune
+  - quiet: --quiet
+  - quit: --quit
+  - rebase: --rebase
+  - remote: --remote
+  - set up stream: --set-upstream
+  - set up stream to: --set-upstream-to
+  - short: --short
+  - short stat: --shortstat
+  - skip: --skip
+  - soft: --soft
+  - staged: --staged
+  - stat: --stat
+  - system: --system
+  - track: --track
+  - update: --update
+  - verbose: --verbose
+  - branch: -b
+  - combined: -c
+  - deep: -d
+  - very verbose: -vv
+  - HEAD
+  - main
+  - master
+  - origin
+  - upstream
+  - origin main: origin/main
+  - origin master: origin/master
+
+List: user.git_command
+  - add
+  - archive
+  - bisect
+  - blame
+  - branch
+  - checkout
+  - cherry pick: cherry-pick
+  - clean
+  - clone
+  - commit
+  - config
+  - diff
+  - diff tool: difftool
+  - fetch
+  - gc
+  - grep
+  - help
+  - in it: init
+  - log
+  - ls files: ls-files
+  - merge
+  - merge tool: mergetool
+  - move: mv
+  - pull
+  - push
+  - range diff: range-diff
+  - rebase
+  - ref log: reflog
+  - remote
+  - remote add
+  - remote remove
+  - remote rename
+  - remote set url: remote set-url
+  - remote set you are el: remote set-url
+  - remote show
+  - rerere
+  - rerere diff
+  - rerere status
+  - reset
+  - restore
+  - revert
+  - remove: rm
+  - short log: shortlog
+  - show
+  - sparse checkout: sparse-checkout
+  - stash
+  - stash apply
+  - stash list
+  - stash pop
+  - stash push
+  - stash show
+  - stash save
+  - status
+  - submodule
+  - submodule add
+  - submodule in it: submodule init
+  - submodule status
+  - submodule update
+  - switch
+  - tag
+  - worktree
+  - worktree add
+  - worktree list
+  - worktree lock
+  - worktree move
+  - worktree prune
+  - worktree remove
+  - worktree repair
+  - worktree unlock
+
+List: user.delimiter_pair
+  - 
+  - # Format:
+  - # SPOKEN_FORM: LEFT_DELIMITER RIGHT_DELIMITER
+  - # Use the literal symbols for delimiters (except for whitespace, which is "space")
+  - #
+  - # Examples:
+  - # round: ( )
+  - # pad: space space
+  - 
+  - round: ( )
+  - box: [ ]
+  - diamond: < >
+  - curly: { }
+  - twin: "' '"
+  - quad: '" "'
+  - skis: ` `
+  - percentages: % %
+  - pad: space space
+  - 
+  - escaped quad: '\\" \\"'
+  - escaped twin:  "\\' \\'"
+  - escaped round: \( \)
+  - escaped box: \[ \]
+
+List: user.edit_action
+  - 
+  - select: select
+  - go before: goBefore
+  - go after: goAfter
+  - 
+  - copy: copyToClipboard
+  - cut: cutToClipboard
+  - paste: pasteFromClipboard
+  - paste to: pasteFromClipboard
+  - 
+  - clear: delete
+
+List: user.edit_modifier
+  - all: document
+  - paragraph: paragraph
+  - word: word
+  - line: line
+  - line start: lineStart
+  - way left: lineStart
+  - line end: lineEnd
+  - way right: lineEnd
+  - file start: fileStart
+  - way up: fileStart
+  - file end: fileEnd
+  - way down: fileEnd
+
+List: user.edit_text_file
+  - 
+  - additional words: core/vocabulary/vocabulary.talon-list
+  - vocabulary: core/vocabulary/vocabulary.talon-list
+  - alphabet: core/keys/letter.talon-list
+  - homophones: core/homophones/homophones.csv
+  - search engines: core/websites_and_search_engines/search_engine.talon-list
+  - websites: core/websites_and_search_engines/website.talon-list
+  - 
+  - unix utilities: tags/terminal/unix_utility.talon-list
+  - 
+  - abbreviations: settings/abbreviations.csv
+  - file extensions: settings/file_extensions.csv
+  - words to replace: settings/words_to_replace.csv
+
+List: user.code_formatter
+  - all cap: ALL_CAPS
+  - all down: ALL_LOWERCASE
+  - camel: PRIVATE_CAMEL_CASE
+  - dotted: DOT_SEPARATED
+  - dub string: DOUBLE_QUOTED_STRING
+  - dunder: DOUBLE_UNDERSCORE
+  - hammer: PUBLIC_CAMEL_CASE
+  - kebab: DASH_SEPARATED
+  - packed: DOUBLE_COLON_SEPARATED
+  - padded: SPACE_SURROUNDED_STRING
+  - slasher: ALL_SLASHES
+  - conga: SLASH_SEPARATED
+  - smash: NO_SPACES
+  - snake: SNAKE_CASE
+  - string: SINGLE_QUOTED_STRING
+  - constant: ALL_CAPS,SNAKE_CASE
+
+List: user.prose_formatter
+  - say: NOOP
+  - speak: NOOP
+  - sentence: CAPITALIZE_FIRST_WORD
+  - title: CAPITALIZE_ALL_WORDS
+
+List: user.reformatter
+  - cap: CAPITALIZE
+  - list: COMMA_SEPARATED
+  - unformat: REMOVE_FORMATTING
+
+List: user.word_formatter
+  - 
+  - word: NOOP
+  - trot: TRAILING_SPACE
+  - proud: CAPITALIZE_FIRST_WORD
+  - leap: TRAILING_SPACE,CAPITALIZE_FIRST_WORD
+
+List: user.arrow_key
+  - down: down
+  - left: left
+  - right: right
+  - up: up
+
+List: user.function_key
+  - f one: f1
+  - f two: f2
+  - f three: f3
+  - f four: f4
+  - f five: f5
+  - f six: f6
+  - f seven: f7
+  - f eight: f8
+  - f nine: f9
+  - f ten: f10
+  - f eleven: f11
+  - f twelve: f12
+  - f thirteen: f13
+  - f fourteen: f14
+  - f fifteen: f15
+  - f sixteen: f16
+  - f seventeen: f17
+  - f eighteen: f18
+  - f nineteen: f19
+  - f twenty: f20
+  - # these f keys are not supported by all platforms (eg Mac) and are disabled by default
+  - #f twenty one: f21
+  - #f twenty two: f22
+  - #f twenty three: f23
+  - #f twenty four: f24
+
+List: user.keypad_key
+  - 
+  - key pad zero: keypad_0
+  - key pad one: keypad_1
+  - key pad two: keypad_2
+  - key pad three: keypad_3
+  - key pad four: keypad_4
+  - key pad five: keypad_5
+  - key pad six: keypad_6
+  - key pad seven: keypad_7
+  - key pad eight: keypad_8
+  - key pad nine: keypad_9
+  - key pad point: keypad_decimal
+  - key pad plus: keypad_plus
+  - key pad minus: keypad_minus
+  - key pad star: keypad_multiply
+  - key pad slash: keypad_divide
+  - key pad equals: keypad_equals
+  - key pad clear: keypad_clear
+  - key pad enter: keypad_enter
+
+List: user.letter
+  - # for common alternative spoken forms for letters, visit
+  - # https://talon.wiki/quickstart/improving_recognition_accuracy/#collected-alternatives-to-the-default-alphabet
+  - air: a
+  - bat: b
+  - cap: c
+  - drum: d
+  - each: e
+  - fine: f
+  - gust: g
+  - harp: h
+  - sit: i
+  - jury: j
+  - crunch: k
+  - look: l
+  - made: m
+  - near: n
+  - odd: o
+  - pit: p
+  - quench: q
+  - red: r
+  - sun: s
+  - trap: t
+  - urge: u
+  - vest: v
+  - whale: w
+  - plex: x
+  - yank: y
+  - zip: z
+
+List: user.number_key
+  - zero: 0
+  - one: 1
+  - two: 2
+  - three: 3
+  - four: 4
+  - five: 5
+  - six: 6
+  - seven: 7
+  - eight: 8
+  - nine: 9
+
+List: user.currency
+  - dollar: $
+  - dollars: $
+  - euro: €
+  - euros: €
+  - pound: £
+  - pounds: £
+
+List: user.phrase_ender
+  - 
+  - over: ""
+
+List: user.prose_modifiers
+  - # Maps spoken forms to DictationFormat method names (see DictationFormat in text_and_dictation.py).
+  - cap: cap
+  - no cap: no_cap
+  - # no caps variant for Dragon
+  - no caps: no_cap
+  - no space: no_space
+
+List: user.prose_snippets
+  - spacebar: " "
+  - new line: "\n"
+  - new paragraph: "\n\n"
+  - # Curly quotes are used to obtain proper spacing for left and right quotes, but will later be straightened.
+  - open quote: "“"
+  - close quote: "”"
+  - smiley: :-)
+  - winky: ;-)
+  - frowny: :-(
+
+List: user.vocabulary
+  - 
+  - N map: nmap
+  - under documented: under-documented
+  - nmap
+  - admin
+  - Cisco
+  - Citrix
+  - VPN
+  - DNS
+  - Minecraft
+  - Meyers
+  - HTML
+  - Radzen
+  - Blazor
+  - Talon
+  - C#
+  - Python
+  - JavaScript
+  - CSS
+  - SQL
+
+List: user.search_engine
+  - #amazon: https://www.amazon.com/s/?field-keywords=%s
+  - google: https://www.google.com/search?q=%s
+  - google maps: https://maps.google.com/maps?q=%s
+  - scholar: https://scholar.google.com/scholar?q=%s
+  - wikipedia: https://en.wikipedia.org/w/index.php?search=%s
+
+List: user.website
+  - talon home page: http://talonvoice.com
+  - talon slack: http://talonvoice.slack.com/messages/help
+  - talon wiki: https://talon.wiki/
+  - talon practice: https://chaosparrot.github.io/talon_practice/
+  - talon repository search: https://search.talonvoice.com/search/
+  - amazon: https://www.amazon.com/
+  - dropbox: https://dropbox.com/
+  - google: https://www.google.com/
+  - google calendar: https://calendar.google.com
+  - google maps: https://maps.google.com/
+  - google scholar: https://scholar.google.com/
+  - gmail: https://mail.google.com/
+  - github: https://github.com/
+  - gist: https://gist.github.com/
+  - wikipedia: https://en.wikipedia.org/
+  - youtube: https://www.youtube.com/
+
+List: user.code_common_function
+  - -
+  - insert
+  - key
+  - print
+  - repeat
+
+List: user.before_or_after
+  - before: BEFORE
+  - after: AFTER
+
+List: user.navigation_action
+  - 
+  - move: GO
+  - extend: EXTEND
+  - select: SELECT
+  - clear: DELETE
+  - cut: CUT
+  - copy: COPY
+
+List: user.emoji
+  - angry: 😠
+  - blushing: 😊
+  - broken heart: 💔
+  - clapping: 👏
+  - cool: 😎
+  - crying: 😭
+  - dancing: 💃
+  - disappointed: 😞
+  - eyes: 👀
+  - happy: 😀
+  - heart: ❤
+  - heart eyes: 😍
+  - hugging: 🤗
+  - kissing: 😗
+  - monocle: 🧐
+  - party: 🎉
+  - pleading: 🥺
+  - poop: 💩
+  - rofl: 🤣
+  - roll eyes: 🙄
+  - sad: 🙁
+  - shrugging: 🤷
+  - shushing: 🤫
+  - star eyes: 🤩
+  - thinking: 🤔
+  - thumbs down: 👎
+  - thumbs up: 👍
+  - worried: 😟
+
+List: user.emoticon
+  - broken heart: </3
+  - cheeky: :p
+  - cheering: \o/
+  - crying: ":'("
+  - happy: :)
+  - heart: <3
+  - horror: D:
+  - laughing: :D
+  - sad: :(
+  - salute: o7
+  - skeptical: :/
+  - surprised: :o
+  - wink: ;)
+
+List: user.kaomoji
+  - blushing: (⁄ ⁄•⁄ω⁄•⁄ ⁄)
+  - crying: (╥﹏╥)
+  - embarrassed: (⌒_⌒;)
+  - flower girl: (◕‿◕✿)
+  - happy: (* ^ ω ^)
+  - kissing: ( ˘ ³˘)♥
+  - lenny: ( ͡° ͜ʖ ͡°)
+  - sad: (｡•́︿•̀｡)
+  - shrugging: ¯\_(ツ)_/¯
+  - table flip: (╯°□°)╯︵ ┻━┻
+  - table return: ┬─┬ ノ( ゜-゜ノ)
+
+List: user.unix_utility
+  - ark: awk
+  - base sixty four decode: base64 -d
+  - base sixty four: base64
+  - concat: cat
+  - change mode recurse: chmod -R
+  - change mode: chmod
+  - change owner recurse: chown -R
+  - change owner: chown
+  - curl
+  - cut
+  - disk free human: df -h
+  - disk free: df
+  - dig
+  - disk usage human: du -h
+  - disk usage: du
+  - echo
+  - false
+  - find
+  - grab here: grep -Hirn
+  - grab: grep
+  - head
+  - harp top: htop
+  - I D user: id -u
+  - I D: id
+  - less
+  - link soft: ln -s
+  - link: ln
+  - M D five sum: md5sum
+  - make dear: mkdir
+  - paste
+  - print format: printf
+  - work dear: pwd
+  - reverse: rev
+  - are sync: rsync
+  - said: sed
+  - sequence: seq
+  - shah two fifty six sum: sha256sum
+  - sleep
+  - sort human: sort -h
+  - sort numeric: sort -n
+  - sort reverse: sort -r
+  - sort unique: sort -u
+  - sort
+  - S S H: ssh
+  - stat
+  - pseudo: sudo
+  - tail follow: tail -f
+  - tail
+  - tea append: tee -a
+  - tea: tee
+  - touch
+  - translate delete: tr -d
+  - translate: tr
+  - true
+  - unique count: uniq -c
+  - unique: uniq
+  - word count characters: wc -c
+  - word count lines: wc -l
+  - word count: wc
+  - who
+  - who am I: whoami
+
+List: user.modifier_key
+  - -
+  - 
+  - alt: alt
+  - control: ctrl
+  - shift: shift
+  - super: cmd
+  - command: cmd
+  - option: alt
+  - function: fn
+  - globe: fn
+
+List: user.special_key
+  - -
+  - 
+  - end: end
+  - home: home
+  - minus: minus
+  - return: return
+  - enter: keypad_enter
+  - page down: pagedown
+  - page up: pageup
+  - escape: escape
+  - space: space
+  - tab: tab
+  - insert: insert
+  - wipe: backspace
+  - delete: backspace
+  - forward delete: delete
+
+List: user.modifier_key
+  - os: linux
+  - -
+  - alt: alt
+  - control: ctrl
+  - shift: shift
+  - # super is the windows key
+  - super: super
+  - command: ctrl
+  - option: alt
+
+List: user.special_key
+  - os: linux
+  - -
+  - 
+  - end: end
+  - home: home
+  - minus: minus
+  - enter: enter
+  - page down: pagedown
+  - page up: pageup
+  - escape: escape
+  - space: space
+  - tab: tab
+  - insert: insert
+  - wipe: backspace
+  - delete: backspace
+  - forward delete: delete
+  - menu key: menu
+  - print screen: printscr
+
+End of Talon Lists

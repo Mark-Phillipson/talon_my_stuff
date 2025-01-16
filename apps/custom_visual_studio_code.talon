@@ -3,6 +3,8 @@ app: vscode
 # Navigation
 
 terminal tab: user.vscode("workbench.action.terminal.focus")
+single tab: user.vscode("workbench.action.showEditorTab")
+multi tabs: user.vscode("workbench.action.showMultipleEditorTabs")
 solution explorer: user.vscode("solutionExplorer.focus")
 symbols: user.vscode("workbench.action.showAllSymbols")
 [go to] definition: user.vscode("editor.action.revealDefinition")
