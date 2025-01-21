@@ -3,8 +3,8 @@ list: user.letter
 
 act: a
 alpha: A
-batt: b
-box: b
+bat: b
+birch: b # testing this out 16-01-2025
 bravo: B
 cat: c
 charlie: C

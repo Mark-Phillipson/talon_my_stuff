@@ -11,6 +11,24 @@ symbols: user.vscode("workbench.action.showAllSymbols")
 [focus] problems: user.vscode("workbench.panel.markers.view.focus")
 maximize panel: user.vscode("workbench.action.toggleMaximizedPanel")
 (terminal focus) | (focus terminal): user.vscode("workbench.action.terminal.focus")
+terminal build:
+    user.vscode("workbench.action.terminal.focus")
+    sleep(100ms)
+    insert("dotnet build")
+    sleep(100ms)
+    key(enter)
+terminal run:
+    user.vscode("workbench.action.terminal.focus")
+    sleep(100ms)
+    insert("dotnet run")
+    sleep(100ms)
+    key(enter)
+terminal watch:
+    user.vscode("workbench.action.terminal.focus")
+    sleep(100ms)
+    insert("dotnet watch run")
+    sleep(100ms)
+    key(enter)    
 focus search: user.vscode("workbench.view.search")
 focus extensions: user.vscode("workbench.view.extensions")
 focus explorer: user.vscode("workbench.view.explorer")
@@ -65,6 +83,7 @@ open folder: user.vscode("workbench.action.files.openFolder")
 file save as: user.vscode("workbench.action.files.saveAs")
 file save all: user.vscode("workbench.action.files.saveAll")
 focus open [files | tab]: user.vscode("workbench.files.action.focusOpenEditorsView")
+close others: user.vscode("workbench.action.closeOtherEditors")
 rename [file]: key(f2)
 new file here: user.vscode("fileutils.newFile")
 new folder: user.vscode("explorer.newFolder")
@@ -117,6 +136,10 @@ zoom out small:
 toggle secondary: user.vscode("workbench.action.closeAuxiliaryBar")
 
 # Cursorless
+
+put <user.cursorless_target>:
+    value = user.cursorless_get_text(cursorless_target, true)
+    insert(value)
 
 toggle hats: user.vscode("cursorless.toggleDecorations")
 <user.formatters> {user.cursorless_reformat_action} <user.cursorless_target>:

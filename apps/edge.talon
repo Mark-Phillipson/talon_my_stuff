@@ -7,6 +7,7 @@ tag(): user.tabs
 theatre mode: key(alt-t)
 previous tab: key(ctrl-shift-tab)
 next tab: key(ctrl-tab)
+refresh page: key(f5)
 skip ads:
     mouse_move(3546, 970)
 destroy drone:
