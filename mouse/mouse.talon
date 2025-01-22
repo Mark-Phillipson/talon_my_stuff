@@ -21,9 +21,15 @@
 taskbar <user.screen_step_one>:
     mouse_move(screen_step_one, 1050)
     mouse_click(0)
-# taskbar <user.screen_step_two>:
-#     mouse_move(screen_step_two, 1050)
-#     mouse_click(0)
+top <user.screen_step_one>:
+    mouse_move(screen_step_one, 30)
+    mouse_click(0)
+taskbar <user.screen_step_two>:
+    mouse_move(screen_step_two, 1050)
+    mouse_click(0)
+top <user.screen_step_two>:
+    mouse_move(screen_step_two, 10)
+    mouse_click(0)
 taskbar <user.screen_step_two> <user.number_signed_small>:
     mouse_move(screen_step_two, 1050)
     position_x = user.query_mouse_position_x()
