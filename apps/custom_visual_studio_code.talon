@@ -2,6 +2,7 @@ app: vscode
 -
 # Navigation
 
+switch tab: user.vscode("workbench.action.switchWindow")
 terminal tab: user.vscode("workbench.action.terminal.focus")
 single tab: user.vscode("workbench.action.showEditorTab")
 multi tabs: user.vscode("workbench.action.showMultipleEditorTabs")

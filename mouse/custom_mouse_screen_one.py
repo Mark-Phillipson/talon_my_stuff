@@ -3,7 +3,7 @@ from talon import actions, Module, Context
 steps_screen_one = {
     "zero": 5,
     "act": 50,
-    'alpha': 50,
+    "alpha": 50,
     "bat": 100,
     "bravo": 100,
     "cat": 150,

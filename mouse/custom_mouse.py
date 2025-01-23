@@ -3,7 +3,7 @@ from talon import actions, Module, Context
 steps_monitor_one = {
     "zero": 5,
     "act": 50,
-    'alpha': 50,
+    "alpha": 50,
     "bat": 100,
     "bravo": 100,
     "cat": 150,
@@ -357,6 +357,7 @@ ctx.lists["user.screen_step_vertical_monitor_two"] = list(steps_vertical_monitor
 def screen_step_one(m) -> int:
     "Get horizontal pixel screen coordinate for monitor one"
     actual=steps_monitor_one[m.screen_step_one] - 1680
+    print(actual)
     return actual
 
 @mod.capture(rule="{user.screen_step_two}")
