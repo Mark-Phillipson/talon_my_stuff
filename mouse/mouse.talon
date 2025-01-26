@@ -1,7 +1,7 @@
-<user.screen_step_one> <user.screen_step_vertical> move:
+<user.screen_step_one> <user.screen_step_vertical> (move | position):
     vertical = screen_step_vertical + 30
     mouse_move(screen_step_one, vertical)
-<user.screen_step_two> <user.screen_step_vertical_monitor_two> move:
+<user.screen_step_two> <user.screen_step_vertical_monitor_two> (move | position):
     vertical = screen_step_vertical_monitor_two
     mouse_move(screen_step_two, vertical)
 <user.screen_step_one> <user.screen_step_vertical> (click | touch):
@@ -22,15 +22,15 @@ taskbar <user.screen_step_one>:
     mouse_move(screen_step_one, 1050)
     mouse_click(0)
 apex <user.screen_step_one>:
-    print(screen_step_one)
-    mouse_move(screen_step_one, 10)
+    mouse_move(-380, 35) 
+    mouse_move(screen_step_one, 35)
     mouse_click(0)
 taskbar <user.screen_step_two>:
     mouse_move(screen_step_two, 1050)
     mouse_click(0)
-# apex <user.screen_step_two>:
-#     mouse_move(screen_step_two, 10)
-#     mouse_click(0)
+apex <user.screen_step_two>:
+    mouse_move(screen_step_two, 10)
+    mouse_click(0)
 taskbar <user.screen_step_two> <user.number_signed_small>:
     mouse_move(screen_step_two, 1050)
     position_x = user.query_mouse_position_x()
