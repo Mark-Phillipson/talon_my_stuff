@@ -154,3 +154,9 @@ clear screen:
     key(enter)
 Linux update: insert("sudo apt-get update")
 include paging: insert(" | more")
+repel: 
+    insert("C:\\Users\\MPhil\\AppData\\Roaming\\talon\\venv\\3.13\\Scripts\\repl.bat")
+    sleep(100ms)
+    key(enter)
+    sleep(100ms)
+    insert("events.tail()")

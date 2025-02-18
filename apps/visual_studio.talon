@@ -64,7 +64,7 @@ hint show: key(ctrl-shift-space)
 (go to definition | definition show): key(f12)
 definition peek: key(alt-f12)
 references find: key(shift-f12)
-format that: key(ctrl-k ctrl-d)
+format (that | code): key(ctrl-k ctrl-d)
 imports fix: key(ctrl-r ctrl-g)
 
 # problem next:

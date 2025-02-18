@@ -80,6 +80,7 @@ fluent search <user.text>:
     sleep(300ms)
 pause some:                 sleep(500ms)
 select rest of line:        key(shift-end)
+base | home:              key(home)
 double home:
     key(home)
     sleep(100ms)
@@ -119,6 +120,7 @@ clear message:
 [enter] email address:      insert("MPhillipson0@Gmail.com")
 test email:                 insert("firstlastname@domain.co.uk")
 enter office username:      insert("Phillipson@MSPSystems.onmicrosoft.com")
+[enter] extra email address:      insert("Mark.S.Phillipson@outlook.com")
 enter username:
     insert("MPhil")
     sleep(100ms)

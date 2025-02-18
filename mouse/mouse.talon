@@ -22,8 +22,8 @@ taskbar <user.screen_step_one>:
     mouse_move(screen_step_one, 1050)
     mouse_click(0)
 apex <user.screen_step_one>:
-    mouse_move(-380, 35) 
-    mouse_move(screen_step_one, 35)
+    mouse_move(-380, 45) 
+    mouse_move(screen_step_one, 45)
     mouse_click(0)
 taskbar <user.screen_step_two>:
     mouse_move(screen_step_two, 1050)

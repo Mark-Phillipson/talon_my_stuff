@@ -7,7 +7,7 @@ settings():
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
-    key_hold = 50
+    key_hold = 32
 
 # This is a list of the commands that are specific to the Company of Heroes 2 game
 game <user.arrow_key>:
@@ -29,7 +29,7 @@ move left:
     key(left)
 move right:
     key(right)
-attack move:
+attack [move]:
     key(a)
     mouse_click(0)
 stop:
@@ -46,13 +46,13 @@ secondary build:
     key(b)
 headquarters:
     key(f1)
-tier one building:
+infantry:
     key(f2)
-tier two building:
+support:
     key(f3)
-tier three building:
+light [vehicles]:
     key(f4)
-tier four building:
+heavy [vehicles]:
     key(f5)
 set rally point:
     mouse_click(2)
@@ -67,13 +67,15 @@ defend point:
 go there:
     mouse_click(0)
     key(keypad_0)
-[next] idle [vehicle]:
+[next idle] vehicle:
     key(alt-/)
 [next] idle infantry:
     key(alt-.)
+idle:
+    key(alt-.)
 [all] vehicles:
     key(ctrl-/)
-[all] infantry:
+[all] soldiers:
     key(ctrl-.)
 reset camera:
     key(backspace)
@@ -97,7 +99,7 @@ take [all]:
     mouse_click(0)
 #save game: key(f5)
 unit one: key(1)
-srunit two: key(2)
+unit two: key(2)
 unit three: key(3)
 unit four: key(4)
 unit five: key(5)
@@ -108,7 +110,6 @@ unit nine: key(9)
 unit zero: key(0)
 centre:
     mouse_move(800, 500)
-home: key(ctrl)
 go home: key(home)
 [unit] one track:
     key(1)
@@ -162,3 +163,43 @@ slot fifth:
     mouse_click(0)
 zoom out: user.mouse_scroll_down()
 zoom: user.mouse_scroll_up()
+touch first: 
+    mouse_move(1660, 105)
+    sleep(30ms)
+    mouse_click(0)
+touch second:
+    mouse_move(1610, 110)
+    sleep(30ms)
+    mouse_click(0)
+touch third:
+    mouse_move(1560, 110)
+    sleep(30ms)
+    mouse_click(0)
+touch fourth:
+    mouse_move(1510, 110)
+    sleep(30ms)
+    mouse_click(0)  
+touch fifth:
+    mouse_move(1460, 110)
+    sleep(30ms)
+    mouse_click(0)
+touch sixth:
+    mouse_move(1410, 110)
+    sleep(30ms)
+    mouse_click(0)
+touch seventh:
+    mouse_move(1360, 110)
+    sleep(30ms)
+    mouse_click(0)
+touch eighth:
+    mouse_move(1310, 110)
+    sleep(30ms)
+    mouse_click(0)
+touch ninth:
+    mouse_move(1260, 110)
+    sleep(30ms)
+    mouse_click(0)^
+get stuff:
+    mouse_move(380, 855)
+    sleep(30ms)
+    mouse_click(0)
