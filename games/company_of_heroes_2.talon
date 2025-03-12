@@ -67,7 +67,7 @@ defend point:
 go there:
     mouse_click(0)
     key(keypad_0)
-[next idle] vehicle:
+[next] idle vehicle:
     key(alt-/)
 [next] idle infantry:
     key(alt-.)
@@ -75,8 +75,24 @@ idle:
     key(alt-.)
 [all] vehicles:
     key(ctrl-/)
+explode:
+    key(ctrl-/)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+hold shift:
+    key(shift:down)
+release shift:
+    key(shift:up)    
 [all] soldiers:
     key(ctrl-.)
+[all] invade:
+    key(ctrl-.)   
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
 reset camera:
     key(backspace)
 [game] pause:
@@ -198,7 +214,7 @@ touch eighth:
 touch ninth:
     mouse_move(1260, 110)
     sleep(30ms)
-    mouse_click(0)^
+    mouse_click(0)
 get stuff:
     mouse_move(380, 855)
     sleep(30ms)

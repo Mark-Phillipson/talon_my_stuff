@@ -1,11 +1,11 @@
-from talon import Module
-mod = Module()
+# from talon import Module
+# mod = Module()
 
-@mod.capture(rule='hello <word>')
-def testing_captures(m) -> str:
-    'capture a word and return it in lower case'
-    print('testing_captures:', m)
-    return 'HELLO ' + str(m.word).upper()
+# @mod.capture(rule='hello <word>')
+# def testing_captures(m) -> str:
+#     'capture a word and return it in lower case'
+#     print('testing_captures:', m)
+#     return 'HELLO ' + str(m.word).upper()
 
 # In Talon, you can use various symbols in capture rules to define patterns. Here are some common symbols you can use:
 
