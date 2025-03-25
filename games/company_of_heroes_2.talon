@@ -75,6 +75,18 @@ idle:
     key(alt-.)
 [all] vehicles:
     key(ctrl-/)
+queue: 
+    key(shift:down)
+    sleep(30ms)
+    mouse_click(1)
+    sleep(30ms)
+    key(shift:up)
+next:
+    key(shift:down)
+    sleep(30ms)
+    mouse_click(0)
+    sleep(30ms)
+    key(shift:up)
 explode:
     key(ctrl-/)
     sleep(30ms)
@@ -217,5 +229,45 @@ touch ninth:
     mouse_click(0)
 get stuff:
     mouse_move(380, 855)
+    sleep(30ms)
+    mouse_click(0)
+vehicle first: 
+    mouse_move(1660, 200)
+    sleep(30ms)
+    mouse_click(0)
+vehicle second:
+    mouse_move(1610, 200)
+    sleep(30ms)
+    mouse_click(0)
+vehicle third:
+    mouse_move(1560, 200)
+    sleep(30ms)
+    mouse_click(0)
+vehicle fourth:
+    mouse_move(1510, 200)
+    sleep(30ms)
+    mouse_click(0)
+vehicle fifth:
+    mouse_move(1460, 200)
+    sleep(30ms)
+    mouse_click(0)
+vehicle sixth:
+    mouse_move(1410, 200)
+    sleep(30ms)
+    mouse_click(0)
+vehicle seventh:
+    mouse_move(1360, 200)
+    sleep(30ms)
+    mouse_click(0)
+emplacement first:
+    mouse_move(1650, 300)
+    sleep(30ms)
+    mouse_click(0)    
+emplacement second:
+    mouse_move(1600, 300)
+    sleep(30ms)
+    mouse_click(0)
+emplacement third:
+    mouse_move(1550, 300)
     sleep(30ms)
     mouse_click(0)

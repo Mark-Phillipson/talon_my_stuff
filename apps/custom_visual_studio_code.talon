@@ -277,7 +277,7 @@ pilot new chat:
 pilot ask: key(ctrl-i)
 pilot toggle: user.vscode("github.copilot.toggleCopilot")
 pilot accept [word]: key(ctrl-right)
-pilot edit: user.vscode("workbench.action.chat.openEditSession")
+pilot edits: user.vscode("workbench.action.chat.openEditSession")
 pilot chat workspace:
     user.copilot_chat("")
     sleep(300ms)
