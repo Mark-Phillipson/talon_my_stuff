@@ -56,7 +56,6 @@ attack ground:
 ground attack:
     key(f2)
     sleep(100ms)
-    mouse_click(0)
 build bridge: key(x)
 camera reset: key(k)
 diffuse mine:
@@ -743,3 +742,47 @@ slide stop:
     key(left:up)
     key(up:up)
     key(down:up)
+order anti air:
+    mouse_move(1850, 875)
+    sleep(30ms)
+    mouse_click(0)
+order artillery:
+    mouse_move(1770, 875)
+    sleep(30ms)
+    mouse_click(0)
+order infantry:
+    mouse_move(1710, 875)
+    sleep(30ms)
+    mouse_click(0)
+order car:
+    mouse_move(1640, 875)
+    sleep(30ms)
+    mouse_click(0)
+order tank:
+    mouse_move(1580, 875)
+    sleep(30ms)
+    mouse_click(0)
+order repair:
+    mouse_move(1570, 935)
+    sleep(30ms)
+    mouse_click(0)
+order supply:
+    mouse_move(1640, 935)
+    sleep(30ms)
+    mouse_click(0)
+order heavy [tank]:
+    mouse_move(1720, 945)
+    sleep(30ms)
+    mouse_click(0)
+order beast:
+    mouse_move(1780, 945)
+    sleep(30ms)
+    mouse_click(0)
+confirm order:
+    mouse_move(1849, 1016)
+    sleep(30ms)
+    mouse_click(0)
+cancel order:
+    mouse_move(1775, 1010)
+    sleep(30ms)
+    mouse_click(0)
