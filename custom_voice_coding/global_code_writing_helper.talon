@@ -15,6 +15,7 @@ search list <user.text>:
 {user.snippet_language} {user.snippet_category}: user.run_application_voice_admin_windows_forms_language_category(snippet_language, snippet_category)
 launch {user.launcher_category}: user.run_application_voice_admin_windows_forms_launcher(launcher_category)
 launch voice admin: user.launch_voice_admin()
+launch realtime: user.launch_realtime_ai_app()
 fresh line:
     key(end)
     key(enter)

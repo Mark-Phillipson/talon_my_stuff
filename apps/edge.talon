@@ -131,3 +131,6 @@ test Blazor CRUD example:
 microphone mute:
     # Google Meet
     key(ctrl-d)
+start realtime:
+    speech.disable()
+    key(alt-m)
