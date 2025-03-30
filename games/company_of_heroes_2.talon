@@ -170,61 +170,61 @@ go home: key(home)
     key(0)
     key(0)
 slot first:
-    mouse_move(450, 855)
+    mouse_move(522, 862)
     sleep(30ms)
     mouse_click(0)
 slot second:
-    mouse_move(528, 855)
+    mouse_move(602, 853)
     sleep(30ms)
     mouse_click(0)
 slot third:
-    mouse_move(606, 855)
+    mouse_move(680, 852)
     sleep(30ms)
     mouse_click(0)
 slot fourth:
-    mouse_move(684, 855)
+    mouse_move(766, 856)
     sleep(30ms)
     mouse_click(0)
 slot fifth:
-    mouse_move(752, 855)
+    mouse_move(852, 859)
     sleep(30ms)
     mouse_click(0)
 zoom out: user.mouse_scroll_down()
 zoom: user.mouse_scroll_up()
 touch first: 
-    mouse_move(1660, 105)
+    mouse_move(1890, 115)
     sleep(30ms)
     mouse_click(0)
 touch second:
-    mouse_move(1610, 110)
+    mouse_move(1830, 120)
     sleep(30ms)
     mouse_click(0)
 touch third:
-    mouse_move(1560, 110)
+    mouse_move(1780, 120)
     sleep(30ms)
     mouse_click(0)
 touch fourth:
-    mouse_move(1510, 110)
+    mouse_move(1720, 120)
     sleep(30ms)
     mouse_click(0)  
 touch fifth:
-    mouse_move(1460, 110)
+    mouse_move(1660, 120)
     sleep(30ms)
     mouse_click(0)
 touch sixth:
-    mouse_move(1410, 110)
+    mouse_move(1610, 120)
     sleep(30ms)
     mouse_click(0)
 touch seventh:
-    mouse_move(1360, 110)
+    mouse_move(1550, 120)
     sleep(30ms)
     mouse_click(0)
 touch eighth:
-    mouse_move(1310, 110)
+    mouse_move(1500, 120)
     sleep(30ms)
     mouse_click(0)
 touch ninth:
-    mouse_move(1260, 110)
+    mouse_move(1440, 120)
     sleep(30ms)
     mouse_click(0)
 get stuff:
@@ -232,42 +232,42 @@ get stuff:
     sleep(30ms)
     mouse_click(0)
 vehicle first: 
-    mouse_move(1660, 200)
+    mouse_move(1885, 225)
     sleep(30ms)
     mouse_click(0)
 vehicle second:
-    mouse_move(1610, 200)
+    mouse_move(1835, 230)
     sleep(30ms)
     mouse_click(0)
 vehicle third:
-    mouse_move(1560, 200)
+    mouse_move(1785, 230)
     sleep(30ms)
     mouse_click(0)
 vehicle fourth:
-    mouse_move(1510, 200)
+    mouse_move(1720, 230)
     sleep(30ms)
     mouse_click(0)
 vehicle fifth:
-    mouse_move(1460, 200)
+    mouse_move(1795, 230)
     sleep(30ms)
     mouse_click(0)
 vehicle sixth:
-    mouse_move(1410, 200)
+    mouse_move(1745, 230)
     sleep(30ms)
     mouse_click(0)
 vehicle seventh:
-    mouse_move(1360, 200)
+    mouse_move(1695, 230)
     sleep(30ms)
     mouse_click(0)
 emplacement first:
-    mouse_move(1650, 300)
+    mouse_move(1885, 345)
     sleep(30ms)
     mouse_click(0)    
 emplacement second:
-    mouse_move(1600, 300)
+    mouse_move(1835, 350)
     sleep(30ms)
     mouse_click(0)
 emplacement third:
-    mouse_move(1550, 300)
+    mouse_move(1895, 350)
     sleep(30ms)
     mouse_click(0)

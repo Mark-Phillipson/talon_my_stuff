@@ -4,6 +4,14 @@ mod = Module()
 
 @mod.action_class
 class Actions:
+    def noise_trigger_hiss(active: bool):
+        """
+        Called when the user makes a 'hiss' noise. Listen to
+        https://noise.talonvoice.com/static/previews/hiss.mp3 for an
+        example.
+        """
+        actions.mouse_click(1)
+        print("Hiss detected")
     def fake_email()->str:
         """make fake email"""
         random_number = random.randint(97, 122)

@@ -21,13 +21,13 @@ class Actions:
         subprocess.Popen(["start", uri], shell=True)
     def launch_realtime_ai_app():
         """Launch Realtime AI app"""
-        uri = "http://localhost:5174/"
+        uri = "http://localhost:5006/"
         psi = subprocess.Popen(["C:\\Users\\MPhil\\source\\repos\\RealtimeAIApp\\RealtimeFormApp\\bin\\Release\\net9.0\\publish\\RealtimeFormApp.exe"], 
                                 shell=True, 
                                 cwd="C:\\Users\\MPhil\\source\\repos\\RealtimeAIApp\\RealtimeFormApp\\bin\\Release\\net9.0\\publish\\",
                                 creationflags=subprocess.CREATE_NEW_CONSOLE)
 
-        uri = "http://localhost:5174/"
+        uri = "http://localhost:5006/"
         psi = subprocess.Popen(["C:\\Users\\MPhil\\source\\repos\\RealtimeAIApp\\RealtimeFormApp\\bin\\Release\\net9.0\\publish\\RealtimeFormApp.exe"], 
                                 shell=True, 
                                 cwd="C:\\Users\\MPhil\\source\\repos\\RealtimeAIApp\\RealtimeFormApp\\bin\\Release\\net9.0\\publish\\",

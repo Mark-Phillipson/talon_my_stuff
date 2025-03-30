@@ -9,7 +9,7 @@ mode: dictation
     key(enter)
 ^backspace: key(backspace)
 ^delete: key(delete)
-^backspace <user.number_signed_small>:
+backspace <user.number_signed_small>:
     key(backspace)
     repeat(number_signed_small-1)
 ^space: key(space)
