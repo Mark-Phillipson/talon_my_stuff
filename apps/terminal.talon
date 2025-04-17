@@ -127,13 +127,14 @@ dotnet publish voice admin:
     key(enter)
     sleep(100ms)
     insert("CD C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher")
-    key(enter)
-    sleep(100ms)
-    insert("dotnet publish -c Release --output C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net8.0\\publish")
     sleep(100ms)
     key(enter)
+    sleep(100ms)
+    insert("dotnet publish -c Release ")
+    sleep(100ms)
     key(enter)
-chat with database:
+    key(enter)
+chat with database 4:
     insert("CD C:\\Users\\MPhil\\source\\repos\\dbchatprov4\\DBchatpro")
     sleep(100ms)
     key(enter)

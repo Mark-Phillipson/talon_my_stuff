@@ -10,6 +10,16 @@ settings():
     key_hold = 32
 
 # This is a list of the commands that are specific to the Gates of Hell game
+take [all]:
+    mouse_move(10, 10)
+    sleep(30ms)
+    user.mouse_drag(0)
+    sleep(30ms)
+    mouse_move(1670, 250)
+    sleep(30ms)
+    mouse_move(1670, 979)
+    sleep(30ms)
+    mouse_click(0)
 game up:
     key(w)
     repeat(10)
@@ -173,3 +183,15 @@ rotate left: key(,)
 rotate write: key(.)
 pitch up: key(;)
 pitch down: key(')
+reinforce first:
+    mouse_move(1820, 505)
+    sleep(100ms)
+    mouse_click(0)
+twelve o'clock:
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x, position_y - 200)
+    

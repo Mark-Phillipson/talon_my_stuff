@@ -1,4 +1,5 @@
 app: vscode
+
 -
 # Navigation
 
@@ -291,7 +292,9 @@ pilot list commands:
     key(ctrl-shift-p)
     sleep(100ms)
     insert("GitHub Copilot: ")
-
+pilot voice: 
+    user.vscode("workbench.action.chat.startVoiceChat")    
+    speech.disable()
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
 #Markdown All in One Extension

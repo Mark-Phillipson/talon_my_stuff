@@ -142,3 +142,19 @@ microphone mute:
 start realtime:
     speech.disable()
     key(alt-m)
+^(realtime copy)+$:
+    key(alt-t)
+    sleep(100ms)
+    key(ctrl-a)
+    sleep(100ms)
+    key(ctrl-c)
+^(realtime paste)+$:
+    key(alt-t)
+    sleep(100ms)
+    key(ctrl-a)
+    sleep(100ms)
+    key(ctrl-c)
+    sleep(100ms)
+    key(alt-tab)        
+    sleep(100ms)
+    key(ctrl-v)

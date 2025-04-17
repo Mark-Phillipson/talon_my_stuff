@@ -25,7 +25,6 @@ help search selection:
     user.help_search(text)
 new paragraph: key(enter)
 new line: key(enter)
-<number> <user.text>: key(ctrl)
 taskbar toggle:
     user.toggle_taskbar()
 snipping tool: key(super-shift-s)

@@ -27,7 +27,7 @@ dotnet publish clear visibility:
     insert("cd C:\\Users\\Mark\\source\\repos\\ARM_MIG\\ARM_MVC")
     sleep(100ms)
     key(enter)
-    insert("dotnet publish -c Release --output D:\\CV Staging\\cv-wwwroot\\MVC")
+    insert("dotnet publish -c Release ")
     sleep(100ms)
     key(enter)
 list directory:

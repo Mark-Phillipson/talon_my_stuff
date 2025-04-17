@@ -29,3 +29,9 @@ app: microsoft_edge
     key(alt-tab)        
     sleep(100ms)
     key(ctrl-v)
+^(realtime copy)+$:
+    key(alt-t)
+    sleep(100ms)
+    key(ctrl-a)
+    sleep(100ms)
+    key(ctrl-c)

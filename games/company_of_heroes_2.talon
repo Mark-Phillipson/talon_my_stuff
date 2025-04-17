@@ -71,8 +71,7 @@ go there:
     key(alt-/)
 [next] idle infantry:
     key(alt-.)
-idle:
-    key(alt-.)
+idle: key(alt-.)
 [all] vehicles:
     key(ctrl-/)
 queue: 
@@ -139,34 +138,34 @@ unit zero: key(0)
 centre:
     mouse_move(800, 500)
 go home: key(home)
-[unit] one track:
+[unit] one focus:
     key(1)
     key(1)
-[unit] two track:
+[unit] two focus:
     key(2)
     key(2)
-[unit] three track:
+[unit] three focus:
     key(3)
     key(3)
-[unit] four track:
+[unit] four focus:
     key(4)
     key(4)
-[unit] five track:
+[unit] five focus:
     key(5)
     key(5)
-[unit] six track:
+[unit] six focus:
     key(6)
     key(6)
-[unit] seven track:
+[unit] seven focus:
     key(7)
     key(7)
-[unit] eight track:
+[unit] eight focus:
     key(8)
     key(8)
-[unit] nine track:
+[unit] nine focus:
     key(9)
     key(9)
-[unit] zero track:
+[unit] zero focus:
     key(0)
     key(0)
 slot first:
@@ -268,6 +267,324 @@ emplacement second:
     sleep(30ms)
     mouse_click(0)
 emplacement third:
-    mouse_move(1895, 350)
+    mouse_move(1780, 340)
+    sleep(30ms)
+    mouse_click(0)
+emplacement fourth:
+    mouse_move(1720, 340)
+    sleep(30ms)
+    mouse_click(0)
+emplacement fifth:
+    mouse_move(1790, 340)
+    sleep(30ms)
+    mouse_click(0)
+emplacement sixth:
+    mouse_move(1740, 340)
+    sleep(30ms)
+    mouse_click(0)
+emplacement seventh:
+    mouse_move(1690, 340)
+    sleep(30ms)
+    mouse_click(0)
+emplacement eighth:
+    mouse_move(1640, 340)
+    sleep(30ms)
+    mouse_click(0)
+emplacement ninth:
+    mouse_move(1590, 340)
+    sleep(30ms)
+    mouse_click(0)
+group one:
+    key(shift-1)
+    key(ctrl-1)    
+group two:
+    key(shift-2)
+    key(ctrl-2)
+group three:
+    key(shift-3)
+    key(ctrl-3)
+group four:
+    key(shift-4)
+    key(ctrl-4)
+group five:
+    key(shift-5)
+    key(ctrl-5)
+group six:
+    key(shift-6)
+    key(ctrl-6)
+group seven:
+    key(shift-7)
+    key(ctrl-7)
+group eight:
+    key(shift-8)
+    key(ctrl-8)
+group nine:
+    key(shift-9)
+    key(ctrl-9) 
+group zero:
+    key(shift-0)
+    key(ctrl-0)
+kill tank:
+    key(7)    
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+reverse:
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+antitank:
+    key(7)
+[get] gammon [bomb]:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(1790, 1025)
+    sleep(30ms)
+    mouse_click(0)
+    sleep(30ms)
+    mouse_move(position_x , position_y )
+one attack:
+    key(1)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+two attack:
+    key(2)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+three attack:
+    key(3)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+four attack:
+    key(4)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+five attack:
+    key(5)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+six attack:
+    key(6)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+seven attack:
+    key(7)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+eight attack:
+    key(8)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+nine attack:
+    key(9)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+zero attack:
+    key(0)
+    sleep(30ms)
+    key(a)
++    sleep(30ms)
+    mouse_click(0)
+rotate small:
+    key(alt:down)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    adjustment = 100
+    sleep(300ms)
+    mouse_move(position_x - adjustment , position_y)
+    sleep(300ms)
+    key(alt:up)
+rotate right:
+    key(alt:down)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    adjustment = 8000
+    sleep(300ms)
+    mouse_move(position_x - adjustment , position_y)
+    sleep(300ms)
+    key(alt:up)
+rotate left:
+    key(alt:down)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    adjustment = 8000
+    sleep(300ms)
+    mouse_move(position_x + adjustment , position_y)
+    sleep(300ms)
+    key(alt:up)
+six o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x, position_y + 300)
+    sleep(900ms)
+    user.mouse_drag_end()
+twelve o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x, position_y - 300)
+    sleep(700ms)
+    user.mouse_drag_end()
+nine o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 300, position_y)
+    sleep(700ms)
+    user.mouse_drag_end()
+three o'clock:
+    sleep(100ms)
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 300, position_y)
+    sleep(700ms)
+    user.mouse_drag_end()
+one o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 66, position_y - 132)
+    sleep(700ms)
+    user.mouse_drag_end()
+two o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 132, position_y - 66)
+    sleep(700ms)
+    user.mouse_drag_end()
+four o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 132, position_y + 66)
+    sleep(700ms)
+    user.mouse_drag_end()
+five o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 132, position_y + 66)
+    sleep(700ms)
+    user.mouse_drag_end()
+seven o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 66, position_y + 132)
+    sleep(700ms)
+    user.mouse_drag_end()
+eight o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 132, position_y + 66)
+    sleep(700ms)
+    user.mouse_drag_end()
+ten o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 132, position_y - 66)
+    sleep(700ms)
+    user.mouse_drag_end()
+eleven o'clock:
+    user.mouse_drag(1)
+    sleep(100ms)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 66, position_y - 132)
+    sleep(700ms)
+    user.mouse_drag_end()
+one back:
+    key(1)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+two back:
+    key(2)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+three back:
+    key(3)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+four back:
+    key(4)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+five back:
+    key(5)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+six back:
+    key(6)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+seven back:
+    key(7)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+eight back:
+    key(8)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+nine back:
+    key(9)
+    sleep(30ms)
+    key(u)
+    sleep(30ms)
+    mouse_click(0)
+zero back:
+    key(0)
+    sleep(30ms)
+    key(u)
     sleep(30ms)
     mouse_click(0)
