@@ -10,3 +10,8 @@ get [meaning] phrase <user.text>:
 get opposite [word] <user.text>: 
     result=user.get_result_from_open_ai(text,"Please return a word that is the opposite of the given word.")    
     insert(result)
+computer <user.text>: 
+    result=user.get_result_from_open_ai(text,"")    
+    #app.notify(result)    
+    #insert(result)
+    user.tts(result)

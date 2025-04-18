@@ -23,7 +23,7 @@ class Actions:
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": f"{prompt} '{value}':"}
             ],
-            "max_tokens": 20
+            "max_tokens": 600
         }
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data)
         response_json = response.json()

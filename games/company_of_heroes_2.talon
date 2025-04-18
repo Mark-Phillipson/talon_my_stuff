@@ -8,6 +8,12 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 32
+    # Zoom Mouse Options     
+    tracking.zoom_live = true
+    tracking.zoom_height = 300
+    tracking.zoom_width = 300
+    tracking.zoom_scale = 4
+    
 
 # This is a list of the commands that are specific to the Company of Heroes 2 game
 game <user.arrow_key>:
@@ -138,6 +144,7 @@ unit zero: key(0)
 centre:
     mouse_move(800, 500)
 go home: key(home)
+home: key(`)
 [unit] one focus:
     key(1)
     key(1)

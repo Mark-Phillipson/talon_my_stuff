@@ -295,6 +295,7 @@ pilot list commands:
 pilot voice: 
     user.vscode("workbench.action.chat.startVoiceChat")    
     speech.disable()
+add context: user.vscode("workbench.action.chat.editing.attachContext")
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
 #Markdown All in One Extension
