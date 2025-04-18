@@ -144,35 +144,34 @@ unit zero: key(0)
 centre:
     mouse_move(800, 500)
 go home: key(home)
-home: key(`)
-[unit] one focus:
+[unit] one view:
     key(1)
     key(1)
-[unit] two focus:
+[unit] two view:
     key(2)
     key(2)
-[unit] three focus:
+[unit] three view:
     key(3)
     key(3)
-[unit] four focus:
+[unit] four view:
     key(4)
     key(4)
-[unit] five focus:
+[unit] five view:
     key(5)
     key(5)
-[unit] six focus:
+[unit] six view:
     key(6)
     key(6)
-[unit] seven focus:
+[unit] seven view:
     key(7)
     key(7)
-[unit] eight focus:
+[unit] eight view:
     key(8)
     key(8)
-[unit] nine focus:
+[unit] nine view:
     key(9)
     key(9)
-[unit] zero focus:
+[unit] zero view:
     key(0)
     key(0)
 slot first:
