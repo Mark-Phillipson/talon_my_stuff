@@ -1,5 +1,5 @@
 from talon import Module, actions
-import random
+import random, os
 
 mod = Module()
 
@@ -66,3 +66,11 @@ class Actions:
         # Convert to integer
         newValue = int(value) / int(divide)
         return str(newValue)
+    def folder_navigate(address: str) :
+        """Navigate to folder"""
+        # Open the windows file explorer and navigate to the folder
+        if os.path.isdir(address):
+            os.startfile(address)
+        else:
+            print("The specified path does not exist.")
+        

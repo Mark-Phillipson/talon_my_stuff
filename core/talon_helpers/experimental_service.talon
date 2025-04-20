@@ -15,3 +15,9 @@ computer <user.text>:
     #app.notify(result)    
     #insert(result)
     user.tts(result)
+script <user.text>: 
+    result=user.get_result_from_open_ai(text,"")    
+    insert(result)
+hex color random [<user.text>]: 
+    result=user.get_result_from_open_ai(text,"Please return a random hex color code.")    
+    insert(result)

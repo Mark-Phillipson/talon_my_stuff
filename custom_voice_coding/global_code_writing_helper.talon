@@ -11,9 +11,6 @@ sharp <user.text>:
 capital smash <user.text>:
     result = user.capital_strip(text)
     insert(result)
-capital <user.letter> <user.letter> <user.letter>:
-    result = user.capital_letters(letter_1, letter_2, letter_3)
-    insert(result)
 (ad tag) | (add tag) <user.text>:
     user.run_application_csharp_database_command("add tag " + text)
 search old list <user.text>:
@@ -22,6 +19,13 @@ search list <user.text>:
     user.run_application_voice_admin_windows_forms(text)
 {user.snippet_language} {user.snippet_category}: user.run_application_voice_admin_windows_forms_language_category(snippet_language, snippet_category)
 launch {user.launcher_category}: user.run_application_voice_admin_windows_forms_launcher(launcher_category)
+# Favorite Folders
+go [to] documents: user.folder_navigate("C:\\Users\\MPhil\\OneDrive\\Documents")
+go [to] downloads: user.folder_navigate("C:\\Users\\MPhil\\Downloads")
+go [to] desktop: user.folder_navigate("C:\\Users\\MPhil\\Desktop")
+go [to] pictures: user.folder_navigate("C:\\Users\\MPhil\\OneDrive\\Pictures")
+go [to] desktop pictures: user.folder_navigate("C:\\DesktopPictures")
+go [to] videos: user.folder_navigate("C:\\Users\\MPhil\\Videos")
 launch voice admin: user.launch_voice_admin()
 launch realtime:
     key(super-r)

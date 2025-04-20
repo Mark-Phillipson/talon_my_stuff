@@ -38,10 +38,10 @@ taskbar <user.screen_step_two> <user.number_signed_small>:
     adjustment = number_signed_small * 5
     mouse_move(position_x + adjustment, position_y)
     mouse_click(0)
-menu <user.screen_step_one>:
+(menu | leaf) <user.screen_step_one>:
     mouse_move(screen_step_one, 80)
     mouse_click(0)
-menu <user.screen_step_two>:
+(menu | leaf) <user.screen_step_two>:
     mouse_move(screen_step_two, 52)
     mouse_click(0)
 ribbon <user.screen_step_one>:
