@@ -73,4 +73,9 @@ class Actions:
             os.startfile(address)
         else:
             print("The specified path does not exist.")
-        
+    def open_file(file_path: str) -> None:
+        """Open a file with the default application"""
+        if os.path.isfile(file_path):
+            os.startfile(file_path)
+        else:
+            print("The specified file does not exist.")        

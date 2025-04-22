@@ -28,3 +28,11 @@ new line: key(enter)
 taskbar toggle:
     user.toggle_taskbar()
 snipping tool: key(super-shift-s)
+talon show lists:
+    user.open_file("c:/Users/MPhil/AppData/Roaming/talon/user/mystuff/talon_my_stuff/TalonLists.txt")
+touch screen one: 
+    mouse_move(-680, 480)    
+    mouse_click(0)
+touch screen two:
+    mouse_move(986, 470)    
+    mouse_click(0)

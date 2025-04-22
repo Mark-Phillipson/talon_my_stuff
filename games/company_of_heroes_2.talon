@@ -60,14 +60,10 @@ light [vehicles]:
     key(f4)
 heavy [vehicles]:
     key(f5)
-set rally point:
-    mouse_click(2)
-capture point:
-    key(ctrl-c)
-attack point:
+[set] rally point:
     key(ctrl-a)
-defend point:
-    key(ctrl-d)
+    sleep(30ms)
+    mouse_click(0)
 [toggle] map:
     key(keypad_0)
 go there:
@@ -75,7 +71,7 @@ go there:
     key(keypad_0)
 [next] idle vehicle:
     key(alt-/)
-[next] idle infantry:
+[next] idle [soldier]:
     key(alt-.)
 idle: key(alt-.)
 [all] vehicles:
@@ -175,25 +171,40 @@ go home: key(home)
     key(0)
     key(0)
 slot first:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
     mouse_move(522, 862)
     sleep(30ms)
     mouse_click(0)
+    mouse_move(position_x , position_y )
 slot second:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
     mouse_move(602, 853)
     sleep(30ms)
     mouse_click(0)
+    mouse_move(position_x , position_y )
 slot third:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
     mouse_move(680, 852)
     sleep(30ms)
     mouse_click(0)
+    mouse_move(position_x , position_y )
 slot fourth:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
     mouse_move(766, 856)
     sleep(30ms)
     mouse_click(0)
+    mouse_move(position_x , position_y )
 slot fifth:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
     mouse_move(852, 859)
     sleep(30ms)
     mouse_click(0)
+    mouse_move(position_x , position_y )
 zoom out: user.mouse_scroll_down()
 zoom: user.mouse_scroll_up()
 touch first: 
@@ -483,7 +494,7 @@ zero attack:
     key(0)
     sleep(30ms)
     key(a)
-+    sleep(30ms)
+    sleep(30ms)
     mouse_click(0)
 rotate small:
     key(alt:down)

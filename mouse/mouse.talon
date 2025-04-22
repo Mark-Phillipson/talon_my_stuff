@@ -137,3 +137,4 @@ screen <user.number_key>+:
     user.grid_activate()
     user.grid_narrow_list(number_key_list)
 continuous: user.mouse_scroll_down_continuous()
+zoom mouse here: tracking.zoom()
