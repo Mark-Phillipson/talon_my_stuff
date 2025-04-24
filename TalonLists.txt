@@ -8,7 +8,7 @@ List: user.system_paths
   - documents: C:\Users\MPhil\OneDrive\lsDocuments
   - docks: C:\Users\MPhil\Documents
   - downloads: C:\Users\MPhil\Downloads
-  - music: C:\Users\MPhil\Musicls
+  - music: C:\Users\MPhil\Music
   - pictures: C:\Users\MPhil\OneDrive\Pictures
   - videos: C:\Users\MPhil\Videos
   - talon home: C:\Users\MPhil\AppData\Roaming\talon
@@ -635,3 +635,4 @@ List: user.special_key
   - print screen: printscr
 
 End of Talon Lists
+

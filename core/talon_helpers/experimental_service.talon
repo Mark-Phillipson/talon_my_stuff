@@ -21,3 +21,6 @@ script <user.text>:
 hex color random [<user.text>]: 
     result=user.get_result_from_open_ai(text,"Please return a random hex color code.")    
     insert(result)
+get correct [<user.text>]: 
+    result=user.get_result_from_open_ai(text,"There is a likelihood that the speech recognition has made a mistake.Please return the correct spelling of the given word. Do not return anything other than the single word")    
+    insert(result)
