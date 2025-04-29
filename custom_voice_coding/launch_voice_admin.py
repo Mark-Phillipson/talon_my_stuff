@@ -10,13 +10,13 @@ class Actions:
         uri = "http://localhost:5000/launchersfavourites"
         psi = subprocess.Popen(["C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\publish\\VoiceLauncher.exe"], 
                                 shell=True, 
-                                cwd="C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net8.0\\publish\\",
+                                cwd="C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\publish\\",
                                 creationflags=subprocess.CREATE_NEW_CONSOLE)
 
         uri = "http://localhost:5000/launchersfavourites"
         psi = subprocess.Popen(["C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\publish\\VoiceLauncher.exe"], 
                                 shell=True, 
-                                cwd="C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net8.0\\publish\\",
+                                cwd="C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\publish\\",
                                 creationflags=subprocess.CREATE_NEW_CONSOLE)
 
         subprocess.Popen(["start", uri], shell=True)

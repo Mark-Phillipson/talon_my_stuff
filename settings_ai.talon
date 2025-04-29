@@ -19,6 +19,6 @@ settings():
     # Zoom Mouse Settings     
     tracking.zoom_live = true
     tracking.zoom_height = 200
-    tracking.zoom_width = 300
-    tracking.zoom_scale = 4
+    tracking.zoom_width = 500
+    tracking.zoom_scale = 3
     

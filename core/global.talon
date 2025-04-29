@@ -36,3 +36,6 @@ touch screen one:
 touch screen two:
     mouse_move(986, 470)    
     mouse_click(0)
+mouse last position:
+    mouse_coordinates = clip.text()
+    user.move_mouse_from_string(mouse_coordinates)

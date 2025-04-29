@@ -1,4 +1,4 @@
-from talon import Module, actions
+from talon import Module, actions, ctrl
 import random, os
 
 mod = Module()
@@ -79,3 +79,12 @@ class Actions:
             os.startfile(file_path)
         else:
             print("The specified file does not exist.")        
+    def move_mouse_from_string(mouse_coordinates: str):
+        """Move mouse to coordinates given as a string like 100, 100."""
+        try:
+            x_str, y_str = mouse_coordinates.split(",")
+            x = int(x_str.strip())
+            y = int(y_str.strip())
+            ctrl.mouse_move(x, y)
+        except Exception as e:
+            print(f"Invalid coordinates: {e}")

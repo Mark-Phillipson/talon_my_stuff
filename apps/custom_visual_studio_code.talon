@@ -1,5 +1,5 @@
 app: vscode
-
+os: windows
 -
 # Navigation
 
@@ -296,6 +296,9 @@ pilot voice:
     user.vscode("workbench.action.chat.startVoiceChat")    
     speech.disable()
 add context: user.vscode("workbench.action.chat.editing.attachContext")
+pilot next edit: user.vscode("chatEditor.action.navigateNext")
+pilot previous edit: user.vscode("chatEditor.action.navigatePrevious")
+
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
 #Markdown All in One Extension

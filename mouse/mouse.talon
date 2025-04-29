@@ -137,4 +137,11 @@ screen <user.number_key>+:
     user.grid_activate()
     user.grid_narrow_list(number_key_list)
 continuous: user.mouse_scroll_down_continuous()
-zoom mouse here: tracking.zoom()
+mouse test: 
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(1720, 140)
+    sleep(1000ms)
+    user.mouse_zoom_relative()
+    sleep(1000ms)
+    mouse_move(position_x, position_y)
