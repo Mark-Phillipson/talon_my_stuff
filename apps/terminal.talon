@@ -134,7 +134,7 @@ dotnet publish voice admin:
     sleep(100ms)
     key(enter)
     key(enter)
-chat with database 4:
+chat with database:
     insert("CD C:\\Users\\MPhil\\source\\repos\\dbchatprov4\\DBchatpro")
     sleep(100ms)
     key(enter)
