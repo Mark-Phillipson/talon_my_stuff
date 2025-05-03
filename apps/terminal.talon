@@ -135,7 +135,7 @@ dotnet publish voice admin:
     key(enter)
     key(enter)
 chat with database:
-    insert("CD C:\\Users\\MPhil\\source\\repos\\dbchatprov4\\DBchatpro")
+    insert("CD C:\\Users\\MPhil\\source\\repos\\dbchatpro\\DBchatpro")
     sleep(100ms)
     key(enter)
     sleep(100ms)
@@ -150,7 +150,7 @@ dotnet build release:
     sleep(100ms)
     key(enter)
 clear screen:
-    insert("clear")
+    insert("cls")
     sleep(100ms)
     key(enter)
 Linux update: insert("sudo apt-get update")
