@@ -125,7 +125,6 @@ maximize editor:
     sleep(100ms)
     insert("View: Toggle Primary Sidebar Visibility")
     key(enter)
-ide navigate: key(alt-f7)
 sidebar narrow: user.vscode("workbench.action.increaseViewWidth")
 sidebar widen: user.vscode("workbench.action.decreaseViewWidth")
 zoom in small:
@@ -340,3 +339,7 @@ make code smaller: user.vscode("editor.action.fontZoomOut")
 
 hay code:
     speech.disable()
+fix errors: 
+    insert("Please Fix All Build Errors and Warnings!")    
+    sleep(100ms)
+    key(enter)

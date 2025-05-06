@@ -21,4 +21,4 @@ settings():
     tracking.zoom_height = 200
     tracking.zoom_width = 500
     tracking.zoom_scale = 3
-    
+

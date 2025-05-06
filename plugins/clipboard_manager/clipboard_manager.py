@@ -252,7 +252,7 @@ def shrink():
 
 
 def error(msg: str):
-    actions.user.notify(msg)
+    actions.app.notify(msg)
     raise ValueError(msg)
 
 

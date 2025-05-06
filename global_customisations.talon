@@ -114,9 +114,6 @@ go left:
 go right:
     key(right)
 #Clears the message in Visual Studio
-clear message:
-    mouse_move(1500, 900)
-    mouse_click(0)
 [enter] email address:      insert("MPhillipson0@Gmail.com")
 test email:                 insert("firstlastname@domain.co.uk")
 enter office username:      insert("Phillipson@MSPSystems.onmicrosoft.com")
@@ -133,18 +130,15 @@ fake phone number:
     phoneNumber = user.generate_random_number()
     insert(phoneNumber)
 enter timestamp:            insert(user.time_format("%Y-%m-%d %H:%M:%S"))
-reset mouse:
-    user.mouse_sleep()
-    #Disables control mouse, zoom mouse, and re-enables cursor
-    user.mouse_show_cursor()
 select and copy:
     key(ctrl-a)
     sleep(100ms)
     key(ctrl-c)
     sleep(100ms)
 voice typing:
-    key(super-h)
     speech.disable()
+    sleep(20ms)
+    key(super-h)
 (voice typing in code) | (draft in code):
     user.switcher_focus("code")
     speech.disable()
@@ -166,12 +160,7 @@ press alt: key(alt)
 click drowse:
     speech.disable()
     mouse_click(0)
-#SmartNav Mouse Commands
-# center mouse:               key(ctrl-alt-f12)
-# toggle pause mouse:         key(ctrl-alt-f9)
-# scroll mouse:               key(ctrl-alt-f11)
-# precision mode:             key(ctrl-alt-f8)
-search clipboard:           key(ctrl-shift-f12)
+.search clipboard:           key(ctrl-shift-f12)
 start recording: 
     user.switcher_focus("obs64.exe")
     key(ctrl-super-shift-r)

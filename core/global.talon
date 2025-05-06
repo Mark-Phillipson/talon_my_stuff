@@ -39,3 +39,4 @@ touch screen two:
 mouse last position:
     mouse_coordinates = clip.text()
     user.move_mouse_from_string(mouse_coordinates)
+command palette: key(super-alt-space)
