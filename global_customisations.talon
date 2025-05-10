@@ -160,7 +160,7 @@ press alt: key(alt)
 click drowse:
     speech.disable()
     mouse_click(0)
-.search clipboard:           key(ctrl-shift-f12)
+search clipboard:           key(ctrl-shift-f12)
 start recording: 
     user.switcher_focus("obs64.exe")
     key(ctrl-super-shift-r)

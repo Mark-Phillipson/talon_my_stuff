@@ -343,3 +343,5 @@ fix errors:
     insert("Please Fix All Build Errors and Warnings!")    
     sleep(100ms)
     key(enter)
+split grow: user.vscode("workbench.action.increaseViewSize")
+split shrink: user.vscode("workbench.action.decreaseViewSize")    
