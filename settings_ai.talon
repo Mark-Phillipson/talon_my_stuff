@@ -22,3 +22,4 @@ settings():
     tracking.zoom_width = 500
     tracking.zoom_scale = 3
 
+    user.ocr_screen_index = 0

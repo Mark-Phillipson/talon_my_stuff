@@ -69,6 +69,7 @@ select matching <user.number_signed_small>:
     user.vscode("editor.action.addSelectionToNextFindMatch")
     repeat(number_signed_small-1)
 select matching next: user.vscode("editor.action.addSelectionToNextFindMatch")
+select matching previous: user.vscode("editor.action.addSelectionToPreviousFindMatch")
 
 #File Management
 
@@ -335,13 +336,13 @@ T4 for inject:
 make code bigger: user.vscode("editor.action.fontZoomIn")
 make code smaller: user.vscode("editor.action.fontZoomOut")
 
-#Walkie Talkie
-
-hay code:
-    speech.disable()
 fix errors: 
     insert("Please Fix All Build Errors and Warnings!")    
     sleep(100ms)
     key(enter)
 split grow: user.vscode("workbench.action.increaseViewSize")
 split shrink: user.vscode("workbench.action.decreaseViewSize")    
+stop the agent: 
+    mouse_move(1872, 980)
+    mouse_click(0)
+(hunt | search | find) this: edit.find()
