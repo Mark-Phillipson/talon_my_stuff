@@ -161,3 +161,7 @@ repel:
     key(enter)
     sleep(100ms)
     insert("events.tail()")
+list last commits:
+    insert("git log origin/master --oneline -n 10")
+    sleep(100ms)
+    key(enter)

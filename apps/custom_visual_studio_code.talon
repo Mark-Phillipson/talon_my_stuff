@@ -298,6 +298,31 @@ pilot voice:
 add context: user.vscode("workbench.action.chat.editing.attachContext")
 pilot next edit: user.vscode("chatEditor.action.navigateNext")
 pilot previous edit: user.vscode("chatEditor.action.navigatePrevious")
+pilot fix errors:
+    key(ctrl-/)
+    sleep(100ms)
+    insert("tools")
+    sleep(100ms)
+    key(enter)
+    sleep(100ms)
+    insert("last")
+    sleep(100ms)
+    key(enter)
+    sleep(100ms)
+    insert("Please can you look at the last terminal command and fix these errors for me?")
+pilot fix warnings:
+    key(ctrl-/)
+    sleep(100ms)
+    insert("tools")
+    sleep(100ms)
+    key(enter)
+    sleep(100ms)
+    insert("last")
+    sleep(100ms)
+    key(enter)
+    sleep(100ms)
+    insert("Please can you look at the last terminal command and fix these warnings for me?")
+
 
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
