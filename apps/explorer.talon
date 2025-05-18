@@ -7,6 +7,13 @@ go local documents: user.file_manager_open_directory("C:\\Users\\MPhil\\Document
 go downloads: user.file_manager_open_directory("C:\\Users\\MPhil\\Downloads")
 go pictures: user.file_manager_open_directory("C:\\Users\\MPhil\\OneDrive\\Pictures")
 go one drive documents: user.file_manager_open_directory("C:\\Users\\MPhil\\OneDrive\\Documents")
+snip folder local documents: insert("C:\\Users\\MPhil\\Documents")
+snip folder downloads: insert("C:\\Users\\MPhil\\Downloads")
+snip folder pictures: insert("C:\\Users\\MPhil\\OneDrive\\Pictures")
+snip folder one drive documents: insert("C:\\Users\\MPhil\\OneDrive\\Documents")
+snip folder desktop: insert("C:\\Users\\MPhil\\Desktop")
+snip folder desktop pictures: insert("C:\\DesktopPictures")
+snip folder repose: insert("C:\Users\MPhil\source\repos")
 open in terminal:
     key(alt-f)
     sleep(400ms)

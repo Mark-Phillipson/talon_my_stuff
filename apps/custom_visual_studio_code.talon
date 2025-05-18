@@ -322,7 +322,16 @@ pilot fix warnings:
     key(enter)
     sleep(100ms)
     insert("Please can you look at the last terminal command and fix these warnings for me?")
-
+draft this:
+    key(ctrl-a)
+    sleep(60ms)
+    key(ctrl-c)
+    sleep(60ms)
+    user.vscode("welcome.showNewFileEntries")
+    sleep(60ms)
+    key(enter)
+    sleep(60ms)
+    key(ctrl-v)-
 
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
