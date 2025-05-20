@@ -165,3 +165,4 @@ list last commits:
     insert("git log origin/master --oneline -n 10")
     sleep(100ms)
     key(enter)
+delete object and binary folders: insert("Remove-Item -Path bin,obj -Recurse -Force")

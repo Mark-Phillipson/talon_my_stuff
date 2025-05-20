@@ -76,6 +76,7 @@ select matching previous: user.vscode("editor.action.addSelectionToPreviousFindM
 collapse folders: user.vscode("workbench.files.action.collapseExplorerFolders")
 (search files [by name]) | (navigate [to]):
     user.vscode("workbench.action.quickOpen")
+(hunt | search | find) this: edit.find()
 search files <user.cursorless_target>:
     value = user.cursorless_get_text(cursorless_target, true)
     user.vscode("workbench.action.quickOpen")
@@ -126,8 +127,11 @@ maximize editor:
     sleep(100ms)
     insert("View: Toggle Primary Sidebar Visibility")
     key(enter)
-sidebar narrow: user.vscode("workbench.action.increaseViewWidth")
-sidebar widen: user.vscode("workbench.action.decreaseViewWidth")
+sidebar shrink: user.vscode("workbench.action.increaseViewWidth")
+sidebar grow: user.vscode("workbench.action.decreaseViewWidth")
+split grow: user.vscode("workbench.action.increaseViewSize")
+split shrink: user.vscode("workbench.action.decreaseViewSize")    
+
 zoom in small:
     key(ctrl:down)
     user.mouse_scroll_up()
@@ -332,6 +336,13 @@ draft this:
     key(enter)
     sleep(60ms)
     key(ctrl-v)-
+fix errors: 
+    insert("Please Fix All Build Errors and Warnings!")    
+    sleep(100ms)
+    key(enter)
+stop the agent: 
+    mouse_move(1872, 980)
+    mouse_click(0)
 
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
@@ -370,13 +381,4 @@ T4 for inject:
 make code bigger: user.vscode("editor.action.fontZoomIn")
 make code smaller: user.vscode("editor.action.fontZoomOut")
 
-fix errors: 
-    insert("Please Fix All Build Errors and Warnings!")    
-    sleep(100ms)
-    key(enter)
-split grow: user.vscode("workbench.action.increaseViewSize")
-split shrink: user.vscode("workbench.action.decreaseViewSize")    
-stop the agent: 
-    mouse_move(1872, 980)
-    mouse_click(0)
-(hunt | search | find) this: edit.find()
+

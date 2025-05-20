@@ -22,4 +22,5 @@ settings():
     tracking.zoom_width = 500
     tracking.zoom_scale = 3
 
-    user.ocr_screen_index = 0
+    user.ocr_behavior_when_no_eye_tracker = "ACTIVE_WINDOW"
+    user.clamp_to_main_screen = true
