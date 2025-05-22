@@ -28,8 +28,6 @@ new line: key(enter)
 taskbar toggle:
     user.toggle_taskbar()
 snipping tool: key(super-shift-s)
-talon show lists:
-    user.open_file("c:/Users/MPhil/AppData/Roaming/talon/user/mystuff/talon_my_stuff/TalonLists.txt")
 touch screen one: 
     mouse_move(-680, 480)    
     mouse_click(0)
@@ -40,3 +38,4 @@ mouse last position:
     mouse_coordinates = clip.text()
     user.move_mouse_from_string(mouse_coordinates)
 command palette: key(super-alt-space)
+talon show lists: user.show_talon_lists()

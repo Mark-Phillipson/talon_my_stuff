@@ -1,5 +1,7 @@
 from talon import Module, actions, ctrl
 import random, os
+from datetime import datetime
+import subprocess
 
 mod = Module()
 
@@ -87,4 +89,40 @@ class Actions:
             y = int(y_str.strip())
             ctrl.mouse_move(x, y)
         except Exception as e:
-            print(f"Invalid coordinates: {e}")
+            print(f"Invalid coordinates: {e}")    def show_talon_lists():
+        """Create a text file with all Talon lists and open in VS Code"""
+        # Get path to Talon community directory
+        talon_dir = os.path.expandvars(r"%APPDATA%\talon")
+        directory_path = os.path.join(talon_dir, "user", "community")
+        output_file_path = os.path.join(talon_dir, "user", "mystuff", "talon_my_stuff", "TalonLists.txt")
+        
+        # Create the file with lists
+        with open(output_file_path, 'w', encoding='utf-8') as writer:
+            writer.write(f"All Talon Lists In all directories below {directory_path} created: {datetime.now()}\n")
+            
+            # Walk through all files in directory and subdirectories
+            for root, _, files in os.walk(directory_path):
+                for file in files:
+                    if file.endswith('.talon-list'):
+                        file_path = os.path.join(root, file)
+                        
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            lines = f.readlines()
+                        
+                        # Get list name from first line
+                        if lines:
+                            list_name = lines[0].split(": ", 1)[1].strip()
+                            writer.write(f"List: {list_name}\n")
+                            
+                            # Write list items starting from third line
+                            for line in lines[2:]:
+                                writer.write(f"  - {line.strip()}\n")
+                            
+                            writer.write("\n")
+            
+            writer.write("End of Talon Lists")        # Open in VS Code
+        try:
+            os.system(f'code "{output_file_path}"')
+            print(f"Created and opened {output_file_path}")
+        except Exception as e:
+            print(f"Error opening VS Code: {e}")

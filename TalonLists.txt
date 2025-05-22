@@ -1,20 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user\community created: 15/01/2025 16:43:42
-List: user.system_paths
-  - -
-  - user: C:\Users\MPhil
-  - profile: C:\Users\MPhil
-  - desktop: C:\Users\MPhil\OneDrive\Desktop
-  - desk: C:\Users\MPhil\Desktop
-  - documents: C:\Users\MPhil\OneDrive\lsDocuments
-  - docks: C:\Users\MPhil\Documents
-  - downloads: C:\Users\MPhil\Downloads
-  - music: C:\Users\MPhil\Music
-  - pictures: C:\Users\MPhil\OneDrive\Pictures
-  - videos: C:\Users\MPhil\Videos
-  - talon home: C:\Users\MPhil\AppData\Roaming\talon
-  - talon user: C:\Users\MPhil\AppData\Roaming\talon\user
-  - one drive: C:\Users\MPhil\OneDrive
-
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user\community created: 2025-05-22 07:45:34.745141
 List: user.git_argument
   - abort: --abort
   - all: --all
@@ -155,6 +139,22 @@ List: user.git_command
   - worktree repair
   - worktree unlock
 
+List: user.system_paths
+  - -
+  - user: C:\Users\MPhil
+  - profile: C:\Users\MPhil
+  - desktop: C:\Users\MPhil\OneDrive\Desktop
+  - desk: C:\Users\MPhil\Desktop
+  - documents: C:\Users\MPhil\OneDrive\Documents
+  - docks: C:\Users\MPhil\Documents
+  - downloads: C:\Users\MPhil\Downloads
+  - music: C:\Users\MPhil\Music
+  - pictures: C:\Users\MPhil\OneDrive\Pictures
+  - videos: C:\Users\MPhil\Videos
+  - talon home: C:\Users\MPhil\AppData\Roaming\talon
+  - talon user: C:\Users\MPhil\AppData\Roaming\talon\user
+  - one drive: C:\Users\MPhil\OneDrive
+
 List: user.delimiter_pair
   - 
   - # Format:
@@ -227,6 +227,7 @@ List: user.code_formatter
   - all down: ALL_LOWERCASE
   - camel: PRIVATE_CAMEL_CASE
   - dotted: DOT_SEPARATED
+  - list: COMMA_SEPARATED
   - dub string: DOUBLE_QUOTED_STRING
   - dunder: DOUBLE_UNDERSCORE
   - hammer: PUBLIC_CAMEL_CASE
@@ -248,7 +249,6 @@ List: user.prose_formatter
 
 List: user.reformatter
   - cap: CAPITALIZE
-  - list: COMMA_SEPARATED
   - unformat: REMOVE_FORMATTING
 
 List: user.word_formatter
@@ -354,6 +354,67 @@ List: user.number_key
   - eight: 8
   - nine: 9
 
+List: user.modifier_key
+  - -
+  - 
+  - alt: alt
+  - control: ctrl
+  - shift: shift
+  - super: cmd
+  - command: cmd
+  - option: alt
+  - function: fn
+  - globe: fn
+
+List: user.special_key
+  - -
+  - 
+  - end: end
+  - home: home
+  - minus: minus
+  - return: return
+  - enter: keypad_enter
+  - page down: pagedown
+  - page up: pageup
+  - escape: escape
+  - space: space
+  - tab: tab
+  - insert: insert
+  - wipe: backspace
+  - delete: backspace
+  - forward delete: delete
+
+List: user.modifier_key
+  - os: linux
+  - -
+  - alt: alt
+  - control: ctrl
+  - shift: shift
+  - # super is the windows key
+  - super: super
+  - command: ctrl
+  - option: alt
+
+List: user.special_key
+  - os: linux
+  - -
+  - 
+  - end: end
+  - home: home
+  - minus: minus
+  - enter: enter
+  - page down: pagedown
+  - page up: pageup
+  - escape: escape
+  - space: space
+  - tab: tab
+  - insert: insert
+  - wipe: backspace
+  - delete: backspace
+  - forward delete: delete
+  - menu key: menu
+  - print screen: printscr
+
 List: user.currency
   - dollar: $
   - dollars: $
@@ -396,12 +457,10 @@ List: user.vocabulary
   - VPN
   - DNS
   - Minecraft
-  - Meyers
   - HTML
   - Radzen
   - Blazor
   - Talon
-  - C#
   - Python
   - JavaScript
   - CSS
@@ -415,14 +474,14 @@ List: user.search_engine
   - wikipedia: https://en.wikipedia.org/w/index.php?search=%s
 
 List: user.website
+  - 
   - talon home page: http://talonvoice.com
   - talon slack: http://talonvoice.slack.com/messages/help
   - talon wiki: https://talon.wiki/
   - talon practice: https://chaosparrot.github.io/talon_practice/
   - talon repository search: https://search.talonvoice.com/search/
   - amazon: https://www.amazon.com/
-  - dropbox: https://dropbox.com/
-  - google: https://www.google.com/
+  - google search: https://www.google.com/
   - google calendar: https://calendar.google.com
   - google maps: https://maps.google.com/
   - google scholar: https://scholar.google.com/
@@ -431,6 +490,50 @@ List: user.website
   - gist: https://gist.github.com/
   - wikipedia: https://en.wikipedia.org/
   - youtube: https://www.youtube.com/
+
+List: user.window_snap_positions
+  - 
+  - left: LEFT
+  - right: RIGHT
+  - top: TOP
+  - bottom: BOTTOM
+  - center third: CENTER_THIRD
+  - left third: LEFT_THIRD
+  - right third: RIGHT_THIRD
+  - left two thirds: LEFT_TWO_THIRDS
+  - right two thirds: RIGHT_TWO_THIRDS
+  - center small: CENTER_SMALL
+  - left small: LEFT_SMALL
+  - right small: RIGHT_SMALL
+  - left large: LEFT_LARGE
+  - right large: RIGHT_LARGE
+  - top left: TOP_LEFT
+  - top right: TOP_RIGHT
+  - bottom left: BOTTOM_LEFT
+  - bottom right: BOTTOM_RIGHT
+  - top left third: TOP_LEFT_THIRD
+  - top right third: TOP_RIGHT_THIRD
+  - top left two thirds: TOP_LEFT_TWO_THIRDS
+  - top right two thirds: TOP_RIGHT_TWO_THIRDS
+  - top center third: TOP_CENTER_THIRD
+  - bottom left third: BOTTOM_LEFT_THIRD
+  - bottom right third: BOTTOM_RIGHT_THIRD
+  - bottom left two thirds: BOTTOM_LEFT_TWO_THIRDS
+  - bottom right two thirds: BOTTOM_RIGHT_TWO_THIRDS
+  - bottom center third: BOTTOM_CENTER_THIRD
+  - top left small: TOP_LEFT_SMALL
+  - top right small: TOP_RIGHT_SMALL
+  - top left large: TOP_LEFT_LARGE
+  - top right large: TOP_RIGHT_LARGE
+  - top center small: TOP_CENTER_SMALL
+  - bottom left small: BOTTOM_LEFT_SMALL
+  - bottom right small: BOTTOM_RIGHT_SMALL
+  - bottom left large: BOTTOM_LEFT_LARGE
+  - bottom right large: BOTTOM_RIGHT_LARGE
+  - bottom center small: BOTTOM_CENTER_SMALL
+  - center: CENTER
+  - full: FULL
+  - fullscreen: FULLSCREEN
 
 List: user.code_common_function
   - -
@@ -453,6 +556,7 @@ List: user.navigation_action
   - copy: COPY
 
 List: user.emoji
+  - 
   - angry: 😠
   - blushing: 😊
   - broken heart: 💔
@@ -481,6 +585,8 @@ List: user.emoji
   - thumbs down: 👎
   - thumbs up: 👍
   - worried: 😟
+  - writing: ✍
+  - yawning: 🥱
 
 List: user.emoticon
   - broken heart: </3
@@ -573,66 +679,4 @@ List: user.unix_utility
   - who
   - who am I: whoami
 
-List: user.modifier_key
-  - -
-  - 
-  - alt: alt
-  - control: ctrl
-  - shift: shift
-  - super: cmd
-  - command: cmd
-  - option: alt
-  - function: fn
-  - globe: fn
-
-List: user.special_key
-  - -
-  - 
-  - end: end
-  - home: home
-  - minus: minus
-  - return: return
-  - enter: keypad_enter
-  - page down: pagedown
-  - page up: pageup
-  - escape: escape
-  - space: space
-  - tab: tab
-  - insert: insert
-  - wipe: backspace
-  - delete: backspace
-  - forward delete: delete
-
-List: user.modifier_key
-  - os: linux
-  - -
-  - alt: alt
-  - control: ctrl
-  - shift: shift
-  - # super is the windows key
-  - super: super
-  - command: ctrl
-  - option: alt
-
-List: user.special_key
-  - os: linux
-  - -
-  - 
-  - end: end
-  - home: home
-  - minus: minus
-  - enter: enter
-  - page down: pagedown
-  - page up: pageup
-  - escape: escape
-  - space: space
-  - tab: tab
-  - insert: insert
-  - wipe: backspace
-  - delete: backspace
-  - forward delete: delete
-  - menu key: menu
-  - print screen: printscr
-
 End of Talon Lists
-
