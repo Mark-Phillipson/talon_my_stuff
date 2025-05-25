@@ -28,10 +28,10 @@ new line: key(enter)
 taskbar toggle:
     user.toggle_taskbar()
 snipping tool: key(super-shift-s)
-touch screen one: 
+[touch] screen one: 
     mouse_move(-680, 480)    
     mouse_click(0)
-touch screen two:
+[touch] screen two:
     mouse_move(986, 470)    
     mouse_click(0)
 mouse last position:

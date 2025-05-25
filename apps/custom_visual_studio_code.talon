@@ -275,6 +275,7 @@ toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
 
+pilot completions: user.vscode("github.copilot.completions.toggle")
 pilot new chat:
     user.copilot_chat("")
     sleep(100ms)
