@@ -277,9 +277,9 @@ if statement:
     key(ctrl-j)
     sleep(100ms)
     key(tab tab)
-deck(pedal_left): 
-    user.pedal_left()
-    speech.toggle()
-deck(pedal_right): 
-    user.pedal_right()
-    speech.toggle()
+# deck(pedal_left): 
+#     user.pedal_left()
+#     speech.toggle()
+# deck(pedal_right): 
+#     user.pedal_right()
+#     speech.toggle()

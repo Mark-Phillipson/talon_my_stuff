@@ -254,7 +254,7 @@ complete task: key(alt-d)
 
 #terminal (integrated)
 
-terminal: user.vscode("workbench.action.createTerminalEditor")
+terminal in editor: user.vscode("workbench.action.createTerminalEditor")
 terminal history: user.vscode("workbench.action.terminal.runRecentCommand")
 terminal recent commands: user.vscode("workbench.action.terminal.runRecentCommand")
 terminal recent directory: user.vscode("workbench.action.terminal.goToRecentDirectory")
@@ -327,6 +327,7 @@ pilot fix warnings:
     key(enter)
     sleep(100ms)
     insert("Please can you look at the last terminal command and fix these warnings for me?")
+add context: user.vscode("workbench.action.chat.attach.instructions")
 draft this:
     key(ctrl-a)
     sleep(60ms)
@@ -336,7 +337,7 @@ draft this:
     sleep(60ms)
     key(enter)
     sleep(60ms)
-    key(ctrl-v)-
+    key(ctrl-v)
 fix errors: 
     insert("Please Fix All Build Errors and Warnings!")    
     sleep(100ms)

@@ -10,9 +10,8 @@ pick <user.word>:
 pick <user.letters>:
     "{letters}"
     key(enter)
-deck(pedal_middle): 
-    speech.toggle()
-    # user.microphone_toggle()
+# deck(pedal_middle): 
+#     speech.toggle()
 [save to] disk: key(ctrl-s)
 context menu: key(menu)
 help search clipboard:
@@ -39,3 +38,10 @@ mouse last position:
     user.move_mouse_from_string(mouse_coordinates)
 command palette: key(super-alt-space)
 talon show lists: user.show_talon_lists()
+snip folder local documents: insert("C:\\Users\\MPhil\\Documents")
+snip folder downloads: insert("C:\\Users\\MPhil\\Downloads")
+snip folder pictures: insert("C:\\Users\\MPhil\\OneDrive\\Pictures")
+snip folder one drive documents: insert("C:\\Users\\MPhil\\OneDrive\\Documents")
+snip folder desktop: insert("C:\\Users\\MPhil\\Desktop")
+snip folder desktop pictures: insert("C:\\DesktopPictures")
+snip folder repose: insert("C:\\Users\\MPhil\\source\\repos")

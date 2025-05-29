@@ -89,7 +89,8 @@ class Actions:
             y = int(y_str.strip())
             ctrl.mouse_move(x, y)
         except Exception as e:
-            print(f"Invalid coordinates: {e}")    def show_talon_lists():
+            print(f"Invalid coordinates: {e}")    
+    def show_talon_lists():
         """Create a text file with all Talon lists and open in VS Code"""
         # Get path to Talon community directory
         talon_dir = os.path.expandvars(r"%APPDATA%\talon")
