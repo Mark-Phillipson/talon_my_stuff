@@ -327,10 +327,10 @@ pilot fix warnings:
     key(enter)
     sleep(100ms)
     insert("Please can you look at the last terminal command and fix these warnings for me?")
-#add context: user.vscode("workbench.action.chat.attach.instructions")
 add context: key(ctrl-/)
 pick model: key(ctrl-alt-.)
 set mode: key(ctrl-.)
+select tools: key(ctrl-shift-/)
 draft this:
     key(ctrl-a)
     sleep(60ms)
