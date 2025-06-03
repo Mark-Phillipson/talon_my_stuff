@@ -90,38 +90,65 @@ class Actions:
             ctrl.mouse_move(x, y)
         except Exception as e:
             print(f"Invalid coordinates: {e}")    
-    def show_talon_lists():
-        """Create a text file with all Talon lists and open in VS Code"""
-        # Get path to Talon community directory
+    def show_talon_lists(search: str = ""):
+        """Show all Talon lists, optionally filtered by a search string. Always write to file and open in VS Code. If searching, include the search term at the top of the file."""
+        import os
+        from datetime import datetime
         talon_dir = os.path.expandvars(r"%APPDATA%")
         directory_path = os.path.join(talon_dir, "talon", "user")
         output_file_path = os.path.join(talon_dir, "talon", "user", "community", "TalonLists.txt")
-        
-        # Create the file with lists
-        with open(output_file_path, 'w', encoding='utf-8') as writer:
-            writer.write(f"All Talon Lists In all directories below {directory_path} created: {datetime.now()}\n")
-            
-            # Walk through all files in directory and subdirectories
-            for root, _, files in os.walk(directory_path):
-                for file in files:
-                    if file.endswith('.talon-list'):
-                        file_path = os.path.join(root, file)
-                        
+        results = []
+        search = search.lower().strip() if search else ""
+        for root, _, files in os.walk(directory_path):
+            for file in files:
+                if file.endswith('.talon-list'):
+                    file_path = os.path.join(root, file)
+                    try:
                         with open(file_path, 'r', encoding='utf-8') as f:
                             lines = f.readlines()
-                        
-                        # Get list name from first line
                         if lines:
                             list_name = lines[0].split(": ", 1)[1].strip()
-                            writer.write(f"List: {list_name}\n")
-                            
-                            # Write list items starting from third line
-                            for line in lines[2:]:
-                                writer.write(f"  - {line.strip()}\n")
-                            
-                            writer.write("\n")
-            
-            writer.write("End of Talon Lists")        # Open in VS Code
+                            list_name_lc = list_name.lower()
+                            if search:
+                                # If search matches list name, include all items
+                                if search in list_name_lc:
+                                    results.append(f"List: {list_name}")
+                                    for line in lines[2:]:
+                                        item = line.strip()
+                                        if item:
+                                            results.append(f"  - {item}")
+                                    results.append("")
+                                else:
+                                    # Otherwise, include only matching items
+                                    matching_items = [line.strip() for line in lines[2:] if line.strip() and search in line.strip().lower()]
+                                    if matching_items:
+                                        results.append(f"List: {list_name}")
+                                        for item in matching_items:
+                                            results.append(f"  - {item}")
+                                        results.append("")
+                            else:
+                                # No search: collect all for file output
+                                results.append(f"List: {list_name}")
+                                for line in lines[2:]:
+                                    item = line.strip()
+                                    if item:
+                                        results.append(f"  - {item}")
+                                results.append("")
+                    except Exception as e:
+                        print(f"Error reading {file_path}: {e}")
+        if not results:
+            if search:
+                results = [f"No results found for '{search}'"]
+            else:
+                results = ["No Talon list items found."]
+        with open(output_file_path, 'w', encoding='utf-8') as writer:
+            writer.write(f"All Talon Lists In all directories below {directory_path} created: {datetime.now()}\n")
+            if search:
+                writer.write(f"Search term: {search}\n\n")
+            else:
+                writer.write("\n")
+            writer.write("\n".join(results))
+            writer.write("\nEnd of Talon Lists")
         try:
             os.system(f'code "{output_file_path}"')
             print(f"Created and opened {output_file_path}")
