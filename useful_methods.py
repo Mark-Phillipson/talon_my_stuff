@@ -93,9 +93,9 @@ class Actions:
     def show_talon_lists():
         """Create a text file with all Talon lists and open in VS Code"""
         # Get path to Talon community directory
-        talon_dir = os.path.expandvars(r"%APPDATA%\talon")
-        directory_path = os.path.join(talon_dir, "user", "community")
-        output_file_path = os.path.join(talon_dir, "user", "mystuff", "talon_my_stuff", "TalonLists.txt")
+        talon_dir = os.path.expandvars(r"%APPDATA%")
+        directory_path = os.path.join(talon_dir, "talon", "user")
+        output_file_path = os.path.join(talon_dir, "talon", "user", "community", "TalonLists.txt")
         
         # Create the file with lists
         with open(output_file_path, 'w', encoding='utf-8') as writer:

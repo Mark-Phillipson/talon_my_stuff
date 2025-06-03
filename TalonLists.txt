@@ -1,4 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user\community created: 2025-05-22 07:51:39.241062
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user\community created: 2025-06-03 06:52:12.721940
 List: user.git_argument
   - abort: --abort
   - all: --all
@@ -196,7 +196,6 @@ List: user.edit_action
 List: user.edit_modifier
   - all: document
   - paragraph: paragraph
-  - word: word
   - line: line
   - line start: lineStart
   - way left: lineStart
@@ -206,6 +205,15 @@ List: user.edit_modifier
   - way up: fileStart
   - file end: fileEnd
   - way down: fileEnd
+
+List: user.edit_modifier_repeatable
+  - word: word
+  - word left: wordLeft
+  - word right: wordRight
+  - up: lineUp
+  - down: lineDown
+  - left: left
+  - right: right
 
 List: user.edit_text_file
   - 
@@ -221,6 +229,8 @@ List: user.edit_text_file
   - abbreviations: settings/abbreviations.csv
   - file extensions: settings/file_extensions.csv
   - words to replace: settings/words_to_replace.csv
+  - contacts json: private/contacts.json
+  - contacts csv: private/contacts.csv
 
 List: user.code_formatter
   - all cap: ALL_CAPS
@@ -465,6 +475,7 @@ List: user.vocabulary
   - JavaScript
   - CSS
   - SQL
+  - Elgato
 
 List: user.search_engine
   - #amazon: https://www.amazon.com/s/?field-keywords=%s
@@ -535,12 +546,114 @@ List: user.window_snap_positions
   - full: FULL
   - fullscreen: FULLSCREEN
 
+List: user.window_split_positions
+  - 
+  - half: HALF
+  - thirds: THIRDS
+  - clock: CLOCK
+  - counterclock: COUNTERCLOCK
+  - grid: GRID
+  - big grid: BIG_GRID
+
+List: user.code_operators_array
+  - -
+  - 
+  - subscript: SUBSCRIPT
+
+List: user.code_operators_assignment
+  - -
+  - 
+  - # Assignment
+  - equals: ASSIGNMENT
+  - or equals: ASSIGNMENT_OR
+  - 
+  - # Combined computation and assignment
+  - minus equals: ASSIGNMENT_SUBTRACTION
+  - plus equals: ASSIGNMENT_ADDITION
+  - times equals: ASSIGNMENT_MULTIPLICATION
+  - divide equals: ASSIGNMENT_DIVISION
+  - mod equals: ASSIGNMENT_MODULO
+  - increment: ASSIGNMENT_INCREMENT
+  - 
+  - # Bitwise operators
+  - bitwise and equals: ASSIGNMENT_BITWISE_AND
+  - bitwise or equals: ASSIGNMENT_BITWISE_OR
+  - bitwise exclusive or equals: ASSIGNMENT_BITWISE_EXCLUSIVE_OR
+  - left shift equals: ASSIGNMENT_BITWISE_LEFT_SHIFT
+  - right shift equals: ASSIGNMENT_BITWISE_RIGHT_SHIFT
+
+List: user.code_operators_bitwise
+  - -
+  - 
+  - bitwise and: BITWISE_AND
+  - bitwise or: BITWISE_OR
+  - bitwise not: BITWISE_NOT
+  - 
+  - bitwise ex or: BITWISE_EXCLUSIVE_OR
+  - bitwise left shift: BITWISE_LEFT_SHIFT
+  - bitwise right shift: BITWISE_RIGHT_SHIFT
+
+List: user.code_operators_lambda
+  - -
+  - 
+  - lambda: LAMBDA
+
+List: user.code_operators_math
+  - -
+  - 
+  - # Math operators
+  - minus: MATH_SUBTRACT
+  - plus: MATH_ADD
+  - times: MATH_MULTIPLY
+  - divide: MATH_DIVIDE
+  - int divide: MATH_INTEGER_DIVIDE
+  - mod: MATH_MODULO
+  - power: MATH_EXPONENT
+  - 
+  - # logical operators
+  - and: MATH_AND
+  - or: MATH_OR
+  - not: MATH_NOT
+  - weak and: MATH_WEAK_AND
+  - weak or: MATH_WEAK_OR
+  - weak not: MATH_WEAK_NOT
+
+List: user.code_operators_math_comparison
+  - -
+  - 
+  - # Comparison operators
+  - equal: MATH_EQUAL
+  - not equal: MATH_NOT_EQUAL
+  - weak equal: MATH_WEAK_EQUAL
+  - weak not equal: MATH_WEAK_NOT_EQUAL
+  - greater: MATH_GREATER_THAN
+  - less: MATH_LESS_THAN
+  - greater or equal: MATH_GREATER_THAN_OR_EQUAL
+  - less or equal: MATH_LESS_THAN_OR_EQUAL
+  - 
+  - # Set operators
+  - in: MATH_IN
+  - not in: MATH_NOT_IN
+
+List: user.code_operators_pointer
+  - -
+  - 
+  - dereference: POINTER_INDIRECTION
+  - address of: POINTER_ADDRESS_OF
+  - arrow: POINTER_STRUCTURE_DEREFERENCE
+
 List: user.code_common_function
   - -
   - insert
   - key
   - print
   - repeat
+
+List: user.continuous_scrolling_direction
+  - upper: UP
+  - downer: DOWN
+  - righter: RIGHT
+  - lefter: LEFT
 
 List: user.before_or_after
   - before: BEFORE
