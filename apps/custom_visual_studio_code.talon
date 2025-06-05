@@ -32,6 +32,8 @@ terminal watch:
     sleep(100ms)
     key(enter)    
 local host Marvin: user.open_url("http://localhost:5016")
+drop marker: user.vscode("selectionssaver.saveBookmark")
+collect marker: user.vscode("selectionssaver.restoreBookmark")
 focus search: user.vscode("workbench.view.search")
 focus extensions: user.vscode("workbench.view.extensions")
 focus explorer: user.vscode("workbench.view.explorer")
