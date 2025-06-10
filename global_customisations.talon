@@ -122,6 +122,7 @@ go right:
 test email:                 insert("firstlastname@domain.co.uk")
 [enter] office username:      insert("Phillipson@MSPSystems.onmicrosoft.com")
 [enter] extra email address:      insert("Mark.S.Phillipson@outlook.com")
+[enter] password: insert("Blackberry1!") 
 [enter] username:
     insert("MPhil")
     sleep(100ms)

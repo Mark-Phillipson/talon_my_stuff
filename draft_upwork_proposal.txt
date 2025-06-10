@@ -1,0 +1,15 @@
+Dear Prospective Client.
+
+I am an experienced Full Stack Developer based in the UK, specializing in ASP.NET MVC, Blazor (WASM/Server/Hybrid), and Microsoft SQL Server. I have on the job experience since 2012 and have been developing data-centric desktop and web applications using Microsoft technologies since 1999. My expertise includes GUI/UX design with MVC and Blazor, and I am highly proficient in C#, Entity Framework Core, Bootstrap 5, CSS3, HTML5, JavaScript, JSON, and Progressive Web Apps.
+
+I am available for remote work and am looking for a long-term engagement. I currently have high-speed broadband and a static IP, ensuring reliable connectivity for collaboration and support during US hours as required. I am also comfortable quoting project costs and adhering to agreed budgets and timelines.
+
+In addition to my core skills, I can integrate advanced AI functionality into your application, such as Smart Paste, textarea suggestions, and semantic search, to enhance user experience and productivity. I am also familiar with tools like Visual Studio, Visual Studio Code, GitHub, Git, Azure DevOps, Azure SQL, Azure Storage, VBA, and Visual Basic.NET.
+
+To ensure the successful and timely delivery of your project, I will require a detailed application specification. Without this, it may be challenging to meet your requirements within the desired timeframe and budget.
+
+I hold a valid subscription to GitHub Copilot, which will significantly speed up the development process, especially for repetitive coding tasks.
+
+I am currently available and eager to discuss your project in more detail.
+
+Best regards, Mark P.
