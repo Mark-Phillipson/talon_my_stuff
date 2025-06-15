@@ -1,0 +1,116 @@
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-06-15 11:05:01.197091
+Search term: model
+
+=== DEBUG INFO ===
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\apps\git\git_argument.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\apps\git\git_command.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\system_paths-J40L4V3.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\delimiter_pair.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\edit_command_actions.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\edit_command_modifiers.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\edit_command_modifiers_repeatable.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit_text_file\edit_text_file_list.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\code_formatter.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\prose_formatter.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\reformatter.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\word_formatter.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\arrow_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\function_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\keypad_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\letter.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\number_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\mac\modifier_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\mac\special_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\win\modifier_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\win\special_key.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\currency.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\phrase_ender.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\prose_modifiers.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\prose_snippets.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\vocabulary\vocabulary.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\websites_and_search_engines\search_engine.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\websites_and_search_engines\website.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\windows_and_tabs\window_snap_positions.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\windows_and_tabs\window_split_positions.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_array.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_assignment.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_bitwise.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_lambda.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_math.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_math_comparison.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_pointer.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\talon\talon_code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\plugin\mouse\continuous_scrolling_direction.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\plugin\text_navigation\before_or_after.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\plugin\text_navigation\navigation_action.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\tags\emoji\emoji.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\tags\emoji\emoticon.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\tags\emoji\kaomoji.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\tags\terminal\unix_utility.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\letter.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\myCustomPrompts.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\naughty_words.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\vocabulary.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\website.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\model.talon-list
+  Including list user.model (matches search)
+    Added item: model: model
+    Added item: four o mini: gpt-4o-mini
+    Added item: four o: gpt-4o
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\modelDestination.talon-list
+  Including list user.modelDestination (matches search)
+    Added item: to this: paste
+    Added item: above: above
+    Added item: below: below
+    Added item: to clip: clipboard
+    Added item: to context: context
+    Added item: to new context: newContext
+    Added item: to after clip: appendClipboard
+    Added item: to browser: browser
+    Added item: to speech: textToSpeech
+    Added item: to window: window
+    Added item: chain: chain
+    Added item: snip: snip
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\modelSource.talon-list
+  Including list user.modelSource (matches search)
+    Added item: clip: clipboard
+    Added item: context: context
+    Added item: this: selection
+    Added item: response: gptResponse
+    Added item: last: lastTalonDictation
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\modelThread.talon-list
+  Including list user.modelThread (matches search)
+    Added item: and: continueLast
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\staticPrompt.talon-list
+
+=== LISTS ===
+List: user.model
+  - model: model
+  - four o mini: gpt-4o-mini
+  - four o: gpt-4o
+
+List: user.modelDestination
+  - to this: paste
+  - above: above
+  - below: below
+  - to clip: clipboard
+  - to context: context
+  - to new context: newContext
+  - to after clip: appendClipboard
+  - to browser: browser
+  - to speech: textToSpeech
+  - to window: window
+  - chain: chain
+  - snip: snip
+
+List: user.modelSource
+  - clip: clipboard
+  - context: context
+  - this: selection
+  - response: gptResponse
+  - last: lastTalonDictation
+
+List: user.modelThread
+  - and: continueLast
+
+End of Talon Lists

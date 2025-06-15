@@ -23,13 +23,6 @@ pull changes:
     key(ctrl-k)
     sleep(200ms)
     key(ctrl-g)
-dotnet publish clear visibility:
-    insert("cd C:\\Users\\Mark\\source\\repos\\ARM_MIG\\ARM_MVC")
-    sleep(100ms)
-    key(enter)
-    insert("dotnet publish -c Release ")
-    sleep(100ms)
-    key(enter)
 list directory:
     insert("dir")
     sleep(100ms)

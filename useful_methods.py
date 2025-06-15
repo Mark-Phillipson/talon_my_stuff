@@ -61,53 +61,67 @@ class Actions:
         """Calculate Result"""
         # Convert to integer
         newValue = int(value) * int(multiply)
-        return str(newValue)
-
+        return str(newValue)    
     def calculate_divide(value: str, divide: str) -> str:
         """Calculate Result"""
         # Convert to integer
         newValue = int(value) / int(divide)
         return str(newValue)
-    def folder_navigate(address: str) :
+        
+    def folder_navigate(address: str):
         """Navigate to folder"""
         # Open the windows file explorer and navigate to the folder
         if os.path.isdir(address):
             os.startfile(address)
         else:
             print("The specified path does not exist.")
+            
     def open_file(file_path: str) -> None:
         """Open a file with the default application"""
         if os.path.isfile(file_path):
             os.startfile(file_path)
         else:
-            print("The specified file does not exist.")        
+            print("The specified file does not exist.")
+            
     def move_mouse_from_string(mouse_coordinates: str):
         """Move mouse to coordinates given as a string like 100, 100."""
         try:
             x_str, y_str = mouse_coordinates.split(",")
-            x = int(x_str.strip())
+            x = int(x_str.strip())            
             y = int(y_str.strip())
             ctrl.mouse_move(x, y)
         except Exception as e:
-            print(f"Invalid coordinates: {e}")    
+            print(f"Invalid coordinates: {e}")
+    
     def show_talon_lists(search: str = ""):
         """Show all Talon lists, optionally filtered by a search string. Always write to file and open in VS Code. If searching, include the search term at the top of the file."""
         import os
         from datetime import datetime
         talon_dir = os.path.expandvars(r"%APPDATA%")
         directory_path = os.path.join(talon_dir, "talon", "user")
-        output_file_path = os.path.join(talon_dir, "talon", "user", "community", "TalonLists.txt")
+        output_file_path = os.path.join(talon_dir, "talon", "user", "mystuff", "talon_my_stuff", "TalonLists.txt")
         results = []
         search = search.lower().strip() if search else ""
+        
+        # Debug: track files found
+        debug_info = []
+        
         for root, _, files in os.walk(directory_path):
             for file in files:
                 if file.endswith('.talon-list'):
                     file_path = os.path.join(root, file)
+                    debug_info.append(f"Found: {file_path}")
                     try:
                         with open(file_path, 'r', encoding='utf-8') as f:
                             lines = f.readlines()
-                        if lines:
-                            list_name = lines[0].split(": ", 1)[1].strip()
+                        if lines and len(lines) > 0:
+                            # Handle case where first line might not have the expected format
+                            first_line = lines[0].strip()
+                            if ": " in first_line:
+                                list_name = first_line.split(": ", 1)[1].strip()
+                            else:
+                                # Fallback: use filename without extension
+                                list_name = os.path.splitext(file)[0]
                             list_name_lc = list_name.lower()
                             if search:
                                 # If search matches list name, include all items

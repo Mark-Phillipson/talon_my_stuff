@@ -1,5 +1,58 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-06-15 11:05:18.537914
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-06-15 11:05:01.094994
 
+=== DEBUG INFO ===
+=== PROCESSING ALL LISTS (NO SEARCH) ===
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\apps\git\git_argument.talon-list -> user.git_argument
+  Added 67 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\apps\git\git_command.talon-list -> user.git_command
+  Added 69 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\system_paths-J40L4V3.talon-list -> user.system_paths
+  Added 14 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\delimiter_pair.talon-list -> user.delimiter_pair
+  Added 13 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\edit_command_actions.talon-list -> user.edit_action
+  Added 8 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\edit_command_modifiers.talon-list -> user.edit_modifier
+  Added 11 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit\edit_command_modifiers_repeatable.talon-list -> user.edit_modifier_repeatable
+  Added 7 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\edit_text_file\edit_text_file_list.talon-list -> user.edit_text_file
+  Added 12 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\code_formatter.talon-list -> user.code_formatter
+  Added 17 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\prose_formatter.talon-list -> user.prose_formatter
+  Added 4 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\reformatter.talon-list -> user.reformatter
+  Added 2 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\formatters\word_formatter.talon-list -> user.word_formatter
+  Added 4 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\arrow_key.talon-list -> user.arrow_key
+  Added 4 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\function_key.talon-list -> user.function_key
+  Added 20 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\keypad_key.talon-list -> user.keypad_key
+  Added 18 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\letter.talon-list -> user.letter
+  Added 26 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\number_key.talon-list -> user.number_key
+  Added 10 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\mac\modifier_key.talon-list -> user.modifier_key
+  Added 9 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\mac\special_key.talon-list -> user.special_key
+  Added 15 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\win\modifier_key.talon-list -> user.modifier_key
+  Added 8 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\keys\win\special_key.talon-list -> user.special_key
+  Added 17 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\currency.talon-list -> user.currency
+  Added 6 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\phrase_ender.talon-list -> user.phrase_ender
+  Added 1 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\prose_modifiers.talon-list -> user.prose_modifiers
+  Added 4 items
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\prose_snippets.talon-list -> user.prose_snippets
+
+=== LISTS ===
 List: user.git_argument
   - abort: --abort
   - all: --all
@@ -157,13 +210,6 @@ List: user.system_paths
   - one drive: C:\Users\MPhil\OneDrive
 
 List: user.delimiter_pair
-  - # Format:
-  - # SPOKEN_FORM: LEFT_DELIMITER RIGHT_DELIMITER
-  - # Use the literal symbols for delimiters (except for whitespace, which is "space")
-  - #
-  - # Examples:
-  - # round: ( )
-  - # pad: space space
   - round: ( )
   - box: [ ]
   - diamond: < >
@@ -286,11 +332,6 @@ List: user.function_key
   - f eighteen: f18
   - f nineteen: f19
   - f twenty: f20
-  - # these f keys are not supported by all platforms (eg Mac) and are disabled by default
-  - #f twenty one: f21
-  - #f twenty two: f22
-  - #f twenty three: f23
-  - #f twenty four: f24
 
 List: user.keypad_key
   - key pad zero: keypad_0
@@ -313,8 +354,6 @@ List: user.keypad_key
   - key pad enter: keypad_enter
 
 List: user.letter
-  - # for common alternative spoken forms for letters, visit
-  - # https://talon.wiki/quickstart/improving_recognition_accuracy/#collected-alternatives-to-the-default-alphabet
   - air: a
   - bat: b
   - cap: c
@@ -388,7 +427,6 @@ List: user.modifier_key
   - alt: alt
   - control: ctrl
   - shift: shift
-  - # super is the windows key
   - super: super
   - command: ctrl
   - option: alt
@@ -424,10 +462,8 @@ List: user.phrase_ender
   - over: ""
 
 List: user.prose_modifiers
-  - # Maps spoken forms to DictationFormat method names (see DictationFormat in text_and_dictation.py).
   - cap: cap
   - no cap: no_cap
-  - # no caps variant for Dragon
   - no caps: no_cap
   - no space: no_space
 
@@ -435,7 +471,6 @@ List: user.prose_snippets
   - spacebar: " "
   - new line: "\n"
   - new paragraph: "\n\n"
-  - # Curly quotes are used to obtain proper spacing for left and right quotes, but will later be straightened.
   - open quote: "“"
   - close quote: "”"
   - smiley: :-)
@@ -463,7 +498,6 @@ List: user.vocabulary
   - Elgato
 
 List: user.search_engine
-  - #amazon: https://www.amazon.com/s/?field-keywords=%s
   - google: https://www.google.com/search?q=%s
   - google maps: https://maps.google.com/maps?q=%s
   - scholar: https://scholar.google.com/scholar?q=%s
@@ -543,17 +577,14 @@ List: user.code_operators_array
 
 List: user.code_operators_assignment
   - -
-  - # Assignment
   - equals: ASSIGNMENT
   - or equals: ASSIGNMENT_OR
-  - # Combined computation and assignment
   - minus equals: ASSIGNMENT_SUBTRACTION
   - plus equals: ASSIGNMENT_ADDITION
   - times equals: ASSIGNMENT_MULTIPLICATION
   - divide equals: ASSIGNMENT_DIVISION
   - mod equals: ASSIGNMENT_MODULO
   - increment: ASSIGNMENT_INCREMENT
-  - # Bitwise operators
   - bitwise and equals: ASSIGNMENT_BITWISE_AND
   - bitwise or equals: ASSIGNMENT_BITWISE_OR
   - bitwise exclusive or equals: ASSIGNMENT_BITWISE_EXCLUSIVE_OR
@@ -575,7 +606,6 @@ List: user.code_operators_lambda
 
 List: user.code_operators_math
   - -
-  - # Math operators
   - minus: MATH_SUBTRACT
   - plus: MATH_ADD
   - times: MATH_MULTIPLY
@@ -583,7 +613,6 @@ List: user.code_operators_math
   - int divide: MATH_INTEGER_DIVIDE
   - mod: MATH_MODULO
   - power: MATH_EXPONENT
-  - # logical operators
   - and: MATH_AND
   - or: MATH_OR
   - not: MATH_NOT
@@ -593,7 +622,6 @@ List: user.code_operators_math
 
 List: user.code_operators_math_comparison
   - -
-  - # Comparison operators
   - equal: MATH_EQUAL
   - not equal: MATH_NOT_EQUAL
   - weak equal: MATH_WEAK_EQUAL
@@ -602,7 +630,6 @@ List: user.code_operators_math_comparison
   - less: MATH_LESS_THAN
   - greater or equal: MATH_GREATER_THAN_OR_EQUAL
   - less or equal: MATH_LESS_THAN_OR_EQUAL
-  - # Set operators
   - in: MATH_IN
   - not in: MATH_NOT_IN
 
@@ -815,10 +842,7 @@ List: user.letter
   - zulu: Z
 
 List: user.customPrompt
-  - # Any prompts in this list are automatically added into the <user.modelPrompt> capture
-  - # and thus can be used like normal alongside all of the other model commands
   - -
-  - # Example of a custom prompt that is unique to a user's personal workflow
   - check language: I am learning a new foreign language. Check the grammar of what I have written and return feedback in English with references to what I wrote.
   - joke: Tell me a joke
   - explain python: I am having trouble understanding python code. Can you explain it to me?
@@ -832,7 +856,6 @@ List: user.customPrompt
   - do: I am having trouble with a task. Can you help me with it?
 
 List: user.naughty_words
-  - # A list of swearwords for Talon Voice to ignore
   - fuck
   - fucking
   - fucker
@@ -980,7 +1003,6 @@ List: user.vocabulary
 List: user.website
   - talon home page: http://talonvoice.com
   - talon wiki: https://talon.wiki/
-  - #talon practice: https://chaosparrot.github.io/talon_practice/
   - talon repository search: https://search.talonvoice.com/search/
   - amazon shopping: https://www.amazon.co.uk/
   - google calendar: https://calendar.google.com
@@ -999,71 +1021,44 @@ List: user.website
   - bbc weather: https://www.bbc.co.uk/weather
 
 List: user.model
-  - # The default model name
   - model: model
-  - # OpenAI models
   - four o mini: gpt-4o-mini
   - four o: gpt-4o
-  - # If using user.model_endpoint = "llm", run `llm models` and add any models you want to use here.
 
 List: user.modelDestination
-  - # A list of adjectives/adverbs describing how the result of the GPT query should be returned
-  - # paste in place
   - to this: paste
-  - # Paste above the current selection
   - above: above
-  - # Past below the current selection
   - below: below
-  - # Instead of pasting, return the result to the clipboard
   - to clip: clipboard
-  - # Instead of pasting, add the result to the context
   - to context: context
-  - # Instead of pasting, add the result to a new context
   - to new context: newContext
-  - # Instead of pasting, append the result to the clipboard
   - to after clip: appendClipboard
-  - # Open the result in the browser
   - to browser: browser
-  - # Speak the result with TTS
   - to speech: textToSpeech
-  - # Output the result in a talon imgui window
   - to window: window
-  - # Select the response after insertion so you can apply subsequent prompts on it
   - chain: chain
-  - # Insert the response as a snippet with placeholders (only works in vscode)
   - snip: snip
 
 List: user.modelSource
-  - # A list of sources from which the model can take in data to process
-  - # Apply the prompt to the text on the clipboard
   - clip: clipboard
-  - # Apply the prompt to the text in the context
   - context: context
-  - # Apply the prompt to the currently selected text
   - this: selection
-  - # Apply the prompt to the previously returned GPT response
   - response: gptResponse
-  - # Apply the prompt to the last phrase typed by Talon via a user's dictation
   - last: lastTalonDictation
 
 List: user.modelThread
   - and: continueLast
 
 List: user.staticPrompt
-  - # Use static prompts as aliases for detailed instructions
-  - # Reduce verbosity and prevent the need to say the entire prompt each time time
-  - ## FIXES
   - fix grammar formally: Fix any mistakes or irregularities in grammar, spelling, or formatting. Use a professional business tone. The text was created using voice dictation. Thus, there are likely to be issues regarding homophones and other misrecognitions. Do not change the original structure of the text.
   - fix grammar: Fix any mistakes or irregularities in grammar, spelling, or formatting. The text was created using voice dictation. Thus, there are likely to be issues regarding homophones and other misrecognitions. Do not change the tone. Do not change the original structure of the text.
   - fix syntax: Fix any syntax errors in this code selection. Do not change any behavior.
-  - ## FORMATTING
   - format table: The following markdown text is raw data. There is no index. Return the text in a markdown table format. Each row has a new line in the original data.
   - format bullets: Convert each paragraph into a heading with a series of bullet points underneath it. Each paragraph is separated by a new line. Separate paragraphs should not have combined bullet points. This should all be done in markdown syntax. If it is a small paragraph, then you can just leave it as a heading and not add bullet points. Do not reduce content, only reduce things that would be redundant. These bullet points should be in a useful format for notes for those who want to quickly look at it. If there is a citation in the markdown original, then keep the citation just at the top and not within every individual bullet point.
   - format mermaid: Convert the following plain text into the text syntax for a mermaid diagram.
   - format comment: Format the following text as a comment for the current programming language. Use the proper comment syntax for the current language. Split the comment into multiple lines if the lines are too long.
   - group: Act as an organizer. The following text consists of various topics all put together. Please group these items into categories and label each category. Return just the results.
   - join: Act as an editor. The following text is separated into multiple parts. Please group them together into one part maintaining the flow and meaning. Reorder in whatever way makes sense. Remove any redundant information. The result should be only one part with no additional structure. Return just the modified text.
-  - ## TEXT GENERATION
   - explain: Explain this text in a way that is easier to understand for a layman without technical knowledge.
   - summarize: Summarize this text into a format suitable for project notes.
   - add context: Add additional text to the selected text that would be appropriate to the situation and add useful information.
@@ -1073,25 +1068,20 @@ List: user.staticPrompt
   - add emoji: Return the same exact text verbatim with the same formatting, but add emoji when appropriate in order to make the text fun and easier to understand.
   - make softer: Act as an editor. I want you to make the following text softer in tone. Return just the modified text.
   - make stronger: Act as an editor. I want you to make the following text stronger in tone. Return just the modified text.
-  - ## FILE CONVERSIONS
   - convert to jason: Convert the following data into a JSON format.
   - convert to markdown: Convert the following text into a markdown format.
   - convert to python: Convert the following key-value pairs into the syntax for a Python dictionary. So you should serialize the key-value pairs into a native Python format.
   - convert to sheet: Convert the following data into a CSV format.
   - convert to yam: Convert the following data into a YAML format.
-  - ## CHECKERS
   - describe code: Explain what the following code does in natural language at a high level without getting into the specifics of the syntax.
   - check grammar: Check the grammar and formatting of the following text. Return a list of all potential errors.
   - check spelling: Check the spelling of the following text. Return a list of all potential errors.
   - check structure: Skim the structure and layout of the following text. Tell me if the structure and order of my writing are correct. If it is not correct or flows poorly, then tell me what might be wrong with it. If it is all correct, then say it looks good.
-  - ## TRANSLATIONS
   - translate to english: Translate the following text into English.
-  - ## CODE GENERATION
   - generate code: The following plaintext describes a process in code in the language that is specified by the system prompt. Please output the code necessary to do this. Return just code and not any natural language explanations.
   - update comments: Act as a software engineer. The following code may be missing comments or the comments could be out of date. Please update the comments. If you are unsure how to comment something, ask a question in a comment instead. Return just the code and not any explanations.
   - clean code: Act as a software engineer. Reduce any duplication in the selected code and improve it to be more idiomatic and clear for other users. However, do not change the behavior or functionality. Return just the code and not any explanations.
   - improve semantics: The following is an HTML document. Keep the same structure and layout but if it is needed, change any elements to use proper semantic HTML and make sure it is implementing best practices for user accessibility. Output just the HTML and not any extra explanations.
-  - ## WRITING HELPERS
   - add questions: Help me explore this question from multiple perspectives. For each perspective, ask follow-up questions and indicate what perspective is being taken.
   - format outline: Create an outline that encapsulates the text below. Keep the number of sections between three and five to optimize for human working memory. Return just the outline.
   - format prose: As an editor, format the following outline or summarization as prose. You can have headings and paragraphs. Avoid using bullet points. Reorder and add transitions as necessary to make the document flow. Return just the text.

@@ -393,3 +393,13 @@ make code bigger: user.vscode("editor.action.fontZoomIn")
 make code smaller: user.vscode("editor.action.fontZoomOut")
 
 keep changes: key(ctrl-enter)
+send to pilot:
+    key(shift-home)
+    sleep(30ms)
+    key(shift-right)
+    sleep(30ms)
+    key(ctrl-x)
+    sleep(30ms)
+    key(escape)
+    sleep(30ms)
+    key(ctrl-v)
