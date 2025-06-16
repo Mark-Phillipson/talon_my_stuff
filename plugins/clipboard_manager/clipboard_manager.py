@@ -69,7 +69,7 @@ def update():
     except Exception:
         image = None
 #Avoid Rango Messages Being Added to the History
-    if text.startswith("{\"version\": ") or text.startswith("{\"type\""):
+    if text and (text.startswith("{\"version\": ") or text.startswith("{\"type\"")):
         return
     if not text:
         if image is not None:
