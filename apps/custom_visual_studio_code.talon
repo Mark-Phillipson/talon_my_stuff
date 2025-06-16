@@ -319,8 +319,8 @@ pilot fix errors:
     insert("last")
     sleep(100ms)
     key(enter)
-    sleep(100ms)
-    insert("Please can you look at the last terminal command and fix these errors for me?")
+    sleep(300ms)
+    insert("Please can you look at the LAST terminal command and fix these errors for me?")
 pilot fix warnings:
     key(ctrl-/)
     sleep(100ms)
@@ -401,5 +401,7 @@ send to pilot:
     key(ctrl-x)
     sleep(30ms)
     key(escape)
+    sleep(30ms)
+    insert("please ")
     sleep(30ms)
     key(ctrl-v)

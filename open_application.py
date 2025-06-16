@@ -51,6 +51,17 @@ class Actions:
         print(commandline)
         print(category)
         ui.launch(path=commandline,args=arguments)
+    def run_application_voice_admin_windows_forms_launcher_with_parameter(category:  str, parameter: str ):
+        "runs the voice admin windows forms application with the given launcher category and an additional parameter"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net9.0-windows\\WinFormsApp.exe"
+        args1 = ' ' + '"' + r'/Launcher"' + ' '
+        args2 = '' + r'/' + category + ''
+        args3 = '' + r'/' + parameter + ''
+        arguments=[args1, args2, args3]
+        print(commandline)
+        print(category)
+        print(parameter)
+        ui.launch(path=commandline,args=arguments)
     def open_application_custom(commandline:  str ,args:  str) -> str:
         "Opens an application with the given command line"
         print(commandline)
