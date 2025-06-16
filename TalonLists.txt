@@ -1,4 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-06-15 11:05:18.537914
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-06-15 12:15:42.153685
 
 List: user.git_argument
   - abort: --abort
