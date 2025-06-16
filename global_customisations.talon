@@ -1,3 +1,5 @@
+os: windows
+-
 redo:                       key(ctrl-y)
 undo:                       key(ctrl-z)
 undo <user.number_signed_small>:

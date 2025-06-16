@@ -8,9 +8,6 @@ pick <user.letters>:
     key(enter)
 [save to] disk: key(ctrl-s)
 context menu: key(menu)
-help search clipboard:
-    text = clip.text()
-    user.help_search(text)
 help search selection:    
     key(ctrl-c)
     sleep(500ms)

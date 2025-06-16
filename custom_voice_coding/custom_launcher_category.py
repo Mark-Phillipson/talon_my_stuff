@@ -23,6 +23,8 @@ ctx_default.lists["user.launcher_category"] = {
 "Web Links": "Web Links",
 "Work Links": "Work Links",
 "AI Chat": "AIChat",
-"Talon Search": "Talon Search"
+"Talon Search": "Talon Search",
+"Search": "Talon Search",
+"Talon": "Talon Search"
 }
 
