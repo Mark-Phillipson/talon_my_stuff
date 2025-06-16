@@ -29,16 +29,12 @@ talon copy <user.text> actions: clip.set_text(user.talon_get_actions_search(text
 talon copy core:            clip.set_text(user.talon_get_core())
 
 talon copy python context:  user.talon_add_context_clipboard_python()
-talon copy context:         user.talon_add_context_clipboard()
 talon copy commands:        user.help_copy_all_commands()
 
 talon create app context:   user.talon_create_app_context()
 
-talon open log:             menu.open_log()
 talon open repl:            menu.open_repl()
 talon open home:            menu.open_talon_home()
-talon open debug:           menu.open_debug_window()
-talon check updates:        menu.check_for_updates()
 
 talon sim <phrase>$:        user.talon_sim_phrase(phrase)
 

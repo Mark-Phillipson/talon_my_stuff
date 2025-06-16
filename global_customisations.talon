@@ -1,4 +1,5 @@
 os: windows
+and hostname: J40L4V3
 -
 redo:                       key(ctrl-y)
 undo:                       key(ctrl-z)
