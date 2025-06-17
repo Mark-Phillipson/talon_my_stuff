@@ -47,7 +47,7 @@ split pain: key(shift-alt-d)
     insert("dotnet build")
     sleep(100ms)
     key(enter)
-list [directory]:
+list directory:
     insert("ls")
     sleep(100ms)
     key(enter)

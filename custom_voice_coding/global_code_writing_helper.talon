@@ -96,7 +96,6 @@ angle brackets in:
     insert("<>")
     sleep(300ms)
     key(left)
-angle brackets out: insert("<>")
 pipes out: insert(" || ")
 ampersands out: insert(" && ")
 equals out: insert(" == ")
@@ -134,3 +133,4 @@ custom launcher categories: user.open_url("https://github.com/Mark-Phillipson/ta
 custom attributes: user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/4492ceb5a75c6d4978d43106bc6a9e351596ef0e/custom_voice_coding/html_attributes.py#L7")
 #face mode: mode.enable("user.face_mode")
 start word game: user.launch_word_game()
+sequel {user.sql_keywords}: insert(user.sql_keywords)
