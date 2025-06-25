@@ -18,17 +18,17 @@
 <user.screen_step_two> <user.screen_step_vertical_monitor_two> righty:
     mouse_move(screen_step_two, screen_step_vertical_monitor_two)
     mouse_click(1)
-taskbar <user.screen_step_one>:
+<user.screen_step_one> taskbar:
     mouse_move(screen_step_one, 1050)
     mouse_click(0)
-apex <user.screen_step_one>:
+<user.screen_step_one> apex:
     mouse_move(-380, 45) 
     mouse_move(screen_step_one, 45)
     mouse_click(0)
-taskbar <user.screen_step_two>:
+<user.screen_step_two> taskbar:
     mouse_move(screen_step_two, 1050)
     mouse_click(0)
-apex <user.screen_step_two>:
+<user.screen_step_two> apex:
     mouse_move(screen_step_two, 10)
     mouse_click(0)
 taskbar <user.screen_step_two> <user.number_signed_small>:
@@ -38,13 +38,13 @@ taskbar <user.screen_step_two> <user.number_signed_small>:
     adjustment = number_signed_small * 5
     mouse_move(position_x + adjustment, position_y)
     mouse_click(0)
-(menu | leaf) <user.screen_step_one>:
+<user.screen_step_one> (menu | leaf):
     mouse_move(screen_step_one, 80)
     mouse_click(0)
-(menu | leaf) <user.screen_step_two>:
+<user.screen_step_two> (menu | leaf):
     mouse_move(screen_step_two, 52)
     mouse_click(0)
-ribbon <user.screen_step_one>:
+<user.screen_step_one> ribbon:
     mouse_move(screen_step_one, 80)
     mouse_click(0)
 mouse left <number>:
@@ -137,6 +137,7 @@ screen <user.number_key>+:
     user.grid_activate()
     user.grid_narrow_list(number_key_list)
 continuous: user.mouse_scroll_down_continuous()
+(wheel stop)  | (we'll stop):                 user.mouse_scroll_stop()
 mouse test: 
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()

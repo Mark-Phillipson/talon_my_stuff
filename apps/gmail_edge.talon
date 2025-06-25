@@ -1,4 +1,5 @@
 app: msedge.exe
+title: gmail
 -
 align left:                 key(ctrl-shift-l)
 align centre:               key(ctrl-shift-e)
