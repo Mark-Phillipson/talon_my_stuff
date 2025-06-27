@@ -68,6 +68,7 @@ heavy [vehicles]:
     key(keypad_0)
 go there:
     mouse_click(0)
+    sleep(60msTaskbar)
     key(keypad_0)
 [next] idle vehicle:
     key(alt-/)

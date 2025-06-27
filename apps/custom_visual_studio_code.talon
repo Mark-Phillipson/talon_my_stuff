@@ -278,6 +278,16 @@ toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
 
+context last:
+    key(ctrl-/)
+    sleep(200ms)
+    insert("tools")
+    sleep(100ms)
+    key(enter)
+    insert("last")
+    sleep(100ms)
+    key(enter)
+pilot continue: key(ctrl-enter)
 pilot inline: key(ctrl-i)
 pilot completions: user.vscode("github.copilot.completions.toggle")
 pilot new chat:
