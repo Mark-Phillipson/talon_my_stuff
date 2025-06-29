@@ -1,9 +1,6 @@
 mode: dictation
 mode: mixed
 -
-settings():
-    # Increase command priority in mixed mode
-    speech.timeout(0.300)
 ^tabby: key(tab)
 ^enter: key(enter)
 ^command (return | enter):

@@ -1,5 +1,5 @@
 app: phoneexperiencehost.exe
 -
-notifications clear:
-    mouse_move(308, 258)
-    mouse_click(0)
+
+# Phone Link shortcuts
+phone refresh: key(f5)

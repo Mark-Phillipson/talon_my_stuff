@@ -180,8 +180,8 @@ reset code: user.vscode("workbench.action.debug.stop")
 
 #Testing
 
-run test: user.vscode("dotnet.test.run")
-cancel test run: key("ctrl-; ctrl-x")
+test stop: key("ctrl-; ctrl-x")
+test reload: key("ctrl-; ctrl-r")
 
 #Search
 
