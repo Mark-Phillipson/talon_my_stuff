@@ -145,6 +145,7 @@ navigate <user.text>:
     sleep(100ms)
     insert(text or "")
 #DevExpress CodeRush jump codes/Marker functionality
+AI generation: key(ctrl-shift-7)
 jump [codes]: key(ctrl-shift-j)
 land [carrot]: key(enter)
 [select] token: key(shift-enter)
@@ -283,4 +284,3 @@ if statement:
 # deck(pedal_right): 
 #     user.pedal_right()
 #     speech.toggle()
-AI generation: key(ctrl-shift-7)
