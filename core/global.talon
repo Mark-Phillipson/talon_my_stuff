@@ -1,3 +1,5 @@
+
+#noise(dental_click): key(down)
 pick <number_small>: user.pick_item(number_small)
 pick to: user.pick_item(2)
 pick <user.word>:

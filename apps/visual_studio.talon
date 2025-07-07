@@ -283,3 +283,4 @@ if statement:
 # deck(pedal_right): 
 #     user.pedal_right()
 #     speech.toggle()
+AI generation: key(ctrl-shift-7)

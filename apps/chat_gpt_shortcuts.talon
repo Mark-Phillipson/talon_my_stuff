@@ -22,4 +22,7 @@ toggle sidebar:
 
 delete chat: 
     key(ctrl-shift-backspace)
-
+ask it | basket:
+    insert("?")
+    sleep("20ms")
+    key(enter)

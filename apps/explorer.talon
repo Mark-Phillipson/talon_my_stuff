@@ -16,7 +16,7 @@ open in code:
     key(alt-f)
     sleep(400ms)
     key(i)
-copy path: key(ctrl-shift-c)
+copy the path: key(ctrl-shift-c)
 touch top file:
     # Touch the top file in the explorer on monitor two only
     mouse_move(2220, 145)

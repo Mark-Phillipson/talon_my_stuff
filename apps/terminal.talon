@@ -166,3 +166,4 @@ list last commits:
     sleep(100ms)
     key(enter)
 delete object and binary folders: insert("Remove-Item -Path bin,obj -Recurse -Force")
+watch cycle: insert("dotnet watch run --project CycleRoutes/CycleRoutes.Web")

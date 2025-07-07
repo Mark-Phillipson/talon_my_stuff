@@ -261,6 +261,8 @@ terminal in editor: user.vscode("workbench.action.createTerminalEditor")
 terminal history: user.vscode("workbench.action.terminal.runRecentCommand")
 terminal recent commands: user.vscode("workbench.action.terminal.runRecentCommand")
 terminal recent directory: user.vscode("workbench.action.terminal.goToRecentDirectory")
+terminal previous: user.vscode("workbench.action.terminal.focusPrevious")
+terminal next: user.vscode("workbench.action.terminal.focusNext")
 
 #Emmet
 remove tag: user.vscode("editor.emmet.action.removeTag")
@@ -278,6 +280,10 @@ toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
 
+(ask it) | (basket): 
+    insert("?")
+    sleep(200ms)
+    key(enter)
 context last:
     key(ctrl-/)
     sleep(200ms)
@@ -314,7 +320,7 @@ pilot list commands:
 pilot voice: 
     user.vscode("workbench.action.chat.startVoiceChat")    
     speech.disable()
-add context: user.vscode("workbench.action.chat.editing.attachContext")
+#add context: user.vscode("workbench.action.chat.editing.attachContext")
 pilot next edit: user.vscode("chatEditor.action.navigateNext")
 pilot previous edit: user.vscode("chatEditor.action.navigatePrevious")
 pilot fix errors:
