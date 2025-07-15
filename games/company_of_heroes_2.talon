@@ -43,13 +43,49 @@ stop:
 retreat:
     key(t)
 reinforce:
-    key(r)
-reverse drive:
-    key(u)
-primary build:
-    key(v)
-secondary build:
+    key(r:10)
+fuel:
+    key(b)    
+    sleep(20ms)
+    key(f)
+    sleep(20ms)
+    mouse_click(0)
+munition:
+    key(b)    
+    sleep(20ms)
+    key(m)
+    sleep(20ms)
+    mouse_click(0)
+trench:
     key(b)
+    sleep(20ms)
+    key(t)    
+    sleep(20ms)
+    mouse_click(0)
+wall:
+    key(b)    
+    sleep(20ms)
+    key(w)
+    sleep(20ms)
+    mouse_click(0)
+bofors:
+    key(b)    
+    sleep(20ms)
+    key(b)
+    sleep(20ms)
+    mouse_click(0)
+mortars:
+    key(b)
+    sleep(20ms)
+    key(r)
+    sleep(20ms)
+    mouse_click(0)
+assembly:
+    key(b)
+    sleep(20ms)
+    key(d)
+    sleep(20ms)
+    mouse_click(0)
 headquarters:
     key(f1)
 infantry:
@@ -68,7 +104,7 @@ heavy [vehicles]:
     key(keypad_0)
 go there:
     mouse_click(0)
-    sleep(60msTaskbar)
+    sleep(60ms)
     key(keypad_0)
 [next] idle vehicle:
     key(alt-/)
