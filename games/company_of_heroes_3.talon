@@ -1,5 +1,4 @@
-app.name: Company of Heroes 2
-# app.exe: RelicCoH2.exe
+#app: "c:\program files (x86)\steam\steamapps\common\company of heroes 3\reliccoh3.exe"
 -
 settings():
     user.mode_indicator_show = 0
@@ -23,6 +22,10 @@ game <user.arrow_key>:
 fly <user.arrow_key>:
     key(arrow_key)
     repeat(14)
+[tactical] map: key(m)
+focus selection: key(')
+take all: key(ctrl-a)
+[subselecte] maximize: key(#)
 # Basic commands
 move forward:
     key(up)
@@ -33,14 +36,16 @@ move left:
 move right:
     key(right)
 attack [move]:
-    key(a)
+    key(q)
     mouse_click(0)
 stop:
-    key(s)
-retreat:
-    key(t)
+    key(w)
+retreat: 
+    key(r)
+    sleep(20ms)
+    mouse_click(0)
 reinforce:
-    key(r:10)
+    key(f:10)
 fuel:
     key(b)    
     sleep(20ms)
@@ -97,36 +102,25 @@ heavy [vehicles]:
     key(ctrl-a)
     sleep(30ms)
     mouse_click(0)
-[toggle] map:
-    key(keypad_0)
+toggle map:
+    key(m)
 go there:
     mouse_click(0)
     sleep(60ms)
-    key(keypad_0)
-[next] idle vehicle:
-    key(alt-/)
+    key(m)
 [next] idle [soldier]:
+    key(,)
+lazy [vehicle]: 
     key(.)
-idle: key(alt-.)
-lazy: key(alt-/)
 [all] vehicles:
     key(ctrl-/)
-queue: 
-    key(shift:down)
-    sleep(30ms)
-    mouse_click(1)
-    sleep(30ms)
-    key(shift:up)
-next:
-    key(shift:down)
-    sleep(30ms)
-    mouse_click(0)
-    sleep(30ms)
-    key(shift:up)
+all idle: key(ctrl-alt-,)
+all lazy: key(ctrl-alt-.)
+events: key(n)
 explode:
-    key(ctrl-/)
+    key(ctrl-.)
     sleep(30ms)
-    key(a)
+    key(q)
     sleep(30ms)
     mouse_click(0)
 hold shift:
@@ -134,23 +128,23 @@ hold shift:
 release shift:
     key(shift:up)    
 [all] soldiers:
-    key(ctrl-.)
+    key(ctrl-,)
 [all] invade:
-    key(ctrl-.)   
+    key(ctrl-,)   
     sleep(30ms)
-    key(a)
+    key(q)
     sleep(30ms)
     mouse_click(0)
 reset camera:
     key(backspace)
 [game] pause:
-    key(pause)
+    key(space)
 game stop:
-    key(pause)
+    key(space)
 pause game:
     key(pause)
 [game] menu:
-    key(f10)
+    key(esc)
 take [all]:
     mouse_move(60, 40)
     sleep(30ms)
@@ -312,49 +306,49 @@ get stuff:
 vehicle first: 
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1885, 225)
+    mouse_move(440, 895)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x , position_y )
 vehicle second:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1835, 230)
+    mouse_move(500, 895)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x , position_y )
 vehicle third:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1785, 230)
+    mouse_move(560, 895)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x , position_y )
 vehicle fourth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1720, 230)
+    mouse_move(620, 895)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x , position_y )
 vehicle fifth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1660, 230)
+    mouse_move(680, 895)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x , position_y )
 vehicle sixth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1600, 230)
+    mouse_move(740, 895)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x , position_y )
 vehicle seventh:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1540, 230)
+    mouse_move(1695, 230)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x , position_y )
@@ -454,15 +448,15 @@ group zero:
 kill tank:
     key(7)    
     sleep(30ms)
-    key(a)
+    key(q)
     sleep(30ms)
     mouse_click(0)
 reverse:
-    key(u)
+    key(r)
     sleep(30ms)
     mouse_click(0)
 retreat:
-    key(u)    
+    key(r)    
     sleep(30ms)
     mouse_click(0)
 antitank:
@@ -727,7 +721,9 @@ ante run:
     key(u)
     sleep(30ms)
     mouse_click(0)
-south: key(down)
-east: key(right)
-west: key(left)
-north: key(up)!
+battle group first: key(ctrl-f1)
+battle group second: key(ctrl-f2)
+battle group third: key(ctrl-f3)
+battle group fourth: key(ctrl-f4)
+battle group fifth: key(ctrl-f5)
+battle group sixth: key(ctrl-f6)
