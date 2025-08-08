@@ -103,7 +103,7 @@ tab backwards:              key(shift-tab)
 #switch to <user.running_applications>: user.switcher_focus(running_applications)
 #This one not working:
 focus data:                 user.switcher_focus("Azure Data Studio")
-focus terminal:             user.switcher_focus("WindowsTerminal.exe")
+focus terminal:             user.switcher_focus("windowsterminal.exe")
 focus code:                 user.switcher_focus("code.exe")
 focus studio:               user.switcher_focus("devenv.exe")
 focus edge:                 user.switcher_focus("msedge.exe")

@@ -1,4 +1,4 @@
-app: WindowsTerminal.exe
+app: windowsterminal.exe
 app: devenv.exe
 app: vscode
 app: c:\windows\system32\cmd.exe
