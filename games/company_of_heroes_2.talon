@@ -730,4 +730,10 @@ ante run:
 south: key(down)
 east: key(right)
 west: key(left)
-north: key(up)!
+north: key(up)
+ambush:
+    user.move_cursor_to_gaze_point()
+    sleep(50ms)
+    key(a)
+    sleep(50ms)
+    mouse_click(0)

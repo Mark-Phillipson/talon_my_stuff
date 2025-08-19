@@ -405,6 +405,8 @@ T4 for inject:
     key(left:2)
 make code bigger: user.vscode("editor.action.fontZoomIn")
 make code smaller: user.vscode("editor.action.fontZoomOut")
+zoom in: user.vscode("workbench.action.zoomIn")
+zoom out: user.vscode("workbench.action.zoomOut")
 
 keep changes: key(ctrl-enter)
 send to pilot:
