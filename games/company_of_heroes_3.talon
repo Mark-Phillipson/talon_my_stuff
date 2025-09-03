@@ -40,10 +40,6 @@ attack [move]:
     mouse_click(0)
 stop:
     key(w)
-retreat: 
-    key(r)
-    sleep(20ms)
-    mouse_click(0)
 reinforce:
     key(f:10)
 fuel:

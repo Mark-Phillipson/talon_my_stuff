@@ -40,6 +40,10 @@ run code:
     insert("code .")
     sleep(100ms)
     key(enter)
+run insiders:
+    insert("code-insiders .")    
+    sleep(100ms)
+    key(enter)
 settings: key(ctrl-,)
 shutdown: key(ctrl-c)
 split pain: key(shift-alt-d)
