@@ -1,4 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-03 11:37:28.213918
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-07 06:20:25.850323
 Search term: model
 
 === DEBUG INFO ===
@@ -52,8 +52,6 @@ Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\cor
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\naughty_words.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\vocabulary.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\core\talon_helpers\website.talon-list
-Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\custom_voice_coding\custom_snippet_category.talon-list
-Processing: C:\Users\MPhil\AppData\Roaming\talon\user\mystuff\talon_my_stuff\custom_voice_coding\custom_snippet_languages.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\model.talon-list
   Including list user.model (matches search)
     Added item: model: model

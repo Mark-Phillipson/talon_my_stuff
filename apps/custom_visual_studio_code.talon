@@ -43,6 +43,7 @@ focus extensions: user.vscode("workbench.view.extensions")
 focus explorer: user.vscode("workbench.view.explorer")
 focus debug: user.vscode("workbench.view.debug")
 [focus] source control: user.vscode("workbench.view.scm")
+[focus] commit message: user.vscode("workbench.scm.action.focusNextInput")
 next issue: user.vscode("editor.action.marker.next")
 previous issue: user.vscode("editor.action.marker.prev")
 (focus) | (view) Controller: user.vscode("extension.goToController")
@@ -369,6 +370,14 @@ stop the agent:
     mouse_move(1872, 980)
     mouse_click(0)
 
+# Run .prompt.md directly in GitHub Copilot Chat (no copy/paste)
+# These voice commands save the file then invoke the Copilot "Run Prompt" commands
+# via the Command Palette so you don't need to copy/paste.
+run prompt [in] new [pilot]:
+    key(ctrl-alt-super-/)
+
+run prompt [in] [pilot]:
+    key(alt-super-/)
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
 #Markdown All in One Extension
