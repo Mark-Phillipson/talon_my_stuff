@@ -110,6 +110,10 @@ please dotnet:
     insert(".NET")
     sleep(100ms)
     key(enter)
+go [command] palette:
+    key(ctrl-shift-p)
+palate | palette: key(ctrl-shift-p)
+open recent: user.vscode("workbench.action.openRecent")    
 
 # Manipulate Code
 
@@ -281,10 +285,6 @@ toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
 
-(ask it) | (basket): 
-    insert("?")
-    sleep(200ms)
-    key(enter)
 context last:
     key(ctrl-/)
     sleep(200ms)
@@ -370,14 +370,13 @@ stop the agent:
     mouse_move(1872, 980)
     mouse_click(0)
 
-# Run .prompt.md directly in GitHub Copilot Chat (no copy/paste)
-# These voice commands save the file then invoke the Copilot "Run Prompt" commands
-# via the Command Palette so you don't need to copy/paste.
 run prompt [in] new [pilot]:
-    key(ctrl-alt-super-/)
+    #key(ctrl-alt-super-/)
+    user.vscode("workbench.action.chat.run-in-new-chat.prompt.current")
 
 run prompt [in] [pilot]:
     key(alt-super-/)
+
 #Rainbow CSV
 CSV filter: user.vscode("rainbow-csv.RBQL")
 #Markdown All in One Extension
@@ -430,3 +429,6 @@ send to pilot:
     insert("please ")
     sleep(30ms)
     key(ctrl-v)
+
+pilot window toggle: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
+terminal window toggle: user.vscode("workbench.action.toggleMaximizedPanel")

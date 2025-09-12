@@ -21,8 +21,6 @@ help search selection:
     sleep(500ms)
     text = clip.text()
     user.help_search(text)
-new paragraph: key(enter)
-new line: key(enter)
 taskbar toggle:
     user.toggle_taskbar()
 snipping tool: key(super-shift-s)
@@ -46,3 +44,11 @@ snip folder desktop pictures: insert("C:\\DesktopPictures")
 snip folder repose: insert("C:\\Users\\MPhil\\source\\repos")
 start twitch bot:  user.system_command("c:/Users/MPhil/source/repos/TwitchBot01/launch-bot.bat")
 hover: user.move_cursor_to_gaze_point()
+tab clothes: user.tab_close_wrapper()
+(ask it) | (basket): 
+    insert("?")
+    sleep(200ms)
+    key(enter)
+total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
+
+

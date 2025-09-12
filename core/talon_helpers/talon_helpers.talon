@@ -39,3 +39,4 @@ talon open home:            menu.open_talon_home()
 talon sim <phrase>$:        user.talon_sim_phrase(phrase)
 
 ^talon restart$:            user.talon_restart()
+key(ctrl-shift-`):                user.talon_restart()

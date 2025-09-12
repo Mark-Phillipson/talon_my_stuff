@@ -29,7 +29,7 @@ export text:
     insert("export ")
     sleep(50ms)
     key(enter)
-(command palette) | please:
+go [command] palette:
     key(ctrl-shift-p)
 hunt this: key(ctrl-shift-f)
 # pilot explain <user.text>:

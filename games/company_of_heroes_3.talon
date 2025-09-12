@@ -1,4 +1,4 @@
-#app: "c:\program files (x86)\steam\steamapps\common\company of heroes 3\reliccoh3.exe"
+app: "c:\program files (x86)\steam\steamapps\common\company of heroes 3\reliccoh3.exe"
 -
 settings():
     user.mode_indicator_show = 0

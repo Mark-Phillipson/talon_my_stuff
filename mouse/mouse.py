@@ -11,3 +11,4 @@ class Actions:
         "Test mouse zoom functionality"
         #actions.tracking.control_zoom_toggle(True)
         actions.tracking.zoom()
+        

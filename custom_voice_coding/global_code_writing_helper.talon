@@ -46,14 +46,6 @@ launch realtime:
     user.open_url("http://localhost:5006")
 launch dictation chat:
     user.open_url("http://localhost:5000/chat")
-fresh line:
-    key(end)
-    key(enter)
-fresh line above:
-    key(home)
-    key(home)
-    key(enter)
-    key(up)
 left select: key(ctrl-shift-left)
 right select: key(ctrl-shift-right)
 <number_small> items:

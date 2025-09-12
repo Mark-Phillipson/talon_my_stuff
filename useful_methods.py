@@ -168,3 +168,10 @@ class Actions:
             print(f"Created and opened {output_file_path}")
         except Exception as e:
             print(f"Error opening VS Code: {e}")
+    
+    def open_path_in_code(path: str) -> None:
+        """Open a path in VS Code"""
+        try:
+            os.system(f'code "{path}"')
+        except Exception as e:
+            print(f"Error opening path in VS Code: {e}")

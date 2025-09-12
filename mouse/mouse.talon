@@ -136,8 +136,12 @@ screen <user.number_key>+:
     user.grid_select_screen(2)
     user.grid_activate()
     user.grid_narrow_list(number_key_list)
+spin down: user.mouse_scroll_down_continuous()
 continuous: user.mouse_scroll_down_continuous()
-(wheel stop)  | (we'll stop):                 user.mouse_scroll_stop()
+spin up: user.mouse_scroll_up_continuous()
+stop: user.mouse_scroll_stop()
+will stop: user.mouse_scroll_stop()
+we'll stop: user.mouse_scroll_stop()
 mouse test: 
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
@@ -146,3 +150,9 @@ mouse test:
     user.mouse_zoom_relative()
     sleep(1000ms)
     mouse_move(position_x, position_y)
+righty | (right click):
+    # close zoom if open
+    tracking.zoom_cancel()
+    mouse_click(1)
+    # close the mouse grid if open
+    user.grid_close()

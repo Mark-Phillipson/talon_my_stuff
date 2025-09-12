@@ -98,3 +98,10 @@ top of window:
 # Maximize or minimize the active window
 toggle maximize:
     key(f11)
+open in Visual Studio code:
+    # Copy current path from Explorer address bar
+    key(f4)            
+    key(ctrl-c)        
+    key(escape)        
+    path = clip.text()
+    user.open_path_in_code(path)
