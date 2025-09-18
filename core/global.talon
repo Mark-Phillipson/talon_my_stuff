@@ -52,4 +52,4 @@ tab clothes: user.tab_close_wrapper()
     sleep(200ms)
     key(enter)
 total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
-
+glide [cursor]: key(super-alt-.)

@@ -1,4 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-18 09:15:12.769035
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-18 16:19:23.453129
 Search term: model
 
 === DEBUG INFO ===
@@ -27,6 +27,7 @@ Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\curren
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\phrase_ender.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\prose_modifiers.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\text\prose_snippets.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\vocabulary\code_formatter.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\vocabulary\vocabulary.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\websites_and_search_engines\search_engine.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\websites_and_search_engines\website.talon-list
