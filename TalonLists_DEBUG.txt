@@ -1,4 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-12 18:10:09.968454
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-18 09:15:12.769035
 Search term: model
 
 === DEBUG INFO ===
@@ -32,6 +32,25 @@ Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\websites_an
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\websites_and_search_engines\website.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\windows_and_tabs\window_snap_positions.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\core\windows_and_tabs\window_split_positions.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\c\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\c\code_keyword.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\c\code_keyword_unprefixed.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\cpp\cpp_standard_prefix.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\cpp\cpp_standard_type.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\csharp\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\css\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\go\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\java\code_common_method.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\java\code_keyword.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\javascript\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\lua\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\python\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\python\code_common_method.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\python\code_keyword.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\python\code_keyword_unprefixed.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\r\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\sql\code_common_function.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\stata\code_common_function.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_array.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_assignment.talon-list
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\community\lang\tags\operators_bitwise.talon-list
@@ -84,6 +103,9 @@ Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\m
   Including list user.modelThread (matches search)
     Added item: and: continueLast
 Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-ai-tools\GPT\lists\staticPrompt.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-gaze-ocr\ocr_actions.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-gaze-ocr\ocr_common_actions.talon-list
+Processing: C:\Users\MPhil\AppData\Roaming\talon\user\talon-gaze-ocr\ocr_modifiers.talon-list
 
 === LISTS ===
 List: user.model

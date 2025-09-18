@@ -20,6 +20,7 @@ search list <user.text>:
 {user.snippet_language} {user.snippet_category}: user.run_application_voice_admin_windows_forms_language_category(snippet_language, snippet_category)
 launch {user.launcher_category}: user.run_application_voice_admin_windows_forms_launcher(launcher_category)
 what can I say: user.run_application_voice_admin_windows_forms_launcher("Talon Search")
+what can I say new: user.launch_talon_voice_command_server()
 launch {user.launcher_category} <user.text>: user.run_application_voice_admin_windows_forms_launcher_with_parameter(launcher_category, text)
 # Favourite Folders
 go [to] documents: user.folder_navigate("C:\\Users\\MPhil\\OneDrive\\Documents")
@@ -124,5 +125,4 @@ custom categories: user.open_url("https://github.com/Mark-Phillipson/talon_my_st
 custom launcher categories: user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/a3ca27e064553a88fdb597584b89622b5630533c/custom_voice_coding/custom_launcher_category.py#L7-L8")
 custom attributes: user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/4492ceb5a75c6d4978d43106bc6a9e351596ef0e/custom_voice_coding/html_attributes.py#L7")
 #face mode: mode.enable("user.face_mode")
-start word game: user.launch_word_game()
 sequel {user.sql_keywords}: insert(user.sql_keywords)

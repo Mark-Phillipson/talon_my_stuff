@@ -1,4 +1,6 @@
 
+emoji {user.emoji}: user.paste(emoji)
+
 ^game mode$:
     mode.enable("game")    
     mode.enable("command")
@@ -50,5 +52,4 @@ tab clothes: user.tab_close_wrapper()
     sleep(200ms)
     key(enter)
 total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
-
 

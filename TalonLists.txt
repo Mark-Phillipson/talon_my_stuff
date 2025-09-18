@@ -1,4 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-11 11:52:49.676920
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-16 16:36:25.762111
 
 List: user.git_argument
   - abort: --abort
@@ -314,7 +314,7 @@ List: user.keypad_key
 
 List: user.letter
   - # for common alternative spoken forms for letters, visit
-  - # https://talon.wiki/quickstart/improving_recognition_accuracy/#collected-alternatives-to-the-default-alphabet
+  - # https://talon.wiki/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy#collected-alternatives-to-the-default-alphabet
   - air: a
   - bat: b
   - cap: c
@@ -536,6 +536,651 @@ List: user.window_split_positions
   - counterclock: COUNTERCLOCK
   - grid: GRID
   - big grid: BIG_GRID
+
+List: user.code_common_function
+  - -
+  - alloc ah: alloca
+  - ay to eye: atoi
+  - ef close: fclose
+  - ef open: fopen
+  - ef read: fread
+  - ef write: fwrite
+  - em map: mmap
+  - em un map: munmap
+  - es en print eff: sprintf
+  - es print eff: sprintf
+  - exit
+  - free
+  - get char: getchar
+  - get op: getopt
+  - is digit: isdigit
+  - ma map: mmap
+  - malloc
+  - mem copy: memcpy
+  - mem set: memset
+  - print eff: printf
+  - re alloc: realloc
+  - see alloc: calloc
+  - set jump: setjmp
+  - signal
+  - size of: sizeof
+  - stir cat: strcat
+  - string cat: strcat
+  - stir comp: strcmp
+  - stir copy: strcpy
+  - stir dupe: strdup
+  - string dupe: strdup
+  - stir elle cat: strlcat
+  - stir l cat: strlcat
+  - stir elle copy: strlcpy
+  - stir l copy: strlcpy
+  - stir en cat: strncat
+  - stir en copy: strncpy
+  - stir en comp: strncmp
+  - stir len: strlen
+  - string len: strlen
+  - stir to int: strtoint
+  - stir to unsigned int: strtouint
+  - string char: strchr
+
+List: user.code_keyword
+  - -
+  - align as: "alignas"
+  - align of: "alignof"
+  - auto: "auto "
+  - bool: "bool"
+  - break: "break"
+  - case: "case "
+  - char: "char"
+  - const expr: "constexpr "
+  - const expression: "constexpr "
+  - const: "const "
+  - continue: "continue"
+  - default: "default"
+  - do: "do "
+  - double: "double"
+  - else: "else "
+  - enum: "enum "
+  - extern: "extern "
+  - false: "false"
+  - float: "float"
+  - for: "for "
+  - go to: "goto "
+  - if: "if "
+  - in line: "inline "
+  - int
+  - integer: int
+  - long: "long "
+  - null pointer: "nullptr"
+  - restrict: "restrict "
+  - return: "return "
+  - short: "short "
+  - signed: "signed "
+  - size of: "sizeof"
+  - static assert: "static_assert"
+  - struct: "struct "
+  - switch: "switch "
+  - thread local: " thread_local "
+  - true: "true"
+  - type deaf: "typedef "
+  - type of unqual: "typeof_unqual"
+  - type of: "typeof"
+  - union: "union "
+  - unsigned: "unsigned "
+  - void: "void "
+  - while: "while "
+
+List: user.code_keyword_unprefixed
+  - -
+  - register: "register "
+  - static: "static "
+  - volatile: "volatile "
+
+List: user.cpp_standard_prefix
+  - -
+  - stood
+  - standard
+
+List: user.cpp_standard_type
+  - -
+  - any
+  - array
+  - atomic
+  - barrier
+  - bit set: bitset
+  - chrono duration: chrono::duration
+  - chrono time point: chrono::time_point
+  - condition variable: condition_variable
+  - deck: deque
+  - filesystem path: filesystem::path
+  - function
+  - future
+  - hash
+  - in stream: istream
+  - latch
+  - lock guard: lock_guard
+  - map
+  - match results: match_results
+  - multimap
+  - multiset
+  - mutex
+  - optional
+  - out stream: ostream
+  - packaged task: packaged_task
+  - pair
+  - priority queue: priority_queue
+  - promise
+  - queue
+  - recursive mutex: recursive_mutex
+  - regex
+  - scoped lock: scoped_lock
+  - semaphore
+  - set
+  - shared mutex: shared_mutex
+  - shared pointer: shared_ptr
+  - span
+  - stack
+  - stop token: stop_token
+  - string
+  - sub match: sub_match
+  - thread
+  - tuple
+  - unique lock: unique_lock
+  - unique pointer: unique_ptr
+  - unordered map: unordered_map
+  - unordered multimap: unordered_multimap
+  - unordered multiset: unordered_multiset
+  - unordered set: unordered_set
+  - variant
+  - vector
+  - weak pointer: weak_ptr
+
+List: user.code_common_function
+  - -
+  - integer: int.TryParse
+  - print: Console.WriteLine
+  - string: .ToString
+
+List: user.code_common_function
+  - code.language: scss
+  - -
+  - # reference
+  - attribute: attr
+  - env
+  - url
+  - var
+  - variable: var
+  - # mathematical
+  - calc
+  - calculate: calc
+  - clamp
+  - max
+  - min
+  - # color
+  - HSL: hsl
+  - hue sat light: hsl
+  - HSLA: hsla
+  - lab
+  - LCH: lch
+  - RGB: rgb
+  - red green blue: rgb
+  - RGBA: rgba
+  - color
+  - # image functions
+  - linear gradient: linear-gradient
+  - # counter functions
+  - counter
+  - counters
+  - symbols
+  - # filter
+  - blur
+  - brightness
+  - contrast
+  - drop shadow: drop-shadow
+  - grayscale
+  - hue rotate: hue-rotate
+  - invert
+  - opacity
+  - saturate
+  - sepia
+  - # grid
+  - fit content: fit-content
+  - min max: minmax
+  - repeat
+  - # transform
+  - matrix
+  - rotate
+  - scale
+  - skew
+  - translate
+
+List: user.code_common_function
+  - -
+  - # golang builtin functions
+  - append
+  - length: len
+  - make
+  - # formatting
+  - format print: fmt.Printf
+  - format print eff: fmt.Printf
+  - format sprint: fmt.Sprintf
+  - format es print eff: fmt.Sprintf
+  - format print line: fmt.Println
+  - # time
+  - time hour: time.Hour
+  - time minute: time.Minute
+  - time second: time.Second
+  - time millisecond: time.Millisecond
+  - time microsecond: time.Microsecond
+  - time nanosecond: time.Nanosecond
+  - # IO
+  - buf I O: bufio.
+  - # strings
+  - string convert: strconv.
+  - string convert to int: strconv.AtoI
+
+List: user.code_common_method
+  - -
+  - add
+  - char at: charAt
+  - clear
+  - clone
+  - contains
+  - contains key: containsKey
+  - equals
+  - get
+  - isEmpty
+  - length
+  - put
+  - remove
+  - set
+  - size
+  - substring
+  - to string: toString
+  - trim
+
+List: user.code_keyword
+  - -
+  - abstract: "abstract "
+  - assert: "assert "
+  - boolean: "boolean "
+  - break
+  - byte: "byte "
+  - case: "case "
+  - catch
+  - char: "char "
+  - class: "class "
+  - continue
+  - default
+  - do: "do "
+  - double: "double "
+  - else
+  - enum: "enum "
+  - exports: "exports "
+  - extends: " extends "
+  - final: "final "
+  - finally: "finally "
+  - float: "float "
+  - for: "for "
+  - if: "if "
+  - implements: " implements "
+  - import: "import "
+  - instance of: "instanceof "
+  - int: "int "
+  - interface: "interface "
+  - long: "long "
+  - module: "module "
+  - native: "native "
+  - new: "new "
+  - open: "open "
+  - opens: "opens "
+  - package: "package "
+  - private: "private "
+  - protected: "protected "
+  - provides: "provides "
+  - public: "public "
+  - requires: "requires "
+  - return: "return "
+  - short: "short "
+  - static: "static "
+  - strict eff pee: "strictfp "
+  - super
+  - switch: "switch "
+  - synchronized: "synchronized "
+  - this
+  - throw: "throw "
+  - throws: "throws "
+  - to: " to "
+  - transient: "transient "
+  - transitive: "transitive "
+  - try: "try "
+  - uses: "uses "
+  - var: "var "
+  - void: "void "
+  - volatile: "volatile "
+  - while: "while "
+  - with: " with "
+  - yield: "yield "
+
+List: user.code_common_function
+  - code.language: typescript
+  - code.language: javascriptreact
+  - code.language: typescriptreact
+  - -
+  - abs: Math.abs
+  - entries: Object.entries
+  - fetch: fetch
+  - floor: Math.floor
+  - from entries: Object.fromEntries
+  - keys: Object.keys
+  - log: console.log
+  - max: Math.max
+  - min: Math.min
+  - print: console.log
+  - round: Math.round
+  - values: Object.values
+
+List: user.code_common_function
+  - -
+  - to number: "tonumber"
+  - I pairs: "ipairs"
+  - print: "print"
+  - print F: "printf"
+  - type: "type"
+  - assert: "assert"
+  - get meta table: "getmetatable"
+  - set meta table: "setmetatable"
+  - # io
+  - I O write: "io.write"
+  - I O read: "io.read"
+  - I O open: "io.open"
+  - # string
+  - format: "string.format"
+  - string G find: "string.gfind"
+  - string find: "string.strfind"
+  - string len: "string.strlen"
+  - string upper: "string.strupper"
+  - string lower: "string.strlower"
+  - string sub: "string.strsub"
+  - string G sub: "string.gsub"
+  - string match: "string.match"
+  - string G match: "string.gmatch"
+  - # table
+  - table unpack: "table.unpack"
+  - table insert: "table.insert"
+  - tabel get N: "table.getn"
+  - tabel sort: "table.sort"
+  - # math
+  - math max: "math.max"
+  - # json
+  - jason parse: "json.parse"
+  - # http
+  - H T T P get: "http.get"
+  - web get: "http.get"
+  - # os
+  - O S date: "os.date"
+  - O S time: "os.time"
+  - O S clock: "os.clock"
+  - O S rename: "os.rename"
+  - O S remove: "os.remove"
+  - O S getenv: "os.getenv"
+  - O S execute: "os.execute"
+
+List: user.code_common_function
+  - -
+  - enumerate
+  - integer: "int"
+  - length: "len"
+  - list
+  - print
+  - range
+  - set
+  - split
+  - string: "str"
+  - update
+
+List: user.code_common_method
+  - add
+  - append
+  - are strip: rstrip
+  - elle strip: lstrip
+  - extend
+  - get
+  - items
+  - join
+  - keys
+  - lower
+  - pop
+  - remove
+  - replace
+  - sort
+  - split
+  - strip
+  - upper
+  - values
+
+List: user.code_keyword
+  - -
+  - and: " and "
+  - as: " as "
+  - assert: "assert "
+  - async: "async "
+  - await: "await "
+  - break: "break"
+  - case: "case "
+  - class: "class "
+  - deaf: "def "
+  - define: "def "
+  - dell: "del "
+  - elif: "elif "
+  - else: "else "
+  - except: "except "
+  - false: "False"
+  - for: "for "
+  - from: "from "
+  - global: "global "
+  - if: "if "
+  - import: "import "
+  - in: " in "
+  - is: " is "
+  - lambda: "lambda "
+  - match: "match "
+  - none: "None"
+  - not: "not "
+  - null: "None"
+  - or: " or "
+  - pass: "pass"
+  - raise: "raise "
+  - return: "return "
+  - true: "True"
+  - try: "try"
+  - type: "type"
+  - while: "while "
+  - with: "with "
+  - yield: "yield "
+
+List: user.code_keyword_unprefixed
+  - -
+  - continue: "continue"
+  - finally: "finally"
+  - nonlocal: "nonlocal "
+
+List: user.code_common_function
+  - -
+  - # base R
+  - as character: "as.character"
+  - as data frame: "as.data.frame"
+  - as date: "as.Date"
+  - as double: "as.double"
+  - as factor: "as.factor"
+  - as integer: "as.integer"
+  - as numeric: "as.numeric"
+  - base read RDS: "readRDS"
+  - base save RDS: "saveRDS"
+  - cable: "kable"
+  - correlation: "cor"
+  - count: "count"
+  - covariance: "cov"
+  - describe: "describe"
+  - eigen: "eigen"
+  - ex table: "xtable"
+  - get working directory: "getwd"
+  - head: "head"
+  - if else: "ifelse"
+  - install packages: "install.packages"
+  - is NA: "is.na"
+  - is not NA: "!is.na"
+  - length: "length"
+  - library: "library"
+  - list files: "list.files"
+  - list: "list"
+  - lm: "lm"
+  - log: "log"
+  - make directory: "dir.create"
+  - margins: "margins"
+  - max: "max"
+  - mean: "mean"
+  - min: "min"
+  - names: "names"
+  - paste: "paste0"
+  - print: "print"
+  - reorder: "reorder"
+  - repeat: "rep"
+  - scale: "scale"
+  - sequence along: "seq_along"
+  - sequence length: "seq_len"
+  - sequence: "seq"
+  - set working directory: "setwd"
+  - sort: "sort"
+  - subset: "subset"
+  - sum: "sum"
+  - summary: "summary"
+  - tail: "tail"
+  - tidy: "tidy"
+  - trim white space: "trimws"
+  - type: "typeof"
+  - unique: "unique"
+  - vector: "c"
+  - vee table: "vtable"
+  - view: "View"
+  - # dplyr
+  - anti join: "anti_join"
+  - arrange: "arrange"
+  - as tibble: "as_tibble"
+  - bind rows: "bind_rows"
+  - case when: "case_when"
+  - distinct: "distinct"
+  - everything: "everything"
+  - filter: "filter"
+  - full join: "full_join"
+  - glimpse: "glimpse"
+  - group by: "group_by"
+  - inner join: "inner_join"
+  - left join: "left_join"
+  - mutate: "mutate"
+  - pull: "pull"
+  - rename all: "rename_all"
+  - rename: "rename"
+  - right join: "right_join"
+  - select all: "select_all"
+  - select: "select"
+  - semi join: "semi_join"
+  - starts with: "starts_with"
+  - summarise: "summarise"
+  - tibble: "tibble"
+  - ungroup: "ungroup"
+  - # ggplot2
+  - coord cartesian: "coor_cartesian"
+  - element text: "element_text"
+  - element blank: "element_blank"
+  - facet grid: "facet_grid"
+  - facet wrap: "facet_wrap"
+  - geom A B line: "geom_abline"
+  - geom area: "geom_area"
+  - geom bar: "geom_bar"
+  - geom boxplot: "geom_boxplot"
+  - geom histogram: "geom_histogram"
+  - geom horizontal line: "geom_hline"
+  - geom line: "geom_line"
+  - geom point: "geom_point"
+  - geom pointrange: "geom_pointrange"
+  - geom polygon: "geom_polygon"
+  - geom ribbon: "geom_ribbon"
+  - geom segment: "geom_segment"
+  - geom smooth: "geom_smooth"
+  - geom vertical line: "geom_vline"
+  - geom violin: "geom_violin"
+  - labs: "labs"
+  - scale colour manual: "scale_colour_manual"
+  - scale fill manual: "scale_fill_manual"
+  - scale fill viridis: "scale_fill_viridis_c"
+  - scale colour viridis: "scale_colour_viridis_c"
+  - theme set: "theme_set"
+  - # purrr
+  - map character: "map_chr"
+  - map data frame: "map_dfr"
+  - map double: "map_dbl"
+  - map: "map"
+  - P map: "pmap"
+  - # stringr
+  - string contains: "str_detect"
+  - string detect: "str_detect"
+  - string replace all: "str_replace_all"
+  - string replace: "str_replace"
+  - # tidyr
+  - drop NA: "drop_na"
+  - gather: "gather"
+  - nest: "nest"
+  - pivot longer: "pivot_longer"
+  - pivot wider: "pivot_wider"
+  - spread: "spread"
+  - un nest: "unnest"
+  - # readr readxl and other non-base R reading/writing
+  - read E views: "readEViews"
+  - read CSV: "read_csv"
+  - read RDS: "read_rds"
+  - read excel: "read_xlsx"
+  - write CSV: "write_csv"
+  - write RDS: "write_rds"
+  - # Shiny
+  - shine ui: "shinyUI"
+  - title panel: "titlePanel"
+  - main panel: "mainPanel"
+  - tab panel: "tabPanel"
+  - navigation list panel: "navlistPanel"
+  - conditional panel: "conditionalPanel"
+  - input panel: "inputPanel"
+  - ui output: "uiOutput"
+  - text output: "textOutput"
+  - table output: "tableOutput"
+  - data table output: "dataTableOutput"
+  - select size input: "selectizeInput"
+  - action button: "actionButton"
+  - download button: "downloadButton"
+  - render ui: "renderUI"
+  - observe event: "observeEvent"
+  - # Base
+
+List: user.code_common_function
+  - -
+  - # these vary by dialect
+  - count: Count
+  - min: Min
+  - max: Max
+
+List: user.code_common_function
+  - -
+  - # base stata
+  - global
+  - local
+  - reg
+  - regress: reg
+  - # packages
+  - estadd
+  - estout
+  - estpost
+  - eststo
+  - esttab
 
 List: user.code_operators_array
   - -
@@ -1095,5 +1740,33 @@ List: user.staticPrompt
   - add questions: Help me explore this question from multiple perspectives. For each perspective, ask follow-up questions and indicate what perspective is being taken.
   - format outline: Create an outline that encapsulates the text below. Keep the number of sections between three and five to optimize for human working memory. Return just the outline.
   - format prose: As an editor, format the following outline or summarization as prose. You can have headings and paragraphs. Avoid using bullet points. Reorder and add transitions as necessary to make the document flow. Return just the text.
+
+List: user.ocr_actions
+  - take: select
+  - copy: copy
+  - carve: cut
+  - paste to: paste
+  - paste link to: paste_link
+  - clear: delete
+  - change: delete
+  - delete: delete_with_whitespace
+  - chuck: delete_with_whitespace
+  - cap: capitalize
+  - no cap: uncapitalize
+  - no caps: uncapitalize
+  - lower: lowercase
+  - upper: uppercase
+  - bold: bold
+  - italic: italic
+  - strikethrough: strikethrough
+  - number: number_list
+  - bullet: bullet_list
+  - link: link
+
+List: user.ocr_common_actions
+  - select: select
+
+List: user.ocr_modifiers
+  - all: selectAll
 
 End of Talon Lists

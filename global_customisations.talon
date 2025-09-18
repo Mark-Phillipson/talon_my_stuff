@@ -89,7 +89,7 @@ fluent search <user.text>:
 pause some:                 sleep(500ms)
 select rest of line:        key(shift-end)
 base | home:              key(home)
-double home:
+double (base | home):
     key(home)
     sleep(100ms)
     key(home)

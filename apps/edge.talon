@@ -158,3 +158,4 @@ start realtime:
     key(alt-tab)        
     sleep(100ms)
     key(ctrl-v)
+hard refresh: key(ctrl-shift-r)

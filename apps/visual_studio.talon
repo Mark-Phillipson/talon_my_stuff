@@ -1,8 +1,8 @@
 os: windows
-app: visual_studio
-app: devenv.exe
 app: remote_desktop_connection
 app: mstsc.exe
+app: visual_studio
+app: devenv.exe
 -
 
 tag(): user.tabs
