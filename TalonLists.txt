@@ -1,4 +1,4 @@
-All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-16 16:36:25.762111
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-19 07:23:51.124391
 
 List: user.git_argument
   - abort: --abort
@@ -441,6 +441,25 @@ List: user.prose_snippets
   - smiley: :-)
   - winky: ;-)
   - frowny: :-(
+
+List: user.code_formatter
+  - all cap: ALL_CAPS
+  - all down: ALL_LOWERCASE
+  - camel: PRIVATE_CAMEL_CASE
+  - dotted: DOT_SEPARATED
+  - delimited: COMMA_SEPARATED
+  - dub string: DOUBLE_QUOTED_STRING
+  - dunder: DOUBLE_UNDERSCORE
+  - hammer: PUBLIC_CAMEL_CASE
+  - kebab: DASH_SEPARATED
+  - packed: DOUBLE_COLON_SEPARATED
+  - padded: SPACE_SURROUNDED_STRING
+  - slasher: ALL_SLASHES
+  - conga: SLASH_SEPARATED
+  - smash: NO_SPACES
+  - snake: SNAKE_CASE
+  - string: SINGLE_QUOTED_STRING
+  - constant: ALL_CAPS,SNAKE_CASE
 
 List: user.vocabulary
   - N map: nmap
