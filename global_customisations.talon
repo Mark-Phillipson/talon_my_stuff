@@ -210,3 +210,14 @@ date insert: insert(user.time_format("%d-%m-%Y"))
 # Microsoft Power Toys Voice Commands
 shortcut guide: key(super-shift-/)    
 color picker: key(super-shift-c)
+# will only work when Talon menu is the first item in the notification tray!
+talon menu:
+    key(super-b)
+    sleep(50ms)
+    key(right)
+    sleep(50ms)
+    key(menu)
+    sleep(50ms)
+    key(down:4)
+    sleep(50ms)
+    key(right)
