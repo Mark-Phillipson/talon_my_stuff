@@ -38,7 +38,7 @@ settings():
 # ^(talon wake)+$:
 #     speech.enable()
 
-^(stop)+$:
+^(stop voice [typing])+$:
     key(super-h)
     sleep(100ms)
     key(escape)

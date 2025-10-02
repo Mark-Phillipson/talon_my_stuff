@@ -1,0 +1,206 @@
+:root {
+    --bg: #0f1720;
+    --card: #0b1220;
+    --muted: #94a3b8;
+    --accent: #60a5fa
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Segoe UI, Arial, sans-serif
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #071022 0%, #0b1220 100%);
+    color: #e6eef8;
+    min-height: 100vh;
+    padding: 24px
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px
+}
+
+.lead {
+    margin: 0;
+    color: var(--muted)
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    margin-bottom: 12px
+}
+
+input#search {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.02);
+    color: inherit
+}
+
+/* Scope select styling: ensure options are readable on dark background and constrain width */
+select {
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: #e6eef8;
+    min-width: 160px;
+    max-width: 420px
+}
+
+select option {
+    background: linear-gradient(180deg, #071022, #0b1220);
+    color: #e6eef8
+}
+
+select {
+    line-height: 1.2;
+    appearance: menulist;
+    padding-right: 28px
+}
+
+select:focus {
+    outline: 2px solid rgba(96, 165, 250, 0.25)
+}
+
+/* Try to ensure the native dropdown renders above our dark overlay */
+select {
+    position: relative;
+    z-index: 50
+}
+
+/* Custom select replacement (used when native pickers are unreadable) */
+.custom-select {
+    position: relative;
+    min-width: 160px;
+    max-width: 420px
+}
+
+.custom-select-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #0b1220, #071022);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: #e6eef8;
+    cursor: pointer
+}
+
+.custom-select-button:focus {
+    outline: 2px solid rgba(96, 165, 250, 0.25)
+}
+
+.custom-select-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: auto;
+    background: #071022 !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    max-height: 420px;
+    overflow: auto;
+    border-radius: 8px;
+    z-index: 120;
+    padding: 8px;
+    min-width: 320px;
+    width: 420px;
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6)
+}
+
+.custom-select-search {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.02);
+    color: #e6eef8;
+    margin-bottom: 8px
+}
+
+.custom-select-item {
+    padding: 8px;
+    border-radius: 6px;
+    color: #cfe7ff;
+    cursor: pointer;
+    background: transparent
+}
+
+.custom-select-item:hover,
+.custom-select-item[aria-selected="true"] {
+    background: rgba(96, 165, 250, 0.12);
+    color: #eaffff
+}
+
+.custom-select-empty {
+    padding: 12px;
+    color: var(--muted);
+    font-size: 13px
+}
+
+/* Hide native select completely as a visual fallback */
+select[aria-hidden="true"] {
+    display: none !important;
+}
+
+button {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: #04263b;
+    cursor: pointer
+}
+
+#tableWrap {
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    padding: 8px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background: rgba(6, 10, 14, 0.9);
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04)
+}
+
+tbody td {
+    padding: 8px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.03);
+    vertical-align: top
+}
+
+tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.01)
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 12px
+}

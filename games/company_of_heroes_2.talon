@@ -17,6 +17,7 @@ settings():
     
 
 # This is a list of the commands that are specific to the Company of Heroes 2 game
+tag(): user.talon_hud_automatic_hide
 game <user.arrow_key>:
     key(arrow_key)
     repeat(4)
@@ -795,3 +796,10 @@ ambush:
     key(a)
     sleep(50ms)
     mouse_click(0)
+attack there:
+    user.move_cursor_to_gaze_point()
+    sleep(50ms)
+    key(a)
+    sleep(50ms)
+    mouse_click(0)
+    
