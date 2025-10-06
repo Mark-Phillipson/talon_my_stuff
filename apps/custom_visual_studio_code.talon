@@ -4,7 +4,6 @@ os: windows
 # Navigation
 
 switch tab: user.vscode("workbench.action.switchWindow")
-terminal tab: user.vscode("workbench.action.terminal.focus")
 single tab: user.vscode("workbench.action.showEditorTab")
 multi tabs: user.vscode("workbench.action.showMultipleEditorTabs")
 solution explorer: user.vscode("solutionExplorer.focus")
@@ -431,4 +430,4 @@ send to pilot:
     key(ctrl-v)
 
 pilot window toggle: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
-terminal window toggle: user.vscode("workbench.action.toggleMaximizedPanel")
+(panel | terminal | pane | pain) window toggle: user.vscode("workbench.action.toggleMaximizedPanel")

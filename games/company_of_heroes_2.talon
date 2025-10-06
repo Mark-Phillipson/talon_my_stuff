@@ -1,5 +1,5 @@
 app.name: Company of Heroes 2
-# app.exe: RelicCoH2.exe
+#app: RelicCoH2.exe
 -
 settings():
     user.mode_indicator_show = 0
@@ -13,7 +13,7 @@ settings():
     tracking.zoom_live = true
     tracking.zoom_height = 300
     tracking.zoom_width = 300
-    tracking.zoom_scale = 5
+    tracking.zoom_scale = 4
     
 
 # This is a list of the commands that are specific to the Company of Heroes 2 game
@@ -102,12 +102,10 @@ go there:
     mouse_click(0)
     sleep(60ms)
     key(keypad_0)
-[next] idle vehicle:
+[next] dozing [vehicle]:
     key(alt-/)
 [next] idle [soldier]:
     key(.)
-idle: key(alt-.)
-lazy: key(alt-/)
 [all] vehicles:
     key(ctrl-/)
 queue: 
@@ -143,10 +141,6 @@ release shift:
 reset camera:
     key(backspace)
 [game] pause:
-    key(pause)
-game stop:
-    key(pause)
-pause game:
     key(pause)
 [game] menu:
     key(f10)
