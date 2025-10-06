@@ -13,7 +13,7 @@ settings():
     tracking.zoom_live = true
     tracking.zoom_height = 300
     tracking.zoom_width = 300
-    tracking.zoom_scale = 4
+    tracking.zoom_scale = 5
     
 
 # This is a list of the commands that are specific to the Company of Heroes 2 game

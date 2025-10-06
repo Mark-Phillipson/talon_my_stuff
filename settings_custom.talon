@@ -20,6 +20,6 @@ settings():
     tracking.zoom_live = true
     tracking.zoom_height = 200
     tracking.zoom_width = 500
-    tracking.zoom_scale = 3
+    tracking.zoom_scale = 4
 
     user.ocr_behavior_when_no_eye_tracker = "ACTIVE_WINDOW"
