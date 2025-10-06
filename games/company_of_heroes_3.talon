@@ -1,4 +1,5 @@
 app: "c:\program files (x86)\steam\steamapps\common\company of heroes 3\reliccoh3.exe"
+app_name: "company_of_heroes_3"
 -
 #Whilst playing the game the workaround to make this work is to make this file global until we can figure out why the app does not detect when the app is running.
 settings():

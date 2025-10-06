@@ -1,31 +1,31 @@
 # Talon Cheatsheet — Whatsapp Windows Desktop
 
-Command | Action | Source
---- | --- | ---
-and app.name | Application Frame Host | apps/whatsapp_windows_desktop.talon
-and title | /WhatsApp/ | apps/whatsapp_windows_desktop.talon
-archive chat | key(ctrl-shift-n) | apps/whatsapp_windows_desktop.talon
-bold text | insert("*") ⏎     key(left) ⏎     key(right) | apps/whatsapp_windows_desktop.talon
-close app | key(alt-f4) | apps/whatsapp_windows_desktop.talon
-close search | key(esc) | apps/whatsapp_windows_desktop.talon
-delete chat | key(ctrl-backspace) | apps/whatsapp_windows_desktop.talon
-delete message | key(ctrl-shift-x) | apps/whatsapp_windows_desktop.talon
-forward message | key(ctrl-shift-f) | apps/whatsapp_windows_desktop.talon
-italic text | insert("_") ⏎     key(left) ⏎     key(right) | apps/whatsapp_windows_desktop.talon
-monospace text | insert("```") ⏎     key(left) ⏎     key(left) ⏎     key(left) | apps/whatsapp_windows_desktop.talon
-mute chat | key(ctrl-shift-m) | apps/whatsapp_windows_desktop.talon
-new chat | key(ctrl-n) | apps/whatsapp_windows_desktop.talon
-new group | key(ctrl-shift-n) | apps/whatsapp_windows_desktop.talon
-next chat | key(ctrl-shift-]) | apps/whatsapp_windows_desktop.talon
-next tab | key(ctrl-tab) | apps/whatsapp_windows_desktop.talon
-open chat info | key(ctrl-shift-i) | apps/whatsapp_windows_desktop.talon
-open profile | key(ctrl-p) | apps/whatsapp_windows_desktop.talon
-os | windows | apps/whatsapp_windows_desktop.talon
-pin chat | key(ctrl-shift-p) | apps/whatsapp_windows_desktop.talon
-previous chat | key(ctrl-shift-[) | apps/whatsapp_windows_desktop.talon
-previous tab | key(ctrl-shift-tab) | apps/whatsapp_windows_desktop.talon
-reply message | key(ctrl-shift-r) | apps/whatsapp_windows_desktop.talon
-search chats | key(ctrl-e) | apps/whatsapp_windows_desktop.talon
-search messages | key(ctrl-f) | apps/whatsapp_windows_desktop.talon
-strike text | insert("~") ⏎     key(left) ⏎     key(right) | apps/whatsapp_windows_desktop.talon
-unread chat | key(ctrl-shift-u) | apps/whatsapp_windows_desktop.talon
+| Spoken Command | Description | Source |
+|----------------|-------------|--------|
+| and app.name | Application Frame Host | whatsapp_windows_desktop |
+| and title | /WhatsApp/ | whatsapp_windows_desktop |
+| archive chat | key(ctrl-shift-n) | whatsapp_windows_desktop |
+| bold text | insert("*") ⏎     key(left) ⏎     key(right) | whatsapp_windows_desktop |
+| close app | key(alt-f4) | whatsapp_windows_desktop |
+| close search | key(esc) | whatsapp_windows_desktop |
+| delete chat | key(ctrl-backspace) | whatsapp_windows_desktop |
+| delete message | key(ctrl-shift-x) | whatsapp_windows_desktop |
+| forward message | key(ctrl-shift-f) | whatsapp_windows_desktop |
+| italic text | insert("_") ⏎     key(left) ⏎     key(right) | whatsapp_windows_desktop |
+| monospace text | insert("```") ⏎     key(left) ⏎     key(left) ⏎     key(left) | whatsapp_windows_desktop |
+| mute chat | key(ctrl-shift-m) | whatsapp_windows_desktop |
+| new chat | key(ctrl-n) | whatsapp_windows_desktop |
+| new group | key(ctrl-shift-n) | whatsapp_windows_desktop |
+| next chat | key(ctrl-shift-]) | whatsapp_windows_desktop |
+| next tab | key(ctrl-tab) | whatsapp_windows_desktop |
+| open chat info | key(ctrl-shift-i) | whatsapp_windows_desktop |
+| open profile | key(ctrl-p) | whatsapp_windows_desktop |
+| os | windows | whatsapp_windows_desktop |
+| pin chat | key(ctrl-shift-p) | whatsapp_windows_desktop |
+| previous chat | key(ctrl-shift-[) | whatsapp_windows_desktop |
+| previous tab | key(ctrl-shift-tab) | whatsapp_windows_desktop |
+| reply message | key(ctrl-shift-r) | whatsapp_windows_desktop |
+| search chats | key(ctrl-e) | whatsapp_windows_desktop |
+| search messages | key(ctrl-f) | whatsapp_windows_desktop |
+| strike text | insert("~") ⏎     key(left) ⏎     key(right) | whatsapp_windows_desktop |
+| unread chat | key(ctrl-shift-u) | whatsapp_windows_desktop |

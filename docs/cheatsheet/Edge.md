@@ -1,137 +1,137 @@
 # Talon Cheatsheet — Edge
 
-Command | Action | Source
---- | --- | ---
-(close tab) | key(ctrl-w) | apps/edge.talon
-(closed tab) | key(ctrl-w) | apps/edge.talon
-(find again) | key(f3) | apps/edge.talon
-(hunt next) | key(f3) | apps/edge.talon
-[toggle] breakpoint | key(ctrl-b) | apps/edge.talon
-^(realtime copy)+$ | key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     sleep(100ms) ⏎     key(ctrl-c) | realtime.talon
-^(realtime copy)+$ | key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     sleep(100ms) ⏎     key(ctrl-c) | apps/edge.talon
-^(realtime paste)+$ | key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     sleep(100ms) ⏎     key(ctrl-c) ⏎     sleep(100ms) ⏎     key(alt-tab) ⏎     sleep(100ms) ⏎     key(ctrl-v) | apps/edge.talon
-^(stop realtime and copy)+$ | speech.enable() ⏎     sleep(100ms) ⏎     key(alt-m) ⏎     sleep(100ms) ⏎     key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     sleep(100ms) ⏎     key(ctrl-c) | realtime.talon
-^(stop realtime and paste)+$ | speech.enable() ⏎     sleep(100ms) ⏎     key(alt-m) ⏎     sleep(100ms) ⏎     key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     key(ctrl-c) ⏎     sleep(100ms) ⏎     key(alt-tab) ⏎     sleep(100ms) ⏎     key(ctrl-v) | realtime.talon
-^(stop realtime)+$ | speech.enable() ⏎     sleep(100ms) ⏎     key(alt-m) | realtime.talon
-access custom from | key(ctrl-shift-f) | apps/gmail_edge.talon
-align centre | key(ctrl-shift-e) | apps/gmail_edge.talon
-align left | key(ctrl-shift-l) | apps/gmail_edge.talon
-align right | key(ctrl-shift-r) | apps/gmail_edge.talon
-app | Microsoft Edge | development_tools.talon
-app | c:\program files (x86)\microsoft\edge\application\msedge.exe | development_tools.talon
-app | microsoft_edge | realtime.talon
-app | msedge.exe | apps/chat_gpt_shortcuts.talon
-app | microsoft_edge | apps/edge.talon
-app | microsoft_edge | apps/edge_testing.talon
-app | microsoft_edge | apps/fig_jam_page.talon
-app | msedge.exe | apps/gmail_edge.talon
-app | microsoft_edge | apps/google_sheets.talon
-application tab | key(ctrl-shift-e) | development_tools.talon
-archive message | key(e) | apps/gmail_edge.talon
-ask it | insert("?") ⏎     sleep("20ms") ⏎     key(enter) | apps/chat_gpt_shortcuts.talon
-basket | insert("?") ⏎     sleep("20ms") ⏎     key(enter) | apps/chat_gpt_shortcuts.talon
-bulleted list | key(ctrl-shift-8) | apps/gmail_edge.talon
-carbon copy recipients | key(ctrl-shift-c) | apps/gmail_edge.talon
-close dev tools | key(ctrl-shift-i) | development_tools.talon
-compose | key(c) | apps/gmail_edge.talon
-console evaluate text | key(ctrl-shift-e) | apps/edge.talon
-console focus | key(ctrl-l) | apps/edge.talon
-console tab | key(ctrl-shift-j) | development_tools.talon
-console toggle | key(ctrl-`) | apps/edge.talon
-continue | key(f8) | apps/edge.talon
-copy code block | key(ctrl-shift-;) | apps/chat_gpt_shortcuts.talon
-copy response | key(ctrl-shift-c) | apps/chat_gpt_shortcuts.talon
-decrease size | key(ctrl-shift--) | apps/gmail_edge.talon
-delete chat | key(ctrl-shift-backspace) | apps/chat_gpt_shortcuts.talon
-delete message | key(#) | apps/gmail_edge.talon
-destroy drone | insert("!drone -1") ⏎     key(enter) | apps/edge.talon
-dev tools | key(ctrl-shift-i) | development_tools.talon
-discard draft | key(ctrl-shift-d) | apps/gmail_edge.talon
-drone diagonal | insert("!D56") ⏎     sleep(100ms) ⏎     key(enter) ⏎     sleep(1000ms) ⏎     insert("!R55") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-drone down | insert("!D55") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-drone left | insert("!L55") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-drone right | insert("!R55") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-drone up | insert("!U55") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-elements tab | key(ctrl-shift-c) | development_tools.talon
-focus input | key(shift-esc) | apps/chat_gpt_shortcuts.talon
-focus main window | key(shift-esc) | apps/gmail_edge.talon
-focus toolbar | key(,) | apps/gmail_edge.talon
-frame next | key(ctrl-.) | apps/edge.talon
-frame previous | key(ctrl-,) | apps/edge.talon
-go [to] bottom | key(ctrl-end) | apps/edge.talon
-go [to] top | key(ctrl-home) | apps/edge.talon
-go to all mail | key(g) ⏎     sleep(100ms) ⏎     key(a) | apps/gmail_edge.talon
-go to contacts | key(g) ⏎     sleep(100ms) ⏎     key(c) | apps/gmail_edge.talon
-go to inbox | key(g) ⏎     sleep(100ms) ⏎     key(i) | apps/gmail_edge.talon
-go to sent messages | key(g) ⏎     sleep(100ms) ⏎     key(t) | apps/gmail_edge.talon
-hard refresh | key(ctrl-shift-r) | apps/edge.talon
-hunt this | key(ctrl-f) | apps/edge.talon
-increase size | key(ctrl-shift-+) | apps/gmail_edge.talon
-insert a link | key(ctrl-k) | apps/gmail_edge.talon
-local host chan of custody | user.open_url("https://localhost:44343/") | apps/edge.talon
-mark spam | key(!) | apps/gmail_edge.talon
-microphone mute | # Google Meet ⏎     key(ctrl-d) | apps/edge.talon
-mode | sleep | realtime.talon
-network tab | key(ctrl-shift-m) | development_tools.talon
-new chat | key(ctrl-shift-o) | apps/chat_gpt_shortcuts.talon
-next chat | key(ctrl-.) | apps/gmail_edge.talon
-next misspelt word | key(ctrl-') | apps/gmail_edge.talon
-next panel | key(ctrl-]) | development_tools.talon
-next tab | key(ctrl-tab) | apps/edge.talon
-numbered list | key(ctrl-shift-7) | apps/gmail_edge.talon
-open spelling suggestions | key(ctrl-m) | apps/gmail_edge.talon
-panel next | key(ctrl-]) | apps/edge.talon
-panel previous | key(ctrl-[) | apps/edge.talon
-pop out chat | key(alt-d right) ⏎     sleep(100ms) ⏎     key(shift-home) ⏎     sleep(100ms) ⏎     key(ctrl-c) ⏎     sleep(100ms) ⏎     key(ctrl-t) ⏎     sleep(200ms) ⏎     key(ctrl-v) ⏎     sleep(100ms) ⏎     insert("/chat") ⏎     sleep(200ms) ⏎     key(enter) ⏎     mimic("tab split") | apps/edge.talon
-previous chat | key(ctrl-,) | apps/gmail_edge.talon
-previous misspelt word | key(ctrl-;) | apps/gmail_edge.talon
-previous panel | key(ctrl-[) | development_tools.talon
-previous tab | key(ctrl-shift-tab) | apps/edge.talon
-print message | key(p) | apps/gmail_edge.talon
-refresh page | key(f5) | apps/edge.talon
-refresh page | key(f5) | apps/gmail_edge.talon
-remove formatting | key(ctrl-\) | apps/gmail_edge.talon
-reply | key(r) | apps/gmail_edge.talon
-reply all | key(a) | apps/gmail_edge.talon
-save as draft | key(ctrl-s) | apps/gmail_edge.talon
-select conversation | key(x) | apps/gmail_edge.talon
-send message | key(ctrl-enter) | apps/gmail_edge.talon
-set instructions | key(ctrl-shift-i) | apps/chat_gpt_shortcuts.talon
-settings | key(f1) | development_tools.talon
-settings() | # Stop continuous scroll/gaze scroll with a pop ⏎     user.mouse_enable_pop_stops_scroll = false ⏎     # Stop pop click with 'control mouse' mode ⏎     user.mouse_enable_pop_click = 0 ⏎     # Stop mouse scroll down using hiss noise ⏎     user.mouse_enable_hiss_scroll = false ⏎     # Stopped using this because it gets triggered all the time accidentally even when breathing for example | apps/edge.talon
-skip ads | mouse_move(3546, 970) | apps/edge.talon
-smoke blue | insert("!smokecolor blue") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-smoke green | insert("!smokecolor green") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-smoke on | insert("!smokeon") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-smoke pink | insert("!smokecolor pink") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-smoke red | insert("!smokecolor red") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-smoke white | insert("!smokecolor white") ⏎     sleep(100ms) ⏎     key(enter) | apps/edge.talon
-snippet run | key(ctrl-enter) | apps/edge.talon
-sources tab | key(ctrl-shift-y) | development_tools.talon
-start drone | insert("!drone") ⏎     key(enter) | apps/edge.talon
-start realtime | speech.disable() ⏎     key(alt-m) | apps/edge.talon
-step into | key(f11) | apps/edge.talon
-step out | key(shift-f11) | apps/edge.talon
-step over | key(f10) | apps/edge.talon
-strike through | key(ctrl-shift-5) | apps/gmail_edge.talon
-tab filter | key(ctrl-shift-a) | apps/edge.talon
-tag() | browser | apps/edge.talon
-tag() | user.tabs | apps/edge.talon
-tag() | browser | apps/edge_testing.talon
-tag() | user.tabs | apps/edge_testing.talon
-test Blazor CRUD example | user.open_url("https://localhost:7026/") ⏎     sleep(400ms) ⏎     key(alt-t) ⏎     sleep(100ms) ⏎     insert("example") ⏎     sleep(200ms) ⏎     key(tab) ⏎     sleep(100ms) ⏎     key(down) ⏎     sleep(100ms) ⏎     key(tab) ⏎     key(enter) ⏎     sleep(100ms) ⏎     key(tab:15) ⏎     sleep(100ms) ⏎     key(space) ⏎     key(tab:9) ⏎     sleep(100ms) ⏎     key(space) ⏎     sleep(100ms) ⏎     key(alt-r) ⏎     sleep(100ms) ⏎     key(alt-g) | apps/edge.talon
-test customer | key(alt-m) ⏎     sleep(100ms) ⏎     insert("Cu") ⏎     sleep(100ms) ⏎     insert("st") ⏎     sleep(500ms) ⏎     key(tab) ⏎     sleep(600ms) ⏎     key(enter) | apps/edge_testing.talon
-theatre mode | key(alt-t) | apps/edge.talon
-title | /chatgpt\|chat gpt/i | apps/chat_gpt_shortcuts.talon
-title | FigJam | apps/fig_jam_page.talon
-title | gmail | apps/gmail_edge.talon
-title | Google Sheets | apps/google_sheets.talon
-toggle breakpoint input window | key(ctrl-alt-b) | apps/edge.talon
-toggle dock position | key(ctrl-shift-d) | development_tools.talon
-toggle sidebar | key(ctrl-shift-s) | apps/chat_gpt_shortcuts.talon
-toggle user interface | key(ctrl-\) | apps/fig_jam_page.talon
-toggle voice | key(ctrl-shift-u) | apps/edge.talon
-zoom in | key(ctrl-+) | apps/fig_jam_page.talon
-zoom to one hundred | key(ctrl-0) | apps/fig_jam_page.talon
-zoom to selection | key(shift-2) | apps/fig_jam_page.talon
-zoom too fit | key(shift-1) | apps/fig_jam_page.talon
+| Spoken Command | Description | Source |
+|----------------|-------------|--------|
+| (close tab) | key(ctrl-w) | edge |
+| (closed tab) | key(ctrl-w) | edge |
+| (find again) | key(f3) | edge |
+| (hunt next) | key(f3) | edge |
+| [toggle] breakpoint | key(ctrl-b) | edge |
+| ^(realtime copy)+$ | key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     sleep(100ms) ⏎     key(ctrl-c) | realtime |
+| ^(realtime copy)+$ | key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     sleep(100ms) ⏎     key(ctrl-c) | edge |
+| ^(realtime paste)+$ | key(alt-t) ⏎     sleep(100ms) ⏎     key(ctrl-a) ⏎     sleep(100ms) ⏎     key(ctrl-c) ⏎     sleep(... | edge |
+| ^(stop realtime and copy)+$ | speech.enable() ⏎     sleep(100ms) ⏎     key(alt-m) ⏎     sleep(100ms) ⏎     key(alt-t) ⏎     sle... | realtime |
+| ^(stop realtime and paste)+$ | speech.enable() ⏎     sleep(100ms) ⏎     key(alt-m) ⏎     sleep(100ms) ⏎     key(alt-t) ⏎     sle... | realtime |
+| ^(stop realtime)+$ | speech.enable() ⏎     sleep(100ms) ⏎     key(alt-m) | realtime |
+| access custom from | key(ctrl-shift-f) | gmail_edge |
+| align centre | key(ctrl-shift-e) | gmail_edge |
+| align left | key(ctrl-shift-l) | gmail_edge |
+| align right | key(ctrl-shift-r) | gmail_edge |
+| app | Microsoft Edge | development_tools |
+| app | c:\program files (x86)\microsoft\edge\application\msedge.exe | development_tools |
+| app | microsoft_edge | realtime |
+| app | msedge.exe | chat_gpt_shortcuts |
+| app | microsoft_edge | edge |
+| app | microsoft_edge | edge_testing |
+| app | microsoft_edge | fig_jam_page |
+| app | msedge.exe | gmail_edge |
+| app | microsoft_edge | google_sheets |
+| application tab | key(ctrl-shift-e) | development_tools |
+| archive message | key(e) | gmail_edge |
+| ask it | insert("?") ⏎     sleep("20ms") ⏎     key(enter) | chat_gpt_shortcuts |
+| basket | insert("?") ⏎     sleep("20ms") ⏎     key(enter) | chat_gpt_shortcuts |
+| bulleted list | key(ctrl-shift-8) | gmail_edge |
+| carbon copy recipients | key(ctrl-shift-c) | gmail_edge |
+| close dev tools | key(ctrl-shift-i) | development_tools |
+| compose | key(c) | gmail_edge |
+| console evaluate text | key(ctrl-shift-e) | edge |
+| console focus | key(ctrl-l) | edge |
+| console tab | key(ctrl-shift-j) | development_tools |
+| console toggle | key(ctrl-`) | edge |
+| continue | key(f8) | edge |
+| copy code block | key(ctrl-shift-;) | chat_gpt_shortcuts |
+| copy response | key(ctrl-shift-c) | chat_gpt_shortcuts |
+| decrease size | key(ctrl-shift--) | gmail_edge |
+| delete chat | key(ctrl-shift-backspace) | chat_gpt_shortcuts |
+| delete message | key(#) | gmail_edge |
+| destroy drone | insert("!drone -1") ⏎     key(enter) | edge |
+| dev tools | key(ctrl-shift-i) | development_tools |
+| discard draft | key(ctrl-shift-d) | gmail_edge |
+| drone diagonal | insert("!D56") ⏎     sleep(100ms) ⏎     key(enter) ⏎     sleep(1000ms) ⏎     insert("!R55") ⏎    ... | edge |
+| drone down | insert("!D55") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| drone left | insert("!L55") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| drone right | insert("!R55") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| drone up | insert("!U55") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| elements tab | key(ctrl-shift-c) | development_tools |
+| focus input | key(shift-esc) | chat_gpt_shortcuts |
+| focus main window | key(shift-esc) | gmail_edge |
+| focus toolbar | key(,) | gmail_edge |
+| frame next | key(ctrl-.) | edge |
+| frame previous | key(ctrl-,) | edge |
+| go [to] bottom | key(ctrl-end) | edge |
+| go [to] top | key(ctrl-home) | edge |
+| go to all mail | key(g) ⏎     sleep(100ms) ⏎     key(a) | gmail_edge |
+| go to contacts | key(g) ⏎     sleep(100ms) ⏎     key(c) | gmail_edge |
+| go to inbox | key(g) ⏎     sleep(100ms) ⏎     key(i) | gmail_edge |
+| go to sent messages | key(g) ⏎     sleep(100ms) ⏎     key(t) | gmail_edge |
+| hard refresh | key(ctrl-shift-r) | edge |
+| hunt this | key(ctrl-f) | edge |
+| increase size | key(ctrl-shift-+) | gmail_edge |
+| insert a link | key(ctrl-k) | gmail_edge |
+| local host chan of custody | user.open_url("https://localhost:44343/") | edge |
+| mark spam | key(!) | gmail_edge |
+| microphone mute | # Google Meet ⏎     key(ctrl-d) | edge |
+| mode | sleep | realtime |
+| network tab | key(ctrl-shift-m) | development_tools |
+| new chat | key(ctrl-shift-o) | chat_gpt_shortcuts |
+| next chat | key(ctrl-.) | gmail_edge |
+| next misspelt word | key(ctrl-') | gmail_edge |
+| next panel | key(ctrl-]) | development_tools |
+| next tab | key(ctrl-tab) | edge |
+| numbered list | key(ctrl-shift-7) | gmail_edge |
+| open spelling suggestions | key(ctrl-m) | gmail_edge |
+| panel next | key(ctrl-]) | edge |
+| panel previous | key(ctrl-[) | edge |
+| pop out chat | key(alt-d right) ⏎     sleep(100ms) ⏎     key(shift-home) ⏎     sleep(100ms) ⏎     key(ctrl-c) ⏎ ... | edge |
+| previous chat | key(ctrl-,) | gmail_edge |
+| previous misspelt word | key(ctrl-;) | gmail_edge |
+| previous panel | key(ctrl-[) | development_tools |
+| previous tab | key(ctrl-shift-tab) | edge |
+| print message | key(p) | gmail_edge |
+| refresh page | key(f5) | edge |
+| refresh page | key(f5) | gmail_edge |
+| remove formatting | key(ctrl-\) | gmail_edge |
+| reply | key(r) | gmail_edge |
+| reply all | key(a) | gmail_edge |
+| save as draft | key(ctrl-s) | gmail_edge |
+| select conversation | key(x) | gmail_edge |
+| send message | key(ctrl-enter) | gmail_edge |
+| set instructions | key(ctrl-shift-i) | chat_gpt_shortcuts |
+| settings | key(f1) | development_tools |
+| settings() | # Stop continuous scroll/gaze scroll with a pop ⏎     user.mouse_enable_pop_stops_scroll = false ... | edge |
+| skip ads | mouse_move(3546, 970) | edge |
+| smoke blue | insert("!smokecolor blue") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| smoke green | insert("!smokecolor green") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| smoke on | insert("!smokeon") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| smoke pink | insert("!smokecolor pink") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| smoke red | insert("!smokecolor red") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| smoke white | insert("!smokecolor white") ⏎     sleep(100ms) ⏎     key(enter) | edge |
+| snippet run | key(ctrl-enter) | edge |
+| sources tab | key(ctrl-shift-y) | development_tools |
+| start drone | insert("!drone") ⏎     key(enter) | edge |
+| start realtime | speech.disable() ⏎     key(alt-m) | edge |
+| step into | key(f11) | edge |
+| step out | key(shift-f11) | edge |
+| step over | key(f10) | edge |
+| strike through | key(ctrl-shift-5) | gmail_edge |
+| tab filter | key(ctrl-shift-a) | edge |
+| tag() | browser | edge |
+| tag() | user.tabs | edge |
+| tag() | browser | edge_testing |
+| tag() | user.tabs | edge_testing |
+| test Blazor CRUD example | user.open_url("https://localhost:7026/") ⏎     sleep(400ms) ⏎     key(alt-t) ⏎     sleep(100ms) ⏎... | edge |
+| test customer | key(alt-m) ⏎     sleep(100ms) ⏎     insert("Cu") ⏎     sleep(100ms) ⏎     insert("st") ⏎     slee... | edge_testing |
+| theatre mode | key(alt-t) | edge |
+| title | /chatgpt\|chat gpt/i | chat_gpt_shortcuts |
+| title | FigJam | fig_jam_page |
+| title | gmail | gmail_edge |
+| title | Google Sheets | google_sheets |
+| toggle breakpoint input window | key(ctrl-alt-b) | edge |
+| toggle dock position | key(ctrl-shift-d) | development_tools |
+| toggle sidebar | key(ctrl-shift-s) | chat_gpt_shortcuts |
+| toggle user interface | key(ctrl-\) | fig_jam_page |
+| toggle voice | key(ctrl-shift-u) | edge |
+| zoom in | key(ctrl-+) | fig_jam_page |
+| zoom to one hundred | key(ctrl-0) | fig_jam_page |
+| zoom to selection | key(shift-2) | fig_jam_page |
+| zoom too fit | key(shift-1) | fig_jam_page |
