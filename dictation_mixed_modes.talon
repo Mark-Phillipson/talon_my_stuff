@@ -27,7 +27,6 @@ mode: command
 ^go down <user.ordinals_small>: key("down:{ordinals_small}")
 
 new paragraph: key(enter)
-new line: key(enter)
 fresh line:
     key(end)
     key(enter)

@@ -47,19 +47,19 @@ taskbar <user.screen_step_two> <user.number_signed_small>:
 <user.screen_step_one> ribbon:
     mouse_move(screen_step_one, 80)
     mouse_click(0)
-mouse left <number>:
+nudge left <number>:
     position_x = mouse_x()
     position_y = mouse_y()
     mouse_move(position_x - number, position_y)
-mouse right <number>:
+nudge right <number>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x + number, position_y)
-mouse up <number>:
+nudge up <number>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y - number)
-mouse down <number>:
+nudge down <number>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y + number)
@@ -142,17 +142,10 @@ spin up: user.mouse_scroll_up_continuous()
 stop: user.mouse_scroll_stop()
 will stop: user.mouse_scroll_stop()
 we'll stop: user.mouse_scroll_stop()
-mouse test: 
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(1720, 140)
-    sleep(1000ms)
-    user.mouse_zoom_relative()
-    sleep(1000ms)
-    mouse_move(position_x, position_y)
-righty | (right click):
+(context) | (righty) | (right click):
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(1)
     # close the mouse grid if open
     user.grid_close()
+zoom off: tracking.zoom_cancel()
