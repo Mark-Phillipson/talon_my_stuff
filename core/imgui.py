@@ -7,7 +7,7 @@ from typing import Callable, Optional, Union
 from dataclasses import dataclass
 
 FONT_FAMILY = "Segoe UI Symbol"
-FONT_SIZE = 12
+FONT_SIZE = 13
 background_color = "2E0F2A"
 border_color = "000000"
 text_color = "DFDBDE"
@@ -296,6 +296,7 @@ class GUI:
         return self._showing
 
     def show(self):
+        print("[ImGui DEBUG] show() called: creating canvas at initial position.")
         self._screen_current = self._get_active_screen()
         # Initializes at minimum size so to calculate and set correct size later
         self._canvas = Canvas(self._screen_current.x, self._screen_current.y, 1, 1)
@@ -479,30 +480,28 @@ class ImGUI:
 imgui = ImGUI(GUI)
 
 
-@imgui.open(numbered=True, x=0.7, y=0.3)
-def gui(gui: imgui.GUI):
-    gui.header("Some header")
-    gui.line(bold=True)
-    gui.text("text before spacer")
-    gui.spacer()
-    gui.text("text after spacer, jg")
-    for i in range(10):
-        gui.line()
-        gui.text(f"stuff stuff {i}")
-    gui.line()
-    gui.text(
-        """def draw(self, state: State):
-            y = state.y + state.padding - 1
-            state.canvas.paint.style = state.canvas.paint.Style.FILL
-            state.canvas.paint.color = text_color if self.bold else button_bg_color
-            state.canvas.draw_line(
-                state.x, y, state.x + state.canvas.width - state.font_size, y
-            )
-            state.add_height(state.font_size)"""
-    )
-
-    if gui.button("some text"):
-        print("Hide")
-
-
-# gui.show()
+# Example test window, now always opens at visible position due to forced x/y in _resize
+# @imgui.open(numbered=True, x=0.1, y=0.1)
+# def gui(gui: imgui.GUI):
+#     gui.header("Some header")
+#     gui.line(bold=True)
+#     gui.text("text before spacer")
+#     gui.spacer()
+#     gui.text("text after spacer, jg")
+#     for i in range(10):
+#         gui.line()
+#         gui.text(f"stuff stuff {i}")
+#     gui.line()
+#     gui.text(
+#         """def draw(self, state: State):
+#             y = state.y + state.padding - 1
+#             state.canvas.paint.style = state.canvas.paint.Style.FILL
+#             state.canvas.paint.color = text_color if self.bold else button_bg_color
+#             state.canvas.draw_line(
+#                 state.x, y, state.x + state.canvas.width - state.font_size, y
+#             )
+#             state.add_height(state.font_size)"""
+#     )
+#
+#     if gui.button("some text"):
+#         print("Hide")

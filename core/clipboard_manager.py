@@ -1,4 +1,5 @@
-from talon import Module, settings, imgui, Context
+from talon import Module, settings, Context
+from user.mystuff.talon_my_stuff.core.imgui import imgui
 import time
 import os
 import json
@@ -108,9 +109,9 @@ def clipboard_update(new_text: str):
 
 
 
-@imgui.open()
+@imgui.open(numbered=True)
 def clipboard_manager_gui(gui: imgui.GUI):
-    gui.text("Clipboard Manager")
+    gui.header("Clipboard Manager")
     gui.line()
     if not clip_history:
         gui.text("(Clipboard history is empty)")
@@ -132,11 +133,11 @@ class Actions:
     def clipboard_manager_toggle():
         """Show/hide the clipboard manager UI"""
         if clipboard_manager_gui.showing:
-            clipboard_manager_gui.close()
-            print("Clipboard manager toggle called! (closed)")
+            clipboard_manager_gui.hide()
+            print("Clipboard manager toggle called! (hidden)")
         else:
-            clipboard_manager_gui.open()
-            print("Clipboard manager toggle called! (opened)")
+            clipboard_manager_gui.show()
+            print("Clipboard manager toggle called! (shown)")
 
     def test_clipitem_action():
         """Test creating a ClipItem as an action"""

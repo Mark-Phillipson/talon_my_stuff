@@ -1,3 +1,38 @@
+---
+
+# Lessons Learned: Custom Clipboard Manager & ImGui Integration (2025)
+
+## Key Takeaways
+- If you want a custom-styled ImGui window (e.g. purple background), you must use your own `core/imgui.py` and import it explicitly in your script.
+- The correct import path for custom modules in Talon is often `from user.<your_path>.core.imgui import imgui` (adjust for your user folder structure).
+- For Talon’s built-in `imgui`, use `from talon import imgui`.
+- The correct methods for showing/hiding ImGui windows in recent Talon versions are `.show()` and `.hide()` (not `.open()`/`.close()`).
+- If you use `.open()`/`.close()` with the built-in ImGui, the window may not appear at all.
+- If your window is not appearing, always check:
+  - The log for import or syntax errors (especially failed imports of custom modules).
+  - That your action is actually registered (print at the top of the file, check for `@mod.action_class` issues).
+  - That you are not shadowing or duplicating files in your Talon user directory.
+- If you want to use custom ImGui features (like color), ensure your decorator and function signature match your custom implementation.
+- If you see a purple background, you are using your custom ImGui; if you see the default gray/black, you are using the built-in one.
+
+## Debugging Workflow
+1. Always add a print statement at the top of your script to confirm it is being loaded.
+2. Check the Talon log for errors after every change.
+3. If a window does not appear, try a minimal ImGui test window with `.show()`/`.hide()` to confirm the basics work.
+4. If using a custom module, try both relative and absolute imports to match Talon’s Python path resolution.
+5. If all else fails, copy the custom module into the same directory as your script and use a simple import.
+
+## Example: Custom ImGui Import
+```python
+from user.mystuff.talon_my_stuff.core.imgui import imgui
+
+@imgui.open(numbered=True)
+def clipboard_manager_gui(gui: imgui.GUI):
+    gui.header("Clipboard Manager")
+    # ...
+```
+
+---
 This repository is a personal Talon configuration and helper scripts collection. The goal of these instructions is to help an automated coding agent be productive quickly by focusing on the project's structure, conventions, and common edit patterns.
 
 High level

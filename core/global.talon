@@ -58,3 +58,4 @@ carriage [return]: key(enter)
 #Currently Not Working?
 switch pedals: key(ctrl-alt-f9)
 mouse wheels: key(ctrl-alt-f10)
+test clippy: user.imgui_test_toggle()

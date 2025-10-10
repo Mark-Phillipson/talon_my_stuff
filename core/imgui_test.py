@@ -16,8 +16,8 @@ class Actions:
     def imgui_test_toggle():
         """Show/hide the minimal ImGui test window"""
         if imgui_test_window.showing:
-            imgui_test_window.close()
+            imgui_test_window.hide()
             print("Minimal ImGui test window closed.")
         else:
-            imgui_test_window.open()
+            imgui_test_window.show()
             print("Minimal ImGui test window opened.")
