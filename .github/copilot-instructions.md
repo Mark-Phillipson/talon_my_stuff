@@ -64,4 +64,51 @@ If something is unclear
 - Ask for which runtime environment to assume (local Talon installation path / Python version) before making changes that require running Talon or invoking its Python environment.
 - Request example audio-to-text mappings only when necessary — do not attempt to invent speech patterns beyond what's present in `.talon` files.
 
+
+---
+
+# Talon Python Action Registration & ImGui Troubleshooting (Lessons Learned)
+
+## Action Registration Best Practices
+- Always define `mod = Module()` at the very top of the file, before any `@mod.action_class` decorator is used.
+- Only one `@mod.action_class` block is allowed per file. All actions must be methods of a single class under this decorator.
+- If multiple `@mod.action_class` blocks are present, only the last one is registered and earlier ones are ignored.
+- All actions must be methods of the class decorated with `@mod.action_class`.
+- If actions are not appearing in the REPL, check for:
+  - Multiple `@mod.action_class` blocks
+  - `mod = Module()` defined after the decorator (must be before)
+  - Syntax errors or import errors in the Talon log
+  - File not being loaded (check for print statements or Talon log entries)
+
+## ImGui Window Registration
+- ImGui windows must be defined with `@imgui.open()` and a function that takes a `gui: imgui.GUI` argument.
+- To toggle an ImGui window, use `.open()` and `.close()` methods on the window function.
+- Example minimal ImGui window:
+  ```python
+  from talon import Module, imgui
+  mod = Module()
+
+  @imgui.open()
+  def my_window(gui: imgui.GUI):
+      gui.text("Hello world!")
+
+  @mod.action_class
+  class Actions:
+      def my_window_toggle():
+          if my_window.showing:
+              my_window.close()
+          else:
+              my_window.open()
+  ```
+
+## Debugging Steps
+- If actions or ImGui windows do not appear after editing scripts:
+  1. Save the file and reload Talon user scripts (or fully restart Talon for best results).
+  2. Check the Talon log for syntax or import errors.
+  3. Use print statements at the top of the file to confirm loading.
+  4. Confirm actions are available in the REPL (e.g. `user.my_action()`).
+  5. If still not working, check for breaking changes in Talon’s scripting API (see Talon Discord, GitHub, or release notes).
+
+---
+
 End of instructions — ask for feedback and I'll iterate on any missing specifics.

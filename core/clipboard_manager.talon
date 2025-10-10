@@ -5,7 +5,7 @@ settings():
     # Minimum time (in seconds) between clipboard updates to prevent rapid internal operations
     user.clipboard_manager_min_time_between_updates = 0.5
 
-clippy:                     user.clipboard_manager_toggle()
+clippy: user.clipboard_manager_toggle()
 
 paste <number_small> [and <number_small>]*:
     user.clipboard_manager_paste(number_small_list)
