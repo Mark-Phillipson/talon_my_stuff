@@ -54,3 +54,7 @@ tab clothes: user.tab_close_wrapper()
 total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 glide [cursor]: key(super-alt-.)
 zoom it: key(super-ctrl-f8)
+carriage [return]: key(enter)
+#Currently Not Working?
+switch pedals: key(ctrl-alt-f9)
+mouse wheels: key(ctrl-alt-f10)

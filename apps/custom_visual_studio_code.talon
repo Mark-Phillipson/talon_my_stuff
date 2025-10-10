@@ -431,3 +431,7 @@ send to pilot:
 
 pilot window toggle: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
 (panel | terminal | pane | pain) window toggle: user.vscode("workbench.action.toggleMaximizedPanel")
+natural [language] [commands]: 
+    key(f1)
+    sleep(30ms)
+    insert("NLC: ")

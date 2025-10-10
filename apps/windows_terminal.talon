@@ -1,4 +1,5 @@
 app: WindowsTerminal.exe
+os: windows
 -
 tag(): terminal
 tag(): user.tabs
@@ -51,5 +52,10 @@ start rails server:
     key(enter)
 create rails controller:
     insert("rails generate controller name action ")
-select all: key(ctrl-shift-a)
+select all text: key(ctrl-shift-a)
 copy that: key(ctrl-c)
+get location: 
+    insert("Set-Clipboard (Get-Location)")
+    sleep(100ms)
+    key(enter)
+    print("Path copied to clipboard")

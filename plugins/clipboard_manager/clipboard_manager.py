@@ -1,9 +1,10 @@
-from talon import Module, Context, actions, clip, app, cron, settings
+from talon import Module, Context, actions, clip, app, cron, settings, mode
 from talon.skia.image import Image
 from talon.clip import MimeData
 from dataclasses import dataclass
 from typing import Optional
 from ...core.imgui import imgui
+import time
 
 mod = Module()
 ctx = Context()
@@ -21,9 +22,31 @@ mod.setting(
     default=20,
 )
 
+mod.setting(
+    "clipboard_manager_ignore_dictation",
+    type=bool,
+    default=True,
+    desc="Ignore clipboard changes during dictation and mixed modes to prevent pollution of clipboard history",
+)
+
+mod.setting(
+    "clipboard_manager_min_time_between_updates",
+    type=float,
+    default=0.5,
+    desc="Minimum time (in seconds) between clipboard updates to prevent rapid internal operations from polluting history",
+)
+
 
 def setting_max_rows() -> int:
     return settings.get("user.clipboard_manager_max_rows")
+
+
+def setting_ignore_dictation() -> bool:
+    return settings.get("user.clipboard_manager_ignore_dictation")
+
+
+def setting_min_time_between_updates() -> float:
+    return settings.get("user.clipboard_manager_min_time_between_updates")
 
 
 @dataclass
@@ -39,12 +62,13 @@ sticky: bool = False
 stopped: bool = False
 last_mime = None
 clicked_num = 0
+last_clipboard_time: float = 0
 
 
 
 def update():
     """Read current clipboard and update manager"""
-    global last_mime, clicked_num
+    global last_mime, clicked_num, last_clipboard_time
 
     if clicked_num:
         try:
@@ -52,10 +76,28 @@ def update():
         finally:
             clicked_num = 0
 
+    # Skip clipboard monitoring during dictation if setting is enabled
+    if setting_ignore_dictation():
+        try:
+            current_modes = mode.get()
+            if "dictation" in current_modes or "mixed" in current_modes:
+                return
+        except:
+            # If we can't check mode, continue normally
+            pass
+
     mime = clip.mime()
 
     if stopped or not mime or mime == last_mime:
         return
+
+    # Check if enough time has passed since last clipboard change
+    current_time = time.time()
+    min_time = setting_min_time_between_updates()
+    if current_time - last_clipboard_time < min_time:
+        return
+    
+    last_clipboard_time = current_time
 
     last_mime = mime
 
@@ -68,8 +110,17 @@ def update():
         image = mime.image
     except Exception:
         image = None
-#Avoid Rango Messages Being Added to the History
+# Avoid Rango Messages Being Added to the History
     if text and (text.startswith("{\"version\": ") or text.startswith("{\"type\"")):
+        return
+    
+    # Filter out very short text that might be from internal Talon operations
+    # (while still allowing single characters that users might intentionally copy)
+    if text and len(text.strip()) == 1 and text.strip().isalnum():
+        # Allow single meaningful characters but filter out things like spaces, tabs etc.
+        pass
+    elif text and len(text.strip()) < 3 and not text.strip().isalnum():
+        # Filter out very short non-alphanumeric content (likely internal operations)
         return
     if not text:
         if image is not None:
@@ -209,6 +260,13 @@ class Actions:
             actions.edit.paste_match_style()
         else:
             actions.edit.paste()
+
+    def clipboard_manager_toggle_dictation_filtering():
+        """Toggle whether clipboard manager ignores dictation operations"""
+        current = settings.get("user.clipboard_manager_ignore_dictation")
+        settings.set("user.clipboard_manager_ignore_dictation", not current)
+        status = "enabled" if not current else "disabled"
+        actions.app.notify(f"Clipboard manager dictation filtering {status}")
 
 
 def hide_if_not_sticky():

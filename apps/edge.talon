@@ -159,3 +159,4 @@ start realtime:
     sleep(100ms)
     key(ctrl-v)
 hard refresh: key(ctrl-shift-r)
+toggle full screen: key(f11)
