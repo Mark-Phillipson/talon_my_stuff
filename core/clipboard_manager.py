@@ -1,17 +1,4 @@
-# Minimal ImGui test window
-from talon import imgui as _imgui
-
-@_imgui.open()
-def test_imgui_window(gui: _imgui.GUI):
-    gui.text("This is a test ImGui window.")
-
-def test_imgui_toggle():
-    if test_imgui_window.showing:
-        test_imgui_window.close()
-    else:
-        test_imgui_window.open()
-print("LOADING CLIPBOARD MANAGER")
-from talon import Module, settings, imgui
+from talon import Module, settings, imgui, Context
 import time
 import os
 import json
@@ -44,7 +31,7 @@ def test_clipitem():
     print(f"ClipItem created: {item}")
     
 mod = Module()
-
+ctx = Context()
 mod.setting(
     "clipboard_manager_max_rows",
     type=int,
@@ -139,6 +126,7 @@ class Actions:
             test_imgui_window.close()
             print("Test ImGui window closed.")
         else:
+            ctx.tags = ["user.clipboard_manager"]
             test_imgui_window.open()
             print("Test ImGui window opened.")
     def clipboard_manager_toggle():
