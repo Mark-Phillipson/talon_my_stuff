@@ -1,4 +1,5 @@
-from talon import Module, settings, Context
+print("clipboard_manager.py loaded")
+from talon import Module, settings, Context, app, actions, scope, speech_system
 from user.mystuff.talon_my_stuff.core.imgui import imgui
 import time
 import os
@@ -15,11 +16,13 @@ def poll_clipboard():
     global last_clipboard_text
     try:
         current = clip.text()
+        print(f"[poll_clipboard] current clipboard: {repr(current)} last_clipboard_text: {repr(last_clipboard_text)}")
         if current != last_clipboard_text:
+            print("[poll_clipboard] Clipboard changed, calling clipboard_update.")
             clipboard_update(current)
             last_clipboard_text = current
     except Exception as e:
-            print(f"Clipboard polling error: {e}")
+        print(f"Clipboard polling error: {e}")
               
 @dataclass
 class ClipItem:
@@ -97,14 +100,29 @@ def clear_clipboard_history():
 def clipboard_update(new_text: str):
     """Monitor clipboard and add new item if it passes filter."""
     # Simple filter: ignore empty or duplicate text
+    print(f"[clipboard_update] Called with new_text: {repr(new_text)}")
     if not new_text or (clip_history and clip_history[0].text == new_text):
-        print("Clipboard update ignored (empty or duplicate).")
+        print("[clipboard_update] Ignored (empty or duplicate).")
         return
+    # Prevent clipboard pollution from dictation if setting enabled
+    if settings.get("user.clipboard_manager_ignore_dictation"):
+        # Check for dictation mode using actions.mode.enabled or scope
+        try:
+            if actions.mode and actions.mode.enabled("dictation"):
+                print("[clipboard_update] Ignored (dictation mode active via actions.mode.enabled).")
+                return
+        except Exception as e:
+            print(f"[clipboard_update] Exception in actions.mode.enabled: {e}")
+            # Fallback to scope if actions.mode not available
+            modes = scope.get("mode")
+            if modes and "dictation" in modes:
+                print("[clipboard_update] Ignored (dictation mode active via scope).")
+                return
     item = ClipItem(new_text, None, None)
     clip_history.insert(0, item)
     if len(clip_history) > CLIPBOARD_HISTORY_LIMIT:
         del clip_history[CLIPBOARD_HISTORY_LIMIT:]
-    print(f"Clipboard updated: {item}")
+    print(f"[clipboard_update] Clipboard updated: {item}")
 
 
 
@@ -119,17 +137,27 @@ def clipboard_manager_gui(gui: imgui.GUI):
         for i, item in enumerate(clip_history[:settings.get("user.clipboard_manager_max_rows")]):
             gui.text(f"{i+1}: {item.text}")
 
+
+# --- Dictation phrase tracking ---
+actively_dictating = False
+def on_pre_phrase(d):
+    global actively_dictating
+    actively_dictating = True
+    print("[dictation] pre:phrase - actively_dictating set to True")
+def on_post_phrase(_):
+    global actively_dictating
+    actively_dictating = False
+    print("[dictation] post:phrase - actively_dictating set to False")
+speech_system.register("pre:phrase", on_pre_phrase)
+speech_system.register("post:phrase", on_post_phrase)
+
 @mod.action_class
 class Actions:
-    def test_imgui_toggle():
-        """Show/hide the test ImGui window for debugging UI rendering"""
-        if test_imgui_window.showing:
-            test_imgui_window.close()
-            print("Test ImGui window closed.")
-        else:
-            ctx.tags = ["user.clipboard_manager"]
-            test_imgui_window.open()
-            print("Test ImGui window opened.")
+    def clipboard_add_debug_entry():
+        """Add a debug entry to the clipboard history for testing UI update"""
+        clipboard_update("DEBUG_ENTRY")
+        print("[debug] Manually added DEBUG_ENTRY to clipboard history.")
+
     def clipboard_manager_toggle():
         """Show/hide the clipboard manager UI"""
         if clipboard_manager_gui.showing:
@@ -143,21 +171,19 @@ class Actions:
         """Test creating a ClipItem as an action"""
         item = ClipItem("test", None, None)
         print(f"ClipItem created: {item}")
+
     def add_test_item_action():
         """Add a test item to the clipboard history"""
         add_test_item_to_history()
+
     def save_clipboard_history_action():
         """Save clipboard history to file"""
         save_clipboard_history()
+
     def load_clipboard_history_action():
         """Load clipboard history from file"""
         load_clipboard_history()
+
     def clear_clipboard_history_action():
         """Clear clipboard history"""
         clear_clipboard_history()
-    def clipboard_update_action(text: str):
-        """Manually update clipboard with given text (for testing)"""
-        clipboard_update(text)
-    
-# Start polling the clipboard every 500ms
-cron.interval("500ms", poll_clipboard)
