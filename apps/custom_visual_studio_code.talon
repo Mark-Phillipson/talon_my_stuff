@@ -29,7 +29,7 @@ terminal watch:
     sleep(100ms)
     insert("dotnet watch run")
     sleep(100ms)
-    key(enter)    
+    key(enter)
 local host Marvin: user.open_url("http://localhost:5016")
 #My SelectionSaver Extension
 drop marker: user.vscode("selectionssaver.saveBookmark")
@@ -112,7 +112,7 @@ please dotnet:
 go [command] palette:
     key(ctrl-shift-p)
 palate | palette: key(ctrl-shift-p)
-open recent: user.vscode("workbench.action.openRecent")    
+open recent: user.vscode("workbench.action.openRecent")
 
 # Manipulate Code
 
@@ -138,7 +138,7 @@ maximize editor:
 sidebar shrink: user.vscode("workbench.action.increaseViewWidth")
 sidebar grow: user.vscode("workbench.action.decreaseViewWidth")
 split grow: user.vscode("workbench.action.increaseViewSize")
-split shrink: user.vscode("workbench.action.decreaseViewSize")    
+split shrink: user.vscode("workbench.action.decreaseViewSize")
 
 zoom in small:
     key(ctrl:down)
@@ -166,7 +166,9 @@ toggle hats: user.vscode("cursorless.toggleDecorations")
 #Debugging
 
 debug application: user.vscode("workbench.action.debug.start")
-start application: user.vscode("workbench.action.debug.run")
+start application: key(f5)
+start debugging: key(f5)
+#start application: user.vscode("workbench.action.debug.run")
 stop application: user.vscode("workbench.action.debug.stop")
 step into: user.vscode("workbench.action.debug.stepInto")
 step out: user.vscode("workbench.action.debug.stepOut")
@@ -313,12 +315,12 @@ pilot chat file:
     sleep(300ms)
     insert("#f")
 pilot chat fix error: user.copilot_chat("#selection How can I /fix this error")
-pilot list commands: 
+pilot list commands:
     key(ctrl-shift-p)
     sleep(100ms)
     insert("GitHub Copilot: ")
-pilot voice: 
-    user.vscode("workbench.action.chat.startVoiceChat")    
+pilot voice:
+    user.vscode("workbench.action.chat.startVoiceChat")
     speech.disable()
 #add context: user.vscode("workbench.action.chat.editing.attachContext")
 pilot next edit: user.vscode("chatEditor.action.navigateNext")
@@ -361,11 +363,11 @@ draft this:
     key(enter)
     sleep(60ms)
     key(ctrl-v)
-fix errors: 
-    insert("Please Fix All Build Errors and Warnings!")    
+fix errors:
+    insert("Please Fix All Build Errors and Warnings!")
     sleep(100ms)
     key(enter)
-stop the agent: 
+stop the agent:
     mouse_move(1872, 980)
     mouse_click(0)
 
@@ -431,3 +433,4 @@ send to pilot:
 
 pilot window toggle: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
 (panel | terminal | pane | pain) window toggle: user.vscode("workbench.action.toggleMaximizedPanel")
+show notifications: user.vscode("notifications.showList")

@@ -54,3 +54,7 @@ tab clothes: user.tab_close_wrapper()
 total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 glide [cursor]: key(super-alt-.)
 zoom it: key(super-ctrl-f8)
+natural: 
+    key(f1)
+    sleep(100ms)
+    insert("NLC: ")

@@ -171,3 +171,9 @@ list last commits:
     key(enter)
 delete object and binary folders: insert("Remove-Item -Path bin,obj -Recurse -Force")
 watch cycle: insert("dotnet watch run --project CycleRoutes/CycleRoutes.Web")
+shelling: 
+    insert("github-copilot-cli what-the-shell \"\"")
+    sleep(30ms)
+    key(left)
+git assist: insert("github-copilot-cli git-assist ")
+Github assist: insert("github-copilot-cli gh-assist ")
