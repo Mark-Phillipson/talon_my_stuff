@@ -83,6 +83,6 @@
 #     user.paste(result)
 #Example call would be computer ask 'some question' to speech
 #If you don't specify to speech it returns text i'm not sure why
-computer <user.modelPrompt> [{user.modelSource}] [{user.modelDestination}]$:
+^hey computer <user.modelPrompt> [{user.modelSource}] [{user.modelDestination}]$:
     modelDestination = modelDestination or "to speech"
     user.gpt_apply_prompt(modelPrompt, modelSource or "", "to speech")

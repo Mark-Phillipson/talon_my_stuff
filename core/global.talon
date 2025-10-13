@@ -1,8 +1,7 @@
-
 emoji {user.emoji}: user.paste(emoji)
 
 ^game mode$:
-    mode.enable("game")    
+    mode.enable("game")
     mode.enable("command")
     mode.disable("dictation")
     mode.disable("sleep")
@@ -18,7 +17,7 @@ pick <user.letters>:
     key(enter)
 [save to] disk: key(ctrl-s)
 context menu: key(menu)
-help search selection:    
+help search selection:
     key(ctrl-c)
     sleep(500ms)
     text = clip.text()
@@ -26,11 +25,11 @@ help search selection:
 taskbar toggle:
     user.toggle_taskbar()
 snipping tool: key(super-shift-s)
-[touch] screen one: 
-    mouse_move(-680, 480)    
+[touch] screen one:
+    mouse_move(-680, 480)
     mouse_click(0)
 [touch] screen two:
-    mouse_move(986, 470)    
+    mouse_move(986, 470)
     mouse_click(0)
 mouse last position:
     mouse_coordinates = clip.text()
@@ -44,17 +43,17 @@ snip folder one drive documents: insert("C:\\Users\\MPhil\\OneDrive\\Documents")
 snip folder desktop: insert("C:\\Users\\MPhil\\Desktop")
 snip folder desktop pictures: insert("C:\\DesktopPictures")
 snip folder repose: insert("C:\\Users\\MPhil\\source\\repos")
-start twitch bot:  user.system_command("c:/Users/MPhil/source/repos/TwitchBot01/launch-bot.bat")
+start twitch bot: user.system_command("c:/Users/MPhil/source/repos/TwitchBot01/launch-bot.bat")
 hover: user.move_cursor_to_gaze_point()
 tab clothes: user.tab_close_wrapper()
-(ask it) | (basket): 
+(ask it) | (basket):
     insert("?")
     sleep(200ms)
     key(enter)
 total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 glide [cursor]: key(super-alt-.)
 zoom it: key(super-ctrl-f8)
-natural: 
+natural:
     key(f1)
     sleep(100ms)
     insert("NLC: ")

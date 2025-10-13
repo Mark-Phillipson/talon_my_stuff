@@ -65,7 +65,19 @@ launch code:
     key(enter)
 show letters:               key(ctrl-super-alt-m)
 control abbreviation:       insert("ctrl")
-computer sleep confirm:
+^computer restart confirm$:
+    key(super-x)
+    sleep(100ms)
+    key(u)
+    sleep(100ms)
+    key(r)
+^computer shutdown confirm$:
+    key(super-x)
+    sleep(100ms)
+    key(u)
+    sleep(100ms)
+    key(s)
+^computer sleep confirm$:
     speech.disable()
     key(super-r)
     sleep(300ms)

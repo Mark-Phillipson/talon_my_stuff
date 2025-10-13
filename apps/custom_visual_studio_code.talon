@@ -349,6 +349,7 @@ pilot fix warnings:
     key(enter)
     sleep(300ms)
     insert("Please can you look at the last terminal command and fix these warnings for me?")
+pilot commit time: insert("Can you please provide me with the git commands to commit the latest changes so I can transfer using Cursorlesss commands")
 add context: key(ctrl-/)
 pick model: key(ctrl-alt-.)
 set mode: key(ctrl-.)
