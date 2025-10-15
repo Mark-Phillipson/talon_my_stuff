@@ -22,7 +22,7 @@
     mouse_move(screen_step_one, 1050)
     mouse_click(0)
 <user.screen_step_one> apex:
-    mouse_move(-380, 45) 
+    mouse_move(-380, 45)
     mouse_move(screen_step_one, 45)
     mouse_click(0)
 <user.screen_step_two> taskbar:
@@ -63,6 +63,27 @@ nudge down <number>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y + number)
+
+# Two-syllable mouse movement commands (move by 10 pixels)
+nudgee:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x, position_y - 10)
+
+droppy:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x, position_y + 10)
+
+leeway:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x - 10, position_y)
+
+rifty:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(position_x + 10, position_y)
 (lower | low) left <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()

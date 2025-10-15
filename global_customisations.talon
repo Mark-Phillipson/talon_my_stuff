@@ -51,10 +51,10 @@ windows start <user.text>:
     sleep(300ms)
     insert(text)
 open file manager:          key(super-e)
-launch preview:
+launch [Visual Studio] (insiders | insides):
     key(super)
     sleep(900ms)
-    insert("visual studio 2022 preview")
+    insert("Visual Studio Insiders")
     sleep(900ms)
     key(enter)
 launch code:
