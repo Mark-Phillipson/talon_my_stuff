@@ -65,7 +65,7 @@ nudge down <number>:
     mouse_move(position_x, position_y + number)
 
 # Two-syllable mouse movement commands (move by 10 pixels)
-nudgee:
+(nudgee | nudgey | noddy):
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y - 10)
