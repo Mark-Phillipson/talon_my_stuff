@@ -41,7 +41,7 @@ run code:
     sleep(100ms)
     key(enter)
 run insiders:
-    insert("code-insiders .")    
+    insert("code-insiders .")
     sleep(100ms)
     key(enter)
 settings: key(ctrl-,)
@@ -159,7 +159,7 @@ clear screen:
     key(enter)
 Linux update: insert("sudo apt-get update")
 include paging: insert(" | more")
-repel: 
+repel:
     insert("C:\\Users\\MPhil\\AppData\\Roaming\\talon\\venv\\3.13\\Scripts\\repl.bat")
     sleep(100ms)
     key(enter)
@@ -171,9 +171,18 @@ list last commits:
     key(enter)
 delete object and binary folders: insert("Remove-Item -Path bin,obj -Recurse -Force")
 watch cycle: insert("dotnet watch run --project CycleRoutes/CycleRoutes.Web")
-shelling: 
+shelling:
     insert("github-copilot-cli what-the-shell \"\"")
     sleep(30ms)
     key(left)
 git assist: insert("github-copilot-cli git-assist ")
 Github assist: insert("github-copilot-cli gh-assist ")
+open terminal settings:
+    key(ctrl-,)
+    sleep(100ms)
+    insert("terminal.integrated.defaultProfile.windows")
+    key(enter)
+list directories:
+    insert("Get-ChildItem -Directory")
+    sleep(100ms)
+    key(enter)
