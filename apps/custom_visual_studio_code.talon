@@ -237,7 +237,7 @@ if statement:
 #Panels
 toggle sidebar: user.vscode("workbench.action.toggleSidebarVisibility")
 toggle (panel | pain): user.vscode("workbench.action.togglePanel")
-toggle zen mode: user.vscode("workbench.action.toggleZenMode")
+[toggle] zen mode: user.vscode("workbench.action.toggleZenMode")
 
 # MS SQL Server Extension
 execute query: user.vscode("mssql.runQuery")
