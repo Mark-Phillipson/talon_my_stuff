@@ -1,3 +1,4 @@
+...existing code...
 app: vscode
 os: windows
 -
@@ -236,7 +237,7 @@ if statement:
 
 #Panels
 toggle sidebar: user.vscode("workbench.action.toggleSidebarVisibility")
-toggle (panel | pain): user.vscode("workbench.action.togglePanel")
+toggle (panel | pain): user.vs      code("workbench.action.togglePanel")
 [toggle] zen mode: user.vscode("workbench.action.toggleZenMode")
 
 # MS SQL Server Extension
@@ -285,6 +286,13 @@ merge lines: user.vscode("editor.emmet.action.mergeLines")
 toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
+
+pilot beast mode:
+    key(ctrl-. )
+    sleep(100ms)
+    key(b)
+    sleep(100ms)
+    key(enter)
 
 context last:
     key(ctrl-/)
