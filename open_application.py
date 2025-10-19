@@ -4,6 +4,17 @@ mod = Module()
 
 @mod.action_class
 class Actions:
+    def play_music_to_code_by():
+        """Launch VLC and play all songs in the music to code by folder in random order"""
+        import os
+        folder = "E:\\Software\\Music\\musictocodebycollection"
+        # List all mp3 and wav files in the folder
+        files = [os.path.join(folder, f) for f in os.listdir(folder) if f.lower().endswith((".mp3", ".wav", ".flac", ".aac", ".ogg"))]
+        if not files:
+            print("No music files found in folder:", folder)
+            return
+        vlc_args = files + ["--random"]
+        ui.launch(path="C:/Program Files/VideoLAN/VLC/vlc.exe", args=vlc_args)
     def run_application_search_intellisense(searchTerm:  str ):
         "Runs an application with the given search term"
         commandline = r'C:\Users\MPhil\source\repos\SpeechRecognitionHelpers\VoiceLauncher\bin\Release\VoiceLauncher.exe'

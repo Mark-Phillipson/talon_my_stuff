@@ -235,3 +235,5 @@ talon menu:
     key(down:4)
     sleep(50ms)
     key(right)
+music to code by:
+    user.play_music_to_code_by()
