@@ -173,7 +173,7 @@ voice typing:
 key(keypad_plus):           speech.disable()
 key(keypad_minus):          speech.enable()
 ziggy <user.text>: #do nothing calling amazon Echo device
-Alexa <user.text>: #do nothing calling amazon Echo device
+Alexa <user.text>: #do nothing calling amazon PC app
 
 drowse:
     #app.notify('I feel drowsy.', 'Talon Now Sleeping', 'DROWSE', true)
