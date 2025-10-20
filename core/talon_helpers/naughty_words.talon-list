@@ -1,0 +1,13 @@
+list: user.naughty_words
+-
+
+# A list of swearwords for Talon Voice to ignore
+
+fuck
+fucking
+fucker
+bollocks
+shit
+fucking hell: fuckingHell
+cunt
+bastard

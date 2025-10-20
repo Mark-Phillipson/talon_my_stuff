@@ -1,0 +1,1791 @@
+All Talon Lists In all directories below C:\Users\MPhil\AppData\Roaming\talon\user created: 2025-09-19 07:23:51.124391
+
+List: user.git_argument
+  - abort: --abort
+  - all: --all
+  - allow empty: --allow-empty
+  - amend: --amend
+  - cached: --cached
+  - cashed: --cached
+  - color words: --color-words
+  - colour words: --color-words
+  - continue: --continue
+  - copy: --copy
+  - create: --create
+  - delete: --delete
+  - detach: --detach
+  - dir diff: --dir-diff
+  - directory diff: --dir-diff
+  - dry run: --dry-run
+  - edit: --edit
+  - fast forward only: --ff-only
+  - force: --force
+  - force create: --force-create
+  - force with lease: --force-with-lease
+  - global: --global
+  - global: --global
+  - hard: --hard
+  - ignore case: --ignore-case
+  - include untracked: --include-untracked
+  - interactive: --interactive
+  - keep index: --keep-index
+  - list: --list
+  - local: --local
+  - mixed: --mixed
+  - move: --move
+  - no edit: --no-edit
+  - no keep index: --no-keep-index
+  - no rebase: --no-rebase
+  - no track: --no-track
+  - no verify: --no-verify
+  - orphan: --orphan
+  - patch: --patch
+  - prune: --prune
+  - quiet: --quiet
+  - quit: --quit
+  - rebase: --rebase
+  - remote: --remote
+  - set up stream: --set-upstream
+  - set up stream to: --set-upstream-to
+  - short: --short
+  - short stat: --shortstat
+  - skip: --skip
+  - soft: --soft
+  - staged: --staged
+  - stat: --stat
+  - system: --system
+  - track: --track
+  - update: --update
+  - verbose: --verbose
+  - branch: -b
+  - combined: -c
+  - deep: -d
+  - very verbose: -vv
+  - HEAD
+  - main
+  - master
+  - origin
+  - upstream
+  - origin main: origin/main
+  - origin master: origin/master
+
+List: user.git_command
+  - add
+  - archive
+  - bisect
+  - blame
+  - branch
+  - checkout
+  - cherry pick: cherry-pick
+  - clean
+  - clone
+  - commit
+  - config
+  - diff
+  - diff tool: difftool
+  - fetch
+  - gc
+  - grep
+  - help
+  - in it: init
+  - log
+  - ls files: ls-files
+  - merge
+  - merge tool: mergetool
+  - move: mv
+  - pull
+  - push
+  - range diff: range-diff
+  - rebase
+  - ref log: reflog
+  - remote
+  - remote add
+  - remote remove
+  - remote rename
+  - remote set url: remote set-url
+  - remote set you are el: remote set-url
+  - remote show
+  - rerere
+  - rerere diff
+  - rerere status
+  - reset
+  - restore
+  - revert
+  - remove: rm
+  - short log: shortlog
+  - show
+  - sparse checkout: sparse-checkout
+  - stash
+  - stash apply
+  - stash list
+  - stash pop
+  - stash push
+  - stash show
+  - stash save
+  - status
+  - submodule
+  - submodule add
+  - submodule in it: submodule init
+  - submodule status
+  - submodule update
+  - switch
+  - tag
+  - worktree
+  - worktree add
+  - worktree list
+  - worktree lock
+  - worktree move
+  - worktree prune
+  - worktree remove
+  - worktree repair
+  - worktree unlock
+
+List: user.system_paths
+  - -
+  - user: C:\Users\MPhil
+  - profile: C:\Users\MPhil
+  - desktop: C:\Users\MPhil\OneDrive\Desktop
+  - desk: C:\Users\MPhil\Desktop
+  - documents: C:\Users\MPhil\OneDrive\Documents
+  - docks: C:\Users\MPhil\Documents
+  - downloads: C:\Users\MPhil\Downloads
+  - music: C:\Users\MPhil\Music
+  - pictures: C:\Users\MPhil\OneDrive\Pictures
+  - videos: C:\Users\MPhil\Videos
+  - talon home: C:\Users\MPhil\AppData\Roaming\talon
+  - talon user: C:\Users\MPhil\AppData\Roaming\talon\user
+  - one drive: C:\Users\MPhil\OneDrive
+
+List: user.delimiter_pair
+  - # Format:
+  - # SPOKEN_FORM: LEFT_DELIMITER RIGHT_DELIMITER
+  - # Use the literal symbols for delimiters (except for whitespace, which is "space")
+  - #
+  - # Examples:
+  - # round: ( )
+  - # pad: space space
+  - round: ( )
+  - box: [ ]
+  - diamond: < >
+  - curly: { }
+  - twin: "' '"
+  - quad: '" "'
+  - skis: ` `
+  - percentages: % %
+  - pad: space space
+  - escaped quad: '\\" \\"'
+  - escaped twin:  "\\' \\'"
+  - escaped round: \( \)
+  - escaped box: \[ \]
+
+List: user.edit_action
+  - select: select
+  - go before: goBefore
+  - go after: goAfter
+  - copy: copyToClipboard
+  - cut: cutToClipboard
+  - paste: pasteFromClipboard
+  - paste to: pasteFromClipboard
+  - clear: delete
+
+List: user.edit_modifier
+  - all: document
+  - paragraph: paragraph
+  - line: line
+  - line start: lineStart
+  - way left: lineStart
+  - line end: lineEnd
+  - way right: lineEnd
+  - file start: fileStart
+  - way up: fileStart
+  - file end: fileEnd
+  - way down: fileEnd
+
+List: user.edit_modifier_repeatable
+  - word: word
+  - word left: wordLeft
+  - word right: wordRight
+  - up: lineUp
+  - down: lineDown
+  - left: left
+  - right: right
+
+List: user.edit_text_file
+  - additional words: core/vocabulary/vocabulary.talon-list
+  - vocabulary: core/vocabulary/vocabulary.talon-list
+  - alphabet: core/keys/letter.talon-list
+  - homophones: core/homophones/homophones.csv
+  - search engines: core/websites_and_search_engines/search_engine.talon-list
+  - websites: core/websites_and_search_engines/website.talon-list
+  - unix utilities: tags/terminal/unix_utility.talon-list
+  - abbreviations: settings/abbreviations.csv
+  - file extensions: settings/file_extensions.csv
+  - words to replace: settings/words_to_replace.csv
+  - contacts json: private/contacts.json
+  - contacts csv: private/contacts.csv
+
+List: user.code_formatter
+  - all cap: ALL_CAPS
+  - all down: ALL_LOWERCASE
+  - camel: PRIVATE_CAMEL_CASE
+  - dotted: DOT_SEPARATED
+  - list: COMMA_SEPARATED
+  - dub string: DOUBLE_QUOTED_STRING
+  - dunder: DOUBLE_UNDERSCORE
+  - hammer: PUBLIC_CAMEL_CASE
+  - kebab: DASH_SEPARATED
+  - packed: DOUBLE_COLON_SEPARATED
+  - padded: SPACE_SURROUNDED_STRING
+  - slasher: ALL_SLASHES
+  - conga: SLASH_SEPARATED
+  - smash: NO_SPACES
+  - snake: SNAKE_CASE
+  - string: SINGLE_QUOTED_STRING
+  - constant: ALL_CAPS,SNAKE_CASE
+
+List: user.prose_formatter
+  - say: NOOP
+  - speak: NOOP
+  - sentence: CAPITALIZE_FIRST_WORD
+  - title: CAPITALIZE_ALL_WORDS
+
+List: user.reformatter
+  - cap: CAPITALIZE
+  - unformat: REMOVE_FORMATTING
+
+List: user.word_formatter
+  - word: NOOP
+  - trot: TRAILING_SPACE
+  - proud: CAPITALIZE_FIRST_WORD
+  - leap: TRAILING_SPACE,CAPITALIZE_FIRST_WORD
+
+List: user.arrow_key
+  - down: down
+  - left: left
+  - right: right
+  - up: up
+
+List: user.function_key
+  - f one: f1
+  - f two: f2
+  - f three: f3
+  - f four: f4
+  - f five: f5
+  - f six: f6
+  - f seven: f7
+  - f eight: f8
+  - f nine: f9
+  - f ten: f10
+  - f eleven: f11
+  - f twelve: f12
+  - f thirteen: f13
+  - f fourteen: f14
+  - f fifteen: f15
+  - f sixteen: f16
+  - f seventeen: f17
+  - f eighteen: f18
+  - f nineteen: f19
+  - f twenty: f20
+  - # these f keys are not supported by all platforms (eg Mac) and are disabled by default
+  - #f twenty one: f21
+  - #f twenty two: f22
+  - #f twenty three: f23
+  - #f twenty four: f24
+
+List: user.keypad_key
+  - key pad zero: keypad_0
+  - key pad one: keypad_1
+  - key pad two: keypad_2
+  - key pad three: keypad_3
+  - key pad four: keypad_4
+  - key pad five: keypad_5
+  - key pad six: keypad_6
+  - key pad seven: keypad_7
+  - key pad eight: keypad_8
+  - key pad nine: keypad_9
+  - key pad point: keypad_decimal
+  - key pad plus: keypad_plus
+  - key pad minus: keypad_minus
+  - key pad star: keypad_multiply
+  - key pad slash: keypad_divide
+  - key pad equals: keypad_equals
+  - key pad clear: keypad_clear
+  - key pad enter: keypad_enter
+
+List: user.letter
+  - # for common alternative spoken forms for letters, visit
+  - # https://talon.wiki/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy#collected-alternatives-to-the-default-alphabet
+  - air: a
+  - bat: b
+  - cap: c
+  - drum: d
+  - each: e
+  - fine: f
+  - gust: g
+  - harp: h
+  - sit: i
+  - jury: j
+  - crunch: k
+  - look: l
+  - made: m
+  - near: n
+  - odd: o
+  - pit: p
+  - quench: q
+  - red: r
+  - sun: s
+  - trap: t
+  - urge: u
+  - vest: v
+  - whale: w
+  - plex: x
+  - yank: y
+  - zip: z
+
+List: user.number_key
+  - zero: 0
+  - one: 1
+  - two: 2
+  - three: 3
+  - four: 4
+  - five: 5
+  - six: 6
+  - seven: 7
+  - eight: 8
+  - nine: 9
+
+List: user.modifier_key
+  - -
+  - alt: alt
+  - control: ctrl
+  - shift: shift
+  - super: cmd
+  - command: cmd
+  - option: alt
+  - function: fn
+  - globe: fn
+
+List: user.special_key
+  - -
+  - end: end
+  - home: home
+  - minus: minus
+  - return: return
+  - enter: keypad_enter
+  - page down: pagedown
+  - page up: pageup
+  - escape: escape
+  - space: space
+  - tab: tab
+  - insert: insert
+  - wipe: backspace
+  - delete: backspace
+  - forward delete: delete
+
+List: user.modifier_key
+  - os: linux
+  - -
+  - alt: alt
+  - control: ctrl
+  - shift: shift
+  - # super is the windows key
+  - super: super
+  - command: ctrl
+  - option: alt
+
+List: user.special_key
+  - os: linux
+  - -
+  - end: end
+  - home: home
+  - minus: minus
+  - enter: enter
+  - page down: pagedown
+  - page up: pageup
+  - escape: escape
+  - space: space
+  - tab: tab
+  - insert: insert
+  - wipe: backspace
+  - delete: backspace
+  - forward delete: delete
+  - menu key: menu
+  - print screen: printscr
+
+List: user.currency
+  - dollar: $
+  - dollars: $
+  - euro: €
+  - euros: €
+  - pound: £
+  - pounds: £
+
+List: user.phrase_ender
+  - over: ""
+
+List: user.prose_modifiers
+  - # Maps spoken forms to DictationFormat method names (see DictationFormat in text_and_dictation.py).
+  - cap: cap
+  - no cap: no_cap
+  - # no caps variant for Dragon
+  - no caps: no_cap
+  - no space: no_space
+
+List: user.prose_snippets
+  - spacebar: " "
+  - new line: "\n"
+  - new paragraph: "\n\n"
+  - # Curly quotes are used to obtain proper spacing for left and right quotes, but will later be straightened.
+  - open quote: "“"
+  - close quote: "”"
+  - smiley: :-)
+  - winky: ;-)
+  - frowny: :-(
+
+List: user.code_formatter
+  - all cap: ALL_CAPS
+  - all down: ALL_LOWERCASE
+  - camel: PRIVATE_CAMEL_CASE
+  - dotted: DOT_SEPARATED
+  - delimited: COMMA_SEPARATED
+  - dub string: DOUBLE_QUOTED_STRING
+  - dunder: DOUBLE_UNDERSCORE
+  - hammer: PUBLIC_CAMEL_CASE
+  - kebab: DASH_SEPARATED
+  - packed: DOUBLE_COLON_SEPARATED
+  - padded: SPACE_SURROUNDED_STRING
+  - slasher: ALL_SLASHES
+  - conga: SLASH_SEPARATED
+  - smash: NO_SPACES
+  - snake: SNAKE_CASE
+  - string: SINGLE_QUOTED_STRING
+  - constant: ALL_CAPS,SNAKE_CASE
+
+List: user.vocabulary
+  - N map: nmap
+  - under documented: under-documented
+  - nmap
+  - admin
+  - Cisco
+  - Citrix
+  - VPN
+  - DNS
+  - Minecraft
+  - HTML
+  - Radzen
+  - Blazor
+  - Talon
+  - Python
+  - JavaScript
+  - CSS
+  - SQL
+  - Elgato
+
+List: user.search_engine
+  - #amazon: https://www.amazon.com/s/?field-keywords=%s
+  - google: https://www.google.com/search?q=%s
+  - google maps: https://maps.google.com/maps?q=%s
+  - scholar: https://scholar.google.com/scholar?q=%s
+  - wikipedia: https://en.wikipedia.org/w/index.php?search=%s
+
+List: user.website
+  - talon home page: http://talonvoice.com
+  - talon slack: http://talonvoice.slack.com/messages/help
+  - talon wiki: https://talon.wiki/
+  - talon practice: https://chaosparrot.github.io/talon_practice/
+  - talon repository search: https://search.talonvoice.com/search/
+  - amazon: https://www.amazon.com/
+  - google search: https://www.google.com/
+  - google calendar: https://calendar.google.com
+  - google maps: https://maps.google.com/
+  - google scholar: https://scholar.google.com/
+  - gmail: https://mail.google.com/
+  - github: https://github.com/
+  - gist: https://gist.github.com/
+  - wikipedia: https://en.wikipedia.org/
+  - youtube: https://www.youtube.com/
+
+List: user.window_snap_positions
+  - left: LEFT
+  - right: RIGHT
+  - top: TOP
+  - bottom: BOTTOM
+  - center third: CENTER_THIRD
+  - left third: LEFT_THIRD
+  - right third: RIGHT_THIRD
+  - left two thirds: LEFT_TWO_THIRDS
+  - right two thirds: RIGHT_TWO_THIRDS
+  - center small: CENTER_SMALL
+  - left small: LEFT_SMALL
+  - right small: RIGHT_SMALL
+  - left large: LEFT_LARGE
+  - right large: RIGHT_LARGE
+  - top left: TOP_LEFT
+  - top right: TOP_RIGHT
+  - bottom left: BOTTOM_LEFT
+  - bottom right: BOTTOM_RIGHT
+  - top left third: TOP_LEFT_THIRD
+  - top right third: TOP_RIGHT_THIRD
+  - top left two thirds: TOP_LEFT_TWO_THIRDS
+  - top right two thirds: TOP_RIGHT_TWO_THIRDS
+  - top center third: TOP_CENTER_THIRD
+  - bottom left third: BOTTOM_LEFT_THIRD
+  - bottom right third: BOTTOM_RIGHT_THIRD
+  - bottom left two thirds: BOTTOM_LEFT_TWO_THIRDS
+  - bottom right two thirds: BOTTOM_RIGHT_TWO_THIRDS
+  - bottom center third: BOTTOM_CENTER_THIRD
+  - top left small: TOP_LEFT_SMALL
+  - top right small: TOP_RIGHT_SMALL
+  - top left large: TOP_LEFT_LARGE
+  - top right large: TOP_RIGHT_LARGE
+  - top center small: TOP_CENTER_SMALL
+  - bottom left small: BOTTOM_LEFT_SMALL
+  - bottom right small: BOTTOM_RIGHT_SMALL
+  - bottom left large: BOTTOM_LEFT_LARGE
+  - bottom right large: BOTTOM_RIGHT_LARGE
+  - bottom center small: BOTTOM_CENTER_SMALL
+  - center: CENTER
+  - full: FULL
+  - fullscreen: FULLSCREEN
+
+List: user.window_split_positions
+  - half: HALF
+  - thirds: THIRDS
+  - clock: CLOCK
+  - counterclock: COUNTERCLOCK
+  - grid: GRID
+  - big grid: BIG_GRID
+
+List: user.code_common_function
+  - -
+  - alloc ah: alloca
+  - ay to eye: atoi
+  - ef close: fclose
+  - ef open: fopen
+  - ef read: fread
+  - ef write: fwrite
+  - em map: mmap
+  - em un map: munmap
+  - es en print eff: sprintf
+  - es print eff: sprintf
+  - exit
+  - free
+  - get char: getchar
+  - get op: getopt
+  - is digit: isdigit
+  - ma map: mmap
+  - malloc
+  - mem copy: memcpy
+  - mem set: memset
+  - print eff: printf
+  - re alloc: realloc
+  - see alloc: calloc
+  - set jump: setjmp
+  - signal
+  - size of: sizeof
+  - stir cat: strcat
+  - string cat: strcat
+  - stir comp: strcmp
+  - stir copy: strcpy
+  - stir dupe: strdup
+  - string dupe: strdup
+  - stir elle cat: strlcat
+  - stir l cat: strlcat
+  - stir elle copy: strlcpy
+  - stir l copy: strlcpy
+  - stir en cat: strncat
+  - stir en copy: strncpy
+  - stir en comp: strncmp
+  - stir len: strlen
+  - string len: strlen
+  - stir to int: strtoint
+  - stir to unsigned int: strtouint
+  - string char: strchr
+
+List: user.code_keyword
+  - -
+  - align as: "alignas"
+  - align of: "alignof"
+  - auto: "auto "
+  - bool: "bool"
+  - break: "break"
+  - case: "case "
+  - char: "char"
+  - const expr: "constexpr "
+  - const expression: "constexpr "
+  - const: "const "
+  - continue: "continue"
+  - default: "default"
+  - do: "do "
+  - double: "double"
+  - else: "else "
+  - enum: "enum "
+  - extern: "extern "
+  - false: "false"
+  - float: "float"
+  - for: "for "
+  - go to: "goto "
+  - if: "if "
+  - in line: "inline "
+  - int
+  - integer: int
+  - long: "long "
+  - null pointer: "nullptr"
+  - restrict: "restrict "
+  - return: "return "
+  - short: "short "
+  - signed: "signed "
+  - size of: "sizeof"
+  - static assert: "static_assert"
+  - struct: "struct "
+  - switch: "switch "
+  - thread local: " thread_local "
+  - true: "true"
+  - type deaf: "typedef "
+  - type of unqual: "typeof_unqual"
+  - type of: "typeof"
+  - union: "union "
+  - unsigned: "unsigned "
+  - void: "void "
+  - while: "while "
+
+List: user.code_keyword_unprefixed
+  - -
+  - register: "register "
+  - static: "static "
+  - volatile: "volatile "
+
+List: user.cpp_standard_prefix
+  - -
+  - stood
+  - standard
+
+List: user.cpp_standard_type
+  - -
+  - any
+  - array
+  - atomic
+  - barrier
+  - bit set: bitset
+  - chrono duration: chrono::duration
+  - chrono time point: chrono::time_point
+  - condition variable: condition_variable
+  - deck: deque
+  - filesystem path: filesystem::path
+  - function
+  - future
+  - hash
+  - in stream: istream
+  - latch
+  - lock guard: lock_guard
+  - map
+  - match results: match_results
+  - multimap
+  - multiset
+  - mutex
+  - optional
+  - out stream: ostream
+  - packaged task: packaged_task
+  - pair
+  - priority queue: priority_queue
+  - promise
+  - queue
+  - recursive mutex: recursive_mutex
+  - regex
+  - scoped lock: scoped_lock
+  - semaphore
+  - set
+  - shared mutex: shared_mutex
+  - shared pointer: shared_ptr
+  - span
+  - stack
+  - stop token: stop_token
+  - string
+  - sub match: sub_match
+  - thread
+  - tuple
+  - unique lock: unique_lock
+  - unique pointer: unique_ptr
+  - unordered map: unordered_map
+  - unordered multimap: unordered_multimap
+  - unordered multiset: unordered_multiset
+  - unordered set: unordered_set
+  - variant
+  - vector
+  - weak pointer: weak_ptr
+
+List: user.code_common_function
+  - -
+  - integer: int.TryParse
+  - print: Console.WriteLine
+  - string: .ToString
+
+List: user.code_common_function
+  - code.language: scss
+  - -
+  - # reference
+  - attribute: attr
+  - env
+  - url
+  - var
+  - variable: var
+  - # mathematical
+  - calc
+  - calculate: calc
+  - clamp
+  - max
+  - min
+  - # color
+  - HSL: hsl
+  - hue sat light: hsl
+  - HSLA: hsla
+  - lab
+  - LCH: lch
+  - RGB: rgb
+  - red green blue: rgb
+  - RGBA: rgba
+  - color
+  - # image functions
+  - linear gradient: linear-gradient
+  - # counter functions
+  - counter
+  - counters
+  - symbols
+  - # filter
+  - blur
+  - brightness
+  - contrast
+  - drop shadow: drop-shadow
+  - grayscale
+  - hue rotate: hue-rotate
+  - invert
+  - opacity
+  - saturate
+  - sepia
+  - # grid
+  - fit content: fit-content
+  - min max: minmax
+  - repeat
+  - # transform
+  - matrix
+  - rotate
+  - scale
+  - skew
+  - translate
+
+List: user.code_common_function
+  - -
+  - # golang builtin functions
+  - append
+  - length: len
+  - make
+  - # formatting
+  - format print: fmt.Printf
+  - format print eff: fmt.Printf
+  - format sprint: fmt.Sprintf
+  - format es print eff: fmt.Sprintf
+  - format print line: fmt.Println
+  - # time
+  - time hour: time.Hour
+  - time minute: time.Minute
+  - time second: time.Second
+  - time millisecond: time.Millisecond
+  - time microsecond: time.Microsecond
+  - time nanosecond: time.Nanosecond
+  - # IO
+  - buf I O: bufio.
+  - # strings
+  - string convert: strconv.
+  - string convert to int: strconv.AtoI
+
+List: user.code_common_method
+  - -
+  - add
+  - char at: charAt
+  - clear
+  - clone
+  - contains
+  - contains key: containsKey
+  - equals
+  - get
+  - isEmpty
+  - length
+  - put
+  - remove
+  - set
+  - size
+  - substring
+  - to string: toString
+  - trim
+
+List: user.code_keyword
+  - -
+  - abstract: "abstract "
+  - assert: "assert "
+  - boolean: "boolean "
+  - break
+  - byte: "byte "
+  - case: "case "
+  - catch
+  - char: "char "
+  - class: "class "
+  - continue
+  - default
+  - do: "do "
+  - double: "double "
+  - else
+  - enum: "enum "
+  - exports: "exports "
+  - extends: " extends "
+  - final: "final "
+  - finally: "finally "
+  - float: "float "
+  - for: "for "
+  - if: "if "
+  - implements: " implements "
+  - import: "import "
+  - instance of: "instanceof "
+  - int: "int "
+  - interface: "interface "
+  - long: "long "
+  - module: "module "
+  - native: "native "
+  - new: "new "
+  - open: "open "
+  - opens: "opens "
+  - package: "package "
+  - private: "private "
+  - protected: "protected "
+  - provides: "provides "
+  - public: "public "
+  - requires: "requires "
+  - return: "return "
+  - short: "short "
+  - static: "static "
+  - strict eff pee: "strictfp "
+  - super
+  - switch: "switch "
+  - synchronized: "synchronized "
+  - this
+  - throw: "throw "
+  - throws: "throws "
+  - to: " to "
+  - transient: "transient "
+  - transitive: "transitive "
+  - try: "try "
+  - uses: "uses "
+  - var: "var "
+  - void: "void "
+  - volatile: "volatile "
+  - while: "while "
+  - with: " with "
+  - yield: "yield "
+
+List: user.code_common_function
+  - code.language: typescript
+  - code.language: javascriptreact
+  - code.language: typescriptreact
+  - -
+  - abs: Math.abs
+  - entries: Object.entries
+  - fetch: fetch
+  - floor: Math.floor
+  - from entries: Object.fromEntries
+  - keys: Object.keys
+  - log: console.log
+  - max: Math.max
+  - min: Math.min
+  - print: console.log
+  - round: Math.round
+  - values: Object.values
+
+List: user.code_common_function
+  - -
+  - to number: "tonumber"
+  - I pairs: "ipairs"
+  - print: "print"
+  - print F: "printf"
+  - type: "type"
+  - assert: "assert"
+  - get meta table: "getmetatable"
+  - set meta table: "setmetatable"
+  - # io
+  - I O write: "io.write"
+  - I O read: "io.read"
+  - I O open: "io.open"
+  - # string
+  - format: "string.format"
+  - string G find: "string.gfind"
+  - string find: "string.strfind"
+  - string len: "string.strlen"
+  - string upper: "string.strupper"
+  - string lower: "string.strlower"
+  - string sub: "string.strsub"
+  - string G sub: "string.gsub"
+  - string match: "string.match"
+  - string G match: "string.gmatch"
+  - # table
+  - table unpack: "table.unpack"
+  - table insert: "table.insert"
+  - tabel get N: "table.getn"
+  - tabel sort: "table.sort"
+  - # math
+  - math max: "math.max"
+  - # json
+  - jason parse: "json.parse"
+  - # http
+  - H T T P get: "http.get"
+  - web get: "http.get"
+  - # os
+  - O S date: "os.date"
+  - O S time: "os.time"
+  - O S clock: "os.clock"
+  - O S rename: "os.rename"
+  - O S remove: "os.remove"
+  - O S getenv: "os.getenv"
+  - O S execute: "os.execute"
+
+List: user.code_common_function
+  - -
+  - enumerate
+  - integer: "int"
+  - length: "len"
+  - list
+  - print
+  - range
+  - set
+  - split
+  - string: "str"
+  - update
+
+List: user.code_common_method
+  - add
+  - append
+  - are strip: rstrip
+  - elle strip: lstrip
+  - extend
+  - get
+  - items
+  - join
+  - keys
+  - lower
+  - pop
+  - remove
+  - replace
+  - sort
+  - split
+  - strip
+  - upper
+  - values
+
+List: user.code_keyword
+  - -
+  - and: " and "
+  - as: " as "
+  - assert: "assert "
+  - async: "async "
+  - await: "await "
+  - break: "break"
+  - case: "case "
+  - class: "class "
+  - deaf: "def "
+  - define: "def "
+  - dell: "del "
+  - elif: "elif "
+  - else: "else "
+  - except: "except "
+  - false: "False"
+  - for: "for "
+  - from: "from "
+  - global: "global "
+  - if: "if "
+  - import: "import "
+  - in: " in "
+  - is: " is "
+  - lambda: "lambda "
+  - match: "match "
+  - none: "None"
+  - not: "not "
+  - null: "None"
+  - or: " or "
+  - pass: "pass"
+  - raise: "raise "
+  - return: "return "
+  - true: "True"
+  - try: "try"
+  - type: "type"
+  - while: "while "
+  - with: "with "
+  - yield: "yield "
+
+List: user.code_keyword_unprefixed
+  - -
+  - continue: "continue"
+  - finally: "finally"
+  - nonlocal: "nonlocal "
+
+List: user.code_common_function
+  - -
+  - # base R
+  - as character: "as.character"
+  - as data frame: "as.data.frame"
+  - as date: "as.Date"
+  - as double: "as.double"
+  - as factor: "as.factor"
+  - as integer: "as.integer"
+  - as numeric: "as.numeric"
+  - base read RDS: "readRDS"
+  - base save RDS: "saveRDS"
+  - cable: "kable"
+  - correlation: "cor"
+  - count: "count"
+  - covariance: "cov"
+  - describe: "describe"
+  - eigen: "eigen"
+  - ex table: "xtable"
+  - get working directory: "getwd"
+  - head: "head"
+  - if else: "ifelse"
+  - install packages: "install.packages"
+  - is NA: "is.na"
+  - is not NA: "!is.na"
+  - length: "length"
+  - library: "library"
+  - list files: "list.files"
+  - list: "list"
+  - lm: "lm"
+  - log: "log"
+  - make directory: "dir.create"
+  - margins: "margins"
+  - max: "max"
+  - mean: "mean"
+  - min: "min"
+  - names: "names"
+  - paste: "paste0"
+  - print: "print"
+  - reorder: "reorder"
+  - repeat: "rep"
+  - scale: "scale"
+  - sequence along: "seq_along"
+  - sequence length: "seq_len"
+  - sequence: "seq"
+  - set working directory: "setwd"
+  - sort: "sort"
+  - subset: "subset"
+  - sum: "sum"
+  - summary: "summary"
+  - tail: "tail"
+  - tidy: "tidy"
+  - trim white space: "trimws"
+  - type: "typeof"
+  - unique: "unique"
+  - vector: "c"
+  - vee table: "vtable"
+  - view: "View"
+  - # dplyr
+  - anti join: "anti_join"
+  - arrange: "arrange"
+  - as tibble: "as_tibble"
+  - bind rows: "bind_rows"
+  - case when: "case_when"
+  - distinct: "distinct"
+  - everything: "everything"
+  - filter: "filter"
+  - full join: "full_join"
+  - glimpse: "glimpse"
+  - group by: "group_by"
+  - inner join: "inner_join"
+  - left join: "left_join"
+  - mutate: "mutate"
+  - pull: "pull"
+  - rename all: "rename_all"
+  - rename: "rename"
+  - right join: "right_join"
+  - select all: "select_all"
+  - select: "select"
+  - semi join: "semi_join"
+  - starts with: "starts_with"
+  - summarise: "summarise"
+  - tibble: "tibble"
+  - ungroup: "ungroup"
+  - # ggplot2
+  - coord cartesian: "coor_cartesian"
+  - element text: "element_text"
+  - element blank: "element_blank"
+  - facet grid: "facet_grid"
+  - facet wrap: "facet_wrap"
+  - geom A B line: "geom_abline"
+  - geom area: "geom_area"
+  - geom bar: "geom_bar"
+  - geom boxplot: "geom_boxplot"
+  - geom histogram: "geom_histogram"
+  - geom horizontal line: "geom_hline"
+  - geom line: "geom_line"
+  - geom point: "geom_point"
+  - geom pointrange: "geom_pointrange"
+  - geom polygon: "geom_polygon"
+  - geom ribbon: "geom_ribbon"
+  - geom segment: "geom_segment"
+  - geom smooth: "geom_smooth"
+  - geom vertical line: "geom_vline"
+  - geom violin: "geom_violin"
+  - labs: "labs"
+  - scale colour manual: "scale_colour_manual"
+  - scale fill manual: "scale_fill_manual"
+  - scale fill viridis: "scale_fill_viridis_c"
+  - scale colour viridis: "scale_colour_viridis_c"
+  - theme set: "theme_set"
+  - # purrr
+  - map character: "map_chr"
+  - map data frame: "map_dfr"
+  - map double: "map_dbl"
+  - map: "map"
+  - P map: "pmap"
+  - # stringr
+  - string contains: "str_detect"
+  - string detect: "str_detect"
+  - string replace all: "str_replace_all"
+  - string replace: "str_replace"
+  - # tidyr
+  - drop NA: "drop_na"
+  - gather: "gather"
+  - nest: "nest"
+  - pivot longer: "pivot_longer"
+  - pivot wider: "pivot_wider"
+  - spread: "spread"
+  - un nest: "unnest"
+  - # readr readxl and other non-base R reading/writing
+  - read E views: "readEViews"
+  - read CSV: "read_csv"
+  - read RDS: "read_rds"
+  - read excel: "read_xlsx"
+  - write CSV: "write_csv"
+  - write RDS: "write_rds"
+  - # Shiny
+  - shine ui: "shinyUI"
+  - title panel: "titlePanel"
+  - main panel: "mainPanel"
+  - tab panel: "tabPanel"
+  - navigation list panel: "navlistPanel"
+  - conditional panel: "conditionalPanel"
+  - input panel: "inputPanel"
+  - ui output: "uiOutput"
+  - text output: "textOutput"
+  - table output: "tableOutput"
+  - data table output: "dataTableOutput"
+  - select size input: "selectizeInput"
+  - action button: "actionButton"
+  - download button: "downloadButton"
+  - render ui: "renderUI"
+  - observe event: "observeEvent"
+  - # Base
+
+List: user.code_common_function
+  - -
+  - # these vary by dialect
+  - count: Count
+  - min: Min
+  - max: Max
+
+List: user.code_common_function
+  - -
+  - # base stata
+  - global
+  - local
+  - reg
+  - regress: reg
+  - # packages
+  - estadd
+  - estout
+  - estpost
+  - eststo
+  - esttab
+
+List: user.code_operators_array
+  - -
+  - subscript: SUBSCRIPT
+
+List: user.code_operators_assignment
+  - -
+  - # Assignment
+  - equals: ASSIGNMENT
+  - or equals: ASSIGNMENT_OR
+  - # Combined computation and assignment
+  - minus equals: ASSIGNMENT_SUBTRACTION
+  - plus equals: ASSIGNMENT_ADDITION
+  - times equals: ASSIGNMENT_MULTIPLICATION
+  - divide equals: ASSIGNMENT_DIVISION
+  - mod equals: ASSIGNMENT_MODULO
+  - increment: ASSIGNMENT_INCREMENT
+  - # Bitwise operators
+  - bitwise and equals: ASSIGNMENT_BITWISE_AND
+  - bitwise or equals: ASSIGNMENT_BITWISE_OR
+  - bitwise exclusive or equals: ASSIGNMENT_BITWISE_EXCLUSIVE_OR
+  - left shift equals: ASSIGNMENT_BITWISE_LEFT_SHIFT
+  - right shift equals: ASSIGNMENT_BITWISE_RIGHT_SHIFT
+
+List: user.code_operators_bitwise
+  - -
+  - bitwise and: BITWISE_AND
+  - bitwise or: BITWISE_OR
+  - bitwise not: BITWISE_NOT
+  - bitwise ex or: BITWISE_EXCLUSIVE_OR
+  - bitwise left shift: BITWISE_LEFT_SHIFT
+  - bitwise right shift: BITWISE_RIGHT_SHIFT
+
+List: user.code_operators_lambda
+  - -
+  - lambda: LAMBDA
+
+List: user.code_operators_math
+  - -
+  - # Math operators
+  - minus: MATH_SUBTRACT
+  - plus: MATH_ADD
+  - times: MATH_MULTIPLY
+  - divide: MATH_DIVIDE
+  - int divide: MATH_INTEGER_DIVIDE
+  - mod: MATH_MODULO
+  - power: MATH_EXPONENT
+  - # logical operators
+  - and: MATH_AND
+  - or: MATH_OR
+  - not: MATH_NOT
+  - weak and: MATH_WEAK_AND
+  - weak or: MATH_WEAK_OR
+  - weak not: MATH_WEAK_NOT
+
+List: user.code_operators_math_comparison
+  - -
+  - # Comparison operators
+  - equal: MATH_EQUAL
+  - not equal: MATH_NOT_EQUAL
+  - weak equal: MATH_WEAK_EQUAL
+  - weak not equal: MATH_WEAK_NOT_EQUAL
+  - greater: MATH_GREATER_THAN
+  - less: MATH_LESS_THAN
+  - greater or equal: MATH_GREATER_THAN_OR_EQUAL
+  - less or equal: MATH_LESS_THAN_OR_EQUAL
+  - # Set operators
+  - in: MATH_IN
+  - not in: MATH_NOT_IN
+
+List: user.code_operators_pointer
+  - -
+  - dereference: POINTER_INDIRECTION
+  - address of: POINTER_ADDRESS_OF
+  - arrow: POINTER_STRUCTURE_DEREFERENCE
+
+List: user.code_common_function
+  - -
+  - insert
+  - key
+  - print
+  - repeat
+
+List: user.continuous_scrolling_direction
+  - upper: UP
+  - downer: DOWN
+  - righter: RIGHT
+  - lefter: LEFT
+
+List: user.before_or_after
+  - before: BEFORE
+  - after: AFTER
+
+List: user.navigation_action
+  - move: GO
+  - extend: EXTEND
+  - select: SELECT
+  - clear: DELETE
+  - cut: CUT
+  - copy: COPY
+
+List: user.emoji
+  - angry: 😠
+  - blushing: 😊
+  - broken heart: 💔
+  - clapping: 👏
+  - cool: 😎
+  - crying: 😭
+  - dancing: 💃
+  - disappointed: 😞
+  - eyes: 👀
+  - happy: 😀
+  - heart: ❤
+  - heart eyes: 😍
+  - hugging: 🤗
+  - kissing: 😗
+  - monocle: 🧐
+  - party: 🎉
+  - pleading: 🥺
+  - poop: 💩
+  - rofl: 🤣
+  - roll eyes: 🙄
+  - sad: 🙁
+  - shrugging: 🤷
+  - shushing: 🤫
+  - star eyes: 🤩
+  - thinking: 🤔
+  - thumbs down: 👎
+  - thumbs up: 👍
+  - worried: 😟
+  - writing: ✍
+  - yawning: 🥱
+
+List: user.emoticon
+  - broken heart: </3
+  - cheeky: :p
+  - cheering: \o/
+  - crying: ":'("
+  - happy: :)
+  - heart: <3
+  - horror: D:
+  - laughing: :D
+  - sad: :(
+  - salute: o7
+  - skeptical: :/
+  - surprised: :o
+  - wink: ;)
+
+List: user.kaomoji
+  - blushing: (⁄ ⁄•⁄ω⁄•⁄ ⁄)
+  - crying: (╥﹏╥)
+  - embarrassed: (⌒_⌒;)
+  - flower girl: (◕‿◕✿)
+  - happy: (* ^ ω ^)
+  - kissing: ( ˘ ³˘)♥
+  - lenny: ( ͡° ͜ʖ ͡°)
+  - sad: (｡•́︿•̀｡)
+  - shrugging: ¯\_(ツ)_/¯
+  - table flip: (╯°□°)╯︵ ┻━┻
+  - table return: ┬─┬ ノ( ゜-゜ノ)
+
+List: user.unix_utility
+  - ark: awk
+  - base sixty four decode: base64 -d
+  - base sixty four: base64
+  - concat: cat
+  - change mode recurse: chmod -R
+  - change mode: chmod
+  - change owner recurse: chown -R
+  - change owner: chown
+  - curl
+  - cut
+  - disk free human: df -h
+  - disk free: df
+  - dig
+  - disk usage human: du -h
+  - disk usage: du
+  - echo
+  - false
+  - find
+  - grab here: grep -Hirn
+  - grab: grep
+  - head
+  - harp top: htop
+  - I D user: id -u
+  - I D: id
+  - less
+  - link soft: ln -s
+  - link: ln
+  - M D five sum: md5sum
+  - make dear: mkdir
+  - paste
+  - print format: printf
+  - work dear: pwd
+  - reverse: rev
+  - are sync: rsync
+  - said: sed
+  - sequence: seq
+  - shah two fifty six sum: sha256sum
+  - sleep
+  - sort human: sort -h
+  - sort numeric: sort -n
+  - sort reverse: sort -r
+  - sort unique: sort -u
+  - sort
+  - S S H: ssh
+  - stat
+  - pseudo: sudo
+  - tail follow: tail -f
+  - tail
+  - tea append: tee -a
+  - tea: tee
+  - touch
+  - translate delete: tr -d
+  - translate: tr
+  - true
+  - unique count: uniq -c
+  - unique: uniq
+  - word count characters: wc -c
+  - word count lines: wc -l
+  - word count: wc
+  - who
+  - who am I: whoami
+
+List: user.letter
+  - act: a
+  - alpha: A
+  - bat: b
+  - bravo: B
+  - cat: c
+  - charlie: C
+  - drum: d
+  - delta: D
+  - eve: e
+  - echo: E
+  - fox: f
+  - foxtrot: F
+  - golf: g
+  - golfer: G
+  - hot: h
+  - hotel: H
+  - sit: i
+  - india: I
+  - jury: j
+  - juliet: J
+  - crunch: k
+  - kilo: K
+  - look: l
+  - lima: L
+  - mike: m
+  - Michael: M
+  - near: n
+  - november: N
+  - odd: o
+  - oscar: O
+  - pit: p
+  - papa: P
+  - quench: q
+  - quebec: Q
+  - red: r
+  - romeo: R
+  - sun: s
+  - sierra: S
+  - trap: t
+  - tango: T
+  - urge: u
+  - uniform: U
+  - vest: v
+  - victor: V
+  - whale: w
+  - whiskey: W
+  - plex: x
+  - xray: X
+  - yank: y
+  - yankee: Y
+  - zip: z
+  - zulu: Z
+
+List: user.customPrompt
+  - # Any prompts in this list are automatically added into the <user.modelPrompt> capture
+  - # and thus can be used like normal alongside all of the other model commands
+  - -
+  - # Example of a custom prompt that is unique to a user's personal workflow
+  - check language: I am learning a new foreign language. Check the grammar of what I have written and return feedback in English with references to what I wrote.
+  - joke: Tell me a joke
+  - explain python: I am having trouble understanding python code. Can you explain it to me?
+  - explain sharp: I am having trouble understanding C Sharp code. Can you explain it to me?
+  - explain razor: I am having trouble understanding razor code. Can you explain it to me?
+  - explain html: I am having trouble understanding HTML code. Can you explain it to me?
+  - explain css: I am having trouble understanding CSS code. Can you explain it to me?
+  - explain javascript: I am having trouble understanding JavaScript code. Can you explain it to me?
+  - improve code: I am having trouble with my code. Can you help me improve it, but leave it so it can still compile?
+  - improve text: I am having trouble with my text. Can you help me improve it?
+  - do: I am having trouble with a task. Can you help me with it?
+
+List: user.naughty_words
+  - # A list of swearwords for Talon Voice to ignore
+  - fuck
+  - fucking
+  - fucker
+  - bollocks
+  - shit
+  - fucking hell: fuckingHell
+  - cunt
+  - bastard
+
+List: user.vocabulary
+  - N map: nmap
+  - under documented: under-documented
+  - nmap
+  - admin
+  - Cisco
+  - Citrix
+  - VPN
+  - DNS
+  - Minecraft
+  - Courtenay Road
+  - 24hr
+  - addition abbreviation: Add
+  - ADO
+  - adodb
+  - alternate abbreviation: Alt
+  - Annotations
+  - application abbreviation: app
+  - append as in query: Append
+  - Array
+  - ASP dot net: ASP.NET
+  - Assert In Code: Assert
+  - async
+  - Attendee
+  - as your: Azure
+  - Microsoft Cloud: Azure
+  - Azure DevOps
+  - blazer: Blazor
+  - Blazored
+  - Boolean abbreviation: bln
+  - Bulk
+  - ByRef
+  - ByVal
+  - Cart
+  - Clone
+  - American colour: color
+  - Contacts
+  - Controller
+  - count in code: count
+  - COVID
+  - CRUD
+  - control abbreviation: Ctrl
+  - DA oh: DAO
+  - dbo
+  - Dear Prospective Client
+  - Delimited
+  - descending abbreviation: desc
+  - Dev express: DevExpress
+  - DevOps
+  - dialogue: dialog
+  - Docker
+  - DragonCapture
+  - Dwell
+  - Escrow
+  - falsy
+  - FileZilla
+  - Fullname
+  - General Utilities
+  - git ignore
+  - Github
+  - GMAIL
+  - Hotfix
+  - hours abbreviation: Hrs
+  - HubSpot
+  - IEnumerable
+  - iFrame
+  - Inbetweeners
+  - integer: int
+  - jQuery
+  - JSON
+  - Kilo
+  - KnowBrainer
+  - Multiple Launcher
+  - NavMenu
+  - new get: NuGet
+  - nullable
+  - nvarchar
+  - OData
+  - Office 365
+  - OneNote
+  - Opacity
+  - Overtime
+  - Packtex
+  - Partial
+  - PL SQL: PL/SQL
+  - PluralSight
+  - Printberry
+  - Purchase Order
+  - quantity abbreviation: Qty
+  - Recordset
+  - refactoring
+  - Requery
+  - San Fairy Ann
+  - Scrollbar
+  - SetFocus
+  - SQL light: SQLite
+  - Strava
+  - Syncfusion
+  - T sequel: T/SQL
+  - Tag Helper
+  - Taskbar
+  - TeamViewer
+  - Telerik
+  - TextBox
+  - Tiberium
+  - Todos
+  - Toggle
+  - touple
+  - Twilio
+  - uncomment
+  - Upwork
+  - View Bag: ViewBag
+  - Visual Studio
+  - VueJS
+  - Web API
+  - Windows Azure
+  - Zwift
+  - sequel: SQL
+  - sol: SQL
+  - sequel server: SQL Server
+  - sequel server management studio: SQL Server Management Studio
+  - ref
+  - Courier
+  - Cursor less: Cursorless
+  - raiser: Razor
+  - Radzen
+  - Nullable
+  - Rango
+  - axon lab,Axxonlab
+  - sea shop: C#
+  - sea sharp: C#
+  - pd: pdf
+  - my SQL: MySQL
+  - my sequel: MySQL
+
+List: user.website
+  - talon home page: http://talonvoice.com
+  - talon wiki: https://talon.wiki/
+  - #talon practice: https://chaosparrot.github.io/talon_practice/
+  - talon repository search: https://search.talonvoice.com/search/
+  - amazon shopping: https://www.amazon.co.uk/
+  - google calendar: https://calendar.google.com
+  - google maps: https://maps.google.com/
+  - gmail: https://mail.google.com/
+  - github: https://github.com/
+  - github gist: https://gist.github.com/
+  - wikipedia: https://en.wikipedia.org/
+  - youtube: https://www.youtube.com/
+  - twitch: https://www.twitch.tv/
+  - discord: https://discord.com/
+  - font awesome: https://fontawesome.com/search?o=r&m=free
+  - talon alphabet: https://witty-mud-047c12703.4.azurestaticapps.net/
+  - Upwork messages: https://www.upwork.com/messages
+  - azure portal: https://portal.azure.com/#home
+  - bbc weather: https://www.bbc.co.uk/weather
+
+List: user.model
+  - # The default model name
+  - model: model
+  - # OpenAI models
+  - four o mini: gpt-4o-mini
+  - four o: gpt-4o
+  - # If using user.model_endpoint = "llm", run `llm models` and add any models you want to use here.
+
+List: user.modelDestination
+  - # A list of adjectives/adverbs describing how the result of the GPT query should be returned
+  - # paste in place
+  - to this: paste
+  - # Paste above the current selection
+  - above: above
+  - # Past below the current selection
+  - below: below
+  - # Instead of pasting, return the result to the clipboard
+  - to clip: clipboard
+  - # Instead of pasting, add the result to the context
+  - to context: context
+  - # Instead of pasting, add the result to a new context
+  - to new context: newContext
+  - # Instead of pasting, append the result to the clipboard
+  - to after clip: appendClipboard
+  - # Open the result in the browser
+  - to browser: browser
+  - # Speak the result with TTS
+  - to speech: textToSpeech
+  - # Output the result in a talon imgui window
+  - to window: window
+  - # Select the response after insertion so you can apply subsequent prompts on it
+  - chain: chain
+  - # Insert the response as a snippet with placeholders (only works in vscode)
+  - snip: snip
+
+List: user.modelSource
+  - # A list of sources from which the model can take in data to process
+  - # Apply the prompt to the text on the clipboard
+  - clip: clipboard
+  - # Apply the prompt to the text in the context
+  - context: context
+  - # Apply the prompt to the currently selected text
+  - this: selection
+  - # Apply the prompt to the previously returned GPT response
+  - response: gptResponse
+  - # Apply the prompt to the last phrase typed by Talon via a user's dictation
+  - last: lastTalonDictation
+
+List: user.modelThread
+  - and: continueLast
+
+List: user.staticPrompt
+  - # Use static prompts as aliases for detailed instructions
+  - # Reduce verbosity and prevent the need to say the entire prompt each time time
+  - ## FIXES
+  - fix grammar formally: Fix any mistakes or irregularities in grammar, spelling, or formatting. Use a professional business tone. The text was created using voice dictation. Thus, there are likely to be issues regarding homophones and other misrecognitions. Do not change the original structure of the text.
+  - fix grammar: Fix any mistakes or irregularities in grammar, spelling, or formatting. The text was created using voice dictation. Thus, there are likely to be issues regarding homophones and other misrecognitions. Do not change the tone. Do not change the original structure of the text.
+  - fix syntax: Fix any syntax errors in this code selection. Do not change any behavior.
+  - ## FORMATTING
+  - format table: The following markdown text is raw data. There is no index. Return the text in a markdown table format. Each row has a new line in the original data.
+  - format bullets: Convert each paragraph into a heading with a series of bullet points underneath it. Each paragraph is separated by a new line. Separate paragraphs should not have combined bullet points. This should all be done in markdown syntax. If it is a small paragraph, then you can just leave it as a heading and not add bullet points. Do not reduce content, only reduce things that would be redundant. These bullet points should be in a useful format for notes for those who want to quickly look at it. If there is a citation in the markdown original, then keep the citation just at the top and not within every individual bullet point.
+  - format mermaid: Convert the following plain text into the text syntax for a mermaid diagram.
+  - format comment: Format the following text as a comment for the current programming language. Use the proper comment syntax for the current language. Split the comment into multiple lines if the lines are too long.
+  - group: Act as an organizer. The following text consists of various topics all put together. Please group these items into categories and label each category. Return just the results.
+  - join: Act as an editor. The following text is separated into multiple parts. Please group them together into one part maintaining the flow and meaning. Reorder in whatever way makes sense. Remove any redundant information. The result should be only one part with no additional structure. Return just the modified text.
+  - ## TEXT GENERATION
+  - explain: Explain this text in a way that is easier to understand for a layman without technical knowledge.
+  - summarize: Summarize this text into a format suitable for project notes.
+  - add context: Add additional text to the selected text that would be appropriate to the situation and add useful information.
+  - fit schema: The given text has a series of responses that need to be categorized. Each response has a key that needs to be mapped to a value. Infer the schema from the text unless it is given at the top of the text with prior examples. Return the key-value pairs in a JSON format unless you infer a different format.
+  - answer: Generate text that satisfies the question or request given in the input.
+  - shell: Generate a shell script that performs the following actions. Output only the command. Do not output any comments or explanations. Default to the bash shell unless otherwise specified.
+  - add emoji: Return the same exact text verbatim with the same formatting, but add emoji when appropriate in order to make the text fun and easier to understand.
+  - make softer: Act as an editor. I want you to make the following text softer in tone. Return just the modified text.
+  - make stronger: Act as an editor. I want you to make the following text stronger in tone. Return just the modified text.
+  - ## FILE CONVERSIONS
+  - convert to jason: Convert the following data into a JSON format.
+  - convert to markdown: Convert the following text into a markdown format.
+  - convert to python: Convert the following key-value pairs into the syntax for a Python dictionary. So you should serialize the key-value pairs into a native Python format.
+  - convert to sheet: Convert the following data into a CSV format.
+  - convert to yam: Convert the following data into a YAML format.
+  - ## CHECKERS
+  - describe code: Explain what the following code does in natural language at a high level without getting into the specifics of the syntax.
+  - check grammar: Check the grammar and formatting of the following text. Return a list of all potential errors.
+  - check spelling: Check the spelling of the following text. Return a list of all potential errors.
+  - check structure: Skim the structure and layout of the following text. Tell me if the structure and order of my writing are correct. If it is not correct or flows poorly, then tell me what might be wrong with it. If it is all correct, then say it looks good.
+  - ## TRANSLATIONS
+  - translate to english: Translate the following text into English.
+  - ## CODE GENERATION
+  - generate code: The following plaintext describes a process in code in the language that is specified by the system prompt. Please output the code necessary to do this. Return just code and not any natural language explanations.
+  - update comments: Act as a software engineer. The following code may be missing comments or the comments could be out of date. Please update the comments. If you are unsure how to comment something, ask a question in a comment instead. Return just the code and not any explanations.
+  - clean code: Act as a software engineer. Reduce any duplication in the selected code and improve it to be more idiomatic and clear for other users. However, do not change the behavior or functionality. Return just the code and not any explanations.
+  - improve semantics: The following is an HTML document. Keep the same structure and layout but if it is needed, change any elements to use proper semantic HTML and make sure it is implementing best practices for user accessibility. Output just the HTML and not any extra explanations.
+  - ## WRITING HELPERS
+  - add questions: Help me explore this question from multiple perspectives. For each perspective, ask follow-up questions and indicate what perspective is being taken.
+  - format outline: Create an outline that encapsulates the text below. Keep the number of sections between three and five to optimize for human working memory. Return just the outline.
+  - format prose: As an editor, format the following outline or summarization as prose. You can have headings and paragraphs. Avoid using bullet points. Reorder and add transitions as necessary to make the document flow. Return just the text.
+
+List: user.ocr_actions
+  - take: select
+  - copy: copy
+  - carve: cut
+  - paste to: paste
+  - paste link to: paste_link
+  - clear: delete
+  - change: delete
+  - delete: delete_with_whitespace
+  - chuck: delete_with_whitespace
+  - cap: capitalize
+  - no cap: uncapitalize
+  - no caps: uncapitalize
+  - lower: lowercase
+  - upper: uppercase
+  - bold: bold
+  - italic: italic
+  - strikethrough: strikethrough
+  - number: number_list
+  - bullet: bullet_list
+  - link: link
+
+List: user.ocr_common_actions
+  - select: select
+
+List: user.ocr_modifiers
+  - all: selectAll
+
+End of Talon Lists

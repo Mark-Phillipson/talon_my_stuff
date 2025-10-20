@@ -1,0 +1,21 @@
+title: WhatsApp
+-
+new chat: key(ctrl-n)
+close chat: key(ctrl-w)
+search: key(ctrl-f)
+search in chat: key(ctrl-shift-f)
+profile: key(ctrl-p)
+mute chat: key(ctrl-shift-m)
+toggle read: key(ctrl-shift-u)
+emoji panel: key(ctrl-shift-e)
+gif panel: key(ctrl-shift-g)
+sticker panel: key(ctrl-shift-s)
+previous chat: key(ctrl-shift-[)
+next chat: key(ctrl-shift-])
+open chat <user.number>:
+    key(ctrl:down)
+    input(number)
+    key(ctrl:up)
+edit last message: key(ctrl-up)
+zoom in: key(ctrl-+)
+zoom out: key(ctrl--)

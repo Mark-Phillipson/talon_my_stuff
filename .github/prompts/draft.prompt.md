@@ -1,0 +1,1 @@
+I would like to change the function to be able to take parameters and make it more generic and therefore rename it to launch_dotnet_project. Can you make the necessary edits for me?

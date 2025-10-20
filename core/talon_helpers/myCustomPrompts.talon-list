@@ -1,0 +1,22 @@
+list: user.customPrompt
+# Copy this file into your user directory and add your own custom prompts
+# Any prompts in this list are automatically added into the <user.modelPrompt> capture
+# and thus can be used like normal alongside all of the other model commands
+-
+
+# Example of a custom prompt that is unique to a user's personal workflow
+
+check language: I am learning a new foreign language. Check the grammar of what I have written and return feedback in English with references to what I wrote.
+
+joke: Tell me a joke
+
+explain python: I am having trouble understanding python code. Can you explain it to me?
+explain sharp: I am having trouble understanding C Sharp code. Can you explain it to me?
+explain razor: I am having trouble understanding razor code. Can you explain it to me?
+explain html: I am having trouble understanding HTML code. Can you explain it to me?
+explain css: I am having trouble understanding CSS code. Can you explain it to me?
+explain javascript: I am having trouble understanding JavaScript code. Can you explain it to me?
+
+improve code: I am having trouble with my code. Can you help me improve it, but leave it so it can still compile?
+improve text: I am having trouble with my text. Can you help me improve it?
+do: I am having trouble with a task. Can you help me with it?
