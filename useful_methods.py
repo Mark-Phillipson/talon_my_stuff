@@ -1,5 +1,5 @@
 from talon import Module, actions, ctrl
-import random, os
+import random, os, time
 from datetime import datetime
 import subprocess
 
@@ -7,10 +7,6 @@ mod = Module()
 
 @mod.action_class
 class Actions:
-    def mouse_hold_seconds(button: int = 0, seconds: float = 1.0):
-        """Hold the mouse button down for a specified number of seconds."""
-        hold_ms = int(seconds * 1000)
-        ctrl.mouse_click(button=button, hold=hold_ms)
     def fake_email() -> str:
         """make fake email"""
         random_number = random.randint(97, 122)
@@ -183,6 +179,12 @@ class Actions:
         """Custom click for games that might need the lower-level approach"""
         ctrl.mouse_click(button=button, hold=16000)
     def game_double_click(button: int = 0):
-        """Custom double click for games that might need the lower-level approach"""
-        ctrl.mouse_click(button=button, hold=16000)
-        ctrl.mouse_click(button=button, hold=16000)
+        """Custom double click for games that might need lower-level approach"""
+        ctrl.mouse_click(button, hold=16000)
+        time.sleep(1)
+        ctrl.mouse_click(button, hold=16000)
+    def mouse_hold_seconds(button: int = 0, seconds: float = 1.0):
+        """Hold the mouse button down for a specified number of seconds."""
+        print("Holding mouse button", button, "for", seconds, "seconds")
+        hold_ms = int(seconds * 1000)
+        ctrl.mouse_click(button, hold=hold_ms)
