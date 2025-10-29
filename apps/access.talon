@@ -22,6 +22,8 @@ run to cursor:
     key(ctrl-f8)
 toggle breakpoint:
     key(f9)
+continue:
+    key(f5)
 [toggle] breakpoint: key(f9)
 clear all breakpoints:
     key(ctrl-shift-f9)
@@ -32,7 +34,7 @@ compile:
     sleep(100ms)
     key(c)
 immediate window: key(ctrl-g)
-reset code: 
+reset code:
     key(alt-d)
     sleep(100ms)
     key(right)

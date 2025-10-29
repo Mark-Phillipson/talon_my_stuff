@@ -177,7 +177,7 @@ class Actions:
             print(f"Error opening path in VS Code: {e}")
     def game_click(button: int = 0):
         """Custom click for games that might need the lower-level approach"""
-        ctrl.mouse_click(button=button, hold=16000)
+        ctrl.mouse_click(button, hold=16000)
     def game_double_click(button: int = 0):
         """Custom double click for games that might need lower-level approach"""
         ctrl.mouse_click(button, hold=16000)

@@ -20,7 +20,7 @@ settings():
 tag(): user.talon_hud_automatic_hide
 game <user.arrow_key>:
     key(arrow_key)
-    repeat(4)
+    repeat(6)
 fly <user.arrow_key>:
     key(arrow_key)
     repeat(14)
@@ -59,9 +59,9 @@ ability four:
     key(v)
 ability five:
     key(b)
-select all units:
+[select] [all] units:
     key(q)
-select all units on screen:
+[select] [all] units [on] screen:
     key(w)
 
 # Camera controls
@@ -91,9 +91,8 @@ support power three:
     key(k)
 support power four:
     key(l)
-support power six:
+support power:
     key("'")
-
 # Build grid
 buildings tab:
     key(e)
@@ -108,19 +107,7 @@ aerial tab:
 production slot one:
     key(f1)
 take [all]:
-    mouse_move(60, 40)
-    sleep(30ms)
-    key(ctrl:down)
-    sleep(30ms)
-    # user.mouse_drag(0)
-    user.mouse_hold_seconds(0, 6)
-    sleep(30ms)
-    mouse_move(1670, 250)
-    sleep(30ms)
-    mouse_move(1670, 979)
-    sleep(30ms)
-    #user.game_click(0)
-    key(ctrl:up)
+    key(w)
 go home: key(backspace)
 pause [game]: key(keypad_multiply)
 hold escape: key(escape:down)
@@ -128,6 +115,9 @@ hold control: key(ctrl:down)
 release escape: key(escape:up)
 release control: key(ctrl:up)
 touch: user.game_click(0)
+context: user.game_click(1)
+middle: user.game_click(2)
+
 clear selection: user.mouse_hold_seconds(1, 3)
 focus one:
     key(1)

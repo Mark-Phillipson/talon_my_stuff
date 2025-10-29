@@ -183,6 +183,7 @@ click drowse:
     speech.disable()
     mouse_click(0)
 (clipboard search) | (search clipboard):           key(ctrl-shift-f12)
+(clip search) | (search clip):           key(ctrl-shift-f12)
 start recording: 
     user.switcher_focus("obs64.exe")
     key(ctrl-super-shift-r)
@@ -237,3 +238,21 @@ talon menu:
     key(right)
 music to code by:
     user.play_music_to_code_by()
+# open microphone settings (For when the microphone is playing up on Windows)
+key(ctrl-f12) :
+    sleep(500ms)
+    key(super-r)
+    sleep(500ms)
+    insert("ms-settings:sound")
+    sleep(500ms)
+    key(enter)
+    sleep(500ms)
+    key(tab:8)
+[open] microphone settings:
+    key(super-r)
+    sleep(500ms)
+    insert("ms-settings:sound")
+    sleep(500ms)
+    key(enter)
+    sleep(800ms)
+    key(tab:8)
