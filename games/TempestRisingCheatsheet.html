@@ -76,7 +76,16 @@
 
 <body>
     <div class="container">
-        <h1>Tempest Rising Voice Command Cheatsheet</h1>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+            <h1 style="margin:0;font-size:2em;">Tempest Rising Voice Command Cheatsheet</h1>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <span
+                    style="color:#ffe066;font-size:13px;background:#22242a;padding:4px 10px;border-radius:5px;border:1px solid #333;">Filter
+                    (<b>Alt+Q</b>)</span>
+                <input type="text" id="filterBox" accesskey="q" placeholder="Type to filter commands or descriptions..."
+                    style="width:340px;max-width:50vw;font-size:16px;padding:8px;background:#22242a;color:#ffe066;border:1.5px solid #333;border-radius:6px;box-shadow:0 2px 8px #0003;">
+            </div>
+        </div>
         <h2>Abilities</h2>
         <table>
             <tr>
@@ -318,6 +327,26 @@
             </tr>
         </table>
     </div>
+    <script>
+        // Filter all tables by textbox input
+        document.getElementById('filterBox').addEventListener('input', function () {
+            const filter = this.value.toLowerCase();
+            document.querySelectorAll('.container table').forEach(table => {
+                // Hide header if filtering, show if not
+                const headerRow = table.rows[0];
+                headerRow.style.display = (filter === '') ? '' : 'none';
+                // For each row (skip header)
+                Array.from(table.rows).forEach((row, idx) => {
+                    if (idx === 0) return; // skip header
+                    let match = false;
+                    Array.from(row.cells).forEach(cell => {
+                        if (cell.textContent.toLowerCase().includes(filter)) match = true;
+                    });
+                    row.style.display = (filter === '' || match) ? '' : 'none';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
