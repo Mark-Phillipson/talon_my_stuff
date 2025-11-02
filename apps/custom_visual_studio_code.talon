@@ -445,3 +445,4 @@ send to pilot:
 pilot window toggle: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
 (panel | terminal | pane | pain) window toggle: user.vscode("workbench.action.toggleMaximizedPanel")
 show notifications: user.vscode("notifications.showList")
+what can I say: user.vscode("talon.searchCommands")

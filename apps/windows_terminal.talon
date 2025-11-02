@@ -1,4 +1,4 @@
-app: WindowsTerminal.exe
+app.exe: windowsterminal.exe
 -
 tag(): terminal
 tag(): user.tabs
@@ -21,7 +21,6 @@ move pane <number_small>:
 move pane left: key(ctrl-shift-left)
 move pane right: key(ctrl-shift-right)
 move pane up: key(ctrl-shift-up)
-
 resize pane: key(ctrl-shift-')
 export text:
     key(ctrl-shift-p)
@@ -29,15 +28,9 @@ export text:
     insert("export ")
     sleep(50ms)
     key(enter)
-go [command] palette:
+[go command] palette:
     key(ctrl-shift-p)
 hunt this: key(ctrl-shift-f)
-# pilot explain <user.text>:
-#     insert("gh copilot explain ")
-#     insert(user.text)
-# pilot suggest <user.text>:
-#     insert("gh copilot suggest ")
-#     insert(user.text)
 create issue [<user.text>]:
     insert("gh issue create ")
     insert(user.text)
@@ -53,3 +46,7 @@ create rails controller:
     insert("rails generate controller name action ")
 select all: key(ctrl-shift-a)
 copy that: key(ctrl-c)
+talon log:
+    xinsert("Get-Content C:\\Users\\MPhil\\AppData\\Roaming\\talon\\talon.log -Wait")
+talon log clear:
+    insert("Clear-Content C:\\Users\\MPhil\\AppData\\Roaming\\talon\\talon.log")
