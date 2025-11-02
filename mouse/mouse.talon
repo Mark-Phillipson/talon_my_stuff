@@ -47,43 +47,50 @@ taskbar <user.screen_step_two> <user.number_signed_small>:
 <user.screen_step_one> ribbon:
     mouse_move(screen_step_one, 80)
     mouse_click(0)
-nudge left <number>:
+nudge left [<number>]:
     position_x = mouse_x()
     position_y = mouse_y()
-    mouse_move(position_x - number, position_y)
-nudge right <number>:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(position_x + number, position_y)
-nudge up <number>:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y - number)
-nudge down <number>:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y + number)
+    amount = number or 1
+    mouse_move(position_x - amount, position_y)
 
-# Two-syllable mouse movement commands (move by 10 pixels)
+nudge right [<number>]:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    amount = number or 1
+    mouse_move(position_x + amount, position_y)
+
+nudge up [<number>]:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    amount = number or 1
+    mouse_move(position_x, position_y - amount)
+
+nudge down [<number>]:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    amount = number or 1
+    mouse_move(position_x, position_y + amount)
+
+# Two-syllable mouse movement commands (move by 5 pixels)
 (nudgee | nudgey | noddy):
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y - 10)
+    mouse_move(position_x, position_y - 5)
 
 droppy:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y + 10)
+    mouse_move(position_x, position_y + 5)
 
 leeway:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x - 10, position_y)
+    mouse_move(position_x - 5, position_y)
 
 rifty:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x + 10, position_y)
+    mouse_move(position_x + 5, position_y)
 (lower | low) left <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
