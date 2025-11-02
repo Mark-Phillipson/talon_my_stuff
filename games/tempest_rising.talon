@@ -49,15 +49,15 @@ patrol:
     key(f)
 Hold:
     key(g)
-[(Unit |) Command Slot 1]:
+[Unit] Command Slot 1:
     key(z)
-[(Unit |) Command Slot 2]:
+[Unit] Command Slot 2:
     key(x)
-[(Unit |) Command Slot 3]:
+[Unit] Command Slot 3:
     key(c)
-[(Unit |) Command Slot 4]:
+[Unit] Command Slot 4:
     key(v)
-[(Unit |) Command Slot 5]:
+[Unit] Command Slot 5:
     key(b)
 [select] [all] units:
     key(q)
