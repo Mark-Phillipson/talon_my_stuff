@@ -1,26 +1,26 @@
-app: msedge.exe
+app: microsoft_edge
 title: /chatgpt|chat gpt/i
 -
 
-new chat: 
+new chat:
     key(ctrl-shift-o)
 
-focus input: 
+focus input:
     key(shift-esc)
 
-copy code block: 
+copy code block:
     key(ctrl-shift-;)
 
-copy response: 
+copy response:
     key(ctrl-shift-c)
 
-set instructions: 
+set instructions:
     key(ctrl-shift-i)
 
-toggle sidebar: 
+toggle sidebar:
     key(ctrl-shift-s)
 
-delete chat: 
+delete chat:
     key(ctrl-shift-backspace)
 ask it | basket:
     insert("?")

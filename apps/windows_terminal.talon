@@ -47,6 +47,6 @@ create rails controller:
 select all: key(ctrl-shift-a)
 copy that: key(ctrl-c)
 talon log:
-    xinsert("Get-Content C:\\Users\\MPhil\\AppData\\Roaming\\talon\\talon.log -Wait")
+    insert("Get-Content C:\\Users\\MPhil\\AppData\\Roaming\\talon\\talon.log -Wait")
 talon log clear:
     insert("Clear-Content C:\\Users\\MPhil\\AppData\\Roaming\\talon\\talon.log")

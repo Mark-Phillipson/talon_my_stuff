@@ -1,4 +1,4 @@
-app: msedge.exe
+app: microsoft_edge
 title: gmail
 -
 align left:                 key(ctrl-shift-l)
