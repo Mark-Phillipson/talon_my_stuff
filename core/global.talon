@@ -1,12 +1,5 @@
 emoji {user.emoji}: user.paste(emoji)
 
-^game mode$:
-    mode.enable("game")
-    mode.enable("command")
-    mode.disable("dictation")
-    mode.disable("sleep")
-^game mode off$:
-    mode.disable("game")
 pick <number_small>: user.pick_item(number_small)
 pick to: user.pick_item(2)
 pick <user.word>:

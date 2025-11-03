@@ -256,3 +256,4 @@ key(ctrl-f12) :
     key(enter)
     sleep(800ms)
     key(tab:8)
+middle click: mouse_click(2)

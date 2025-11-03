@@ -1,4 +1,5 @@
 app.name: TempestGame
+#app.exe: tempest-win64-shipping.exe
 app.app: tempestgame
 -
 settings():
@@ -83,15 +84,15 @@ sell structure:
     key(o)
 toggle power:
     key(p)
-[(select |) (all |) units]:
+[select all] units:
     key(q)
-[(select |) (all |) units (on screen |)]:
+units screen:
     key(w)
-[(Player Command |) Slot 1]:
+Slot 1:
     key(h)
-[(Player Command |) Slot 2]:
+Slot 2:
     key(j)
-[(Player Command |) Slot 3]:
+Slot 3:
     key(k)
 support power four:
     key(l)
@@ -100,25 +101,26 @@ support power:
 # Build grid
 buildings tab:
     key(e)
-[(tab |) buildings]:
+buildings:
     key(e)
-[(tab |) defenses]:
+defenses:
     key(r)
-[(tab |) infantry]:
+infantry:
     key(t)
-[(tab |) vehicles]:
+vehicles:
     key(y)
-[(tab |) aerial]:
+aerial:
     key(u)
-[(production |) slot one]:
+production slot one:
     key(f1)
 defenses tab:
     key(r)
 infantry tab:
     key(t)
-[(support |) power four]:
+
+[support] power for:
     key(l)
-[(support |) power]:
+[support] power:
     key("'")
 vehicles tab:
     key(y)
@@ -144,28 +146,28 @@ focus one:
     sleep(30ms)
     key(1)
 focus two:
-[(screen |) infantry]:
-    key(lshift-w)
+screen infantry:
+    key(shift-w)
     sleep(30ms)
     key(rshift-w)
-[(screen |) vehicles]:
-    key(lctrl-w)
+screen vehicles:
+    key(ctrl-w)
     sleep(30ms)
     key(rctrl-w)
-[(screen |) air]:
-    key(lalt-w)
+screen air:
+    key(alt-w)
     sleep(30ms)
     key(ralt-w)
-[(structures |) infantry]:
-    key(lctrl-t)
+structures infantry:
+    key(ctrl-t)
     sleep(30ms)
     key(rctrl-t)
-[(structures |) vehicle]:
-    key(lalt-t)
+structures vehicle:
+    key(alt-t)
     sleep(30ms)
     key(ralt-t)
-[(structures |) air]:
-    key(lctrl-t)
+structures air:
+    key(ctrl-t)
     sleep(30ms)
     key(rctrl-t)
     key(2)
@@ -180,38 +182,38 @@ focus four:
     sleep(30ms)
     key(4)
 all infantry:
-    key(lshift-q)
+    key(shift-q)
     sleep(30ms)
     key(rshift-q)
 all vehicles:
-    key(lctrl-q)
+    key(ctrl-q)
     sleep(30ms)
     key(rctrl-q)
 every unit:
-    key(lalt-q)
+    key(alt-q)
     sleep(30ms)
     key(ralt-q)
 screen infantry:
-    key(lshift-w)
+    key(shift-w)
     sleep(30ms)
     key(rshift-w)
 screen vehicles:
-    key(lctrl-w)
+    key(ctrl-w)
     sleep(30ms)
     key(rctrl-w)
 screen air:
-    key(lalt-w)
+    key(alt-w)
     sleep(30ms)
     key(ralt-w)
 infantry structures:
-    key(lctrl-t)
+    key(ctrl-t)
     sleep(30ms)
     key(rctrl-t)
 vehicle structures:
-    key(lalt-t)
+    key(alt-t)
     sleep(30ms)
     key(ralt-t)
 air structures:
-    key(lctrl-t)
+    key(ctrl-t)
     sleep(30ms)
     key(rctrl-t)

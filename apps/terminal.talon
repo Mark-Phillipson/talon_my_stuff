@@ -28,6 +28,10 @@ dotnet run:
     insert("dotnet run")
     sleep(100ms)
     key(enter)
+dotnet restore:
+    insert("dotnet restore")
+    sleep(100ms)
+    key(enter)
 dotnet add package:
     insert("dotnet add package ")
 previous [directory]:
