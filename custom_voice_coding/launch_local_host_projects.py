@@ -4,6 +4,10 @@ import time
 import webbrowser
 from typing import Optional
 
+# VoiceLauncher publish path variable
+VOICE_LAUNCHER_PUBLISH_PATH = r"C:\Users\MPhil\source\repos\VoiceLauncherBlazor\VoiceLauncher\bin\Release\net9.0\win-x64\publish"
+VOICE_LAUNCHER_EXE = VOICE_LAUNCHER_PUBLISH_PATH + r"\VoiceLauncher.exe"
+
 mod = Module()
 
 @mod.action_class
@@ -11,18 +15,19 @@ class Actions:
     def launch_voice_admin():
         """Launch voice admin"""
         uri = "http://localhost:5000/launchersfavourites"
-        psi = subprocess.Popen(["C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\win-x86\\publish\\VoiceLauncher.exe"], 
-                                shell=True, 
-                                cwd="C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\win-x86\\publish\\",
-                                creationflags=subprocess.CREATE_NEW_CONSOLE)
+        psi = subprocess.Popen([VOICE_LAUNCHER_EXE],
+                               shell=True,
+                               cwd=VOICE_LAUNCHER_PUBLISH_PATH,
+                               creationflags=subprocess.CREATE_NEW_CONSOLE)
 
-        uri = "http://localhost:5000/launchersfavourites"
-        psi = subprocess.Popen(["C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\publish\\VoiceLauncher.exe"], 
-                                shell=True, 
-                                cwd="C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher\\bin\\Release\\net9.0\\publish\\",
-                                creationflags=subprocess.CREATE_NEW_CONSOLE)
+        # The second launch seems redundant, but keeping as in original
+        psi = subprocess.Popen([VOICE_LAUNCHER_EXE],
+                               shell=True,
+                               cwd=VOICE_LAUNCHER_PUBLISH_PATH,
+                               creationflags=subprocess.CREATE_NEW_CONSOLE)
 
         subprocess.Popen(["start", uri], shell=True)
+        # VOICE_LAUNCHER_PUBLISH_PATH
 
     def launch_talon_voice_command_server():
         """Launch Talon Voice Command Server (backwards-compatible wrapper)"""
