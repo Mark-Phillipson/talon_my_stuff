@@ -186,9 +186,3 @@ open terminal settings:
     sleep(100ms)
     insert("terminal.integrated.defaultProfile.windows")
     key(enter)
-list directories:
-    insert("Get-ChildItem -Directory")
-    sleep(100ms)
-    key(enter)
-kill dotnet:
-    insert("Get-Process dotnet | Stop-Process -Force")

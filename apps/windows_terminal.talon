@@ -46,7 +46,3 @@ create rails controller:
     insert("rails generate controller name action ")
 select all: key(ctrl-shift-a)
 copy that: key(ctrl-c)
-talon log:
-    insert("Get-Content C:\\Users\\MPhil\\AppData\\Roaming\\talon\\talon.log -Wait")
-talon log clear:
-    insert("Clear-Content C:\\Users\\MPhil\\AppData\\Roaming\\talon\\talon.log")
