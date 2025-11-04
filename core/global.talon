@@ -43,9 +43,11 @@ tab clothes: user.tab_close_wrapper()
     insert("?")
     sleep(200ms)
     key(enter)
+# Keep getting misrecognitions using title <user.prose>$, so including total
 total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
-glide [cursor]: key(super-alt-.)
-zoom it: key(super-ctrl-f8)
+#glide [cursor]: key(super-alt-.)
+#zoom it: key(super-ctrl-f8)
+# for the natural language commands Visual Studio Code extension
 natural:
     key(f1)
     sleep(100ms)

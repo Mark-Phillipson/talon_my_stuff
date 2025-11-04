@@ -190,3 +190,5 @@ list directories:
     insert("Get-ChildItem -Directory")
     sleep(100ms)
     key(enter)
+kill dotnet:
+    insert("Get-Process dotnet | Stop-Process -Force")

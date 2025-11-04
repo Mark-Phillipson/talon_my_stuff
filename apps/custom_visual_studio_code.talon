@@ -104,15 +104,15 @@ new file:
     key(menu)
     sleep(100ms)
     key(down)
-please dotnet:
+palette dotnet:
     key(f1)
     sleep(300ms)
     insert(".NET")
     sleep(100ms)
     key(enter)
-go [command] palette:
+[command] palette:
     key(ctrl-shift-p)
-palate | palette: key(ctrl-shift-p)
+palate: key(ctrl-shift-p)
 open recent: user.vscode("workbench.action.openRecent")
 
 # Manipulate Code
