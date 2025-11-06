@@ -186,3 +186,7 @@ open terminal settings:
     sleep(100ms)
     insert("terminal.integrated.defaultProfile.windows")
     key(enter)
+kill dotnet:
+    insert("Stop-Process -Name dotnet -Force")
+    sleep(100ms)
+    key(enter)
