@@ -126,8 +126,6 @@ vehicles tab:
     key(y)
 aerial tab:
     key(u)
-production slot one:
-    key(f1)
 take [all]:
     key(w)
 go home: key(backspace)
@@ -150,10 +148,6 @@ screen infantry:
     key(shift-w)
     sleep(30ms)
     key(rshift-w)
-screen vehicles:
-    key(ctrl-w)
-    sleep(30ms)
-    key(rctrl-w)
 screen air:
     key(alt-w)
     sleep(30ms)
@@ -193,18 +187,10 @@ every unit:
     key(alt-q)
     sleep(30ms)
     key(ralt-q)
-screen infantry:
-    key(shift-w)
-    sleep(30ms)
-    key(rshift-w)
 screen vehicles:
     key(ctrl-w)
     sleep(30ms)
     key(rctrl-w)
-screen air:
-    key(alt-w)
-    sleep(30ms)
-    key(ralt-w)
 infantry structures:
     key(ctrl-t)
     sleep(30ms)

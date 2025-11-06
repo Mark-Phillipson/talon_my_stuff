@@ -188,3 +188,15 @@ class Actions:
         print("Holding mouse button", button, "for", seconds, "seconds")
         hold_ms = int(seconds * 1000)
         ctrl.mouse_click(button, hold=hold_ms)
+    def open_tree_item_in_explorer(letters: str):
+        """Get the path for the given letters and open File Explorer at that location."""
+        # Get the path using the RPC command
+        path = actions.user.run_rpc_command("talon-filetree.getPath", letters)
+        if path:
+            if os.path.isfile(path):
+                folder = os.path.dirname(path)
+            else:
+                folder = path
+            subprocess.Popen(["explorer", folder])
+        else:
+            print(f"Could not resolve path for letters: {letters}")
