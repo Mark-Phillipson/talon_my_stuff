@@ -257,3 +257,4 @@ key(ctrl-f12) :
     sleep(800ms)
     key(tab:8)
 middle click: mouse_click(2)
+penta: key(enter)
