@@ -9,12 +9,11 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 32
-    # Zoom Mouse Options     
+    # Zoom Mouse Options
     tracking.zoom_live = true
     tracking.zoom_height = 300
     tracking.zoom_width = 300
     tracking.zoom_scale = 4
-    
 
 # This is a list of the commands that are specific to the Company of Heroes 2 game
 tag(): user.talon_hud_automatic_hide
@@ -41,13 +40,13 @@ stop:
 reinforce:
     key(r:10)
 fuel:
-    key(b)    
+    key(b)
     sleep(20ms)
     key(f)
     sleep(20ms)
     mouse_click(0)
 munition:
-    key(b)    
+    key(b)
     sleep(20ms)
     key(m)
     sleep(20ms)
@@ -55,17 +54,17 @@ munition:
 trench:
     key(b)
     sleep(20ms)
-    key(t)    
+    key(t)
     sleep(20ms)
     mouse_click(0)
 wall:
-    key(b)    
+    key(b)
     sleep(20ms)
     key(w)
     sleep(20ms)
     mouse_click(0)
 bofors:
-    key(b)    
+    key(b)
     sleep(20ms)
     key(b)
     sleep(20ms)
@@ -108,7 +107,7 @@ go there:
     key(.)
 [all] vehicles:
     key(ctrl-/)
-queue: 
+queue:
     key(shift:down)
     sleep(30ms)
     mouse_click(1)
@@ -129,11 +128,11 @@ explode:
 hold shift:
     key(shift:down)
 release shift:
-    key(shift:up)    
+    key(shift:up)
 [all] soldiers:
     key(ctrl-.)
 [all] invade:
-    key(ctrl-.)   
+    key(ctrl-.)
     sleep(30ms)
     key(a)
     sleep(30ms)
@@ -204,35 +203,35 @@ slot first:
     mouse_move(522, 862)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 slot second:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(602, 853)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 slot third:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(680, 852)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 slot fourth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(766, 856)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 slot fifth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(852, 859)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 zoom out: user.mouse_scroll_down()
 zoom: user.mouse_scroll_up()
 zoom right out:
@@ -295,188 +294,188 @@ zoom right in:
     sleep(30ms)
     user.mouse_scroll_up()
 
-touch first: 
+touch first:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1890, 115)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 touch second:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1830, 120)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 touch third:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1780, 120)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 touch fourth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1720, 120)
     sleep(30ms)
-    mouse_click(0)  
-    mouse_move(position_x , position_y )
+    mouse_click(0)
+    mouse_move(position_x, position_y)
 touch fifth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1660, 120)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 touch sixth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1610, 120)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 touch seventh:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1550, 120)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 touch eighth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1500, 120)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 touch ninth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1440, 120)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 get stuff:
     mouse_move(380, 855)
     sleep(30ms)
     mouse_click(0)
-vehicle first: 
+vehicle first:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1885, 225)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 vehicle second:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1835, 230)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 vehicle third:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1785, 230)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 vehicle fourth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1720, 230)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 vehicle fifth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1660, 230)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 vehicle sixth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1600, 230)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 vehicle seventh:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1540, 230)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement first:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1885, 345)
     sleep(30ms)
-    mouse_click(0)    
-    mouse_move(position_x , position_y )
+    mouse_click(0)
+    mouse_move(position_x, position_y)
 emplacement second:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1835, 350)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement third:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1780, 340)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement fourth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1720, 340)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement fifth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1670, 348)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement sixth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1620, 350)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement seventh:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1570, 340)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement eighth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1520, 340)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 emplacement ninth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1470, 340)
     sleep(30ms)
     mouse_click(0)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 group one:
     key(shift-1)
-    key(ctrl-1)    
+    key(ctrl-1)
 group two:
     key(shift-2)
     key(ctrl-2)
@@ -500,12 +499,12 @@ group eight:
     key(ctrl-8)
 group nine:
     key(shift-9)
-    key(ctrl-9) 
+    key(ctrl-9)
 group zero:
     key(shift-0)
     key(ctrl-0)
 kill tank:
-    key(7)    
+    key(7)
     sleep(30ms)
     key(a)
     sleep(30ms)
@@ -515,7 +514,7 @@ reverse:
     sleep(30ms)
     mouse_click(0)
 retreat:
-    key(u)    
+    key(u)
     sleep(30ms)
     mouse_click(0)
 antitank:
@@ -527,7 +526,7 @@ antitank:
     sleep(30ms)
     mouse_click(0)
     sleep(30ms)
-    mouse_move(position_x , position_y )
+    mouse_move(position_x, position_y)
 one attack:
     key(1)
     sleep(30ms)
@@ -594,7 +593,7 @@ rotate small:
     position_y = user.query_mouse_position_y()
     adjustment = 100
     sleep(300ms)
-    mouse_move(position_x - adjustment , position_y)
+    mouse_move(position_x - adjustment, position_y)
     sleep(300ms)
     key(alt:up)
 rotate right:
@@ -603,7 +602,7 @@ rotate right:
     position_y = user.query_mouse_position_y()
     adjustment = 8000
     sleep(300ms)
-    mouse_move(position_x - adjustment , position_y)
+    mouse_move(position_x - adjustment, position_y)
     sleep(300ms)
     key(alt:up)
 rotate left:
@@ -612,7 +611,7 @@ rotate left:
     position_y = user.query_mouse_position_y()
     adjustment = 8000
     sleep(300ms)
-    mouse_move(position_x + adjustment , position_y)
+    mouse_move(position_x + adjustment, position_y)
     sleep(300ms)
     key(alt:up)
 six o'clock:
@@ -772,7 +771,7 @@ zero back:
     key(u)
     sleep(30ms)
     mouse_click(0)
-ante run:
+(ante | antitank) run:
     key(home)
     sleep(30ms)
     key(7)
@@ -796,4 +795,3 @@ attack there:
     key(a)
     sleep(50ms)
     mouse_click(0)
-    

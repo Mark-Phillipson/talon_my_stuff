@@ -106,11 +106,11 @@ buildings:
 defenses:
     key(r)
 infantry:
-    key(t)
+    key(shift-q)
 vehicles:
-    key(y)
+    key(ctrl-q)
 aerial:
-    key(u)
+    key(alt-q)
 production slot one:
     key(f1)
 defenses tab:
@@ -203,3 +203,7 @@ air structures:
     key(ctrl-t)
     sleep(30ms)
     key(rctrl-t)
+sprint:
+    key(z)
+    sleep(30ms)
+    user.game_click(0)

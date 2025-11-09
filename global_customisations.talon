@@ -166,8 +166,9 @@ voice typing:
     key(ctrl-n)
     sleep(500ms)
     key(super-h)
-[enter] my name:              insert("Mark Phillipson")
-[enter] my last name:         insert("Phillipson")
+[enter] first name:              insert("Mark ")
+[enter] my name:              insert("Mark Phillipson ")
+[enter] last name:         insert("Phillipson ")
 [enter] army number:          insert("24593308")
 [enter] default Github:       insert("https://github.com/Mark-Phillipson/BlazorCRUD_UIGenerator")
 key(keypad_plus):           speech.disable()
@@ -246,7 +247,7 @@ key(ctrl-f12) :
     insert("ms-settings:sound")
     sleep(500ms)
     key(enter)
-    sleep(500ms)
+    sleep(500ms)pp
     key(tab:8)
 [open] microphone settings:
     key(super-r)
@@ -258,3 +259,5 @@ key(ctrl-f12) :
     key(tab:8)
 middle click: mouse_click(2)
 penta: key(enter)
+#pnoise(pop): key(p)
+#noise(dental_click): key(d)

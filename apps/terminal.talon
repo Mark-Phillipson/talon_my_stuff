@@ -190,3 +190,7 @@ kill dotnet:
     insert("Stop-Process -Name dotnet -Force")
     sleep(100ms)
     key(enter)
+kill and watch:
+    insert("Stop-Process -Name dotnet -Force; dotnet watch run")
+    sleep(100ms)
+    key(enter)

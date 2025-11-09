@@ -1,1 +1,0 @@
-Is it possible for you to connect to my voice launcher database using the SQL server tools and then produce a diagram of a couple of tables with relationships in the database schema in markdown and mermaid?
