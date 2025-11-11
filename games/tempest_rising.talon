@@ -207,3 +207,23 @@ sprint:
     key(z)
     sleep(30ms)
     user.game_click(0)
+map one:
+    mouse_move(1720, 85)
+    sleep(30ms)
+    user.game_click(0)
+map two:
+    mouse_move(1850, 85)
+    sleep(30ms)
+    user.game_click(0)  
+map three:
+    mouse_move(1720, 195)
+    sleep(30ms)
+    user.game_click(0)
+map four:
+    mouse_move(1850, 195)
+    sleep(30ms)
+    user.game_click(0)
+map center:
+    mouse_move(1770, 140)
+    sleep(30ms)
+    user.game_click(0)
