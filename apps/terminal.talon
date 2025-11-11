@@ -68,6 +68,10 @@ dotnet clean:
     insert("dotnet clean")
     sleep(100ms)
     key(enter)
+don't net clean:
+    insert("dotnet clean")
+    sleep(100ms)
+    key(enter)
 dotnet test:
     insert("dotnet test")
     sleep(100ms)

@@ -34,6 +34,7 @@ ctx_default.lists["user.snippet_category"] = {
 "File Extensions":"File Extensions",
 "Files":"Files",
 "Fluent API":"Fluent API",
+"Folder Navigation":"Folder Navigation",
 "Folders":"Folders",
 "Functions":"Functions",
 "Hypertext Helper":"Hypertext Helper",

@@ -137,7 +137,7 @@ release control: key(ctrl:up)
 touch: user.game_click(0)
 context: user.game_click(1)
 middle: user.game_click(2)
-
+(duke | kind): user.game_click(0)
 clear selection: user.mouse_hold_seconds(1, 3)
 focus one:
     key(1)
@@ -178,7 +178,7 @@ focus four:
 all infantry:
     key(shift-q)
     sleep(30ms)
-    key(rshift-q)
+    key(shift-q)
 all vehicles:
     key(ctrl-q)
     sleep(30ms)
