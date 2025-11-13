@@ -1,12 +1,7 @@
-os: windows
-and app.name: Windows PowerShell
-os: windows
-app: windows_terminal
-and win.title: /PowerShell/
-os: windows
-and app.exe: powershell.exe
+app.exe: windowsterminal.exe
+app.exe: cmd.exe
 -
-list directories:
+list (directories | folders):
     insert("Get-ChildItem -Directory")
     sleep(100ms)
     key(enter)

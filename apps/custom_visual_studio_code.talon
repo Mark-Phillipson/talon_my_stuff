@@ -288,7 +288,7 @@ merge lines: user.vscode("editor.emmet.action.mergeLines")
 toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
-
+pilot quick chat: user.vscode("workbench.action.openQuickChat")
 pilot beast mode:
     key(ctrl-. )
     sleep(100ms)
@@ -448,3 +448,4 @@ show notifications: user.vscode("notifications.showList")
 what can I say: user.vscode("talon.searchCommands")
 tree [open] explorer <user.letters>:
     user.open_tree_item_in_explorer(letters)
+dev reload: user.vscode("workbench.action.reloadWindow")

@@ -173,8 +173,10 @@ voice typing:
 [enter] default Github:       insert("https://github.com/Mark-Phillipson/BlazorCRUD_UIGenerator")
 key(keypad_plus):           speech.disable()
 key(keypad_minus):          speech.enable()
-ziggy <user.text>: #do nothing calling amazon Echo device
-Alexa <user.text>: #do nothing calling amazon PC app
+#do nothing calling amazon Echo device
+ziggy <user.text>: 
+#do nothing calling amazon PC app
+Alexa <user.text>: 
 
 drowse:
     #app.notify('I feel drowsy.', 'Talon Now Sleeping', 'DROWSE', true)
@@ -183,8 +185,10 @@ press alt: key(alt)
 click drowse:
     speech.disable()
     mouse_click(0)
-(clipboard search) | (search clipboard):           key(ctrl-shift-f12)
-(clip search) | (search clip):           key(ctrl-shift-f12)
+(clipboard search) | (search clipboard):           
+    key(ctrl-shift-f12)
+(clip search) | (search clip):           
+    key(ctrl-shift-f12)
 start recording: 
     user.switcher_focus("obs64.exe")
     key(ctrl-super-shift-r)
@@ -196,7 +200,7 @@ stop recording:
     sleep(50ms)
     app.notify('Running OBS stop record command', 'Message From Talon Voice', 'TALON', true)
 {user.naughty_words}:
-        app.notify("That's quite enough of that", "More Money for the Sware Jar!", "TALON", true)
+        app.notify("That's quite enough of that", "More Money for the Swear Jar!", "TALON", true)
 take line: 
     key(end)
     sleep(50ms)
@@ -247,7 +251,7 @@ key(ctrl-f12) :
     insert("ms-settings:sound")
     sleep(500ms)
     key(enter)
-    sleep(500ms)pp
+    sleep(500ms)
     key(tab:8)
 [open] microphone settings:
     key(super-r)
