@@ -378,8 +378,8 @@ fix errors:
     insert("Please Fix All Build Errors and Warnings!")
     sleep(100ms)
     key(enter)
-stop the agent:
-    mouse_move(1872, 980)
+stop [the] agent:
+    mouse_move(1645, 945)
     mouse_click(0)
 
 run prompt [in] new [pilot]:
@@ -449,3 +449,5 @@ what can I say: user.vscode("talon.searchCommands")
 tree [open] explorer <user.letters>:
     user.open_tree_item_in_explorer(letters)
 dev reload: user.vscode("workbench.action.reloadWindow")
+activity [bar] hide: user.vscode("workbench.action.activityBarLocation.hide")
+activity [bar] focus: user.vscode("workbench.action.focusActivityBar")

@@ -64,7 +64,7 @@ list all [directory]:
     sleep(100ms)
     key(enter)
 current [directory]: insert("cd ")
-dotnet clean:
+(dotnet | terminal) clean:
     insert("dotnet clean")
     sleep(100ms)
     key(enter)

@@ -356,14 +356,14 @@ ctx.lists["user.screen_step_vertical_monitor_two"] = list(steps_vertical_monitor
 @mod.capture(rule="{user.screen_step_one}")
 def screen_step_one(m) -> int:
     "Get horizontal pixel screen coordinate for monitor one"
-    actual=steps_monitor_one[m.screen_step_one] - 1680
+    actual=steps_monitor_one[m.screen_step_one] 
     print(actual)
     return actual
 
 @mod.capture(rule="{user.screen_step_two}")
 def screen_step_two(m) -> int:
     "Get horizontal pixel screen coordinate for monitor two"
-    actual=steps_monitor_two[m.screen_step_two] - 1680
+    actual=steps_monitor_two[m.screen_step_two] 
     return actual
 
 @mod.capture(rule="{user.screen_step_two_commandconquer}")

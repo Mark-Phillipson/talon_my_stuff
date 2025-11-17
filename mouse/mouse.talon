@@ -1,18 +1,18 @@
 <user.screen_step_one> <user.screen_step_vertical> (move | position):
-    vertical = screen_step_vertical + 30
+    vertical = screen_step_vertical
     mouse_move(screen_step_one, vertical)
 <user.screen_step_two> <user.screen_step_vertical_monitor_two> (move | position):
-    vertical = screen_step_vertical_monitor_two
+    vertical = screen_step_vertical_monitor_two -30
     mouse_move(screen_step_two, vertical)
 <user.screen_step_one> <user.screen_step_vertical> (click | touch):
-    vertical = screen_step_vertical + 30
+    vertical = screen_step_vertical
     mouse_move(screen_step_one, vertical)
     mouse_click(0)
 <user.screen_step_two> <user.screen_step_vertical_monitor_two> (click | touch):
-    mouse_move(screen_step_two, screen_step_vertical_monitor_two)
+    mouse_move(screen_step_two, screen_step_vertical_monitor_two -30)
     mouse_click(0)
 <user.screen_step_one> <user.screen_step_vertical> righty:
-    vertical = screen_step_vertical + 30
+    vertical = screen_step_vertical
     mouse_move(screen_step_one, vertical)
     mouse_click(1)
 <user.screen_step_two> <user.screen_step_vertical_monitor_two> righty:
@@ -23,13 +23,13 @@
     mouse_click(0)
 <user.screen_step_one> apex:
     mouse_move(-380, 45)
-    mouse_move(screen_step_one, 45)
+    mouse_move(screen_step_one, 30)
     mouse_click(0)
 <user.screen_step_two> taskbar:
-    mouse_move(screen_step_two, 1050)
+    mouse_move(screen_step_two, 1030)
     mouse_click(0)
 <user.screen_step_two> apex:
-    mouse_move(screen_step_two, 10)
+    mouse_move(screen_step_two, 5)
     mouse_click(0)
 taskbar <user.screen_step_two> <user.number_signed_small>:
     mouse_move(screen_step_two, 1050)
@@ -39,10 +39,10 @@ taskbar <user.screen_step_two> <user.number_signed_small>:
     mouse_move(position_x + adjustment, position_y)
     mouse_click(0)
 <user.screen_step_one> (menu | leaf):
-    mouse_move(screen_step_one, 80)
+    mouse_move(screen_step_one, 60)
     mouse_click(0)
 <user.screen_step_two> (menu | leaf):
-    mouse_move(screen_step_two, 52)
+    mouse_move(screen_step_two, 25)
     mouse_click(0)
 <user.screen_step_one> ribbon:
     mouse_move(screen_step_one, 80)
