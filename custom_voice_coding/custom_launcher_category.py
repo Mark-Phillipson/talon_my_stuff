@@ -27,6 +27,8 @@ ctx_default.lists["user.launcher_category"] = {
 "AI Chat": "AIChat",
 "Talon Search": "Talon Search",
 "Search": "Talon Search",
+"VSCode Projects": "VSCode Projects",
+"VS Code Projects": "VSCode Projects",
 "Visual Studio Code Extensions":"Visual Studio Code Extension",
 }
 

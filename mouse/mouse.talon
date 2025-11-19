@@ -19,7 +19,7 @@
     mouse_move(screen_step_two, screen_step_vertical_monitor_two)
     mouse_click(1)
 <user.screen_step_one> taskbar:
-    mouse_move(screen_step_one, 1050)
+    mouse_move(screen_step_one, 1030)
     mouse_click(0)
 <user.screen_step_one> apex:
     mouse_move(-380, 45)

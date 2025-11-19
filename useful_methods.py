@@ -3,6 +3,7 @@ import random, os, time
 from datetime import datetime
 import subprocess
 
+
 mod = Module()
 
 @mod.action_class
@@ -200,3 +201,20 @@ class Actions:
             subprocess.Popen(["explorer", folder])
         else:
             print(f"Could not resolve path for letters: {letters}")
+    def ensure_vscode_running():
+        """Ensure VS Code is running, launch if not, then focus window. No psutil required."""
+        def is_vscode_running():
+            result = subprocess.run(['tasklist'], capture_output=True, text=True)
+            return 'Code.exe' in result.stdout
+        if is_vscode_running():
+            actions.user.switcher_focus("code.exe")
+            return
+        vscode_path = r"C:\\Users\\MPhil\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+        subprocess.Popen([vscode_path])
+        print("VS Code launched.")
+        for _ in range(20):
+            time.sleep(0.9)
+            if is_vscode_running():
+                actions.user.switcher_focus("code.exe")
+                return
+        print("VS Code did not start in time.")
