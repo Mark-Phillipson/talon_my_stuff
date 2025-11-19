@@ -165,14 +165,20 @@ clear screen:
     insert("cls")
     sleep(100ms)
     key(enter)
-Linux update: insert("sudo apt-get update")
+linux update: insert("sudo apt-get update")
 include paging: insert(" | more")
-repel:
+repel events:
     insert("C:\\Users\\MPhil\\AppData\\Roaming\\talon\\venv\\3.13\\Scripts\\repl.bat")
     sleep(100ms)
     key(enter)
     sleep(100ms)
     insert("events.tail()")
+repel actions:
+    insert("C:\\Users\\MPhil\\AppData\\Roaming\\talon\\venv\\3.13\\Scripts\\repl.bat")
+    sleep(100ms)
+    key(enter)
+    sleep(100ms)
+    insert("actions.list(\"tracking\")")
 list last commits:
     insert("git log origin/master --oneline -n 10")
     sleep(100ms)
@@ -196,5 +202,9 @@ kill dotnet:
     key(enter)
 kill and watch:
     insert("Stop-Process -Name dotnet -Force; dotnet watch run")
+    sleep(100ms)
+    key(enter)
+environment variables:
+    insert("rundll32 sysdm.cpl,EditEnvironmentVariables")
     sleep(100ms)
     key(enter)

@@ -33,6 +33,17 @@ class Actions:
         print(commandline)
         print(searchTerm)
         ui.launch(path=commandline,args=arguments)
+    def run_application_csharp_natural(naturalCommand:  str ):
+        "runs the natural command with the given text"
+        import os
+        commandline = r'C:\Users\MPhil\source\repos\SpeechRecognitionHelpers\ExecuteCommands_NET\bin\Release\net9.0-windows\ExecuteCommands.exe'
+        args1 = ' ' + r'/natural' + ' '
+        args2 = '' + r'/' + naturalCommand + ''
+        arguments = [args1, args2]
+        cwd = os.path.dirname(commandline)
+        print(commandline)
+        print(naturalCommand)
+        ui.launch(path=commandline, args=arguments, cwd=cwd)
     def run_application_voice_admin_windows_forms(searchTerm:  str ):
         "runs the voice admin windows forms application with the given search term"
         commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net9.0-windows\\WinFormsApp.exe"

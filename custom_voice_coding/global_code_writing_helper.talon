@@ -6,7 +6,9 @@ settings():
     # Stop mouse scroll down using hiss noise
     user.mouse_enable_hiss_scroll = false
 
-sharp <user.text>:
+^natural <user.text>$:
+    user.run_application_csharp_natural(text)
+^sharp <user.text>$:
     user.run_application_csharp_database_command(text)
 capital smash <user.text>:
     result = user.capital_strip(text)
