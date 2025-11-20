@@ -265,3 +265,7 @@ middle click: mouse_click(2)
 penta: key(enter)
 #pnoise(pop): key(p)
 #noise(dental_click): key(d)
+[show] notifications: 
+    mouse_move(1665, 990)
+    sleep(100ms)
+    mouse_click(0)

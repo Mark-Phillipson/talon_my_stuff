@@ -29,7 +29,7 @@
     mouse_move(screen_step_two, 1030)
     mouse_click(0)
 <user.screen_step_two> apex:
-    mouse_move(screen_step_two, 5)
+    mouse_move(screen_step_two, -15)
     mouse_click(0)
 taskbar <user.screen_step_two> <user.number_signed_small>:
     mouse_move(screen_step_two, 1050)

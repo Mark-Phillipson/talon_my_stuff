@@ -36,7 +36,7 @@ class Actions:
     def run_application_csharp_natural(naturalCommand:  str ):
         "runs the natural command with the given text"
         import os
-        commandline = r'C:\Users\MPhil\source\repos\SpeechRecognitionHelpers\ExecuteCommands_NET\bin\Release\net9.0-windows\ExecuteCommands.exe'
+        commandline = r'C:\Users\MPhil\source\repos\SpeechRecognitionHelpers\ExecuteCommands_NET\bin\Release\net10.0-windows\ExecuteCommands.exe'
         args1 = ' ' + r'/natural' + ' '
         args2 = '' + r'/' + naturalCommand + ''
         arguments = [args1, args2]
