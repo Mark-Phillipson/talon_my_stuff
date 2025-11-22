@@ -208,3 +208,7 @@ environment variables:
     insert("rundll32 sysdm.cpl,EditEnvironmentVariables")
     sleep(100ms)
     key(enter)
+log natural:
+    insert("Get-Content C:\\Users\\MPhil\\source\\repos\\SpeechRecognitionHelpers\\ExecuteCommands_NET\\bin\\bin\\app.log -Wait")
+    sleep(100ms)
+    key(enter)

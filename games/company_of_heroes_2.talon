@@ -427,7 +427,7 @@ emplacement second:
 emplacement third:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1560, 330)
+    mouse_move(1550, 300)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)

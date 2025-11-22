@@ -269,3 +269,5 @@ penta: key(enter)
     mouse_move(1665, 990)
     sleep(100ms)
     mouse_click(0)
+clippy: 
+    key(super-v)
