@@ -13,8 +13,8 @@ settings():
 
     # Zoom Mouse Options
     tracking.zoom_live = true
-    tracking.zoom_height = 300
-    tracking.zoom_width = 300
+    tracking.zoom_height = 200
+    tracking.zoom_width = 400
     tracking.zoom_scale = 4
 
 # This is a list of the commands that are specific to the Tempest Rising game
@@ -138,7 +138,7 @@ touch: user.game_click(0)
 context: user.game_click(1)
 middle: user.game_click(2)
 (duke | kind): user.game_click(0)
-clear selection: user.mouse_hold_seconds(1, 3)
+clear selection: user.mouse_hold_seconds(1, 4)
 focus one:
     key(1)
     sleep(30ms)

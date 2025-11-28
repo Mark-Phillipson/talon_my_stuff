@@ -167,7 +167,7 @@ screen <user.number_key>+:
 spin down: user.mouse_scroll_down_continuous()
 continuous: user.mouse_scroll_down_continuous()
 spin up: user.mouse_scroll_up_continuous()
-stop: user.mouse_scroll_stop()
+and stop: user.mouse_scroll_stop()
 will stop: user.mouse_scroll_stop()
 we'll stop: user.mouse_scroll_stop()
 (context) | (righty) | (right click):

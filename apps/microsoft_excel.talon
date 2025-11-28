@@ -7,3 +7,5 @@ go to: key(ctrl-g)
 navigate <user.letter> <number_small>: 
     key(ctrl-g)
     insert("{letter}{number_small}")
+take column: key(ctrl-space)
+take data: key(ctrl-a)

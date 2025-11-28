@@ -160,3 +160,4 @@ start realtime:
     key(ctrl-v)
 hard refresh: key(ctrl-shift-r)
 [toggle] full screen: key(f11)
+launch copilot: key(ctrl-shift-.)

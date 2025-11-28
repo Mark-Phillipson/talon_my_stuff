@@ -149,7 +149,10 @@ fake email:
 fake phone number:
     phoneNumber = user.generate_random_number()
     insert(phoneNumber)
-enter timestamp:            insert(user.time_format("%Y-%m-%d %H:%M:%S"))
+(enter | insert) timestamp:            
+    insert(user.time_format("%Y-%m-%d %H:%M:%S"))
+timestamp:           
+    insert(user.time_format("%Y-%m-%d %H:%M:%S"))
 select and copy:
     key(ctrl-a)
     sleep(100ms)

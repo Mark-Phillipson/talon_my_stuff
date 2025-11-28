@@ -16,10 +16,10 @@ settings():
 
     user.model_shell_default = "cmd"
 
-    # Zoom Mouse Settings     
+    # Zoom Mouse Settings
     tracking.zoom_live = true
     tracking.zoom_height = 200
     tracking.zoom_width = 500
-    tracking.zoom_scale = 4
+    tracking.zoom_scale = 3
 
     user.ocr_behavior_when_no_eye_tracker = "ACTIVE_WINDOW"

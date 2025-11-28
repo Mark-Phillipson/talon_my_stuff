@@ -383,8 +383,7 @@ fix errors:
     sleep(100ms)
     key(enter)
 stop [the] agent:
-    mouse_move(1645, 945)
-    mouse_click(0)
+    key(alt-backspace)
 
 run prompt [in] new [pilot]:
     #key(ctrl-alt-super-/)
