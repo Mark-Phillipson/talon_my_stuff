@@ -266,7 +266,7 @@ key(ctrl-f12) :
     key(tab:8)
 middle click: mouse_click(2)
 penta: key(enter)
-#pnoise(pop): key(p)
+noise(pop): mouse_click()
 #noise(dental_click): key(d)
 [show] notifications: 
     mouse_move(1665, 990)

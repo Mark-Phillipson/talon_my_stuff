@@ -30,7 +30,7 @@ go [to] downloads: user.folder_navigate("C:\\Users\\MPhil\\Downloads")
 go [to] desktop: user.folder_navigate("C:\\Users\\MPhil\\Desktop")
 go [to] pictures: user.folder_navigate("C:\\Users\\MPhil\\OneDrive\\Pictures")
 go [to] desktop pictures: user.folder_navigate("C:\\DesktopPictures")
-go [to] videos: user.folder_navigate("C:\\Users\\MPhil\\Videos")
+go [to] videos: user.folder_navigate("C:\\Ucsers\\MPhil\\Videos")
 launch voice admin: user.launch_voice_admin()
 launch realtime:
     key(super-r)

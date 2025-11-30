@@ -134,11 +134,11 @@ dotnet ef migrations remove:
     sleep(100ms)
     key(enter)
 dotnet publish voice admin:
-    insert("taskkill /F /IM VoiceLauncher.exe")
+    insert("taskkill /F /IM VoiceAdmin.exe")
     sleep(100ms)
     key(enter)
     sleep(100ms)
-    insert("CD C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceLauncher")
+    insert("CD C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceAdmin")
     sleep(100ms)
     key(enter)
     sleep(100ms)
