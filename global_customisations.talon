@@ -279,3 +279,8 @@ clippy:
 key(f9:up):
     speech.disable()
     print("Talon sleeping")
+#The community version covers the Taskbar on occasions hence these commands here
+snap left: 
+    key(super-left)
+snap right: 
+    key(super-right)
