@@ -455,3 +455,7 @@ tree [open] explorer <user.letters>:
 dev reload: user.vscode("workbench.action.reloadWindow")
 activity [bar] hide: user.vscode("workbench.action.activityBarLocation.hide")
 activity [bar] focus: user.vscode("workbench.action.focusActivityBar")
+[show] notifications: 
+    mouse_move(1665, 990)
+    sleep(100ms)
+    mouse_click(0)

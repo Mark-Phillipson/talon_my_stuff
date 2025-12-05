@@ -270,12 +270,9 @@ penta: key(enter)
 #Too many false positives to use these
 #noise(pop) noise(pop): mouse_click()
 #noise(dental_click): mouse_click()
-[show] notifications: 
-    mouse_move(1665, 990)
-    sleep(100ms)
-    mouse_click(0)
 clippy: 
     key(super-v)
+# enable push to talk in sleep mode    
 key(f9:up):
     speech.disable()
     print("Talon sleeping")
