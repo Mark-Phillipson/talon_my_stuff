@@ -66,7 +66,7 @@ class Actions:
         ui.launch(path=commandline,args=arguments)
     def run_application_voice_admin_windows_forms_launcher(category:  str ):
         "runs the voice admin windows forms application with the given launcher category"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net9.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
         args1 = ' ' + '"' + r'/Launcher"' + ' '
         args2 = '' + r'/' + category + ''
         arguments=[args1, args2]
@@ -75,7 +75,7 @@ class Actions:
         ui.launch(path=commandline,args=arguments)
     def run_application_voice_admin_windows_forms_launcher_with_parameter(category:  str, parameter: str ):
         "runs the voice admin windows forms application with the given launcher category and an additional parameter"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net9.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
         args1 = ' ' + '"' + r'/Launcher"' + ' '
         args2 = '' + r'/' + category + ''
         args3 = '' + r'/' + parameter + ''

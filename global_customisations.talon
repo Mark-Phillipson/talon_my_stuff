@@ -142,6 +142,7 @@ test email:                 insert("firstlastname@domain.co.uk")
     insert("MPhil")
     sleep(100ms)
     key(tab)
+[enter] community email [address]:      insert("community@makeitfable.com")
 alternate:                  key(alt)
 fake email:
     emailAddress = user.fake_email()
@@ -266,11 +267,15 @@ key(ctrl-f12) :
     key(tab:8)
 middle click: mouse_click(2)
 penta: key(enter)
-noise(pop): mouse_click()
-#noise(dental_click): key(d)
+#Too many false positives to use these
+#noise(pop) noise(pop): mouse_click()
+#noise(dental_click): mouse_click()
 [show] notifications: 
     mouse_move(1665, 990)
     sleep(100ms)
     mouse_click(0)
 clippy: 
     key(super-v)
+key(f9:up):
+    speech.disable()
+    print("Talon sleeping")

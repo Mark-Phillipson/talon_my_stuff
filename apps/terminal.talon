@@ -126,7 +126,7 @@ playwright debug:
     insert("$env:PWDEBUG=\"1\"")
 hunt [terminal]: key(ctrl-shift-f)
 dotnet ef create script:
-    insert("dotnet ef migrations script --output migrations.sql --idempotent --context")
+    insert("dotnet ef migrations script --output migrations.s menuql --idempotent --context")
 dotnet ef migrations add:
     insert("dotnet ef migrations add ")
 dotnet ef migrations remove:
@@ -212,3 +212,7 @@ log natural:
     insert("Get-Content C:\\Users\\MPhil\\source\\repos\\SpeechRecognitionHelpers\\ExecuteCommands_NET\\bin\\bin\\app.log -Wait")
     sleep(100ms)
     key(enter)
+kill process:
+    insert("Stop-Process -Id (Get-NetTCPConnection -LocalPort 5008).OwningProcess -Force")
+    sleep(100ms)
+    key(left:23)

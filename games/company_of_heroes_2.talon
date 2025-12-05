@@ -795,3 +795,4 @@ attack there:
     key(a)
     sleep(50ms)
     mouse_click(0)
+noise(pop): mouse_click(0)

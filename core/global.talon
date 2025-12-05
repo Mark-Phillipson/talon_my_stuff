@@ -8,7 +8,7 @@ pick <user.word>:
 pick <user.letters>:
     "{letters}"
     key(enter)
-[save to] disk: key(ctrl-s)
+[save to] (disk | disky): key(ctrl-s)
 context menu: key(menu)
 help search selection:
     key(ctrl-c)
@@ -52,3 +52,4 @@ natural:
     key(f1)
     sleep(100ms)
     insert("NLC: ")
+con mouse: tracking.control_toggle()

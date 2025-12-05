@@ -53,3 +53,9 @@ settings():
     speech.enable()
     key("ctrl-shift-left")
     key("ctrl-shift-left")
+noise(pop):
+    mouse_click()
+
+key(f9:down):
+    speech.enable()
+    print("Talon awake")
