@@ -274,6 +274,11 @@ clippy:
 key(f9:up):
     speech.disable()
     print("Talon sleeping")
+# deck(pedal_right): 
+#     sleep(50ms)
+#     speech.disable()
+#     sleep(50ms)
+#     print("Talon sleeping")
 #The community version covers the Taskbar on occasions hence these commands here
 snap left: 
     key(super-left)
@@ -283,7 +288,11 @@ reset keys:
     key(ctrl-up)
     key(shift-up)
     key(alt-up)
-    key(ctrl-down) key(ctrl-up)
-    key(shift-down) key(shift-up)
-    key(alt-down) key(alt-up)
-    key(super-down) key(super-up)
+    key(ctrl-down) 
+    key(ctrl-up)
+    key(shift-down) 
+    key(shift-up)
+    key(alt-down) 
+    key(super-down) 
+    key(super-up)
+    key(alt-up)

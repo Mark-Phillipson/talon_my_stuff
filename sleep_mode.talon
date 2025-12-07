@@ -59,3 +59,8 @@ noise(pop):
 key(f9:down):
     speech.enable()
     print("Talon awake")
+# deck(pedal_left):
+#     sleep(50ms)
+#     speech.enable()
+#     sleep(50ms)
+#     print("Talon awake")
