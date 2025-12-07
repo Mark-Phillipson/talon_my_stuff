@@ -15,16 +15,16 @@ class Actions:
     def launch_voice_admin():
         """Launch voice admin"""
         uri = "http://localhost:5000/launchersfavourites"
-        psi = subprocess.Popen([VOICE_LAUNCHER_EXE],
-                               shell=True,
-                               cwd=VOICE_LAUNCHER_PUBLISH_PATH,
-                               creationflags=subprocess.CREATE_NEW_CONSOLE)
+        # psi = subprocess.Popen([VOICE_LAUNCHER_EXE],
+        #                        shell=True,
+        #                        cwd=VOICE_LAUNCHER_PUBLISH_PATH,
+        #                        creationflags=subprocess.CREATE_NEW_CONSOLE)
 
-        # The second launch seems redundant, but keeping as in original
-        psi = subprocess.Popen([VOICE_LAUNCHER_EXE],
-                               shell=True,
-                               cwd=VOICE_LAUNCHER_PUBLISH_PATH,
-                               creationflags=subprocess.CREATE_NEW_CONSOLE)
+        # # The second launch seems redundant, but keeping as in original
+        # psi = subprocess.Popen([VOICE_LAUNCHER_EXE],
+        #                        shell=True,
+        #                        cwd=VOICE_LAUNCHER_PUBLISH_PATH,
+        #                        creationflags=subprocess.CREATE_NEW_CONSOLE)
 
         subprocess.Popen(["start", uri], shell=True)
         # VOICE_LAUNCHER_PUBLISH_PATH

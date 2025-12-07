@@ -1,4 +1,3 @@
-...existing code...
 app: vscode
 os: windows
 -
@@ -170,13 +169,12 @@ toggle hats: user.vscode("cursorless.toggleDecorations")
 debug application: user.vscode("workbench.action.debug.start")
 start application: key(f5)
 start debugging: key(f5)
-#start application: user.vscode("workbench.action.debug.run")
 stop application: user.vscode("workbench.action.debug.stop")
 step into: user.vscode("workbench.action.debug.stepInto")
 step out: user.vscode("workbench.action.debug.stepOut")
 continue: user.vscode("workbench.action.debug.continue")
 restart (debugging): user.vscode("workbench.action.debug.restart")
-toggle breakpoint: user.vscode("editor.debug.action.toggleBreakpoint")
+[toggle] breakpoint: user.vscode("editor.debug.action.toggleBreakpoint")
 bar debug: user.vscode("workbench.view.debug")
 open talon log:
     user.vscode("workbench.action.files.openFile")
@@ -295,7 +293,7 @@ make it so number one:
     key(enter)
 pilot quick chat: user.vscode("workbench.action.openQuickChat")
 pilot beast mode:
-    key(ctrl-. )
+    key(ctrl-.)
     sleep(100ms)
     key(b)
     sleep(100ms)
@@ -455,7 +453,7 @@ tree [open] explorer <user.letters>:
 dev reload: user.vscode("workbench.action.reloadWindow")
 activity [bar] hide: user.vscode("workbench.action.activityBarLocation.hide")
 activity [bar] focus: user.vscode("workbench.action.focusActivityBar")
-[show] notifications: 
+[show] notifications:
     mouse_move(1665, 990)
     sleep(100ms)
     mouse_click(0)

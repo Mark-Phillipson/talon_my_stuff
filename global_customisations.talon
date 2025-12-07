@@ -89,9 +89,7 @@ control abbreviation:       insert("ctrl")
     insert("rundll32.exe powrprof.dll, SetSuspendState Sleep")
     sleep(300ms)
     key(enter)
-# toggle mouse: key(ctrl-alt-f9)
-# centre mouse: key(ctrl-alt-f1)
-tabby:                      key(tab)
+tabby:                     key(tab)
 fluent search:              key(super-ctrl-shift)
 fluent search <user.text>:
     key(super-ctrl-shift)
@@ -99,7 +97,7 @@ fluent search <user.text>:
     insert(text)
     sleep(300ms)
 pause some:                 sleep(500ms)
-select rest of line:        key(shift-end)
+rocket:                   key(end)
 base | home:              key(home)
 double (base | home):
     key(home)
@@ -281,3 +279,11 @@ snap left:
     key(super-left)
 snap right: 
     key(super-right)
+reset keys:
+    key(ctrl-up)
+    key(shift-up)
+    key(alt-up)
+    key(ctrl-down) key(ctrl-up)
+    key(shift-down) key(shift-up)
+    key(alt-down) key(alt-up)
+    key(super-down) key(super-up)
