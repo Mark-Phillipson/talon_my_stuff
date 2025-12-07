@@ -459,3 +459,9 @@ activity [bar] focus: user.vscode("workbench.action.focusActivityBar")
     mouse_move(1665, 990)
     sleep(100ms)
     mouse_click(0)
+# for the natural language commands Visual Studio Code extension
+natural:
+    key(f1)
+    sleep(100ms)
+    insert("NLC: ")
+show open (editors | files): user.vscode("workbench.action.showAllEditors")
