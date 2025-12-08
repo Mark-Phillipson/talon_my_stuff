@@ -159,7 +159,6 @@ select and copy:
     sleep(100ms)
 voice typing:
     speech.disable()
-    sleep(20ms)
     key(super-h)
 (voice typing in code) | (draft in code):
     user.switcher_focus("code")
@@ -167,6 +166,8 @@ voice typing:
     sleep(500ms)
     key(ctrl-n)
     sleep(500ms)
+    key(enter)
+    sleep(50ms)
     key(super-h)
 [enter] first name:              insert("Mark ")
 [enter] my name:              insert("Mark Phillipson ")

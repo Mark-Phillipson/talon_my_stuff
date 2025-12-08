@@ -8,6 +8,9 @@ settings():
 
 ^(natural | nat) <user.text>$:
     user.run_application_csharp_natural(text)
+^(natural | nat) dictate$:
+    speech.disable()
+    user.run_application_csharp_natural("dictate")
 ^sharp <user.text>$:
     user.run_application_csharp_database_command(text)
 capital smash <user.text>:

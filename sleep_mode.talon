@@ -43,7 +43,6 @@ settings():
     sleep(100ms)
     key(escape)
     speech.enable()
-    #key("ctrl-shift-left")
 ^(full stop)+$:
     key(super-h)
     sleep(100ms)

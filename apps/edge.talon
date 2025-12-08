@@ -161,3 +161,8 @@ start realtime:
 hard refresh: key(ctrl-shift-r)
 [toggle] full screen: key(f11)
 launch copilot: key(ctrl-shift-.)
+main menu: key(alt-e)
+edge settings:
+    key(alt-e)
+    sleep(100ms)
+    key(g)
