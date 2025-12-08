@@ -323,6 +323,7 @@ pilot chat workspace:
     user.copilot_chat("")
     sleep(300ms)
     insert("@workspace ")
+
 pilot chat file:
     user.copilot_chat("")
     sleep(300ms)
@@ -363,8 +364,14 @@ pilot fix warnings:
     key(enter)
     sleep(300ms)
     insert("Please can you look at the last terminal command and fix these warnings for me?")
-pilot commit time: insert("Can you please provide me with the git commands to commit the latest changes so I can transfer using Cursorlesss commands")
-add context: key(ctrl-/)
+pilot summarize:
+    user.copilot_chat("")
+    sleep(100ms)
+    insert("Please place any code changes at the BOTTOM of your reply under a clear 'CHANGES:' header. Keep explanations above and show only the changed lines with minimal context. Thank you.")
+    sleep(100ms)
+    key(enter)
+pilot commit time: insert("Can you please provide me with the git commands to commit all files with the latest changes so I can transfer using  a code block  so I can copy. Please just supply a single line command.")
+sleep (100ms) key (enter) add context: key(ctrl-/)
 pick model: key(ctrl-alt-.)
 set mode: key(ctrl-.)
 select tools: key(ctrl-shift-/)
