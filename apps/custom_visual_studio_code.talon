@@ -333,6 +333,7 @@ pilot list commands:
     sleep(100ms)
     insert("GitHub Copilot: ")
 pilot voice:
+    user.copilot_chat("")
     user.vscode("workbench.action.chat.startVoiceChat")
     speech.disable()
 #add context: user.vscode("workbench.action.chat.editing.attachContext")
