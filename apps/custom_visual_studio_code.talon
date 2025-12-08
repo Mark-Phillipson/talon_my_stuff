@@ -375,7 +375,7 @@ pilot summarize:
 pilot commit time:
     insert("Can you please provide me with the git commands to commit all files with the latest")
     sleep(100ms)
-    insert("changes in a code block so I can copy. Please just supply a single line command.")
+    insert("changes in a code block so I can copy. Please just supply a single line command with an appropriate commit message.")
     sleep(100ms)
     key(enter)
     sleep(100ms)
