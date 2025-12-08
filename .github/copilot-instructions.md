@@ -45,23 +45,65 @@ Editing guidance for the agent
 - When adding or editing lists, prefer the `.talon-list` format used widely here (header, `-` delimiter, `Key: Value` entries). Example:
 
 ```
-list: user.snippet_language
--
-Blazor: Blazor
-Bootstrap: Bootstrap
+<!--
+Repository-specific Copilot instructions for automated coding agents.
+Keep this file concise and actionable — prefer specific, discoverable guidance
+over generic best-practices. Update when repo structure or workflows change.
+-->
+
+# Overview
+This repo contains a personal Talon configuration (voice commands, lists and helper scripts) plus a few helper/demo files. Primary runtime is the Talon app; the repo is organized so Talon can load files directly from the folder.
+
+**Key directories**
+- `core/` — shared helpers and core Talon glue (examples: `app.py`, `engines.py`, `ordinals.talon`).
+- `apps/` — per-application command files (many `*.talon` files for VS Code, Edge, Visual Studio, etc.).
+- `custom_voice_coding/` — lists, snippets, and helper Python modules. Contains both legacy Python lists and `.talon-list` files.
+- `plugins/` — optional Talon plugins.
+- `tests/` and repo-root pytest files (`test_talon_lists_all.py`, `test_talon_search.py`).
+
+# What to know before changing code
+- Talon interprets `.talon` and `.talon-list` files at runtime — changes appear when Talon reloads. Use Talon's UI to reload or restart after edits.
+- Python helper scripts are executed by the same Python runtime Talon uses; do not assume a venv. Inspect the local Talon python if you need dependencies.
+- Lists follow two formats in this repo:
+  - Preferred: `.talon-list` files with header `list: user.<name>`, a `-` delimiter line, then `Key: Value` lines. Example in `custom_voice_coding/`.
+  - Legacy: Python modules that call `Module()` and assign `ctx_default.lists[...]`. When converting, keep both implementations until validated.
+
+# Developer workflows & commands
+- Run unit tests from the repository root with pytest:
+
+```powershell
+pytest -q
 ```
 
-- If you need to convert an existing Python `Module()` list into a `.talon-list`, preserve the string values exactly and remove the `.py` module only after the `.talon-list` is in place.
-- When changing voice commands in `.talon` files, follow existing naming: keep contexts and capture groups consistent (look at `apps/custom_visual_studio_code.talon` and `core/ordinals.talon` for examples of patterns and captures).
+- To run a single test file or test case, use pytest's file::test selector.
+- There is a VS Code task `build` that runs `dotnet build` (used for a few demo `.cs` files). There is no single .NET solution for the repo — run `dotnet` only if you know which project to target.
 
-Important files to reference when editing
-- `core/` — shared helpers and ordinals handling
-- `apps/custom_visual_studio_code.talon` — example app-specific command file
-- `custom_voice_coding/` — lists and snippet helpers; both `.py` and `.talon-list` files live here
-- `test_talon_lists_all.py`, `test_talon_search.py` — tests that exercise list loading and lookup behavior
+# Patterns & conventions (repo-specific)
+- Lists use the `user.` namespace (e.g. `user.snippet_language`). Preserve those names when adding or editing lists.
+- Prefer `.talon-list` edits over Python list modules. If converting a Python list to `.talon-list`:
+  1. Add the `.talon-list` file with identical values.
+  2. Keep the Python module until Talon reload shows the `.talon-list` is used.
+  3. Remove the Python module only after verification.
+- Voice command files (`*.talon`) use contexts and capture groups consistently — match existing captures when adding similar commands. See `apps/custom_visual_studio_code.talon` and `core/ordinals.talon` for examples.
 
-If something is unclear
-- Ask for which runtime environment to assume (local Talon installation path / Python version) before making changes that require running Talon or invoking its Python environment.
-- Request example audio-to-text mappings only when necessary — do not attempt to invent speech patterns beyond what's present in `.talon` files.
+# Integration points & sensitive files
+- `open_ai_key.py` and other secret-like files may contain API keys — do not commit new secrets. If you need to run code requiring keys, ask the repo owner for a safe method.
+- Talon is the runtime: changes are validated best by reloading Talon and running voice commands interactively.
 
-End of instructions — ask for feedback and I'll iterate on any missing specifics.
+# Editing guidance for an automated agent
+- Small edits: update the `.talon-list` or `.talon` file and suggest the user reload Talon.
+- Larger changes: run the pytest suite locally before proposing breaking changes.
+- Do not add external dependencies without confirming the target Talon runtime and Python environment.
+- Preserve file indentation and style (minimal diffs). Avoid renaming lists or changing `user.` list names without coordination.
+
+# Files to inspect when working
+- `core/` and `apps/` for command patterns and contexts
+- `custom_voice_coding/` for list formats and snippet helpers
+- `test_talon_lists_all.py`, `test_talon_search.py` for how lists are exercised in tests
+- `.github/instructions/memory.instructions.md` for personal context about the repository owner
+
+# If something is unclear
+- Ask which local Talon Python interpreter to assume, or request an example voice-to-text mapping before inventing speech patterns.
+- When in doubt about secrets, stop and request guidance.
+
+ 
