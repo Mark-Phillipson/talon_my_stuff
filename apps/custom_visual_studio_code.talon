@@ -337,7 +337,8 @@ pilot voice:
     user.copilot_chat("")
     user.vscode("workbench.action.chat.startVoiceChat")
     speech.disable()
-#add context: user.vscode("workbench.action.chat.editing.attachContext")
+
+add context: user.vscode("workbench.action.chat.editing.attachContext")
 pilot next edit: user.vscode("chatEditor.action.navigateNext")
 pilot previous edit: user.vscode("chatEditor.action.navigatePrevious")
 pilot fix errors:
@@ -367,20 +368,18 @@ pilot fix warnings:
 pilot summarize:
     user.copilot_chat("")
     sleep(100ms)
-    insert("Please place any code changes at the BOTTOM of your reply under a clear 'CHANGES:' header. Keep")
-    sleep(100ms)
-    insert(" explanations above and show only the changed lines with minimal context. Thank you.")
+    insert("If you made any code changes summarize them at the BOTTOM of your reply under a clear 'CHANGES:' header.")
     sleep(100ms)
     key(enter)
 pilot commit time:
-    insert("Can you please provide me with the git commands to commit all files with the latest")
+    insert("Can you provide me with the git commands to commit all files with the latest")
     sleep(100ms)
-    insert("changes in a code block so I can copy. Please just supply a single line command with an appropriate commit message.")
+    insert(" changes in a code block so I can copy. Just supply a single line command with an appropriate commit message.")
     sleep(100ms)
     key(enter)
     sleep(100ms)
 add context: key(ctrl-/)
-pick model: key(ctrl-alt-.)
+set model: key(ctrl-alt-.)
 set mode: key(ctrl-.)
 select tools: key(ctrl-shift-/)
 draft this:
@@ -391,6 +390,14 @@ draft this:
     user.vscode("welcome.showNewFileEntries")
     sleep(60ms)
     key(enter)
+    sleep(60ms)
+    key(ctrl-v)
+pilot submit:
+    key(ctrl-a)
+    sleep(60ms)
+    key(ctrl-c)
+    sleep(60ms)
+    user.copilot_chat("")
     sleep(60ms)
     key(ctrl-v)
 fix errors:

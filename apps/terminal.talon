@@ -216,3 +216,5 @@ kill process:
     insert("Stop-Process -Id (Get-NetTCPConnection -LocalPort 5008).OwningProcess -Force")
     sleep(100ms)
     key(left:23)
+new blazor:
+    insert("dotnet new blazor -o Practice --framework net10.0 ")
