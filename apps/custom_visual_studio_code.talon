@@ -258,7 +258,6 @@ copy code link:
 #     sleep(100ms)
 #     key(enter)
 
-take all: key(ctrl-a)
 #to do tasks extension
 (new task) | (checkbox): key(ctrl-enter)
 complete task: key(alt-d)
@@ -485,3 +484,5 @@ natural:
     sleep(100ms)
     insert("NLC: ")
 show open (editors | files): user.vscode("workbench.action.showAllEditors")
+^hay code [user.text]:
+    speech.disable()

@@ -144,6 +144,9 @@ focus one:
     sleep(30ms)
     key(1)
 focus two:
+    key(2)
+    sleep(30ms)
+    key(2)
 screen infantry:
     key(shift-w)
     sleep(30ms)
@@ -214,7 +217,7 @@ map one:
 map two:
     mouse_move(1850, 85)
     sleep(30ms)
-    user.game_click(0)  
+    user.game_click(0)
 map three:
     mouse_move(1720, 195)
     sleep(30ms)

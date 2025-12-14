@@ -1,4 +1,4 @@
-title: Commandos  
+title: Commandos
 -
 settings():
     user.mode_indicator_show = 0
@@ -14,8 +14,8 @@ settings():
     tracking.zoom_width = 300
     tracking.zoom_scale = 4
 
-    # This is a list of the commands that are specific to the Company of Heroes 2 game
-    tag(): user.talon_hud_automatic_hide
+tag(): user.talon_hud_automatic_hide
+
 test: key(left)
 game <user.arrow_key>:
     key(arrow_key)

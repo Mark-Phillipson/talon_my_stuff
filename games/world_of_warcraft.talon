@@ -17,18 +17,34 @@ settings():
     tracking.zoom_scale = 4
 
 tag(): user.talon_hud_automatic_hide
+
 game <user.arrow_key>:
     key(arrow_key)
     repeat(4)
-fly <user.arrow_key>:
-    key(arrow_key)
+fly left:
+    key(a)
+    repeat(14)
+fly right:
+    key(d)  
+    repeat(14)
+fly forward:
+    key(w)
+    repeat(14)
+fly back:
+    key(s)
     repeat(14)
 # Basic commands
+space: key(space)
+jump: key(space)
 move forward:
-    key(up)
+    key(w)
 move back:
-    key(down)
+    key(s)
 move left:
-    key(left)
+    key(a)
 move right:
-    key(right)
+    key(d)
+loot: 
+    key(shift)
+target: key(f)    
+

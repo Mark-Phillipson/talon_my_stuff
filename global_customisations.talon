@@ -157,7 +157,7 @@ select and copy:
     sleep(100ms)
     key(ctrl-c)
     sleep(100ms)
-voice typing:
+`1
     speech.disable()
     key(super-h)
 (voice typing in code) | (draft in code):
@@ -297,3 +297,10 @@ reset keys:
     key(super-down) 
     key(super-up)
     key(alt-up)
+take all: key(ctrl-a)    
+gamepad(south:up):          
+    speech.disable()
+    print("Talon sleeping")
+gamepad(south:down):        
+    speech.enable()
+    print("Talon awake")
