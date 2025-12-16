@@ -286,18 +286,12 @@ merge lines: user.vscode("editor.emmet.action.mergeLines")
 toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
+^pilot allow$: key(ctrl-enter)
 make it so number one:
     insert("Yes Please Do That")
     sleep(100ms)
     key(enter)
 pilot quick chat: user.vscode("workbench.action.openQuickChat")
-pilot beast mode:
-    key(ctrl-.)
-    sleep(100ms)
-    key(b)
-    sleep(100ms)
-    key(enter)
-
 context last:
     key(ctrl-/)
     sleep(200ms)
