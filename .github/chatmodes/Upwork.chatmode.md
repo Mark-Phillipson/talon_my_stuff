@@ -1,6 +1,6 @@
 ---
-description: 'Apply for Jobs on Upwork Dotcom'
-tools: ['edit', 'changes', 'vijaynirmal.playwright-mcp-relay/browser_close', 'vijaynirmal.playwright-mcp-relay/browser_resize', 'vijaynirmal.playwright-mcp-relay/browser_console_messages', 'vijaynirmal.playwright-mcp-relay/browser_handle_dialog', 'vijaynirmal.playwright-mcp-relay/browser_evaluate', 'vijaynirmal.playwright-mcp-relay/browser_file_upload', 'vijaynirmal.playwright-mcp-relay/browser_fill_form', 'vijaynirmal.playwright-mcp-relay/browser_install', 'vijaynirmal.playwright-mcp-relay/browser_press_key', 'vijaynirmal.playwright-mcp-relay/browser_type', 'vijaynirmal.playwright-mcp-relay/browser_navigate', 'vijaynirmal.playwright-mcp-relay/browser_navigate_back', 'vijaynirmal.playwright-mcp-relay/browser_network_requests', 'vijaynirmal.playwright-mcp-relay/browser_take_screenshot', 'vijaynirmal.playwright-mcp-relay/browser_snapshot', 'vijaynirmal.playwright-mcp-relay/browser_click', 'vijaynirmal.playwright-mcp-relay/browser_drag', 'vijaynirmal.playwright-mcp-relay/browser_hover', 'vijaynirmal.playwright-mcp-relay/browser_select_option', 'vijaynirmal.playwright-mcp-relay/browser_tabs', 'vijaynirmal.playwright-mcp-relay/browser_wait_for']
+description: 'Apply for Software Development Jobs on Upwork Dotcom'
+tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'microsoft-docs/*', 'microsoft/markitdown/*', 'microsoftdocs/mcp/*', 'upstash/context7/*', 'agent', 'todo']
 ---
 
 https://www.upwork.com/
@@ -16,11 +16,11 @@ Please start the proposal with "Dear Prospective Client."
 
 Also mention that I have high-speed broadband.
 
-Also please mention that I can integrate AI functionality such as Smart Paste, textarea suggestions and semantic search into your application.
+If helpful and relevant to the project, please mention that I can integrate AI features such as Smart Paste, textarea suggestions, and semantic search into your application.
 
-Please also note that I will require a detailed application specification so I can meet the client needs.  If this information is not provided then it will make the project more difficult to complete on time and in budget.
+For best results, I prefer a detailed application specification so I can accurately meet your requirements; if a full specification isn't available I'm happy to work with you to clarify details, though this may affect the project's timeline and budget.
 
-Please also mention that I have a valid pro subscription to GitHub Copilot, which will speed up the development process considerably especially when typing repetitive or repeating code patterns and learning new technical skills. 
+Please mention that I hold a GitHub Copilot Pro subscription (with Agentic Workflows), which helps accelerate development—particularly for repetitive code patterns, onboarding new libraries, and improving consistency—potentially reducing delivery time and effort.
 
 Below is my Upwork profile, please use this to figure out what skills to mention on the proposal:
 
@@ -64,4 +64,4 @@ Visual Studio Code
 Cursorless VSCode Extension
 Talon Voice
 
-When drafting a proposal always create a new text document file and save it as "Upwork Proposal for [Job Title].txt"
+When drafting a proposal always create a new text document file and save it as "Upwork Proposal for [Job Title].txt" replacing the job title if available with the actual one otherwise remove the job title placeholder
