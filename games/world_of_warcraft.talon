@@ -1,5 +1,5 @@
-app = "World of Warcraft"
-title = "World of Warcraft"
+app.name: = World of Warcraft
+title: = World of Warcraft
 -
 
 settings():
@@ -25,7 +25,7 @@ fly left:
     key(a)
     repeat(14)
 fly right:
-    key(d)  
+    key(d)
     repeat(14)
 fly forward:
     key(w)
@@ -44,7 +44,6 @@ move left:
     key(a)
 move right:
     key(d)
-loot: 
+loot:
     key(shift)
-target: key(f)    
-
+target: key(f)

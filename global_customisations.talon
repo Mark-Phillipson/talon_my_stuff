@@ -157,7 +157,6 @@ select and copy:
     sleep(100ms)
     key(ctrl-c)
     sleep(100ms)
-`1
     speech.disable()
     key(super-h)
 (voice typing in code) | (draft in code):

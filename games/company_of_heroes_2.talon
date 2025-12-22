@@ -1,5 +1,4 @@
 app.name: Company of Heroes 2
-#app: RelicCoH2.exe
 -
 settings():
     user.mode_indicator_show = 0

@@ -72,6 +72,6 @@ ctx_default.lists["user.snippet_category"] = {
 "VBA":"VBA",
 "Value":"Value",
 "Words":"Words",
-
+"Web Links":"Web Links",
 }
 

@@ -218,3 +218,7 @@ kill process:
     key(left:23)
 new blazor:
     insert("dotnet new blazor -o Practice --framework net10.0 ")
+list directories:
+    insert("Get-ChildItem -Directory")
+    sleep(100ms)
+    key(enter)
