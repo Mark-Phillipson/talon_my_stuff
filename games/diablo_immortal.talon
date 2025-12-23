@@ -7,6 +7,8 @@ inventory:
 close inventory:
     mouse_move(1620, 100)
     mouse_click()
+walk:
+    mouse_click(1)
 [move] left:
     key(a)
 [move] right:
