@@ -168,11 +168,14 @@ select and copy:
     key(enter)
     sleep(50ms)
     key(super-h)
+voice typing:
+    key(super-h)
+    speech.disable()
 [enter] first name:              insert("Mark ")
 [enter] my name:              insert("Mark Phillipson ")
 [enter] last name:         insert("Phillipson ")
 [enter] army number:          insert("24593308")
-[enter] default Github:       insert("https://github.com/Mark-Phillipson/BlazorCRUD_UIGenerator")
+[enter] my Github:       insert("https://github.com/Mark-Phillipson/")
 key(keypad_plus):           speech.disable()
 key(keypad_minus):          speech.enable()
 #do nothing calling amazon Echo device

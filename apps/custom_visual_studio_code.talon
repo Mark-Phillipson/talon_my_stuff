@@ -286,7 +286,10 @@ merge lines: user.vscode("editor.emmet.action.mergeLines")
 toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
-^pilot allow$: key(ctrl-enter)
+^pilot (allow | alow)$: 
+    user.copilot_chat("")
+    sleep(50ms)
+    key(ctrl-enter)
 make it so number one:
     insert("Yes Please Do That")
     sleep(100ms)
@@ -301,7 +304,6 @@ context last:
     insert("last")
     sleep(100ms)
     key(enter)
-pilot continue: key(ctrl-enter)
 pilot inline: key(ctrl-i)
 pilot completions: user.vscode("github.copilot.completions.toggle")
 pilot new chat:
