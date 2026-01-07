@@ -15,8 +15,7 @@ settings():
     tracking.zoom_scale = 4
 
 # This is a list of the commands that are specific to the Company of Heroes 2 game
-tag(): user.talon_hud_automatic_hide
-game <user.arrow_key>:
+h game <user.arrow_key>:
     key(arrow_key)
     repeat(4)
 fly <user.arrow_key>:

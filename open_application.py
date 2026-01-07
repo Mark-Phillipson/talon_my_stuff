@@ -46,7 +46,7 @@ class Actions:
         ui.launch(path=commandline, args=arguments, cwd=cwd)
     def run_application_voice_admin_windows_forms(searchTerm:  str ):
         "runs the voice admin windows forms application with the given search term"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net9.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
         args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
         args2 = '' + r'/' + searchTerm + ''
         arguments=[args1, args2]
@@ -55,12 +55,13 @@ class Actions:
         ui.launch(path=commandline,args=arguments)
     def run_application_voice_admin_windows_forms_language_category(language:  str,category:  str ):
         "runs the voice admin windows forms application with the given language and category"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net9.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
         args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
         args2 = '' + r'/' + language + ''
         args3 = '' + r'/' + category + ''
         arguments=[args1, args2, args3]
         print(commandline)
+        print(args1)
         print(language)
         print(category)
         ui.launch(path=commandline,args=arguments)
