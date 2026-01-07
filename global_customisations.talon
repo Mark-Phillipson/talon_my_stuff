@@ -63,7 +63,6 @@ launch code:
     insert("visual studio code")
     sleep(900ms)
     key(enter)
-show letters:               key(ctrl-super-alt-m)
 control abbreviation:       insert("ctrl")
 ^computer restart confirm$:
     key(super-x)
