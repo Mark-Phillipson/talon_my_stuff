@@ -793,4 +793,9 @@ attack there:
     key(a)
     sleep(50ms)
     mouse_click(0)
+repair:
+    key(e)
+    sleep(50ms)
+    mouse_click(0)
+
 #noise(pop): mouse_click(0)
