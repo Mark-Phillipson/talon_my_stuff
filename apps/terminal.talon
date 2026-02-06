@@ -56,11 +56,11 @@ split pain: key(shift-alt-d)
     sleep(100ms)
     key(enter)
 list directory:
-    insert("ls")
+    insert("ls | more")
     sleep(100ms)
     key(enter)
 list all [directory]:
-    insert("ls -a")
+    insert("ls -a | more")
     sleep(100ms)
     key(enter)
 current [directory]: insert("cd ")

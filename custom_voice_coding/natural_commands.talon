@@ -52,3 +52,5 @@
     user.run_application_csharp_natural("faster")
 ^slower$:
     user.run_application_csharp_natural("slower")
+^auto click$:
+    user.run_application_csharp_natural("auto click")

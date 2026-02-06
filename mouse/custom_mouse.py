@@ -29,6 +29,7 @@ steps_monitor_one = {
     "near": 700,
     "November": 700,
     "odd": 750,
+    "old": 750,
     "oscar": 750,
     "pit": 800,
     "papa": 800,
