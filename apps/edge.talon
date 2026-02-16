@@ -166,3 +166,4 @@ edge settings:
     key(alt-e)
     sleep(100ms)
     key(g)
+tab search: key(ctrl-shift-a)
