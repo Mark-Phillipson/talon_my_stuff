@@ -71,26 +71,26 @@ nudge down [<number>]:
     amount = number or 1
     mouse_move(position_x, position_y + amount)
 
-# Two-syllable mouse movement commands (move by 5 pixels)
+# Two-syllable mouse movement commands (move by 1 pixels)
 (nudgee | nudgey | noddy):
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y - 5)
+    mouse_move(position_x, position_y - 1)
 
 droppy:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x, position_y + 5)
+    mouse_move(position_x, position_y + 1)
 
 leeway:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x - 5, position_y)
+    mouse_move(position_x - 1, position_y)
 
 rifty:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(position_x + 5, position_y)
+    mouse_move(position_x + 1, position_y)
 (lower | low) left <user.number_signed_small>:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()

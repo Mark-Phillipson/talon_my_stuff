@@ -8,14 +8,6 @@ go local documents: user.file_manager_open_directory("C:\\Users\\MPhil\\Document
 go downloads: user.file_manager_open_directory("C:\\Users\\MPhil\\Downloads")
 go pictures: user.file_manager_open_directory("C:\\Users\\MPhil\\OneDrive\\Pictures")
 go one drive documents: user.file_manager_open_directory("C:\\Users\\MPhil\\OneDrive\\Documents")
-open in terminal:
-    key(alt-f)
-    sleep(400ms)
-    key(t)
-open in code:
-    key(alt-f)
-    sleep(400ms)
-    key(i)
 copy the path: key(ctrl-shift-c)
 touch top file:
     # Touch the top file in the explorer on monitor two only
@@ -100,8 +92,8 @@ toggle maximize:
     key(f11)
 open in Visual Studio code:
     # Copy current path from Explorer address bar
-    key(f4)            
-    key(ctrl-c)        
-    key(escape)        
+    key(f4)
+    key(ctrl-c)
+    key(escape)
     path = clip.text()
     user.open_path_in_code(path)

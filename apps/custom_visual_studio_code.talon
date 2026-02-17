@@ -494,7 +494,7 @@ toggle complete: user.vscode("voiceitems.toggleComplete")
 voice items pick: user.vscode("voiceitems.showItemsQuickPick")
 voice items search: user.vscode("voiceitems.searchKeyword")
 # Toggle sidebar, panel and secondary bar all at once
-toggle everything | toggle panels:
+toggle everything | toggle panels | toggle all:
     user.vscode("workbench.action.toggleSidebarVisibility")
     sleep(80ms)
     user.vscode("workbench.action.togglePanel")
