@@ -410,33 +410,43 @@ emplacement ninth:
     mouse_move(position_x, position_y)
 group one:
     key(shift-1)
+    sleep(30ms)
     key(ctrl-1)
 group two:
     key(shift-2)
+    sleep(30ms)
     key(ctrl-2)
 group three:
     key(shift-3)
+    sleep(30ms)
     key(ctrl-3)
 group four:
     key(shift-4)
+    sleep(30ms)
     key(ctrl-4)
 group five:
     key(shift-5)
+    sleep(30ms)
     key(ctrl-5)
 group six:
     key(shift-6)
+    sleep(30ms)
     key(ctrl-6)
 group seven:
     key(shift-7)
+    sleep(30ms)
     key(ctrl-7)
 group eight:
     key(shift-8)
+    sleep(30ms)
     key(ctrl-8)
 group nine:
     key(shift-9)
+    sleep(30ms)
     key(ctrl-9)
 group zero:
     key(shift-0)
+    sleep(30ms)
     key(ctrl-0)
 kill tank:
     key(7)
