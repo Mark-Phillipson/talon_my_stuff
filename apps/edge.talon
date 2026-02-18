@@ -167,3 +167,10 @@ edge settings:
     sleep(100ms)
     key(g)
 tab search: key(ctrl-shift-a)
+attach file:
+    user.mouse_helper_position_save()
+    user.mouse_helper_move_image_relative("2026-02-18_10.48.13.041558.png", 0)
+    sleep(0.05)
+    mouse_click(0)
+    sleep(0.05)
+    user.mouse_helper_position_restore()

@@ -500,3 +500,7 @@ toggle everything | toggle panels | toggle all:
     user.vscode("workbench.action.togglePanel")
     sleep(80ms)
     user.vscode("workbench.action.closeAuxiliaryBar")
+include file: 
+    key(shift-tab)
+    sleep(100ms)
+    key(space)
