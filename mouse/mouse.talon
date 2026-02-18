@@ -18,20 +18,20 @@
 <user.screen_step_two> <user.screen_step_vertical_monitor_two> righty:
     mouse_move(screen_step_two, screen_step_vertical_monitor_two)
     mouse_click(1)
-<user.screen_step_one> taskbar:
+<user.screen_step_one> (taskbar | task):
     mouse_move(screen_step_one, 1030)
     mouse_click(0)
 <user.screen_step_one> apex:
     mouse_move(-380, 45)
     mouse_move(screen_step_one, 30)
     mouse_click(0)
-<user.screen_step_two> taskbar:
+<user.screen_step_two> (taskbar | task):
     mouse_move(screen_step_two, 1030)
     mouse_click(0)
 <user.screen_step_two> apex:
     mouse_move(screen_step_two, -15)
     mouse_click(0)
-taskbar <user.screen_step_two> <user.number_signed_small>:
+(taskbar | task) <user.screen_step_two> <user.number_signed_small>:
     mouse_move(screen_step_two, 1050)
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
