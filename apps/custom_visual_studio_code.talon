@@ -504,3 +504,10 @@ include file:
     key(shift-tab)
     sleep(100ms)
     key(space)
+commit message:
+    user.mouse_helper_position_save()
+    user.mouse_helper_move_image_relative("2026-02-19_11.54.36.304447.png", 0)
+    sleep(0.05)
+    mouse_click(0)
+    sleep(0.05)
+    user.mouse_helper_position_restore()    

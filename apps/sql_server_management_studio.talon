@@ -11,7 +11,7 @@ add existing item: key(shift-alt-a)
 
 # Query editor and execution
 new query: key(ctrl-n)
-run query: key(f5)
+(run | execute) query: key(f5)
 parse query: key(ctrl-f5)
 estimate plan: key(ctrl-l)
 actual plan: key(ctrl-m)

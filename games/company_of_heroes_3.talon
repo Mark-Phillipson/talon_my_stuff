@@ -1,6 +1,7 @@
 os: windows
 and app.exe: reliccoh3.exe
 and win.title: /company of heroes 3|coh3/i
+or app.exe: RelicCoH3.exe
 -
 #Whilst playing the game the workaround to make this work is to make this file global until we can figure out why the app does not detect when the app is running.
 settings():
@@ -105,7 +106,7 @@ go there:
 lazy [vehicle]:
     key(.)
 [all] vehicles:
-    key(ctrl-/)
+    key(ctrl-.)
 all idle: key(ctrl-alt-,)
 all lazy: key(ctrl-alt-.)
 events: key(n)
@@ -299,49 +300,49 @@ get stuff:
 vehicle first:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(440, 895)
+    mouse_move(382, 886)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
 vehicle second:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(500, 895)
+    mouse_move(437, 884)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
 vehicle third:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(560, 895)
+    mouse_move(494, 879)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
 vehicle fourth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(620, 895)
+    mouse_move(550, 879)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
 vehicle fifth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(680, 895)
+    mouse_move(605, 879)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
 vehicle sixth:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(740, 895)
+    mouse_move(660, 879)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
 vehicle seventh:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
-    mouse_move(1695, 230)
+    mouse_move(715, 879)
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
@@ -410,44 +411,24 @@ emplacement ninth:
     mouse_move(position_x, position_y)
 group one:
     key(shift-1)
-    sleep(30ms)
-    key(ctrl-1)
 group two:
     key(shift-2)
-    sleep(30ms)
-    key(ctrl-2)
 group three:
     key(shift-3)
-    sleep(30ms)
-    key(ctrl-3)
 group four:
     key(shift-4)
-    sleep(30ms)
-    key(ctrl-4)
 group five:
     key(shift-5)
-    sleep(30ms)
-    key(ctrl-5)
 group six:
     key(shift-6)
-    sleep(30ms)
-    key(ctrl-6)
 group seven:
     key(shift-7)
-    sleep(30ms)
-    key(ctrl-7)
 group eight:
     key(shift-8)
-    sleep(30ms)
-    key(ctrl-8)
 group nine:
     key(shift-9)
-    sleep(30ms)
-    key(ctrl-9)
 group zero:
     key(shift-0)
-    sleep(30ms)
-    key(ctrl-0)
 kill tank:
     key(7)
     sleep(30ms)
@@ -458,7 +439,7 @@ reverse:
     key(r)
     sleep(30ms)
     mouse_click(0)
-retreat | trap:
+retreat:
     key(r)
     sleep(30ms)
     mouse_click(0)
