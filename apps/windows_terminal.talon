@@ -1,4 +1,5 @@
 app.exe: windowsterminal.exe
+and os: windows
 -
 tag(): terminal
 tag(): user.tabs
@@ -46,3 +47,47 @@ create rails controller:
     insert("rails generate controller name action ")
 select all: key(ctrl-shift-a)
 copy that: key(ctrl-c)
+rubout:
+    user.throttle_backspace(1)
+rubout <number_small>:
+    user.throttle_backspace(number_small)
+rubout first:
+    user.throttle_backspace(1)
+rubout second:
+    user.throttle_backspace(2)
+rubout third:
+    user.throttle_backspace(3)
+rubout fourth:
+    user.throttle_backspace(4)
+rubout fifth:
+    user.throttle_backspace(5)
+rubout sixth:
+    user.throttle_backspace(6)
+rubout seventh:
+    user.throttle_backspace(7)
+rubout eighth:
+    user.throttle_backspace(8)
+rubout ninth:
+    user.throttle_backspace(9)
+rubout tenth:
+    user.throttle_backspace(10)
+throttle backspace first:
+    user.throttle_backspace(1)
+throttle backspace second:
+    user.throttle_backspace(2)
+throttle backspace third:
+    user.throttle_backspace(3)
+throttle backspace fourth:
+    user.throttle_backspace(4)
+throttle backspace fifth:
+    user.throttle_backspace(5)
+throttle backspace sixth:
+    user.throttle_backspace(6)
+throttle backspace seventh:
+    user.throttle_backspace(7)
+throttle backspace eighth:
+    user.throttle_backspace(8)
+throttle backspace ninth:
+    user.throttle_backspace(9)
+throttle backspace tenth:
+    user.throttle_backspace(10)
