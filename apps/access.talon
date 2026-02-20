@@ -81,7 +81,7 @@ export file: key(ctrl-e)
 view design: key(shift-f7)
 view code: key(f7)
 [go to] definition: key(shift-f2)
-
+set next statement: key(ctrl-f9)
 hunt (all | this): key(ctrl-f)
 open [an] object:
     user.mouse_helper_position_save()
