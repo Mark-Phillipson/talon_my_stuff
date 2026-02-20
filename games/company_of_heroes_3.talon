@@ -781,3 +781,5 @@ understood:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
+number labels show:
+    user.number_labels_register(360, 990, 55, "left_to_right", "horizontal")

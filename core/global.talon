@@ -49,3 +49,6 @@ total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 #zoom it: key(super-ctrl-f8)
 con mouse: tracking.control_toggle()
 control [mass]: tracking.control_toggle()
+
+# currently used in Company of Heroes games
+number labels hide: user.hud_set_virtual_keyboard()

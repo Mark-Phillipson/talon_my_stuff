@@ -93,7 +93,7 @@ heavy [vehicles]:
     key(ctrl-a)
     sleep(30ms)
     mouse_click(0)
-[toggle] map:
+tactical map:
     key(keypad_0)
 go there:
     mouse_click(0)
@@ -799,3 +799,5 @@ repair:
     mouse_click(0)
 
 #noise(pop): mouse_click(0)
+number labels show:
+    user.number_labels_register(1630, -20, 50, "right_to_left", "horizontal")
