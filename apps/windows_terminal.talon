@@ -71,23 +71,3 @@ rubout ninth:
     user.throttle_backspace(9)
 rubout tenth:
     user.throttle_backspace(10)
-throttle backspace first:
-    user.throttle_backspace(1)
-throttle backspace second:
-    user.throttle_backspace(2)
-throttle backspace third:
-    user.throttle_backspace(3)
-throttle backspace fourth:
-    user.throttle_backspace(4)
-throttle backspace fifth:
-    user.throttle_backspace(5)
-throttle backspace sixth:
-    user.throttle_backspace(6)
-throttle backspace seventh:
-    user.throttle_backspace(7)
-throttle backspace eighth:
-    user.throttle_backspace(8)
-throttle backspace ninth:
-    user.throttle_backspace(9)
-throttle backspace tenth:
-    user.throttle_backspace(10)
