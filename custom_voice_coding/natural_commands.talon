@@ -10,6 +10,9 @@
 ^show desktop$:
     user.run_application_csharp_natural("show desktop")
 
+^(identify | identified) <user.text>$:
+    user.run_application_csharp_natural("identify " + text)
+
 # Mouse movement commands for NaturalCommands
 # Copy these into your Talon user directory
 
