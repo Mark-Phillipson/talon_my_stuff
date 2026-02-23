@@ -185,13 +185,11 @@ list last commits:
     key(enter)
 delete object and binary folders: insert("Remove-Item -Path bin,obj -Recurse -Force")
 watch cycle: insert("dotnet watch run --project CycleRoutes/CycleRoutes.Web")
-shelling:
-    insert("github-copilot-cli what-the-shell \"\"")
+copilot:
+    insert("copilot --banner")
     sleep(30ms)
-    key(left)
-git assist: insert("github-copilot-cli git-assist ")
-Github assist: insert("github-copilot-cli gh-assist ")
-open terminal settings:
+    key(enter)
+[open] terminal settings:
     key(ctrl-,)
     sleep(100ms)
     insert("terminal.integrated.defaultProfile.windows")
@@ -220,5 +218,9 @@ new blazor:
     insert("dotnet new blazor -o Practice --framework net10.0 ")
 list directories:
     insert("Get-ChildItem -Directory")
+    sleep(100ms)
+    key(enter)
+list directories horizontal:
+    insert("Get-ChildItem -Directory | Format-Wide Name -Column 4")
     sleep(100ms)
     key(enter)
