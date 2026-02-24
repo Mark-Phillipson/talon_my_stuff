@@ -224,3 +224,27 @@ list directories horizontal:
     insert("Get-ChildItem -Directory | Format-Wide Name -Column 4")
     sleep(100ms)
     key(enter)
+rubout:
+    user.throttle_backspace(1)
+rubout <number_small>:
+    user.throttle_backspace(number_small)
+rubout first:
+    user.throttle_backspace(1)
+rubout second:
+    user.throttle_backspace(2)
+rubout third:
+    user.throttle_backspace(3)
+rubout fourth:
+    user.throttle_backspace(4)
+rubout fifth:
+    user.throttle_backspace(5)
+rubout sixth:
+    user.throttle_backspace(6)
+rubout seventh:
+    user.throttle_backspace(7)
+rubout eighth:
+    user.throttle_backspace(8)
+rubout ninth:
+    user.throttle_backspace(9)
+rubout tenth:
+    user.throttle_backspace(10)

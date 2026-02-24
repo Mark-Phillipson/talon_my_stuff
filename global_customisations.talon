@@ -306,3 +306,9 @@ gamepad(south:up):
 gamepad(south:down):        
     speech.enable()
     print("Talon awake")
+steam library:
+    key(super-r)
+    sleep(40ms)
+    insert("steam://open/library")
+    key(enter)
+

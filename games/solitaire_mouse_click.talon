@@ -1,5 +1,6 @@
 os: windows
-and app.name: Application Frame Host
+and app.name: Applicatione Frame Host
+and app.name: Applicatione Frame Host
 and win.title: /solitaire|casual games|microsoft solitaire collection/i
 -
 bubble:
