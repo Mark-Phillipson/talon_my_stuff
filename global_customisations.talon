@@ -308,7 +308,7 @@ gamepad(south:down):
     print("Talon awake")
 steam library:
     key(super-r)
-    sleep(40ms)
+    sleep(400ms
     insert("steam://open/library")
     key(enter)
 

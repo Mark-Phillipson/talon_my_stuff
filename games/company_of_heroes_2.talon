@@ -1,5 +1,6 @@
 app.name: Company of Heroes 2
 -
+
 settings():
     user.mode_indicator_show = 0
     # Choose how pop click should work in 'control mouse' mode
@@ -359,7 +360,7 @@ get stuff:
     mouse_move(380, 825)
     sleep(30ms)
     mouse_click(0)
-vehicle first:
+vehicle [first]:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1650, 175)
@@ -408,7 +409,7 @@ vehicle seventh:
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
-emplacement first:
+emplacement [first]:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(1650, 270)

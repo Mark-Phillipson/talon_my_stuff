@@ -131,16 +131,12 @@ open accessible view: user.vscode("editor.action.accessibleView")
 previous tab: user.vscode("workbench.action.previousEditor")
 next tab: user.vscode("workbench.action.nextEditor")
 (closed tab | close tab): user.vscode("workbench.action.closeActiveEditor")
-maximize editor:
-    key(f1)
-    sleep(100ms)
-    insert("View: Toggle Primary Sidebar Visibility")
-    key(enter)
 sidebar shrink: user.vscode("workbench.action.increaseViewWidth")
 sidebar grow: user.vscode("workbench.action.decreaseViewWidth")
 split grow: user.vscode("workbench.action.increaseViewSize")
 split shrink: user.vscode("workbench.action.decreaseViewSize")
-
+split editor right: user.vscode("workbench.action.splitEditorRight")
+    
 zoom in small:
     key(ctrl:down)
     user.mouse_scroll_up()
