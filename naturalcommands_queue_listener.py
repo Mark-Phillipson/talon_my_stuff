@@ -9,6 +9,7 @@ QUEUE_PATHS = [
 ]
 
 _positions = {}
+_mtimes = {}
 _job = None
 
 
@@ -24,9 +25,13 @@ def _drain_path(path: Path):
     if not path.exists():
         return
 
+    stat = path.stat()
     last_pos = _positions.get(path, 0)
-    size = path.stat().st_size
-    if size < last_pos:
+    last_mtime = _mtimes.get(path, 0)
+
+    # NaturalCommands uses File.WriteAllText (overwrite), so reset position whenever
+    # the file's modification time has changed or the file shrank.
+    if stat.st_mtime != last_mtime or stat.st_size < last_pos:
         last_pos = 0
 
     with path.open("r", encoding="utf-8") as f:
@@ -37,6 +42,7 @@ def _drain_path(path: Path):
             except Exception as e:
                 app.notify("NaturalCommands queue", f"Failed command '{line.strip()}': {e}")
         _positions[path] = f.tell()
+        _mtimes[path] = stat.st_mtime
 
 
 def _poll_queue():
