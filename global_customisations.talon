@@ -310,5 +310,6 @@ steam library:
     key(super-r)
     sleep(400ms
     insert("steam://open/library")
+    sleep(400ms)
     key(enter)
 
