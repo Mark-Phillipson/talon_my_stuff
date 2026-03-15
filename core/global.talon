@@ -1,10 +1,10 @@
 pick <number_small>: user.pick_item(number_small)
 pick to: user.pick_item(2)
 pick <user.word>:
-    "{word}"
+    insert("{word}")
     key(enter)
 pick <user.letters>:
-    "{letters}"
+    insert("{letters}")
     key(enter)
 [save to] (disk | disky): key(ctrl-s)
 context menu: key(menu)
@@ -13,8 +13,7 @@ help search selection:
     sleep(500ms)
     text = clip.text()
     user.help_search(text)
-taskbar toggle:
-    user.toggle_taskbar()
+taskbar toggle: user.toggle_taskbar()
 snipping tool: key(super-shift-s)
 [touch] screen one:
     mouse_move(-680, 480)
@@ -34,8 +33,9 @@ snip folder one drive documents: insert("C:\\Users\\MPhil\\OneDrive\\Documents")
 snip folder desktop: insert("C:\\Users\\MPhil\\Desktop")
 snip folder desktop pictures: insert("C:\\DesktopPictures")
 snip folder repose: insert("C:\\Users\\MPhil\\source\\repos")
-start twitch bot: user.system_command("c:/Users/MPhil/source/repos/TwitchBot01/launch-bot.bat")
-(hover | position): user.move_cursor_to_gaze_point()
+start twitch bot:
+    user.system_command("c:/Users/MPhil/source/repos/TwitchBot01/launch-bot.bat")
+hover | position: user.move_cursor_to_gaze_point()
 tab clothes: user.tab_close_wrapper()
 (ask it) | (basket):
     insert("?")
@@ -50,3 +50,5 @@ control [mass]: tracking.control_toggle()
 
 # currently used in Company of Heroes games
 number labels hide: user.hud_set_virtual_keyboard()
+
+telegram bob: user.switcher_focus("Telegram")

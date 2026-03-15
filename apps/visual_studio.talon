@@ -31,8 +31,8 @@ new empty file: key(shift-f2)
 [panel] properties: key(f4)
 window position: key(alt-minus)
 close tool [window]: key(shift-escape)
-close tab: key(ctrl-alt-f6)
-closed tab: key(ctrl-alt-f6)
+close tab: key(ctrl-w)
+closed tab: key(ctrl-w)
 # Settings
 show settings: key(alt-t o)
 #show shortcuts:
@@ -61,7 +61,7 @@ show recent [projects | solutions]:
     key(j)
 # Language Features
 hint show: key(ctrl-shift-space)
-(go to definition | definition show): key(f12)
+go to definition | definition show: key(f12)
 definition peek: key(alt-f12)
 references find: key(shift-f12)
 format (that | code): key(ctrl-k ctrl-d)
@@ -78,7 +78,7 @@ refactor remove parameters: key(ctrl-r ctrl-v)
 refactor that: key(ctrl-r ctrl-r)
 
 #code navigation
-(last position | go back): key(ctrl--)
+last position | go back: key(ctrl--)
 go forward: key(ctrl-shift--)
 go [to] implementation: key(ctrl-f12)
 go recent [<user.text>]:
@@ -102,16 +102,16 @@ go next mark: key(ctrl-k ctrl-n)
 go last mark: key(ctrl-k ctrl-p)
 
 # Folding
-(toggle collapse | fold toggle | toggle expand): key(ctrl-m ctrl-m)
-(collapse all | fold toggle all): key(ctrl-m ctrl-l)
+toggle collapse | fold toggle | toggle expand: key(ctrl-m ctrl-m)
+collapse all | fold toggle all: key(ctrl-m ctrl-l)
 (collapse | fold) definitions: key(ctrl-m ctrl-o)
 
 #Debugging
 build solution: key(ctrl-shift-b)
 build project: key(ctrl-b)
 start application: key(ctrl-f5)
-(reset code | stop application): key(shift-f5)
-(start debugging | debug application): key(f5)
+reset code | stop application: key(shift-f5)
+start debugging | debug application: key(f5)
 show code places:
     key(ctrl-alt-shift-h)
     sleep(100ms)
@@ -124,15 +124,15 @@ debug stopper: key(shift-f5)
 debug continue: key(f5)
 
 # findinghing the code
-(hunt next | find next): key(f3)
-(hunt last | find last): key(shift-f3)
+hunt next | find next: key(f3)
+hunt last | find last: key(shift-f3)
 find following [<user.text>]:
     key(ctrl-f)
     sleep(100ms)
     insert(text or "")
     key(escape)
 #navigation
-(go line | go to line): key(ctrl-g)
+go line | go to line: key(ctrl-g)
 go [to line] <user.number_string>:
     key(ctrl-g)
     sleep(100ms)
@@ -156,7 +156,7 @@ collect marker: key(alt-end)
 drop marker: key(alt-home)
 swap marker: key(alt-shift-home)
 #DevExpress CodeRush jump codes functionality end
-(quick actions | open smart tag): key(ctrl-.)
+quick actions | open smart tag: key(ctrl-.)
 search code: key(ctrl-f)
 search code [<user.text>]:
     key(ctrl-f)
@@ -171,16 +171,14 @@ show error [list]: key(ctrl-\ ctrl-e)
 expand selection: key(alt-shift-=)
 shrink selection: key(alt-shift--)
 go to view: key(ctrl-m ctrl-g)
-(hunt this | search code): key(ctrl-f)
+hunt this | search code: key(ctrl-f)
 format document: key(ctrl-k ctrl-d)
 format code: key(ctrl-k ctrl-e)
 format selection: key(ctrl-k ctrl-f)
 next method: key(ctrl-shift-m)
 previous method: key(ctrl-shift-alt-m)
-move [the] line up:
-    key(ctrl-f1 ctrl-f2)
-move [the] line down:
-    key(ctrl-f1 ctrl-f4)
+move [the] line up: key(ctrl-f1 ctrl-f2)
+move [the] line down: key(ctrl-f1 ctrl-f4)
 commit changes: key(ctrl-alt-f7)
 commit and sink:
     key(ctrl-alt-shift-k)
@@ -213,7 +211,7 @@ step across:
     key(f10)
     sleep(100ms)
 step over: key(f10)
-(reset code | stop debugging): key(shift-f5)
+reset code | stop debugging: key(shift-f5)
 continue: key(f5)
 toggle breakpoint: key(f9)
 delete [all] breakpoints: key(ctrl-shift-f9)
@@ -244,8 +242,8 @@ previous tab:
     key(alt-w)
     sleep(100ms)
     key(2)
-(view code | view page | view component): key(f7)
-(begin comment | start comment): insert("// ")
+view code | view page | view component: key(f7)
+begin comment | start comment: insert("// ")
 visual studio clipboard: key(ctrl-shift-insert)
 jump to symbol [<user.text>]:
     key(ctrl-shift-q)
@@ -278,9 +276,9 @@ if statement:
     key(ctrl-j)
     sleep(100ms)
     key(tab tab)
-# deck(pedal_left): 
+# deck(pedal_left):
 #     user.pedal_left()
 #     speech.toggle()
-# deck(pedal_right): 
+# deck(pedal_right):
 #     user.pedal_right()
 #     speech.toggle()
