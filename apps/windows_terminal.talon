@@ -29,21 +29,27 @@ export text:
     insert("export ")
     sleep(50ms)
     key(enter)
-[go command] palette:
-    key(ctrl-shift-p)
+[go command] palette: key(ctrl-shift-p)
 hunt this: key(ctrl-shift-f)
 create issue [<user.text>]:
     insert("gh issue create ")
     insert(user.text)
-dotnet restore:
+(dotnet | terminal) restore:
     insert("dotnet restore")
+    sleep(100ms)
+    key(enter)
+(dotnet | terminal) build:
+    insert("dotnet build")
+    sleep(100ms)
+    key(enter)
+(dotnet | terminal) run:
+    insert("dotnet run")
     sleep(100ms)
     key(enter)
 start rails server:
     insert("rails server")
     sleep(100ms)
     key(enter)
-create rails controller:
-    insert("rails generate controller name action ")
+create rails controller: insert("rails generate controller name action ")
 select all: key(ctrl-shift-a)
 copy that: key(ctrl-c)
