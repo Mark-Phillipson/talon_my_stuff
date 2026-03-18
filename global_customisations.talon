@@ -145,8 +145,9 @@ fake email:
     emailAddress = user.fake_email()
     insert(emailAddress)
 fake phone number:
-    phoneNumber = user.generate_random_number()
-    insert(phoneNumber)
+    phoneNumber1 = user.generate_random_number()
+    phoneNumber2 =  user.generate_random_number()
+    insert(phoneNumber1 + phoneNumber2)
 (enter | insert) timestamp:            
     insert(user.time_format("%Y-%m-%d %H:%M:%S"))
 timestamp:           
@@ -310,6 +311,4 @@ steam library:
     key(super-r)
     sleep(400ms
     insert("steam://open/library")
-    sleep(400ms)
-    key(enter)
-
+    

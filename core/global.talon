@@ -51,4 +51,4 @@ control [mass]: tracking.control_toggle()
 # currently used in Company of Heroes games
 number labels hide: user.hud_set_virtual_keyboard()
 
-telegram bob: user.switcher_focus("Telegram")
+(telegram | telegraph) bob: user.switcher_focus("Telegram")

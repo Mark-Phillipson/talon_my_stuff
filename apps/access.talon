@@ -138,3 +138,25 @@ best fit:
     key(f)
     sleep(200ms)
     key(alt-b)
+chain login:
+    key(shift-tab)
+    sleep(200ms)
+    insert("axxonlab")
+    sleep(200ms)
+    key(tab)
+    sleep(200ms)
+    insert("uygfuiHqduf40")
+    sleep(200ms)
+    key(enter)
+down space:
+    key(down)
+    sleep(200ms)
+    key(space)
+tab space:
+    key(tab)
+    sleep(200ms)
+    key(space)
+space tab:
+    key(space)
+    sleep(200ms)
+    key(tab)
