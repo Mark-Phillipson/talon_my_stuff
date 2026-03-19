@@ -1,58 +1,37 @@
-^(natural | nat) <user.text>$:
-    user.run_application_csharp_natural(text)
+^(natural | nat) <user.text>$: user.run_application_csharp_natural(text)
 ^(natural | nat) dictate$:
     speech.disable()
     user.run_application_csharp_natural("dictate")
-^show letters$:
-    user.run_application_csharp_natural("show letters")
-^show taskbar$:
-    user.run_application_csharp_natural("show taskbar")
-^show desktop$:
-    user.run_application_csharp_natural("show desktop")
+bob <user.text>: user.bob_cli_send(text)
+^show letters$: user.run_application_csharp_natural("show letters")
+^show taskbar$: user.run_application_csharp_natural("show taskbar")
+^show desktop$: user.run_application_csharp_natural("show desktop")
 
-^(ID) <user.text>$:
-    user.run_application_csharp_natural("identify " + text)
+^(ID) <user.text>$: user.run_application_csharp_natural("identify " + text)
 
 # Mouse movement commands for NaturalCommands
 
 # Basic directional movement
-^mouse left$:
-    user.run_application_csharp_natural("mouse left")
-^mouse right$:
-    user.run_application_csharp_natural("mouse right")
-^mouse up$:
-    user.run_application_csharp_natural("mouse up")
-^mouse down$:
-    user.run_application_csharp_natural("mouse down")
+^mouse left$: user.run_application_csharp_natural("mouse left")
+^mouse right$: user.run_application_csharp_natural("mouse right")
+^mouse up$: user.run_application_csharp_natural("mouse up")
+^mouse down$: user.run_application_csharp_natural("mouse down")
 
 # Diagonal movement
-^mouse up left$:
-    user.run_application_csharp_natural("mouse up left")
-^mouse up right$:
-    user.run_application_csharp_natural("mouse up right")
-^mouse down left$:
-    user.run_application_csharp_natural("mouse down left")
-^mouse down right$:
-    user.run_application_csharp_natural("mouse down right")
+^mouse up left$: user.run_application_csharp_natural("mouse up left")
+^mouse up right$: user.run_application_csharp_natural("mouse up right")
+^mouse down left$: user.run_application_csharp_natural("mouse down left")
+^mouse down right$: user.run_application_csharp_natural("mouse down right")
 
 # Stop commands
-^mouse stop$:
-    user.run_application_csharp_natural("mouse stop")
-^stop mouse$:
-    user.run_application_csharp_natural("stop mouse")
-^stop click$:
-    user.run_application_csharp_natural("stop click")
-^stop right click$:
-    user.run_application_csharp_natural("stop right click")
+^mouse stop$: user.run_application_csharp_natural("mouse stop")
+^stop mouse$: user.run_application_csharp_natural("stop mouse")
+^stop click$: user.run_application_csharp_natural("stop click")
+^stop right click$: user.run_application_csharp_natural("stop right click")
 
 # Speed adjustment
-^mouse faster$:
-    user.run_application_csharp_natural("mouse faster")
-^mouse slower$:
-    user.run_application_csharp_natural("mouse slower")
-^faster$:
-    user.run_application_csharp_natural("faster")
-^slower$:
-    user.run_application_csharp_natural("slower")
-^auto click$:
-    user.run_application_csharp_natural("auto click")
+^mouse faster$: user.run_application_csharp_natural("mouse faster")
+^mouse slower$: user.run_application_csharp_natural("mouse slower")
+^faster$: user.run_application_csharp_natural("faster")
+^slower$: user.run_application_csharp_natural("slower")
+^auto click$: user.run_application_csharp_natural("auto click")
