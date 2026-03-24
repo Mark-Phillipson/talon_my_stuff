@@ -309,4 +309,7 @@ steam library:
     key(super-r)
     sleep(400ms
     insert("steam://open/library")
+local host <user.number_string>:
+    port = user.normalize_number_string(number_string)
+    user.open_url("http://localhost:" + port)
     

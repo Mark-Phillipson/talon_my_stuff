@@ -1,5 +1,6 @@
 title: WhatsApp
 -
+
 new chat: key(ctrl-n)
 close chat: key(ctrl-w)
 search: key(ctrl-f)
@@ -12,9 +13,10 @@ gif panel: key(ctrl-shift-g)
 sticker panel: key(ctrl-shift-s)
 previous chat: key(ctrl-shift-[)
 next chat: key(ctrl-shift-])
-open chat <user.number>:
+open chat <user.number_string>:
+    chat_index = user.normalize_number_string(number_string)
     key(ctrl:down)
-    input(number)
+    input(chat_index)
     key(ctrl:up)
 edit last message: key(ctrl-up)
 zoom in: key(ctrl-+)

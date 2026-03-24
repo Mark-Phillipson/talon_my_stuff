@@ -30,7 +30,6 @@ terminal watch:
     insert("dotnet watch run")
     sleep(100ms)
     key(enter)
-#local host Marvin: user.open_url("http://localhost:5016")
 #My SelectionSaver Extension
 drop (marker | mark): user.vscode("selectionssaver.saveBookmark")
 collect (marker | mark): user.vscode("selectionssaver.restoreBookmark")
