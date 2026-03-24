@@ -181,9 +181,7 @@ key(keypad_minus):          speech.enable()
 #do nothing calling amazon Echo device
 ziggy <user.text>: 
 #do nothing calling amazon PC app
-Alexa <user.text>: 
-stop listening:
-    speech.enable()
+stop listening:   speech.disable()
 drowse:
     #app.notify('I feel drowsy.', 'Talon Now Sleeping', 'DROWSE', true)
     speech.disable()

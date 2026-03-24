@@ -72,7 +72,7 @@ nudge down [<number>]:
     mouse_move(position_x, position_y + amount)
 
 # Two-syllable mouse movement commands (move by 1 pixels)
-(nudgee | nudgey | noddy):
+nudgee | nudgey | noddy:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(position_x, position_y - 1)
@@ -177,3 +177,6 @@ we'll stop: user.mouse_scroll_stop()
     # close the mouse grid if open
     user.grid_close()
 zoom off: tracking.zoom_cancel()
+parrot(tut):
+    mouse_click(0)
+    print("tut > parrot")

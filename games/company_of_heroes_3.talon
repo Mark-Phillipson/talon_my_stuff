@@ -1,7 +1,6 @@
 os: windows
 and app.exe: reliccoh3.exe
 and win.title: /company of heroes 3|coh3/i
-or app.exe: RelicCoH3.exe
 -
 #Whilst playing the game the workaround to make this work is to make this file global until we can figure out why the app does not detect when the app is running.
 settings():

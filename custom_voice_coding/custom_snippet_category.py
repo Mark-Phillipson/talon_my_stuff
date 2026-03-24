@@ -19,6 +19,7 @@ ctx_default.lists["user.snippet_category"] = {
 "CodeRushed":"CodeRushed",
 "Commands":"Commands",
 "Computer Names":"Computer Names",
+"Contacts":"Contacts",
 "Connection Strings":"Connection Strings",
 "Cursorless":"Cursorless",
 "Data Access Objects":"Data Access Objects",

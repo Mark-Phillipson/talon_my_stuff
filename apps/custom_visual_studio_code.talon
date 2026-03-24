@@ -30,12 +30,12 @@ terminal watch:
     insert("dotnet watch run")
     sleep(100ms)
     key(enter)
-local host Marvin: user.open_url("http://localhost:5016")
+#local host Marvin: user.open_url("http://localhost:5016")
 #My SelectionSaver Extension
-drop marker: user.vscode("selectionssaver.saveBookmark")
-collect marker: user.vscode("selectionssaver.restoreBookmark")
-save swap marker: user.vscode("selectionssaver.saveSelectionToSwapSlot")
-swap marker: user.vscode("selectionssaver.swapWithSwapSlot")
+drop (marker | mark): user.vscode("selectionssaver.saveBookmark")
+collect (marker | mark): user.vscode("selectionssaver.restoreBookmark")
+swap save: user.vscode("selectionssaver.saveSelectionToSwapSlot")
+swap (marker | mark): user.vscode("selectionssaver.swapWithSwapSlot")
 
 focus search: user.vscode("workbench.view.search")
 focus extensions: user.vscode("workbench.view.extensions")
