@@ -26,12 +26,15 @@ def _run_bob_cli_async(prompt: str, env: dict, startupinfo, creationflags: int):
         )
 
     except FileNotFoundError:
+        _append_log("ERROR: dotnet command not found")
         actions.app.notify("Bob CLI", "dotnet command not found.")
         return
     except subprocess.TimeoutExpired as ex:
+        _append_log(f"ERROR: timeout after {ex.timeout}s")
         actions.app.notify("Bob CLI", "Assistant timed out.")
         return
     except Exception as ex:
+        _append_log(f"ERROR: exception {ex}")
         actions.app.notify("Bob CLI", f"Failed to run assistant: {ex}")
         return
 
@@ -55,7 +58,7 @@ class Actions:
 
         env = os.environ.copy()
         env["ASSISTANT_TTS_ENABLED"] = "true"  # ensure TTS is enabled for Talon calls
-        env["ASSISTANT_TTS_PREFERRED_GENDER"] = env.get("ASSISTANT_TTS_PREFERRED_GENDER", "female")
+        env["ASSISTANT_TTS_PREFERRED_GENDER"] = env.get("ASSISTANT_TTS_PREFERRED_GENDER", "male")
 
         startupinfo = None
         creationflags = 0

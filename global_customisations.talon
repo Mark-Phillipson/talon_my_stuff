@@ -267,9 +267,6 @@ key(ctrl-f12) :
     key(tab:8)
 middle click: mouse_click(2)
 penta: key(enter)
-#Too many false positives to use these
-#noise(pop) noise(pop): mouse_click()
-#noise(dental_click): mouse_click()
 clippy: 
     key(super-v)
 # enable push to talk in sleep mode    

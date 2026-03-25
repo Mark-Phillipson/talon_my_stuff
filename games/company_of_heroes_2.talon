@@ -1,6 +1,9 @@
 app.name: Company of Heroes 2
 -
 
+# Enables pop to click in the game
+#tag(): user.sound_clicks
+
 settings():
     user.mode_indicator_show = 0
     # Choose how pop click should work in 'control mouse' mode
@@ -23,21 +26,15 @@ fly <user.arrow_key>:
     key(arrow_key)
     repeat(14)
 # Basic commands
-move forward:
-    key(up)
-move back:
-    key(down)
-move left:
-    key(left)
-move right:
-    key(right)
+move forward: key(up)
+move back: key(down)
+move left: key(left)
+move right: key(right)
 attack [move]:
     key(a)
     mouse_click(0)
-stop:
-    key(s)
-reinforce:
-    key(r:10)
+stop: key(s)
+reinforce: key(r:10)
 fuel:
     key(b)
     sleep(20ms)
@@ -80,32 +77,23 @@ assembly:
     key(d)
     sleep(20ms)
     mouse_click(0)
-headquarters:
-    key(f1)
-infantry:
-    key(f2)
-support:
-    key(f3)
-light [vehicles]:
-    key(f4)
-heavy [vehicles]:
-    key(f5)
+headquarters: key(f1)
+infantry: key(f2)
+support: key(f3)
+light [vehicles]: key(f4)
+heavy [vehicles]: key(f5)
 [set] rally point:
     key(ctrl-a)
     sleep(30ms)
     mouse_click(0)
-tactical map:
-    key(keypad_0)
+tactical map: key(keypad_0)
 go there:
     mouse_click(0)
     sleep(60ms)
     key(keypad_0)
-[next] dozing [vehicle]:
-    key(alt-/)
-[next] idle [soldier]:
-    key(.)
-[all] vehicles:
-    key(ctrl-/)
+[next] dozing [vehicle]: key(alt-/)
+[next] idle [soldier]: key(.)
+[all] vehicles: key(ctrl-/)
 queue:
     key(shift:down)
     sleep(30ms)
@@ -124,24 +112,18 @@ explode:
     key(a)
     sleep(30ms)
     mouse_click(0)
-hold shift:
-    key(shift:down)
-release shift:
-    key(shift:up)
-[all] soldiers:
-    key(ctrl-.)
+hold shift: key(shift:down)
+release shift: key(shift:up)
+[all] soldiers: key(ctrl-.)
 [all] invade:
     key(ctrl-.)
     sleep(30ms)
     key(a)
     sleep(30ms)
     mouse_click(0)
-reset camera:
-    key(backspace)
-[game] pause:
-    key(pause)
-[game] menu:
-    key(f10)
+reset camera: key(backspace)
+[game] pause: key(pause)
+[game] menu: key(f10)
 take [all]:
     mouse_move(60, 10)
     sleep(30ms)
@@ -163,8 +145,7 @@ unit seven: key(7)
 unit eight: key(8)
 unit nine: key(9)
 unit zero: key(0)
-centre:
-    mouse_move(800, 470)
+centre: mouse_move(800, 470)
 go home: key(home)
 [unit] one view:
     key(1)
@@ -516,8 +497,7 @@ retreat:
     key(u)
     sleep(30ms)
     mouse_click(0)
-antitank:
-    key(7)
+antitank: key(7)
 [get] gammon [bomb]:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()

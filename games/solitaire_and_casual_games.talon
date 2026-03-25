@@ -1,11 +1,13 @@
 win.title: Solitaire & Casual Games
 -
-left card: 
+
+tag(): user.sound_clicks
+left card:
     mouse_move(813, 793)
     sleep(30ms)
     mouse_click(0)
-right card: 
+right card:
     mouse_move(1102, 800)
     sleep(30ms)
-    mouse_click(0)    
-deal: key(d)    
+    mouse_click(0)
+deal: key(d)
