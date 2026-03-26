@@ -177,6 +177,6 @@ we'll stop: user.mouse_scroll_stop()
     # close the mouse grid if open
     user.grid_close()
 zoom off: tracking.zoom_cancel()
-parrot(tut):
-    mouse_click(0)
-    print("tut > parrot")
+#parrot(tut):
+#    mouse_click(0)
+#    print("tut > parrot")

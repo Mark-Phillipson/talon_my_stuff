@@ -455,8 +455,8 @@ send to pilot:
     insert("please ")
     sleep(30ms)
     key(ctrl-v)
-
-pilot window toggle: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
+toggle chat: user.vscode("workbench.panel.chat")
+pilot [window] toggle: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
 (panel | terminal | pane | pain) window toggle: user.vscode("workbench.action.toggleMaximizedPanel")
 show notifications: user.vscode("notifications.showList")
 what can I say: user.vscode("talon.searchCommands")
