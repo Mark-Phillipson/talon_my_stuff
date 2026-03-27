@@ -1,7 +1,9 @@
 app: microsoft_edge
 -
+
 tag(): browser
 tag(): user.tabs
+
 settings():
     # Stop continuous scroll/gaze scroll with a pop
     user.mouse_enable_pop_stops_scroll = false
@@ -16,8 +18,7 @@ theatre mode: key(alt-t)
 previous tab: key(ctrl-shift-tab)
 next tab: key(ctrl-tab)
 refresh page: key(f5)
-skip ads:
-    mouse_move(3546, 970)
+skip ads: mouse_move(3546, 970)
 destroy drone:
     insert("!drone -1")
     key(enter)
@@ -72,8 +73,7 @@ smoke pink:
     insert("!smokecolor pink")
     sleep(100ms)
     key(enter)
-local host chan of custody:
-    user.open_url("https://localhost:44343/")
+local host chain of custody: user.open_url("https://localhost:44343/")
 toggle voice: key(ctrl-shift-u)
 pop out chat:
     key(alt-d right)
