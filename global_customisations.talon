@@ -304,12 +304,11 @@ gamepad(south:down):
     print("Talon awake")
 steam library:
     key(super-r)
-    sleep(400ms
-    insert("steam://open/library")
+    app.notify("Steam deep-link appears blocked by Windows security. If steam://open/library is not selected, choose it from the left list.", "Steam Library", "TALON", true)
 local host <user.number_string>:
     port = user.normalize_number_string(number_string)
     user.open_url("http://localhost:" + port)
-dismiss notification: 
+dismiss (notification | message | that): 
     mouse_move(1636, 823)
     sleep(400ms)
     mouse_click(0)    
