@@ -309,4 +309,7 @@ steam library:
 local host <user.number_string>:
     port = user.normalize_number_string(number_string)
     user.open_url("http://localhost:" + port)
-    
+dismiss notification: 
+    mouse_move(1636, 823)
+    sleep(400ms)
+    mouse_click(0)    

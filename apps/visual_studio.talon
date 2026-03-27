@@ -5,6 +5,11 @@ app: visual_studio
 app: devenv.exe
 -
 
+settings():
+    user.mouse_continuous_scroll_amount = 5
+    # Set the scroll amount for continuous scroll/gaze scroll
+    user.mouse_continuous_scroll_amount = 1
+
 tag(): user.tabs
 #tag(): user.line_commands
 tag(): user.find_and_replace
