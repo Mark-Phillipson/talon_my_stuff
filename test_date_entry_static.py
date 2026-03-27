@@ -18,7 +18,9 @@ def test_date_entry_uses_list_syntax_for_custom_lists():
     content = _read(HELPERS_DIR / "date_entry.talon")
 
     assert "date {user.day} {user.month} {user.year}:" in content
+    assert "date {user.day} {user.month} {user.year} us:" in content
     assert "date {user.day} {user.month} {user.year} iso:" in content
+    assert "date {user.day} {user.month} {user.year}:" in content
     assert "<user.day>" not in content
     assert "<user.month>" not in content
     assert "<user.year>" not in content
@@ -27,14 +29,42 @@ def test_date_entry_uses_list_syntax_for_custom_lists():
 def test_date_today_commands_insert_text():
     content = _read(HELPERS_DIR / "date_entry.talon")
 
-    assert "date today: insert(user.enter_date_function())" in content
-    assert "date now: insert(user.enter_date_function())" in content
+    assert "date today: user.insert_date_today()" in content
+    assert "date now: user.insert_date_today()" in content
 
 
 def test_date_us_command_exists():
     content = _read(HELPERS_DIR / "date_entry.talon")
 
     assert "date {user.day} {user.month} {user.year} us:" in content
+
+
+def test_relative_date_commands_exist():
+    content = _read(HELPERS_DIR / "date_entry.talon")
+
+    assert "date today:" in content
+    assert "date tomorrow:" in content
+    assert "date yesterday:" in content
+    assert "date next month:" in content
+    assert "date next year:" in content
+    assert "date last year:" in content
+    assert "date next {user.weekday}:" in content
+
+
+def test_weekday_list_exists():
+    path = HELPERS_DIR / "weekdays.talon-list"
+    content = _read(path)
+
+    assert "list: user.weekday" in content
+    assert "monday" in content
+    assert "friday" in content
+    assert "sunday" in content
+
+
+def test_date_format_setting_exists():
+    content = _read(HELPERS_DIR / "date_entry.talon")
+
+    assert "user.date_format = \"uk\"" in content or "user.date_format = \"us\"" in content or "user.date_format = \"iso\"" in content
 
 
 def test_date_list_files_have_expected_headers_and_counts():
