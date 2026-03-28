@@ -67,6 +67,12 @@ def test_date_format_setting_exists():
     assert "user.date_format = \"uk\"" in content or "user.date_format = \"us\"" in content or "user.date_format = \"iso\"" in content
 
 
+def test_date_lists_reads_expected_setting_key():
+    content = _read(HELPERS_DIR / "date_lists.py")
+
+    assert 'settings.get("user.date_format")' in content
+
+
 def test_date_list_files_have_expected_headers_and_counts():
     expectations = {
         "day.talon-list": ("list: user.day", 62),

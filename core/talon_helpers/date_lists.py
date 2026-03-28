@@ -24,7 +24,7 @@ WEEKDAY_MAP = {
 
 
 def _format_with_preference(a_date: date) -> str:
-    fmt = settings.get(" fright") or "uk"
+    fmt = settings.get("user.date_format") or "uk"
     if fmt == "us":
         return a_date.strftime("%m/%d/%Y")
     if fmt == "iso":
