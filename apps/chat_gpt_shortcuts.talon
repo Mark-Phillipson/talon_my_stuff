@@ -1,5 +1,5 @@
 app: microsoft_edge
-title: /chatgpt|chat gpt/i
+#title: /chatgpt|chat gpt/i
 -
 
 new chat: key(ctrl-shift-o)
@@ -12,4 +12,7 @@ ask it | basket:
     key(enter)
 use dictate:
     speech.disable()
-    mouse_click(0)
+    mouse_click()
+use voice:
+    speech.disable()
+    mouse_click()

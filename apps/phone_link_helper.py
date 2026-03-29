@@ -65,8 +65,8 @@ class Actions:
             escaped = text.replace("%", "%25").replace(" ", "%s").replace("\"", "\\\"")
             device = _current_adb_device
             subprocess.run(["adb", "-s", device, "shell", "input", "text", escaped], check=True)
-        except Exception as e:
-            actions.notify(f"ADB type failed: {e}")
+        except Exception:
+            pass
 
     def phone_link_adb_keyevent(key: str):
         """Send adb keyevent to Android via adb (e.g., enter, backspace)."""
@@ -77,7 +77,7 @@ class Actions:
             "home": "3",
             "desktop": "3",
             "escape": "111",
-            "del": "112",
+            "delete": "112",
         }
         if key in key_map:
             code = key_map[key]
@@ -85,9 +85,22 @@ class Actions:
             code = key
         try:
             device = _current_adb_device
-            subprocess.run(["adb", "-s", device, "shell", "input", "keyevent", code], check=True)
-        except Exception as e:
-            actions.notify(f"ADB key event failed: {e}")
+            key_cmd = ["adb", "-s", device, "shell", "input", "keyevent", code]
+            startupinfo = subprocess.STARTUPINFO()
+            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            startupinfo.wShowWindow = subprocess.SW_HIDE
+            subprocess.run(
+                key_cmd,
+                check=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                stdin=subprocess.DEVNULL,
+                startupinfo=startupinfo,
+                creationflags=subprocess.CREATE_NO_WINDOW,
+                shell=False,
+            )
+        except Exception:
+            pass
 
     def phone_link_terminal_comment(text: str):
         """Send adb text command to phone in background subprocess (no UI switch)."""
@@ -97,19 +110,42 @@ class Actions:
         device = _current_adb_device
         cmd = ["adb", "-s", device, "shell", "input", "text", escaped]
         try:
-            # On Windows, hide the command window while the subprocess runs
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            startupinfo.wShowWindow = subprocess.SW_HIDE
             subprocess.run(
                 cmd,
                 check=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                stdin=subprocess.DEVNULL,
                 startupinfo=startupinfo,
                 creationflags=subprocess.CREATE_NO_WINDOW,
+                shell=False,
             )
-            actions.notify(f"Sent to phone: {text}")
         except subprocess.CalledProcessError as e:
-            actions.notify(f"ADB command failed: {e.returncode} {e.stderr.decode(errors='ignore')}")
+            actions.app.notify("Phone Link ADB", f"ADB command failed with code {e.returncode}")
         except Exception as e:
-            actions.notify(f"Terminal comment failed: {e}")
+            actions.app.notify("Phone Link ADB", f"Terminal comment failed: {e}")
+
+    def phone_link_terminal_comment_case(text: str, case: str = "none"):
+        """Send text to phone in the requested case: none|upper|lower|title."""
+        if not text:
+            return
+        case_type = case.strip().lower()
+        if case_type == "upper":
+            text = text.upper()
+        elif case_type == "lower":
+            text = text.lower()
+        elif case_type == "title":
+            text = text.title()
+        actions.user.phone_link_terminal_comment(text)
+
+    def phone_link_fake_phone_number(number: str = None):
+        """Send either a provided phone number or generate a fake random one."""
+        if number and number.strip():
+            actions.user.phone_link_terminal_comment(number.strip())
+            return
+        phoneNumber1 = actions.user.generate_random_number()
+        phoneNumber2 = actions.user.generate_random_number()
+        actions.user.phone_link_terminal_comment(phoneNumber1 + phoneNumber2)
