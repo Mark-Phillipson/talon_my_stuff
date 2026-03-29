@@ -38,7 +38,8 @@ phone set device <user.text>: user.phone_link_set_adb_device(text)
 phone get device: user.phone_link_get_adb_device()
 
 #phone type <user.text>: user.phone_link_adb_type(text)
-
 phone key <user.text>: user.phone_link_adb_keyevent(text)
+#This once actually works
 # please leave this for my own testing
 phone type <user.text>: user.phone_link_terminal_comment(text)
+phone fake email: user.phone_link_terminal_comment("mzomcpedcw@gmail.com")

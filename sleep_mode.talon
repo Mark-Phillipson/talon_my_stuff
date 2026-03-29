@@ -1,5 +1,6 @@
 mode: sleep
 -
+
 settings():
     # Stop continuous scroll/gaze scroll with a pop
     user.mouse_enable_pop_stops_scroll = false
@@ -63,3 +64,6 @@ key(f9:down):
 #     speech.enable()
 #     sleep(50ms)
 #     print("Talon awake")
+stop using dictate:
+    speech.enable()
+    mouse_click(0)
