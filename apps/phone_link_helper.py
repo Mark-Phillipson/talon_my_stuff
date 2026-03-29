@@ -138,10 +138,12 @@ class Actions:
 
         try:
             subprocess.run(["adb", "connect", target], check=True)
-            print("Phone Link: " + f"adb connect {target} succeeded")
+            actions.user.phone_link_set_adb_device(target)
+            print("Phone Link: " + f"adb connect {target} succeeded (current target updated)")
         except Exception as e:
             print("Phone Link: " + f"adb connect {target} failed: {e}")
-    def phone_link_tcpip(self):
+
+    def phone_link_tcpip():
         """Switch a USB-connected device to TCP/IP mode on port 5555."""
         try:
             subprocess.run(["adb", "tcpip", "5555"], check=True)
@@ -153,11 +155,12 @@ class Actions:
         """Connect to a device using adb connect <host:port>."""
         try:
             subprocess.run(["adb", "connect", host_port], check=True)
-            print("Phone Link: " + f"adb connect {host_port} succeeded")
+            actions.user.phone_link_set_adb_device(host_port)
+            print("Phone Link: " + f"adb connect {host_port} succeeded (current target updated)")
         except Exception as e:
             print("Phone Link: " + f"adb connect {host_port} failed: {e}")
 
-    def phone_link_pair_code(self, pair_info: str):
+    def phone_link_pair_code(pair_info: str):
         """Use adb pair <ip:port> <code> from phone Wireless debugging panel."""
         parts = pair_info.strip().split()
         if len(parts) == 2:
@@ -271,14 +274,20 @@ class Actions:
         except Exception:
             escaped = text.replace("%", "%25").replace(" ", "%s").replace('"', '\\"')
 
-        device = _current_adb_device
-        cmd = ["adb", "-s", device, "shell", "input", "text", escaped]
-        print(f"Phone Link ADB command: {' '.join(cmd)}")
-        try:
+        host_port = actions.user.phone_link_get_host_port()
+        device = _current_adb_device or host_port
+
+        if not device:
+            print("Phone Link: " + "No ADB device configured. Use `phone link set device` or `phone link set host` first.")
+            return
+
+        def run_adb_device(target_device):
+            cmd = ["adb", "-s", target_device, "shell", "input", "text", escaped]
+            print(f"Phone Link ADB command: {' '.join(cmd)}")
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             startupinfo.wShowWindow = subprocess.SW_HIDE
-            result = subprocess.run(
+            return subprocess.run(
                 cmd,
                 check=True,
                 capture_output=True,
@@ -288,17 +297,37 @@ class Actions:
                 shell=False,
                 text=True,
             )
+
+        try:
+            result = run_adb_device(device)
             if result.stdout:
                 print(f"Phone Link ADB stdout: {result.stdout.strip()}")
             if result.stderr:
                 print(f"Phone Link ADB stderr: {result.stderr.strip()}")
+            if device != _current_adb_device:
+                actions.user.phone_link_set_adb_device(device)
+
         except subprocess.CalledProcessError as e:
+            stderr_text = (e.stderr or "").lower()
+            if "device '{}' not found".format(device).lower() in stderr_text and host_port and host_port != device:
+                try:
+                    result = run_adb_device(host_port)
+                    if result.stdout:
+                        print(f"Phone Link ADB stdout: {result.stdout.strip()}")
+                    if result.stderr:
+                        print(f"Phone Link ADB stderr: {result.stderr.strip()}")
+                    actions.user.phone_link_set_adb_device(host_port)
+                    return
+                except Exception as retry_e:
+                    print(f"Phone Link ADB retry exception: {retry_e}")
+
             msg = f"ADB command failed with code {e.returncode}"
             if e.stdout:
                 msg += f" stdout: {e.stdout.strip()}"
             if e.stderr:
                 msg += f" stderr: {e.stderr.strip()}"
             print(f"Phone Link ADB error: {msg}")
+
         except Exception as e:
             print(f"Phone Link ADB exception: {e}")
 
