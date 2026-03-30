@@ -204,7 +204,12 @@ stop recording:
     sleep(50ms)
     app.notify('Running OBS stop record command', 'Message From Talon Voice', 'TALON', true)
 {user.naughty_words}:
-    user.swear_jar_notify("warning")
+    user.custom_message_notify("warning", "That's quite enough of that", 1)
+test message:
+    # app.notify should already be redirected globally in custom_message.py
+    app.notify("This is a test message please ignore it", "TALON", "Test message", false)
+
+
 take line: 
     key(end)
     sleep(50ms)
