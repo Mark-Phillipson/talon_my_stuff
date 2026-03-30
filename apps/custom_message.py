@@ -53,7 +53,7 @@ class Actions:
         else:
             if show_balance:
                 custom_message_balance += increment
-                content = f"{message} (Custom Jar £{custom_message_balance})"
+                content = f"{message} (Swear Jar £{custom_message_balance})"
                 log_text = f"balance {custom_message_balance}"
             else:
                 content = message
