@@ -7,9 +7,6 @@ mod = Module()
 DEFAULT_ADB_DEVICE = "R3CW40BQS0M"
 _current_adb_device = DEFAULT_ADB_DEVICE
 
-DEFAULT_HOST_PORT = ""
-_current_host_port = DEFAULT_HOST_PORT
-
 @mod.action_class
 class Actions:
     def phone_link_set_adb_device(device: str):
@@ -21,67 +18,25 @@ class Actions:
         """Get the currently configured adb device ID."""
         return _current_adb_device
 
-    def phone_link_set_host_port(host_port: str):
-        """Set the target adb host:port (for wireless connect)."""
-        global _current_host_port
-        _current_host_port = host_port.strip()
-        print("Phone Link: " + f"Host:port set to {_current_host_port}")
-
-    def phone_link_get_host_port() -> str:
-        """Get the currently configured host:port."""
-        return _current_host_port
-
-    def phone_link_set_host_port_from_clipboard():
-        """Set host port from clipboard text (copy ip:port first)."""
-        host_port = ""
-        try:
-            host_port = clip.get_text().strip()
-        except AttributeError:
-            try:
-                host_port = subprocess.check_output(
-                    ["powershell", "-NoProfile", "-Command", "Get-Clipboard"],
-                    text=True,
-                ).strip()
-            except Exception:
-                pass
-
-        if not host_port:
-            print("Phone Link: " + "Clipboard is empty. Copy host:port first.")
-            return
-
-        actions.user.phone_link_set_host_port(host_port)
-
     def phone_link_set_adb_device_from_clipboard():
         """Set ADB device from clipboard text (copy device id first)."""
-        device = ""
-        try:
-            device = clip.get_text().strip()
-        except AttributeError:
-            try:
-                device = subprocess.check_output(
-                    ["powershell", "-NoProfile", "-Command", "Get-Clipboard"],
-                    text=True,
-                ).strip()
-            except Exception:
-                pass
-
+        device = clip.get_text().strip()
         if not device:
-            print("Phone Link: " + "Clipboard is empty. Copy adb device id first.")
+            actions.app.notify("Phone Link", "Clipboard is empty. Copy adb device id first.")
             return
-
         actions.user.phone_link_set_adb_device(device)
-        print("Phone Link: " + f"ADB device set to {device}")
+        actions.app.notify("Phone Link", f"ADB device set to {device}")
 
     def phone_link_list_adb_devices() -> list:
         """Return a list of currently connected adb devices (id, state)."""
         try:
             output = subprocess.check_output(["adb", "devices", "-l"], text=True)
         except Exception:
-            print("Phone Link: " + "adb not found or failed to run")
+            actions.app.notify("Phone Link", "adb not found or failed to run")
             return []
         lines = [line.strip() for line in output.splitlines() if line.strip()]
         if len(lines) <= 1:
-            print("Phone Link: " + "No adb devices connected")
+            actions.app.notify("Phone Link", "No adb devices connected")
             return []
         devices = []
         for line in lines[1:]:
@@ -91,33 +46,33 @@ class Actions:
             device_id = parts[0]
             state = parts[1]
             devices.append((device_id, state))
-        print("Phone Link: " + "Devices: " + ", ".join(f"{d}({s})" for d, s in devices))
+        actions.app.notify("Phone Link", "Devices: " + ", ".join(f"{d}({s})" for d, s in devices))
         return devices
 
     def phone_link_discover_adb_device():
         """Auto-select the first online adb device and set it."""
         devices = actions.user.phone_link_list_adb_devices()
         if not devices:
-            print("Phone Link: " + "No adb devices found. Connect and try again.")
+            actions.app.notify("Phone Link", "No adb devices found. Connect and try again.")
             return
         for device_id, state in devices:
             if state == "device":
                 actions.user.phone_link_set_adb_device(device_id)
-                print("Phone Link: " + f"Selected adb device: {device_id}")
+                actions.app.notify("Phone Link", f"Selected adb device: {device_id}")
                 return
-        print("Phone Link: " + "No device state adb device found. Check device status.")
+        actions.app.notify("Phone Link", "No device state adb device found. Check device status.")
 
     def phone_link_status():
         """Notify whether current adb device is connected."""
         current = actions.user.phone_link_get_adb_device()
         devices = actions.user.phone_link_list_adb_devices()
         if devices and any(d[0] == current for d in devices):
-            print("Phone Link: " + f"Connected to {current}")
+            actions.app.notify("Phone Link", f"Connected to {current}")
         elif devices:
             available = ", ".join(d[0] for d in devices)
-            print("Phone Link: " + f"Current device {current} not connected. Available: {available}")
+            actions.app.notify("Phone Link", f"Current device {current} not connected. Available: {available}")
         else:
-            print("Phone Link: " + "No adb devices connected.")
+            actions.app.notify("Phone Link", "No adb devices connected.")
 
     def phone_link_connect():
         """Attempt to connect to the configured ADB device via tcp:5555 (wireless)."""
@@ -126,57 +81,16 @@ class Actions:
             actions.user.phone_link_discover_adb_device()
             current = actions.user.phone_link_get_adb_device()
 
-        target = current
-        if not target:
-            host_port = actions.user.phone_link_get_host_port()
-            if host_port:
-                target = host_port
-
-        if not target:
-            print("Phone Link: " + "No ADB device selected. Use clipboard setup or discover first, or set host:port.")
+        if not current:
+            actions.app.notify("Phone Link", "No ADB device selected. Use clipboard setup or discover first.")
             return
 
         try:
-            subprocess.run(["adb", "connect", target], check=True)
-            actions.user.phone_link_set_adb_device(target)
-            print("Phone Link: " + f"adb connect {target} succeeded (current target updated)")
+            subprocess.run(["adb", "connect", current], check=True)
+            actions.app.notify("Phone Link", f"adb connect {current} succeeded")
         except Exception as e:
-            print("Phone Link: " + f"adb connect {target} failed: {e}")
+            actions.app.notify("Phone Link", f"adb connect {current} failed: {e}")
 
-    def phone_link_tcpip():
-        """Switch a USB-connected device to TCP/IP mode on port 5555."""
-        try:
-            subprocess.run(["adb", "tcpip", "5555"], check=True)
-            print("Phone Link: " + "adb tcpip 5555 succeeded")
-        except Exception as e:
-            print("Phone Link: " + f"adb tcpip 5555 failed: {e}")
-
-    def phone_link_connect_to_host(host_port: str):
-        """Connect to a device using adb connect <host:port>."""
-        try:
-            subprocess.run(["adb", "connect", host_port], check=True)
-            actions.user.phone_link_set_adb_device(host_port)
-            print("Phone Link: " + f"adb connect {host_port} succeeded (current target updated)")
-        except Exception as e:
-            print("Phone Link: " + f"adb connect {host_port} failed: {e}")
-
-    def phone_link_pair_code(pair_info: str):
-        """Use adb pair <ip:port> <code> from phone Wireless debugging panel."""
-        parts = pair_info.strip().split()
-        if len(parts) == 2:
-            target, code = parts
-        elif len(parts) == 1 and ":" in parts[0]:
-            print("Phone Link: " + "Provide pairing info as '<ip:port> <code>'")
-            return
-        else:
-            print("Phone Link: " + "Invalid format. Use '<ip:port> <code>'")
-            return
-
-        try:
-            subprocess.run(["adb", "pair", target, code], check=True)
-            print("Phone Link: " + f"adb pair {target} succeeded")
-        except Exception as e:
-            print("Phone Link: " + f"adb pair {target} failed: {e}")
     def phone_link_slow_type(text: str, delay: float = 0.06):
         """Type text into Phone Link one chunk at a time with small sleep.
 
@@ -265,71 +179,27 @@ class Actions:
         """Send adb text command to phone in background subprocess (no UI switch)."""
         if not text:
             return
-        # ADB text input requires special chars escaped as %xx and spaces as %s.
-        # e.g. test@example.com -> test%40example.com
+        escaped = text.replace("%", "%25").replace(" ", "%s").replace('"', '\\"')
+        device = _current_adb_device
+        cmd = ["adb", "-s", device, "shell", "input", "text", escaped]
         try:
-            from urllib.parse import quote
-            escaped = quote(text, safe="")
-            escaped = escaped.replace("%20", "%s")
-        except Exception:
-            escaped = text.replace("%", "%25").replace(" ", "%s").replace('"', '\\"')
-
-        host_port = actions.user.phone_link_get_host_port()
-        device = _current_adb_device or host_port
-
-        if not device:
-            print("Phone Link: " + "No ADB device configured. Use `phone link set device` or `phone link set host` first.")
-            return
-
-        def run_adb_device(target_device):
-            cmd = ["adb", "-s", target_device, "shell", "input", "text", escaped]
-            print(f"Phone Link ADB command: {' '.join(cmd)}")
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             startupinfo.wShowWindow = subprocess.SW_HIDE
-            return subprocess.run(
+            subprocess.run(
                 cmd,
                 check=True,
-                capture_output=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
                 stdin=subprocess.DEVNULL,
                 startupinfo=startupinfo,
                 creationflags=subprocess.CREATE_NO_WINDOW,
                 shell=False,
-                text=True,
             )
-
-        try:
-            result = run_adb_device(device)
-            if result.stdout:
-                print(f"Phone Link ADB stdout: {result.stdout.strip()}")
-            if result.stderr:
-                print(f"Phone Link ADB stderr: {result.stderr.strip()}")
-            if device != _current_adb_device:
-                actions.user.phone_link_set_adb_device(device)
-
         except subprocess.CalledProcessError as e:
-            stderr_text = (e.stderr or "").lower()
-            if "device '{}' not found".format(device).lower() in stderr_text and host_port and host_port != device:
-                try:
-                    result = run_adb_device(host_port)
-                    if result.stdout:
-                        print(f"Phone Link ADB stdout: {result.stdout.strip()}")
-                    if result.stderr:
-                        print(f"Phone Link ADB stderr: {result.stderr.strip()}")
-                    actions.user.phone_link_set_adb_device(host_port)
-                    return
-                except Exception as retry_e:
-                    print(f"Phone Link ADB retry exception: {retry_e}")
-
-            msg = f"ADB command failed with code {e.returncode}"
-            if e.stdout:
-                msg += f" stdout: {e.stdout.strip()}"
-            if e.stderr:
-                msg += f" stderr: {e.stderr.strip()}"
-            print(f"Phone Link ADB error: {msg}")
-
+            actions.app.notify("Phone Link ADB", f"ADB command failed with code {e.returncode}")
         except Exception as e:
-            print(f"Phone Link ADB exception: {e}")
+            actions.app.notify("Phone Link ADB", f"Terminal comment failed: {e}")
 
     def phone_link_terminal_comment_case(text: str, case: str = "none"):
         """Send text to phone in the requested case: none|upper|lower|title."""

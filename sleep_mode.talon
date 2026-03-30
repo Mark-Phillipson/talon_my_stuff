@@ -67,3 +67,4 @@ key(f9:down):
 stop using dictate:
     speech.enable()
     mouse_click(0)
+stop listening: speech.enable()

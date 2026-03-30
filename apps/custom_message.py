@@ -68,7 +68,9 @@ class Actions:
         if _custom_message_timer_id is not None:
             cron.cancel(_custom_message_timer_id)
 
-        _custom_message_timer_id = cron.after(f"{CUSTOM_MESSAGE_DISPLAY_SECONDS}s", actions.user.custom_message_clear)
+        # Auto-adjust display time for slow readers: base seconds plus extra per 30 chars
+        estimated_seconds = max(CUSTOM_MESSAGE_DISPLAY_SECONDS, 3 + len(content) / 30)
+        _custom_message_timer_id = cron.after(f"{int(estimated_seconds)}s", actions.user.custom_message_clear)
 
     def custom_message_set_app_notify_intercept(enabled: bool = True):
         """No-op: app.notify is always routed to HUD via ctx.action_class override."""

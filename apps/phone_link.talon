@@ -3,6 +3,12 @@ app: yourphoneappproxy.exe
 
 #tag(): user.sound_clicks
 #For use for the window phone link opens when working on the phone
+# adb wirelessly connect to phone (Android 11+):
+#   adb pair 192.168.1.42:5555
+# adb list connected devices:
+#   adb devices
+# get a device ID from phone:
+#   adb devices -l
 # NOTE: This script leaves setup/control commands in global settings.
 # Use `apps/phone_link_global.talon` for `phone link ...` commands.
 

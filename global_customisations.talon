@@ -317,3 +317,7 @@ dismiss (notification | message | that):
     mouse_move(1636, 823)
     sleep(400ms)
     mouse_click(0)    
+transfer to android [phone]:
+    mouse_click(0)
+    speech.disable()
+    tracking.control_toggle()
