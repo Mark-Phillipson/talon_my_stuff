@@ -204,7 +204,7 @@ stop recording:
     sleep(50ms)
     app.notify('Running OBS stop record command', 'Message From Talon Voice', 'TALON', true)
 {user.naughty_words}:
-        app.notify("That's quite enough of that", "More Money for the Swear Jar!", "TALON", true)
+    user.swear_jar_notify("warning")
 take line: 
     key(end)
     sleep(50ms)
