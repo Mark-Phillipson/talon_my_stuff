@@ -32,7 +32,7 @@ class Actions:
         return _current_host_port
 
     def phone_link_set_host_port_from_clipboard():
-        """Set host:port from clipboard text (copy ip:port first)."""
+        """Set host port from clipboard text (copy ip:port first)."""
         host_port = ""
         try:
             host_port = clip.get_text().strip()

@@ -48,6 +48,7 @@ phone link tcpip: user.phone_link_tcpip()
 # Copy host:port (ip:port) to clipboard, then set host from clipboard.
 #   copy 192.168.1.42:5555 (clipboard) then use this phrase.
 # adb-R3CW40BQS0M-Y71tPX._adb-tls-connect._tcp
+
 phone link set host: user.phone_link_set_host_port_from_clipboard()
 # Read current configured host:port in status.
 phone link get host: user.phone_link_get_host_port()
