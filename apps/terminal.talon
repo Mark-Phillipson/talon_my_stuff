@@ -3,6 +3,7 @@ app: devenv.exe
 app: vscode
 app: c:\windows\system32\cmd.exe
 -
+
 tag(): terminal
 tag(): user.tabs
 #tag(): user.find
@@ -32,14 +33,12 @@ dotnet restore:
     insert("dotnet restore")
     sleep(100ms)
     key(enter)
-dotnet add package:
-    insert("dotnet add package ")
+dotnet add package: insert("dotnet add package ")
 previous [directory]:
     insert("cd ..")
     sleep(100ms)
     key(enter)
-restart:
-    key(ctrl-r)
+restart: key(ctrl-r)
 run code:
     insert("code .")
     sleep(100ms)
@@ -116,19 +115,14 @@ playwright generate code:
     insert("pwsh bin/Debug/net8.0/playwright.ps1 codegen --viewport-size=1680,1050 http://localhost:5016/")
     sleep(300ms)
     key(enter)
-playwright headless:
-    insert("$env:HEADED=\"0\"")
-playwright headed:
-    insert("$env:HEADED=\"1\"")
-playwright webkit:
-    insert("$env:BROWSER=\"webkit\"")
-playwright debug:
-    insert("$env:PWDEBUG=\"1\"")
+playwright headless: insert("$env:HEADED=\"0\"")
+playwright headed: insert("$env:HEADED=\"1\"")
+playwright webkit: insert("$env:BROWSER=\"webkit\"")
+playwright debug: insert("$env:PWDEBUG=\"1\"")
 hunt [terminal]: key(ctrl-shift-f)
 dotnet ef create script:
     insert("dotnet ef migrations script --output migrations.s menuql --idempotent --context")
-dotnet ef migrations add:
-    insert("dotnet ef migrations add ")
+dotnet ef migrations add: insert("dotnet ef migrations add ")
 dotnet ef migrations remove:
     insert("dotnet ef migrations remove")
     sleep(100ms)
@@ -142,7 +136,7 @@ dotnet publish voice admin:
     sleep(100ms)
     key(enter)
     sleep(100ms)
-    insert("dotnet publish -c Release ")
+    insert("dotnet publish -c Release --runtime win-x64 ")
     sleep(100ms)
     key(enter)
     key(enter)
@@ -183,12 +177,10 @@ list last commits:
     insert("git log origin/master --oneline -n 10")
     sleep(100ms)
     key(enter)
-delete object and binary folders: insert("Remove-Item -Path bin,obj -Recurse -Force")
+delete object and binary folders:
+    insert("Remove-Item -Path bin,obj -Recurse -Force")
 watch cycle: insert("dotnet watch run --project CycleRoutes/CycleRoutes.Web")
-copilot:
-    insert("copilot --banner")
-    sleep(30ms)
-    key(enter)
+copilot: insert("copilot --banner")
 [open] terminal settings:
     key(ctrl-,)
     sleep(100ms)
@@ -214,8 +206,7 @@ kill process:
     insert("Stop-Process -Id (Get-NetTCPConnection -LocalPort 5008).OwningProcess -Force")
     sleep(100ms)
     key(left:23)
-new blazor:
-    insert("dotnet new blazor -o Practice --framework net10.0 ")
+new blazor: insert("dotnet new blazor -o Practice --framework net10.0 ")
 list directories:
     insert("Get-ChildItem -Directory")
     sleep(100ms)
@@ -224,27 +215,15 @@ list directories horizontal:
     insert("Get-ChildItem -Directory | Format-Wide Name -Column 4")
     sleep(100ms)
     key(enter)
-rubout:
-    user.throttle_backspace(1)
-rubout <number_small>:
-    user.throttle_backspace(number_small)
-rubout first:
-    user.throttle_backspace(1)
-rubout second:
-    user.throttle_backspace(2)
-rubout third:
-    user.throttle_backspace(3)
-rubout fourth:
-    user.throttle_backspace(4)
-rubout fifth:
-    user.throttle_backspace(5)
-rubout sixth:
-    user.throttle_backspace(6)
-rubout seventh:
-    user.throttle_backspace(7)
-rubout eighth:
-    user.throttle_backspace(8)
-rubout ninth:
-    user.throttle_backspace(9)
-rubout tenth:
-    user.throttle_backspace(10)
+rubout: user.throttle_backspace(1)
+rubout <number_small>: user.throttle_backspace(number_small)
+rubout first: user.throttle_backspace(1)
+rubout second: user.throttle_backspace(2)
+rubout third: user.throttle_backspace(3)
+rubout fourth: user.throttle_backspace(4)
+rubout fifth: user.throttle_backspace(5)
+rubout sixth: user.throttle_backspace(6)
+rubout seventh: user.throttle_backspace(7)
+rubout eighth: user.throttle_backspace(8)
+rubout ninth: user.throttle_backspace(9)
+rubout tenth: user.throttle_backspace(10)

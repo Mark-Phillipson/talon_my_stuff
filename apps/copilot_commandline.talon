@@ -1,8 +1,8 @@
 app: windowsterminal.exe
 app: devenv.exe
-app: vscode
 app: c:\windows\system32\cmd.exe
 -
+
 # Copilot CLI (aka copilot commandline) voice commands
 # These are defined globally so they can be spoken from any application.
 
@@ -29,10 +29,7 @@ copilot status:
     sleep(30ms)
     key(enter)
 
-copilot banner:
-    insert("copilot --banner")
-    sleep(30ms)
-    key(enter)
+copilot banner: insert("copilot --banner")
 
 # edit the current line using the CLI (voice equivalent of `copilot edit`)
 copilot edit line:
@@ -41,17 +38,12 @@ copilot edit line:
     key(enter)
 
 # line editing shortcuts that match what the CLI help shows
-copilot line start:
-    key(ctrl-a)
+copilot line start: key(ctrl-a)
 
-copilot line end:
-    key(ctrl-e)
+copilot line end: key(ctrl-e)
 
-copilot delete to start:
-    key(ctrl-u)
+copilot delete to start: key(ctrl-u)
 
-copilot delete to end:
-    key(ctrl-k)
+copilot delete to end: key(ctrl-k)
 
-copilot word right:
-    key(alt-right)
+copilot word right: key(alt-right)

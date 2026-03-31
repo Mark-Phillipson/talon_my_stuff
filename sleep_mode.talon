@@ -67,4 +67,5 @@ key(f9:down):
 stop using dictate:
     speech.enable()
     mouse_click(0)
+#This is used when turning off android voice access while using Phone Link
 stop listening: speech.enable()
