@@ -197,7 +197,7 @@ class Actions:
                 shell=False,
             )
         except subprocess.CalledProcessError as e:
-            actions.app.notify("Phone Link ADB", f"ADB command failed with code {e.returncode}")
+            actions.app.notify("Phone Link ADB", f"ADB command failed with code {e.returncode} and output: {e.output} {e}")
         except Exception as e:
             actions.app.notify("Phone Link ADB", f"Terminal comment failed: {e}")
 
