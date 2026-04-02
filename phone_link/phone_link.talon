@@ -10,7 +10,7 @@ app: yourphoneappproxy.exe
 # get a device ID from phone:
 #   adb devices -l
 # NOTE: This script leaves setup/control commands in global settings.
-# Use `apps/phone_link_global.talon` for `phone link ...` commands.
+# Use `phone_link/phone_link_global.talon` for `phone link ...` commands.
 
 #phone type <user.text>: user.phone_link_adb_type(text)
 key <user.text>: user.phone_link_adb_keyevent(text)

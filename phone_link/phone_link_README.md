@@ -4,8 +4,8 @@ This document describes phone-link ADB commands in this Talon repo and the one-s
 
 ## Files
 
-- `apps/phone_link_helper.py`: action definitions (`user.phone_link_*`)
-- `apps/phone_link_global.talon`: voice command bindings
+- `phone_link/phone_link_helper.py`: action definitions (`user.phone_link_*`)
+- `phone_link/phone_link_global.talon`: voice command bindings
 - `phone_link_wireless.bat`: multi-step wireless ADB flow (including clipboard support)
 
 ## Voice commands (Talon)
@@ -45,7 +45,7 @@ Steps performed internally:
 
 ## Optional alias
 
-Add a voice command alias in `apps/phone_link_global.talon` if desired, e.g.:
+Add a voice command alias in `phone_link/phone_link_global.talon` if desired, e.g.:
 
 `phone link wireless connect: user.phone_link_wireless_bat()`
 

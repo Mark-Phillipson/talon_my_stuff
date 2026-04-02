@@ -9,7 +9,7 @@
   - Use official APIs / apps (e.g., Pushbullet, AirDroid with standard app pairing) and bridge via a web service.
   - Use Bluetooth or network automation via a separate installed app, not ADB.
 
-> For the existing command set in `apps/phone_link.talon`, ADB is the implementation path and Developer Mode is a hard requirement on Android.
+> For the existing command set in `phone_link/phone_link.talon`, ADB is the implementation path and Developer Mode is a hard requirement on Android.
 
 ## 2. What we can improve for non-technical users
 
@@ -51,7 +51,7 @@
 ## 4. Proposed immediate action plan (markdown checklist)
 
 ### 4.1 Build minimum viable “non-developer UI” setup
-- [x] keep existing working `apps/phone_link.talon` commands
+- [x] keep existing working `phone_link/phone_link.talon` commands
 - [x] create `phone_link_config.json` format
 - [x] add `phone_link_setup.py` (interactive CLI)
 - [x] add status/auto-connect voice commands
@@ -70,7 +70,7 @@
 - `phone link say <user.text>`
 
 ## 6. Notes for maintainers
-- Keep `apps/phone_link.talon` as high-level command definitions and short mapping.
+- Keep `phone_link/phone_link.talon` as high-level command definitions and short mapping.
 - Keep script responsibilities in helper module, not Talon grammar.
 - Mark the config file as user-editable and import from there.
 - Encourage a one-click Talon reload step in docs: `talon reload` or from UI.

@@ -553,7 +553,7 @@ Global,screen reader landmark,key(d),,,apps\NVDA.talon
 Global,screen reader list,key(l),,,apps\NVDA.talon
 Global,screen reader table,key(t),,,apps\NVDA.talon
 Global,screen reader elements list, key(capslock:down) sleep(50ms) key(f7) sleep(50ms) key(capslock:up),,,apps\NVDA.talon
-phoneexperiencehost.exe,phone refresh,key(f5),,,apps\phone_link.talon
+phoneexperiencehost.exe,phone refresh,key(f5),,,phone_link\phone_link.talon
 chrome.exe,resume,key(f8),,,apps\playwright.talon
 chrome.exe,step over,key(f10),,,apps\playwright.talon
 mstsc.exe,task manager,key(ctrl-alt-end),,,apps\remote_desktop.talon
