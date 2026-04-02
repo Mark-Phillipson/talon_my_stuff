@@ -136,7 +136,7 @@ dotnet publish voice admin:
     sleep(100ms)
     key(enter)
     sleep(100ms)
-    insert("dotnet publish -c Release --runtime win-x64 ")
+    insert("dotnet publish VoiceAdmin.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=false -p:PublishTrimmed=false")
     sleep(100ms)
     key(enter)
     key(enter)

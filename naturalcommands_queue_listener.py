@@ -8,8 +8,6 @@ QUEUE_PATHS = [
     Path(r"C:\Users\MPhil\source\repos\NaturalCommands\bin\Release\net10.0-windows\talon_command_queue.txt"),
 ]
 
-_positions = {}
-_mtimes = {}
 _job = None
 
 
@@ -25,24 +23,25 @@ def _drain_path(path: Path):
     if not path.exists():
         return
 
-    stat = path.stat()
-    last_pos = _positions.get(path, 0)
-    last_mtime = _mtimes.get(path, 0)
+    try:
+        with path.open("r+", encoding="utf-8") as f:
+            contents = f.read()
+            if not contents:
+                return
 
-    # NaturalCommands uses File.WriteAllText (overwrite), so reset position whenever
-    # the file's modification time has changed or the file shrank.
-    if stat.st_mtime != last_mtime or stat.st_size < last_pos:
-        last_pos = 0
+            # Consume the queue exactly once so a failing command does not remain
+            # in the file and get replayed on the next poll.
+            f.seek(0)
+            f.truncate()
+    except Exception as e:
+        app.notify("NaturalCommands queue", f"Failed to clear queue file '{path}': {e}")
+        return
 
-    with path.open("r", encoding="utf-8") as f:
-        f.seek(last_pos)
-        for line in f:
-            try:
-                _execute_phrase(line)
-            except Exception as e:
-                app.notify("NaturalCommands queue", f"Failed command '{line.strip()}': {e}")
-        _positions[path] = f.tell()
-        _mtimes[path] = stat.st_mtime
+    for line in contents.splitlines():
+        try:
+            _execute_phrase(line)
+        except Exception as e:
+            app.notify("NaturalCommands queue", f"Failed command '{line.strip()}': {e}")
 
 
 def _poll_queue():
