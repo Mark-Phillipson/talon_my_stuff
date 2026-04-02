@@ -6,6 +6,7 @@ mod = Module()
 
 DEFAULT_ADB_DEVICE = "R3CW40BQS0M"
 _current_adb_device = DEFAULT_ADB_DEVICE
+_current_host_port = None
 
 @mod.action_class
 class Actions:
@@ -18,14 +19,96 @@ class Actions:
         """Get the currently configured adb device ID."""
         return _current_adb_device
 
+    def phone_link_set_host_port_from_clipboard():
+        """Set host:port from clipboard text for wireless adb connect."""
+        global _current_host_port
+        clipboard_text = None
+        try:
+            clipboard_text = clip.get()
+        except AttributeError:
+            pass
+        except Exception as error:
+            actions.app.notify(f"Could not read clipboard: {error}", "Phone Link")
+            return
+
+        if clipboard_text is None:
+            try:
+                clipboard_text = actions.clip.get_text()
+            except AttributeError:
+                try:
+                    clipboard_text = actions.clip.get()
+                except Exception as error:
+                    actions.app.notify(f"Could not read clipboard: {error}", "Phone Link")
+                    return
+            except Exception as error:
+                actions.app.notify(f"Could not read clipboard: {error}", "Phone Link")
+                return
+
+        host_port = (clipboard_text or "").strip()
+        if not host_port:
+            actions.app.notify("Clipboard is empty. Copy host:port first.", "Phone Link")
+            return
+
+        _current_host_port = host_port
+        actions.app.notify(f"ADB host:port set to {host_port}", "Phone Link")
+
+    def phone_link_get_host_port() -> str:
+        """Get the currently configured host:port for wireless adb connect."""
+        return _current_host_port
+
+    def phone_link_connect_to_host(text: str = None):
+        """Connect using an explicit host:port or the configured clipboard host/port."""
+        host_port = (text or "").strip() or _current_host_port
+        if not host_port:
+            actions.app.notify("No host:port configured. Use clipboard setup or provide explicit host:port.", "Phone Link")
+            return
+
+        try:
+            subprocess.run(["adb", "connect", host_port], check=True, capture_output=True, text=True)
+            actions.app.notify(f"adb connect {host_port} succeeded", "Phone Link")
+        except subprocess.CalledProcessError as e:
+            msg = e.stderr.strip() if e.stderr else str(e)
+            actions.app.notify(f"adb connect failed: {msg}", "Phone Link")
+        except Exception as e:
+            actions.app.notify(f"adb connect failed: {e}", "Phone Link")
+
     def phone_link_set_adb_device_from_clipboard():
         """Set ADB device from clipboard text (copy device id first)."""
-        device = clip.get_text().strip()
-        if not device:
-            actions.app.notify("Phone Link", "Clipboard is empty. Copy adb device id first.")
+        clipboard_text = None
+        try:
+            clipboard_text = clip.get()
+        except AttributeError:
+            # Talon `clip` module may have `get` (preferred) or no direct get on some versions.
+            pass
+        except Exception as error:
+            actions.app.notify(f"Could not read clipboard: {error}", "Phone Link")
             return
-        actions.user.phone_link_set_adb_device(device)
-        actions.app.notify("Phone Link", f"ADB device set to {device}")
+
+        if clipboard_text is None:
+            try:
+                clipboard_text = actions.clip.get_text()
+            except AttributeError:
+                try:
+                    clipboard_text = actions.clip.get()
+                except Exception as error:
+                    actions.app.notify(f"Could not read clipboard: {error}", "Phone Link")
+                    return
+            except Exception as error:
+                actions.app.notify(f"Could not read clipboard: {error}", "Phone Link")
+                return
+
+        device = (clipboard_text or "").strip()
+        if not device:
+            actions.app.notify("Clipboard is empty. Copy adb device id first.", "Phone Link")
+            return
+
+        try:
+            actions.user.phone_link_set_adb_device(device)
+        except Exception as error:
+            actions.app.notify(f"Failed to set ADB device: {error}", "Phone Link")
+            return
+
+        actions.app.notify(f"ADB device set to {device}", "Phone Link")
 
     def phone_link_list_adb_devices() -> list:
         """Return a list of currently connected adb devices (id, state)."""
@@ -90,6 +173,23 @@ class Actions:
             actions.app.notify("Phone Link", f"adb connect {current} succeeded")
         except Exception as e:
             actions.app.notify("Phone Link", f"adb connect {current} failed: {e}")
+
+    def phone_link_tcpip(port: str = "5555"):
+        """Switch the currently selected USB-connected phone into TCP mode for wireless adb."""
+        current = actions.user.phone_link_get_adb_device()
+        if not current:
+            actions.user.phone_link_discover_adb_device()
+            current = actions.user.phone_link_get_adb_device()
+
+        if not current:
+            actions.app.notify("Phone Link", "No ADB device selected. Use clipboard setup or discover first.")
+            return
+
+        try:
+            subprocess.run(["adb", "-s", current, "tcpip", port], check=True)
+            actions.app.notify("Phone Link", f"adb tcpip {port} sent to {current}")
+        except Exception as e:
+            actions.app.notify("Phone Link", f"adb tcpip failed: {e}")
 
     def phone_link_slow_type(text: str, delay: float = 0.06):
         """Type text into Phone Link one chunk at a time with small sleep.

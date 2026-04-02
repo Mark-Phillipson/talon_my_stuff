@@ -37,7 +37,7 @@ phone link status: user.phone_link_status()
 # Switch the currently selected USB-connected phone into TCP mode for wireless adb.
 # Run this while USB is still connected.
 #   adb tcpip 5555
-phone link tcpip: user.phone_link_tcpip()
+phone link tcp: user.phone_link_tcpip()
 
 # -----------------------------------------------------------------------------
 # 2. WIRELESS DEBUGGING SETUP
@@ -71,6 +71,12 @@ phone link set host: user.phone_link_set_host_port_from_clipboard()
 
 # Read the currently configured host:port.
 phone link get host: user.phone_link_get_host_port()
+
+# Connect using the configured host:port clipboard setting.
+phone link connect host from clipboard: user.phone_link_connect_to_host()
+
+# Connect using explicit host:port text (e.g., 192.168.0.3:5555).
+# (also mapped later in this file by the same phrase; keeping one command)
 
 # Duplicate alias of `phone link connect`, commented out so the setup steps read cleanly.
 # phone link connect host: user.phone_link_connect()
