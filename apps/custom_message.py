@@ -60,6 +60,8 @@ _custom_message_pinned = False
 _custom_message_deadline = None
 _custom_message_canvas = None
 _custom_message_button_rects = {}
+_custom_message_pressed_button = None
+_custom_message_click_job = None
 _custom_message_countdown_job = None
 
 
@@ -77,6 +79,35 @@ def _cancel_countdown_tick():
     if _custom_message_countdown_job is not None:
         cron.cancel(_custom_message_countdown_job)
         _custom_message_countdown_job = None
+
+
+def _cancel_click_job():
+    global _custom_message_click_job
+
+    if _custom_message_click_job is not None:
+        cron.cancel(_custom_message_click_job)
+        _custom_message_click_job = None
+
+
+def _perform_button_action(button_name: str):
+    if button_name == "copy":
+        actions.user.custom_message_copy_current()
+    elif button_name == "pin":
+        if _custom_message_pinned:
+            actions.user.custom_message_release()
+        else:
+            actions.user.custom_message_keep_open()
+    elif button_name == "hide":
+        actions.user.custom_message_clear()
+
+
+def _handle_click_action(button_name: str):
+    global _custom_message_pressed_button, _custom_message_click_job
+
+    _custom_message_click_job = None
+    _perform_button_action(button_name)
+    _custom_message_pressed_button = None
+    _redraw_message_overlay()
 
 
 def _estimate_display_seconds(content: str) -> int:
@@ -222,9 +253,28 @@ def _level_border_colour(level: str) -> str:
     }.get(level, "4C8DFF")
 
 
+def _darker_colour(colour: str, factor: float = 0.8) -> str:
+    hex_colour = colour.lstrip("#")
+    if len(hex_colour) != 6:
+        return colour
+
+    try:
+        r = int(hex_colour[0:2], 16)
+        g = int(hex_colour[2:4], 16)
+        b = int(hex_colour[4:6], 16)
+    except ValueError:
+        return colour
+
+    r = int(max(0, min(255, r * factor)))
+    g = int(max(0, min(255, g * factor)))
+    b = int(max(0, min(255, b * factor)))
+    return f"{r:02X}{g:02X}{b:02X}"
+
+
 def _hide_message_overlay():
     global _custom_message_canvas, _custom_message_button_rects
 
+    _cancel_click_job()
     _custom_message_button_rects = {}
     if _custom_message_canvas is not None:
         _custom_message_canvas.unregister("draw", _draw_message_overlay)
@@ -275,11 +325,12 @@ def _draw_panel_background(canvas, rect: Rect):
     canvas.draw_rrect(rrect)
 
 
-def _draw_button(canvas, rect: Rect, label: str, colour: str):
+def _draw_button(canvas, rect: Rect, label: str, colour: str, pressed: bool = False):
     rrect = skia.RoundRect.from_rect(rect, x=CUSTOM_MESSAGE_BUTTON_RADIUS, y=CUSTOM_MESSAGE_BUTTON_RADIUS)
+    fill_colour = _darker_colour(colour, 0.75) if pressed else colour
 
     canvas.paint.style = canvas.paint.Style.FILL
-    canvas.paint.color = colour
+    canvas.paint.color = fill_colour
     canvas.draw_rrect(rrect)
 
     canvas.paint.style = canvas.paint.Style.STROKE
@@ -292,7 +343,7 @@ def _draw_button(canvas, rect: Rect, label: str, colour: str):
     canvas.paint.textsize = CUSTOM_MESSAGE_BUTTON_TEXT_SIZE
     text_rect = canvas.paint.measure_text(label)[1]
     text_x = rect.x + (rect.width - text_rect.width) / 2 - text_rect.x
-    text_y = rect.y + (rect.height + text_rect.height) / 2
+    text_y = rect.y + (rect.height + text_rect.height) / 2 + (1 if pressed else 0)
     canvas.draw_text(label, text_x, text_y)
 
 
@@ -344,25 +395,55 @@ def _draw_message_overlay(canvas):
         button_x = content_x + index * (button_width + CUSTOM_MESSAGE_BUTTON_GAP)
         button_rect = Rect(button_x, button_y, button_width, CUSTOM_MESSAGE_BUTTON_HEIGHT)
         _custom_message_button_rects[name] = button_rect
-        _draw_button(canvas, button_rect, label, colour)
+        _draw_button(
+            canvas,
+            button_rect,
+            label,
+            colour,
+            pressed=(name == _custom_message_pressed_button),
+        )
 
 
 def _on_message_overlay_mouse(event: MouseEvent):
-    if event.event != "mouseup" or event.button != 0:
+    global _custom_message_pressed_button
+
+    if event.button != 0:
         return
 
+    if event.event == "mousedown":
+        _custom_message_pressed_button = None
+        for button_name, button_rect in _custom_message_button_rects.items():
+            if button_rect.contains(event.gpos.x, event.gpos.y):
+                _custom_message_pressed_button = button_name
+                break
+        _redraw_message_overlay()
+        return
+
+    if event.event == "mousemove" and _custom_message_pressed_button is not None:
+        if not _custom_message_button_rects[_custom_message_pressed_button].contains(
+            event.gpos.x, event.gpos.y
+        ):
+            _custom_message_pressed_button = None
+            _redraw_message_overlay()
+        return
+
+    if event.event != "mouseup":
+        return
+
+    clicked_button = None
     for button_name, button_rect in _custom_message_button_rects.items():
         if button_rect.contains(event.gpos.x, event.gpos.y):
-            if button_name == "copy":
-                actions.user.custom_message_copy_current()
-            elif button_name == "pin":
-                if _custom_message_pinned:
-                    actions.user.custom_message_release()
-                else:
-                    actions.user.custom_message_keep_open()
-            elif button_name == "hide":
-                actions.user.custom_message_clear()
-            return
+            clicked_button = button_name
+            break
+
+    if clicked_button is not None:
+        _cancel_click_job()
+        _custom_message_pressed_button = clicked_button
+        _redraw_message_overlay()
+        _custom_message_click_job = cron.after("80ms", lambda: _handle_click_action(clicked_button))
+    else:
+        _custom_message_pressed_button = None
+        _redraw_message_overlay()
 
 
 @ctx.action_class("app")

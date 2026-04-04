@@ -209,7 +209,8 @@ get selection: user.vscode("editor.action.goToSelectionAnchor")
 cursor up: user.vscode("editor.action.insertCursorAbove")
 cursor down: user.vscode("editor.action.insertCursorBelow")
 list members: user.vscode("editor.action.triggerSuggest")
-duplicate line: user.vscode("editor.action.copyLinesDownAction")
+duplicate (above | up): user.vscode("editor.action.copyLinesUpAction")
+duplicate (line | down): user.vscode("editor.action.copyLinesDownAction")
 search code: user.vscode("actions.find")
 
 #bookmarks
