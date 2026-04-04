@@ -351,8 +351,6 @@ def _draw_message_overlay(canvas):
     global _custom_message_button_rects
 
     _, rect, lines = _get_panel_rect()
-    if canvas.rect != rect:
-        canvas.rect = rect
 
     _custom_message_button_rects = {}
     canvas.paint.typeface = "Segoe UI"
