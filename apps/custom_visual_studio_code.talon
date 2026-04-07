@@ -513,3 +513,4 @@ manage hover:
     insert("@id:editor.hover.enabled ")
     sleep(0.05)
     key(enter)
+^please [<user.text>]$: insert(" " + text)
