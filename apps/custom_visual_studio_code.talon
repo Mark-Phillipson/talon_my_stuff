@@ -507,3 +507,9 @@ commit message:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()    
+manage hover: 
+    key(ctrl-,)
+    sleep(0.05)
+    insert("@id:editor.hover.enabled ")
+    sleep(0.05)
+    key(enter)
