@@ -514,3 +514,4 @@ manage hover:
     sleep(0.05)
     key(enter)
 ^please [<user.text>]$: insert(" " + text)
+
