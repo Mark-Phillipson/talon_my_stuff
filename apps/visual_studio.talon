@@ -115,6 +115,8 @@ collapse all | fold toggle all: key(ctrl-m ctrl-l)
 build solution: key(ctrl-shift-b)
 build project: key(ctrl-b)
 start application: key(ctrl-f5)
+start debugging: key(f5)
+start without debugging: key(ctrl-f5)
 reset code | stop application: key(shift-f5)
 start debugging | debug application: key(f5)
 show code places:
@@ -144,7 +146,7 @@ go [to line] <user.number_string>:
     insert(number_string)
     key(enter)
 navigate: key(ctrl-,)
-code search: key(ctrl-,)
+code search | search files: key(ctrl-,)
 navigate <user.text>:
     key(ctrl-,)
     sleep(100ms)
@@ -287,3 +289,17 @@ if statement:
 # deck(pedal_right):
 #     user.pedal_right()
 #     speech.toggle()
+pilot chat:
+    key(ctrl-\)
+    sleep(100ms)
+    key(c)
+source control:
+    key(ctrl-0)
+    sleep(100ms)
+    key(ctrl-g)
+feature search: key(ctrl-q)
+terminal focus: key(ctrl-')
+take tail: key(shift-end)
+take tail file: key(ctrl-shift-end)
+take head: key(shift-home)
+take head file: key(ctrl-shift-home)

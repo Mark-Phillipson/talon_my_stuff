@@ -52,3 +52,7 @@ control [mass]: tracking.control_toggle()
 number labels hide: user.hud_set_virtual_keyboard()
 
 (telegram | telegraph) bob: user.switcher_focus("Telegram")
+punk <user.text>: user.remove_punctuation_and_insert(text)
+
+# Remove punctuation from current selection using Talon's selection API when available.
+remove punctuation: user.remove_punctuation_from_selection()
