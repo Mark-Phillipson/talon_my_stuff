@@ -39,6 +39,7 @@ pytest -q
 Integration points & external dependencies
 - Primary runtime: Talon (voice engine) — this repo depends on the Talon application to interpret `.talon` and `.talon-list` files.
 - Some helper scripts are Python files that run under the same Python interpreter Talon uses. Do not assume an external virtualenv; inspect the running Talon environment when debugging.
+- When debugging Python or Talon issues, check the Talon log at `C:\Users\MPhil\AppData\Roaming\talon\talon.log`.
 - There is a `dotnet` build task configured in the workspace (used for some example files under the repo). The repo has a few `.cs` test/demo files but no formal .NET project in the root — do not run dotnet builds unless you know which project to target.
 
 Editing guidance for the agent

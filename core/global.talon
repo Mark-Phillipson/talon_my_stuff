@@ -24,7 +24,6 @@ snipping tool: key(super-shift-s)
 mouse last position:
     mouse_coordinates = clip.text()
     user.move_mouse_from_string(mouse_coordinates)
-command palette: key(super-alt-space)
 talon lists show [<user.text>]: user.show_talon_lists(user.text or "")
 snip folder local documents: insert("C:\\Users\\MPhil\\Documents")
 snip folder downloads: insert("C:\\Users\\MPhil\\Downloads")

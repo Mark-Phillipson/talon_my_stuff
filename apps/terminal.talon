@@ -180,7 +180,7 @@ list last commits:
 delete object and binary folders:
     insert("Remove-Item -Path bin,obj -Recurse -Force")
 watch cycle: insert("dotnet watch run --project CycleRoutes/CycleRoutes.Web")
-copilot: insert("copilot --banner")
+pilot: insert("copilot --banner")
 [open] terminal settings:
     key(ctrl-,)
     sleep(100ms)
@@ -207,12 +207,40 @@ kill process:
     sleep(100ms)
     key(left:23)
 new blazor: insert("dotnet new blazor -o Practice --framework net10.0 ")
-list directories:
+list (directories | folders):
     insert("Get-ChildItem -Directory")
     sleep(100ms)
     key(enter)
-list directories horizontal:
+list (directories | folders) horizontal:
     insert("Get-ChildItem -Directory | Format-Wide Name -Column 4")
     sleep(100ms)
     key(enter)
 show recent commands: key(ctrl-alt-r)
+
+pilot help:
+    insert("/help")
+    sleep(100ms)
+    key(enter)
+pilot commands:
+    insert("/")
+    sleep(100ms)
+pilot mention file: insert("@")
+pilot mention issue: insert("#")
+pilot switch modes: key(shift-tab)
+pilot run preserve: key(ctrl-s)
+pilot line end: key(ctrl-e)
+pilot delete to line start: key(ctrl-u)
+pilot delete to line end: key(ctrl-k)
+pilot cursor word left: key(ctrl-left)
+pilot cursor word right: key(ctrl-right)
+pilot edit prompt: key(ctrl-g)
+pilot cancel: key(ctrl-c)
+pilot exit:
+    key(ctrl-c)
+    sleep(150ms)
+    key(ctrl-c)
+pilot toggle reasoning: key(ctrl-t)
+pilot open recent link:
+    key(ctrl-x)
+    sleep(100ms)
+    key(o)

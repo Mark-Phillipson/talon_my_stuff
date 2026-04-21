@@ -111,6 +111,10 @@ palette dotnet:
     key(enter)
 [command] palette:
     key(ctrl-shift-p)
+[command] palette <user.text>:
+    key(ctrl-shift-p)
+    sleep(100ms)
+    insert(text)
 palate: key(ctrl-shift-p)
 open recent: user.vscode("workbench.action.openRecent")
 
@@ -282,6 +286,17 @@ merge lines: user.vscode("editor.emmet.action.mergeLines")
 toggle comment: user.vscode("editor.emmet.action.toggleComment")
 
 #copilot
+# Pilot (short alias for Copilot) — voice-only commands
+pilot show tools: user.vscode("github.copilot.chat.debug.showTools")
+pilot hide tools: user.vscode("github.copilot.chat.debug.hideTools")
+pilot show elements: user.vscode("github.copilot.chat.debug.showElements")
+pilot hide elements: user.vscode("github.copilot.chat.debug.hideElements")
+pilot show nes requests: user.vscode("github.copilot.chat.debug.showNesRequests")
+pilot hide nes requests: user.vscode("github.copilot.chat.debug.hideNesRequests")
+pilot show ghost requests: user.vscode("github.copilot.chat.debug.showGhostRequests")
+pilot hide ghost requests: user.vscode("github.copilot.chat.debug.hideGhostRequests")
+pilot show raw request body: user.vscode("github.copilot.chat.debug.showRawRequestBody")
+
 ^pilot (allow | alow)$: 
     user.copilot_chat("")
     sleep(50ms)
@@ -515,3 +530,10 @@ manage hover:
     key(enter)
 ^please [<user.text>]$: insert(" " + text)
 
+(git | get) stage file: user.vscode("git.stage")
+(git | get) unstage file: user.vscode("git.unstage")
+(git | get) stage all: user.vscode("git.stageAll")
+(git | get) commit: user.vscode("git.commit")
+(git | get) push: user.vscode("git.push")
+(git | get) pull: user.vscode("git.pull")
+(git | get) open change: user.vscode("git.openChange")
