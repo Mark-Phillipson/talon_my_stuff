@@ -244,3 +244,4 @@ pilot open recent link:
     key(ctrl-x)
     sleep(100ms)
     key(o)
+pilot set model: insert("/model gpt-5-mini")
