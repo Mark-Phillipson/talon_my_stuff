@@ -16,7 +16,7 @@ Return only the corrected text without explanations or comments."""
 
 SYSTEM_PROMPT_NO_PUNCTUATION = """Format and fix the grammar on the following text using brevity and clarity.
 Note that speech recognition was used, so there may be sentence fragments.
-Remove ALL punctuation from the text.
+Remove **ALL** punctuation from the text.
 Return only the corrected text without punctuation, explanations or comments."""
 
 
