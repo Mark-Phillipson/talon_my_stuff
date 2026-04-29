@@ -12,12 +12,15 @@ DEFAULT_MODEL = "Mistral"  # Change to your preferred model
 SYSTEM_PROMPT = """Format and fix the grammar on the following text using brevity and clarity.
 Note that speech recognition was used, so there may be sentence fragments.
 Remove punctuation when not relevant to the meaning.
-Return only the corrected text without explanations or comments."""
+Return only the corrected text without explanations or comments.
+Do not wrap the return string in quotes or double quotes.
+If the text contains a question do not try to answer it, just format it as a question."""
 
 SYSTEM_PROMPT_NO_PUNCTUATION = """Format and fix the grammar on the following text using brevity and clarity.
 Note that speech recognition was used, so there may be sentence fragments.
 Remove **ALL** punctuation from the text.
-Return only the corrected text without punctuation, explanations or comments."""
+Return only the corrected text without punctuation, explanations or comments.
+Do not wrap the return string in quotes or double quotes."""
 
 
 @mod.action_class
@@ -53,7 +56,7 @@ class Actions:
                 
                 # Replace selection with formatted text
                 actions.insert(formatted_text)
-                actions.app.notify("Text formatted")
+                # actions.app.notify("Text formatted")
             else:
                 actions.app.notify(f"Ollama error: {response.status_code}")
                 
