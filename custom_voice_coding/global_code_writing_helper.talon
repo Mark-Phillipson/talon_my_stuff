@@ -18,11 +18,11 @@ search list <user.text>: user.run_application_voice_admin_windows_forms(text)
     user.run_application_voice_admin_windows_forms_language_category(snippet_language, snippet_category)
 launch {user.launcher_category}:
     user.run_application_voice_admin_windows_forms_launcher(launcher_category)
+launch {user.launcher_category} <user.text>:
+    user.run_application_voice_admin_windows_forms_launcher_with_parameter(launcher_category, text)
 what can I say:
     user.run_application_voice_admin_windows_forms_launcher("Talon Search")
 what can I say new: user.launch_talon_voice_command_server()
-launch {user.launcher_category} <user.text>:
-    user.run_application_voice_admin_windows_forms_launcher_with_parameter(launcher_category, text)
 # Favourite Folders
 go [to] documents: user.folder_navigate("C:\\Users\\MPhil\\OneDrive\\Documents")
 go [to] downloads: user.folder_navigate("C:\\Users\\MPhil\\Downloads")
