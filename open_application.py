@@ -1,4 +1,5 @@
 from talon import Module, ui
+import os
 
 mod = Module()
 
@@ -47,44 +48,46 @@ class Actions:
     def run_application_voice_admin_windows_forms(searchTerm:  str ):
         "runs the voice admin windows forms application with the given search term"
         commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
-        args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
-        args2 = '' + r'/' + searchTerm + ''
-        arguments=[args1, args2]
-        print(commandline)
-        print(searchTerm)
-        ui.launch(path=commandline,args=arguments)
+        term = (searchTerm or "").strip()
+        # Fallback: if user said "launch X" or "open X" treat it as a Launcher category invocation
+        if term:
+            lower = term.lower()
+            if lower.startswith("launch "):
+                category = term[len("launch "):].strip()
+                args = ["Launcher", category or ""]
+            elif lower.startswith("open "):
+                category = term[len("open "):].strip()
+                args = ["Launcher", category or ""]
+            else:
+                # Default to Talon search when not matching launcher patterns
+                args = ["Talon", term]
+        else:
+            args = ["Talon", ""]
+
+        cwd = os.path.dirname(commandline)
+        print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
+        ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_voice_admin_windows_forms_language_category(language:  str,category:  str ):
         "runs the voice admin windows forms application with the given language and category"
         commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
-        args1 = ' ' + '"' + r'/SearchIntelliSense"' + ' '
-        args2 = '' + r'/' + language + ''
-        args3 = '' + r'/' + category + ''
-        arguments=[args1, args2, args3]
-        print(commandline)
-        print(args1)
-        print(language)
-        print(category)
-        ui.launch(path=commandline,args=arguments)
+        args = ["SearchIntelliSense", language or "", category or ""]
+        cwd = os.path.dirname(commandline)
+        print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
+        ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_voice_admin_windows_forms_launcher(category:  str ):
         "runs the voice admin windows forms application with the given launcher category"
         commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
-        args1 = ' ' + '"' + r'/Launcher"' + ' '
-        args2 = '' + r'/' + category + ''
-        arguments=[args1, args2]
-        print(commandline)
-        print(category)
-        ui.launch(path=commandline,args=arguments)
+        args = ["Launcher", category or ""]
+        cwd = os.path.dirname(commandline)
+        print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
+        ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_voice_admin_windows_forms_launcher_with_parameter(category:  str, parameter: str ):
         "runs the voice admin windows forms application with the given launcher category and an additional parameter"
         commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
-        args1 = ' ' + '"' + r'/Launcher"' + ' '
-        args2 = '' + r'/' + category + ''
-        args3 = '' + r'/' + parameter + ''
-        arguments=[args1, args2, args3]
-        print(commandline)
-        print(category)
-        print(parameter)
-        ui.launch(path=commandline,args=arguments)
+        args = ["Launcher", category or "", parameter or ""]
+        cwd = os.path.dirname(commandline)
+        print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
+        ui.launch(path=commandline, args=args, cwd=cwd)
     def open_application_custom(commandline:  str ,args:  str) -> str:
         "Opens an application with the given command line"
         print(commandline)

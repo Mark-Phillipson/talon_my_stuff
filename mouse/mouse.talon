@@ -31,8 +31,15 @@
 <user.screen_step_two> apex:
     mouse_move(screen_step_two, -15)
     mouse_click(0)
-(taskbar | task) <user.screen_step_two> <user.number_signed_small>:
-    mouse_move(screen_step_two, 1050)
+adjust <user.screen_step_one> <user.number_signed_small>:
+    mouse_move(screen_step_one, 1030)
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    adjustment = number_signed_small * 5
+    mouse_move(position_x + adjustment, position_y)
+    mouse_click(0)
+adjust <user.screen_step_two> <user.number_signed_small>:
+    mouse_move(screen_step_two, 1030)
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     adjustment = number_signed_small * 5

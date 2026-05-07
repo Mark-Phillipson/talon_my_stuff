@@ -320,11 +320,22 @@ steam library:
 local host <user.number_string>:
     port = user.normalize_number_string(number_string)
     user.open_url("http://localhost:" + port)
-dismiss (notification | message | that): 
-    mouse_move(1636, 823)
-    sleep(400ms)
-    mouse_click(0)    
 transfer to android [phone]:
     mouse_click(0)
     speech.disable()
     tracking.control_toggle()
+(message | notification) (close | clothes | dismiss):
+    user.mouse_helper_position_save()
+    user.mouse_helper_move_image_relative("2026-05-07_08.42.35.117292.png", 0, 27, 1)
+    sleep(0.05)
+    mouse_click(0)
+    sleep(0.05)
+    user.mouse_helper_position_restore()    
+#Click the system tray icon, for the Blazor hybrid windows forms app Voice Admin
+[focus] hybrid:
+    user.mouse_helper_position_save()
+    user.mouse_helper_move_image_relative("2026-05-07_09.01.20.990073.png", 0)
+    sleep(0.05)
+    mouse_click(0)
+    sleep(0.05)
+    user.mouse_helper_position_restore()

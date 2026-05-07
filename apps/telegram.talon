@@ -55,3 +55,9 @@ list commands:
     insert("/help")
     sleep(100ms)
     key("enter")
+list calendar events:
+    insert("/calendar-events")
+    sleep(100ms)
+    key("enter")
+#This fails ☹️
+#create calendar event: insert("/calendar-create ")
