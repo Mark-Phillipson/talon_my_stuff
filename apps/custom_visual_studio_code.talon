@@ -116,7 +116,7 @@ palette dotnet:
     sleep(100ms)
     insert(text)
 palate: key(ctrl-shift-p)
-open recent: user.vscode("workbench.action.openRecent")
+
 
 # Manipulate Code
 
@@ -537,3 +537,5 @@ manage hover:
 (git | get) push: user.vscode("git.push")
 (git | get) pull: user.vscode("git.pull")
 (git | get) open change: user.vscode("git.openChange")
+files (latest | recent): user.vscode("workbench.action.openRecent")
+open recent: user.vscode("workbench.action.openRecent")

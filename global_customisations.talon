@@ -242,10 +242,6 @@ calculate <user.number_string> times <user.number_string>:
 calculate <user.number_string> divided by <user.number_string>:
     value = user.calculate_divide(number_string_1, number_string_2)
     insert(value)
-date insert: insert(user.time_format("%d-%m-%Y"))
-# Microsoft Power Toys Voice Commands
-shortcut guide: key(super-shift-/)    
-color picker: key(super-shift-c)
 # will only work when Talon menu is the first item in the notification tray!
 talon menu:
     key(super-b)
@@ -332,7 +328,7 @@ transfer to android [phone]:
     sleep(0.05)
     user.mouse_helper_position_restore()    
 #Click the system tray icon, for the Blazor hybrid windows forms app Voice Admin
-[focus] hybrid:
+^[focus] hybrid$:
     user.mouse_helper_position_save()
     user.mouse_helper_move_image_relative("2026-05-07_09.01.20.990073.png", 0)
     sleep(0.05)
