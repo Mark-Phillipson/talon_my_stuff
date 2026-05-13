@@ -174,3 +174,11 @@ attach file:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
+get password:
+    key(menu)
+    sleep(100ms)
+    key(up:3)
+    sleep(100ms)
+    key(right:2)
+    sleep(100ms)
+    key(enter)

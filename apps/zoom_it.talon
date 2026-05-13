@@ -1,6 +1,7 @@
-# zoomit.talon
 # Voice commands for ZoomIt drawing tools
 
+# Example of Drawing an Red Arrow:
+# draw it, draw arrow, pen red, pen thicker tenth, drag and release, arrow stop, exit draw
 ^zoom it$: key(super-ctrl-f8)
 ^live zoom$: key(ctrl-4)
 ^draw it$: key(ctrl-2)

@@ -3,8 +3,6 @@ os: windows
 
 #Foot Switch
 key(f13): mouse_click(0)
-key(f14):
-    mouse_click()
-    sleep(100ms)
-    mouse_click()
+# Middle pedal: global press-to-talk pulse (auto-sleeps after timeout)
+key(f14): user.pedal_press_to_talk()
 key(f15): mouse_click(1)

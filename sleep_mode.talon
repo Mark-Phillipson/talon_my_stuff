@@ -69,3 +69,4 @@ stop using dictate:
     mouse_click(0)
 #This is used when turning off android voice access while using Phone Link
 stop listening: speech.enable()
+lock screen: speech.enable()

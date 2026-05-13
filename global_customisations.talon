@@ -63,6 +63,12 @@ launch code:
     insert("visual studio code")
     sleep(900ms)
     key(enter)
+launch snagit [editor]:
+    key(super)
+    sleep(900ms)
+    insert("Snagit 2020 Editor")
+    sleep(900ms)
+    key(enter)
 control abbreviation:       insert("ctrl")
 ^computer restart confirm$:
     key(super-x)
@@ -322,6 +328,10 @@ transfer to android [phone]:
     tracking.control_toggle()
 (message | notification) (close | clothes | dismiss):
     user.mouse_helper_position_save()
+    mouse_move(100,100)
+    sleep(0.05)
+    mouse_click(0)
+    sleep(0.05)
     user.mouse_helper_move_image_relative("2026-05-07_08.42.35.117292.png", 0, 27, 1)
     sleep(0.05)
     mouse_click(0)
@@ -335,3 +345,4 @@ transfer to android [phone]:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
+
