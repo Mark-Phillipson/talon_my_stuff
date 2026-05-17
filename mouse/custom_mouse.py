@@ -20,6 +20,7 @@ steps_monitor_one = {
     "sit": 450,
     "india": 450,
     "jury": 500,
+    "jewelry": 500,
     "juliet": 500,
     "crunch": 550,
     "kilo": 550,

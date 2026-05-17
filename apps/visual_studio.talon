@@ -113,6 +113,10 @@ collapse all | fold toggle all: key(ctrl-m ctrl-l)
 
 #Debugging
 build solution: key(ctrl-shift-b)
+rebuild solution:
+    key(alt-b)
+    sleep(100ms)
+    key(r)
 build project: key(ctrl-b)
 start application: key(ctrl-f5)
 start debugging: key(f5)

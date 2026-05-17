@@ -34,7 +34,7 @@ snip folder desktop pictures: insert("C:\\DesktopPictures")
 snip folder repose: insert("C:\\Users\\MPhil\\source\\repos")
 start twitch bot:
     user.system_command("c:/Users/MPhil/source/repos/TwitchBot01/launch-bot.bat")
-hover | position: user.move_cursor_to_gaze_point()
+position: user.move_cursor_to_gaze_point()
 tab clothes: user.tab_close_wrapper()
 (ask it) | (basket):
     insert("?")

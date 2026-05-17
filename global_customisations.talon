@@ -63,12 +63,13 @@ launch code:
     insert("visual studio code")
     sleep(900ms)
     key(enter)
-launch snagit [editor]:
+[launch] snagit editor:
     key(super)
     sleep(900ms)
     insert("Snagit 2020 Editor")
     sleep(900ms)
     key(enter)
+launch snagit: key(ctrl-alt-=)
 control abbreviation:       insert("ctrl")
 ^computer restart confirm$:
     key(super-x)
