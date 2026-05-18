@@ -347,3 +347,7 @@ transfer to android [phone]:
     sleep(0.05)
     user.mouse_helper_position_restore()
 
+view [window] notifications:
+    mouse_move(1652, 1028)
+    sleep(0.05)
+    mouse_click(0)
