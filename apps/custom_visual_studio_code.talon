@@ -539,3 +539,4 @@ manage hover:
 (git | get) open change: user.vscode("git.openChange")
 files (latest | recent): user.vscode("workbench.action.openRecent")
 open recent: user.vscode("workbench.action.openRecent")
+queue message: key(alt-enter)
