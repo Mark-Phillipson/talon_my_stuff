@@ -50,6 +50,12 @@ CUSTOM_MESSAGE_COMMANDS = (
     "custom message help"
 )
 
+# Debugging: non-invasive lifecycle logging (safe to leave off)
+CUSTOM_MESSAGE_DEBUG = False
+
+# Workaround: prefer showing notifications on a secondary monitor when available.
+CUSTOM_MESSAGE_PREFER_SECOND_MONITOR = True
+
 custom_message_balance = 0
 custom_message_count = 0
 _custom_message_timer_id = None
@@ -171,6 +177,15 @@ def _start_countdown_tick():
 
 def _get_active_screen() -> ui.Screen:
     try:
+        if CUSTOM_MESSAGE_PREFER_SECOND_MONITOR:
+            screens = ui.screens()
+            if screens and len(screens) > 1:
+                main = ui.main_screen()
+                main_geometry = (main.x, main.y, main.width, main.height)
+                for screen in screens:
+                    geometry = (screen.x, screen.y, screen.width, screen.height)
+                    if geometry != main_geometry:
+                        return screen
         return ui.active_window().screen
     except Exception:
         return ui.main_screen()
@@ -309,6 +324,13 @@ def _show_message_overlay():
         _custom_message_canvas.register("draw", _draw_message_overlay)
         _custom_message_canvas.register("mouse", _on_message_overlay_mouse)
 
+    # Non-invasive lifecycle log for testing; safe because it does not touch canvas APIs
+    if CUSTOM_MESSAGE_DEBUG:
+        try:
+            preview = (_current_custom_message_text or "").replace("\n", " ")[:120]
+            print(f"[custom_message DEBUG] show overlay text={preview}")
+        except Exception:
+            pass
     _redraw_message_overlay()
 
 
