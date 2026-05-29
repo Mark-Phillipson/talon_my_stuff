@@ -231,7 +231,6 @@ take line:
 [focus] development template: key(ctrl-alt-shift-t)
 focus [talon] my stuff: key(ctrl-alt-shift-m)
 focus [talon] community: key(ctrl-alt-shift-y)
-focus Blazor CRUD: key(ctrl-alt-shift-c)
 focus voice admin: key(ctrl-alt-shift-v)
 click and sleep: 
     mouse_click(0)
