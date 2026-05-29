@@ -95,7 +95,7 @@ control abbreviation:       insert("ctrl")
     insert("rundll32.exe powrprof.dll, SetSuspendState Sleep")
     sleep(300ms)
     key(enter)
-tabby:                     key(tab)
+(tabby | push):                     key(tab)
 fluent search:              key(super-ctrl-shift)
 fluent search <user.text>:
     key(super-ctrl-shift)
@@ -351,3 +351,5 @@ view [window] notifications:
     mouse_move(1652, 1028)
     sleep(0.05)
     mouse_click(0)
+^digit <number_small>$:    
+    key(number_small)

@@ -180,7 +180,10 @@ list last commits:
 delete object and binary folders:
     insert("Remove-Item -Path bin,obj -Recurse -Force")
 watch cycle: insert("dotnet watch run --project CycleRoutes/CycleRoutes.Web")
-pilot launch: insert("copilot --banner")
+pilot (launch | run):
+    insert("copilot --banner")
+    sleep(100ms)
+    key(enter)
 [open] terminal settings:
     key(ctrl-,)
     sleep(100ms)
@@ -245,3 +248,4 @@ pilot open recent link:
     sleep(100ms)
     key(o)
 pilot set model: insert("/model gpt-5-mini")
+pilot prompt [<user.text>]: insert("copilot --prompt \"{user.text}\"")
