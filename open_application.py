@@ -95,6 +95,13 @@ class Actions:
         cwd = os.path.dirname(commandline)
         print(f"Launching Clippy: {commandline} args={args} cwd={cwd}")
         ui.launch(path=commandline, args=args, cwd=cwd)
+    def run_application_ai_chat():
+        "runs the VoiceAdmin AI Chat command (opens AI Chat view)"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        args = ["AIChat"]
+        cwd = os.path.dirname(commandline)
+        print(f"Launching AIChat: {commandline} args={args} cwd={cwd}")
+        ui.launch(path=commandline, args=args, cwd=cwd)
     def open_application_custom(commandline:  str ,args:  str) -> str:
         "Opens an application with the given command line"
         print(commandline)
