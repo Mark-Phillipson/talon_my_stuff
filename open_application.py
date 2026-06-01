@@ -88,6 +88,13 @@ class Actions:
         cwd = os.path.dirname(commandline)
         print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
         ui.launch(path=commandline, args=args, cwd=cwd)
+    def run_application_clippy():
+        "runs the VoiceAdmin Clippy command (opens clipboard history)"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        args = ["Clipboard"]
+        cwd = os.path.dirname(commandline)
+        print(f"Launching Clippy: {commandline} args={args} cwd={cwd}")
+        ui.launch(path=commandline, args=args, cwd=cwd)
     def open_application_custom(commandline:  str ,args:  str) -> str:
         "Opens an application with the given command line"
         print(commandline)

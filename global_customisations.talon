@@ -281,7 +281,7 @@ key(ctrl-f12) :
     key(tab:8)
 middle click: mouse_click(2)
 penta: key(enter)
-clippy: 
+clippy windows: 
     key(super-v)
 # enable push to talk in sleep mode    
 key(f9:up):
