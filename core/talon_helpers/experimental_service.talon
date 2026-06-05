@@ -27,3 +27,5 @@
 ^get abbreviation [for] <user.text>$:
     result = user.get_result_from_open_ai(text, "Please return an abbreviation for the given phrase.")
     insert(result)
+^testing text to speech$:
+    user.tts("This is a test of the text to speech system.  If you can hear this, it is working.")

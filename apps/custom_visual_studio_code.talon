@@ -540,3 +540,7 @@ manage hover:
 files (latest | recent): user.vscode("workbench.action.openRecent")
 open recent: user.vscode("workbench.action.openRecent")
 queue message: key(alt-enter)
+show copilot:
+    mouse_move(1509, 990)
+    sleep(100ms)
+    mouse_click(0)

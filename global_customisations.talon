@@ -352,3 +352,11 @@ view [window] notifications:
     mouse_click(0)
 ^digit <number_small>$:    
     key(number_small)
+launch music app: 
+    key(super)
+    user.tts("Launching Spotify")
+    sleep(900ms)
+    insert("Spotify")
+    sleep(900ms)
+    key(enter)
+    
