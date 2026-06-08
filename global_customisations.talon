@@ -359,4 +359,5 @@ launch music app:
     insert("Spotify")
     sleep(900ms)
     key(enter)
-    
+grab region clip:
+    key(super-shift-t)
