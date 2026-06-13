@@ -6,11 +6,12 @@ and app: vscode
 watch project:
     user.vscode("workbench.action.terminal.focus")
     sleep(100ms)
+
     insert("cd C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\VoiceAdmin")
     sleep(300ms)
     key(enter)
     sleep(300ms)
-    insert("dotnet watch --project VoiceAdmin.csproj --configuration Debug --urls https://localhost:5008")
+    insert("dotnet watch runm")
     sleep(300ms)
     key(enter)
 build hybrid [release]:
@@ -20,6 +21,6 @@ build hybrid [release]:
     sleep(300ms)
     key(enter)
     sleep(300ms)
-    insert("dotnet build --project WinFormApp.csproj --configuration Release")
+    insert("dotnet build WinFormsApp.csproj --configuration Release")
     sleep(300ms)
     key(enter)

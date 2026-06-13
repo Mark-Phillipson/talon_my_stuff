@@ -22,6 +22,13 @@ Remove **ALL** punctuation from the text.
 Return only the corrected text without punctuation, explanations or comments.
 Do not wrap the return string in quotes or double quotes."""
 
+SYSTEM_PROMPT_REDUCE = """Without changing the meaning, summarize using brevity and clarity or even abbreviations. maintain spaces between words, so humans can still read the words but try to summarize.
+Note that speech recognition was used, so there may be incorrect homophones.
+Remove **ALL** punctuation from the text.
+Return only the corrected text without punctuation, explanations or comments.
+Do not wrap the return string in quotes or double quotes.
+If the text contains a question do not try to answer it, just format it as a question."""
+
 
 @mod.action_class
 class Actions:
@@ -144,6 +151,46 @@ class Actions:
                 # Replace selection with formatted text
                 actions.insert(formatted_text)
                 actions.app.notify("Text formatted (no punctuation)")
+            else:
+                actions.app.notify(f"Ollama error: {response.status_code}")
+                
+        except requests.exceptions.ConnectionError:
+            actions.app.notify("Cannot connect to Ollama. Is it running?")
+        except requests.exceptions.Timeout:
+            actions.app.notify("Ollama request timed out")
+        except Exception as e:
+            actions.app.notify(f"Error: {str(e)[:50]}")
+    def ollama_reduce_selection():
+        """Reduce length of selected text using local Ollama."""
+        # Get current selection
+        selected_text = actions.edit.selected_text()
+        
+        if not selected_text or not selected_text.strip():
+            actions.app.notify("No text selected")
+            return
+        
+        try:
+            # Call Ollama API
+            response = requests.post(
+                f"{OLLAMA_BASE_URL}/v1/chat/completions",
+                json={
+                    "model": DEFAULT_MODEL,
+                    "messages": [
+                        {"role": "system", "content": SYSTEM_PROMPT_REDUCE},
+                        {"role": "user", "content": selected_text}
+                    ],
+                    "temperature": 0.3,  # Lower for more consistent formatting
+                    "max_tokens": 1000
+                },
+                timeout=30
+            )
+            
+            if response.status_code == 200:
+                result = response.json()
+                formatted_text = result["choices"][0]["message"]["content"].strip()
+                # Replace selection with formatted text
+                actions.insert(formatted_text)
+                # actions.app.notify("Text formatted")
             else:
                 actions.app.notify(f"Ollama error: {response.status_code}")
                 

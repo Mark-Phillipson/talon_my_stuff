@@ -197,6 +197,12 @@ we'll stop: user.mouse_scroll_stop()
     mouse_click(1)
     # close the mouse grid if open
     user.grid_close()
+context exit:
+    mouse_click(1)
+    sleep(100ms)
+    key(up)
+    sleep(100ms)
+    key(enter)
 zoom off: tracking.zoom_cancel()
 #parrot(tut):
 #    mouse_click(0)

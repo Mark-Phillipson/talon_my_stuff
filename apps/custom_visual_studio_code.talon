@@ -544,3 +544,5 @@ show copilot:
     mouse_move(1509, 990)
     sleep(100ms)
     mouse_click(0)
+search sessions: user.vscode("workbench.action.chat.history")    
+test language: user.hud_get_programming_language()

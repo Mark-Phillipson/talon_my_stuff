@@ -25,6 +25,8 @@ close window: key(ctrl-w)
 code editor: key(alt-f11)
 toggle (code | coat) [editor]: key(alt-f11)
 zoom box: key(shift-f2)
+zoom in: key(ctrl-alt-+)
+zoom out: key(ctrl-alt--)
 
 # Find and Replace
 find replace: key(ctrl-h)
@@ -160,3 +162,23 @@ space tab:
     key(space)
     sleep(200ms)
     key(tab)
+tab next: key(ctrl-f6)
+tab previous: key(ctrl-shift-f6)
+toggle bookmark:
+    key(alt-e)
+    sleep(200ms)
+    key(b)
+    sleep(200ms)
+    key(t)
+next bookmark:
+    key(alt-e)
+    sleep(200ms)
+    key(b)
+    sleep(200ms)
+    key(n)
+previous bookmark:
+    key(alt-e)
+    sleep(200ms)
+    key(b)
+    sleep(200ms)
+    key(p)
