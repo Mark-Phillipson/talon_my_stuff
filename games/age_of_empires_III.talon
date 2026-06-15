@@ -65,7 +65,6 @@ stop: key(s)
 [go to] artillery: key(ctrl-f)
 [go to] castle: key(ctrl-f)
 [go to] fort: key(ctrl-v)
-
 # --- Build Menu (Villager Selected) ---
 [build] house: key(q)
 [build] farm: key(e)

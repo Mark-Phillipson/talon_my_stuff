@@ -1,4 +1,4 @@
-from talon import Module
+from talon import Module,actions
 import requests
 import os
 
@@ -12,6 +12,8 @@ class Actions:
     def get_result_from_open_ai(value: str,prompt: str) -> str:
         """Get a simile for the given value using OpenAI"""
         print(prompt, value)
+        if value is None or value.strip() == "":
+            value = actions.edit.selected_text()
         #print("API_KEY:", API_KEY)
         headers = {
             "Content-Type": "application/json",

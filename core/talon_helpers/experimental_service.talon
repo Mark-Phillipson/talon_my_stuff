@@ -29,3 +29,6 @@
     insert(result)
 ^testing text to speech$:
     user.tts("This is a test of the text to speech system.  If you can hear this, it is working.")
+^reduce selection$:
+    result = user.get_result_from_open_ai("", "Keeping the same meaning please shorten this phrase. Do not return it inside quotes, and do not return anything other than the shortened phrase.")
+    insert(result)
