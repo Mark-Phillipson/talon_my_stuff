@@ -1,10 +1,9 @@
 os: windows
-and app.name: Age of Empires III: Definitive Edition
+and app.name: Cardinal
 os: windows
-and app.exe: aoe3de_s.exe
+and app.exe: reliccardinal.exe
 
 -
-
 settings():
     user.mode_indicator_show = 0
     # Choose how pop click should work in 'control mouse' mode
@@ -19,8 +18,9 @@ settings():
     tracking.zoom_width = 300
     tracking.zoom_scale = 4
 
-# This is a list of the commands that are specific to the Company of Heroes 2 game
 tag(): user.talon_hud_automatic_hide
+stop: key(s)
+back to work: key(ctrl-shift-r)
 take [all]:
     mouse_move(90, 116)
     sleep(30ms)
@@ -52,9 +52,9 @@ stop: key(s)
 
 # --- Building Selection ([Go To] Building) ---
 [go to] (town | headquarters) [center]: 
-    key(f1)
+    key(h)
     sleep(100ms)
-    key(f1)
+    key(h)
 #find town centre: key(ctrl-s)
 [go to] barracks: key(ctrl-a)
 [go to] arsenal: key(ctrl-x)
@@ -82,8 +82,7 @@ stop: key(s)
 # --- Unit Selection & Control ---
 [cycle] idle [villagers]: key(.)
 [select] all idle [villagers]: key(shift-.)
-[cycle] idle military: key(ctrl-f3)
-[select] all military: key(ctrl-shift-f3)
+[select] [all] military: key(ctrl-,)
 [select] all military onscreen: key(alt-,)
 select all military buildings: key(ctrl-shift-space)
 
@@ -120,7 +119,7 @@ minimap:
 # --- Unit Actions ---
 attack move: key(ctrl-shift-z)
 attack:
-    key(space)
+    key(a)
     sleep(30ms)
     mouse_click(0)
 [find] selection: key(ctrl-space)
@@ -173,13 +172,7 @@ display tech tree: key(f5)
 spectate player [number]: key(ctrl-shift-f{number})
 
 # --- General Game Hotkeys (F-keys) ---
-find town center: key(f1)
-find home city: key(f2)
-[toggle] [home] city:
-    mouse_move(40, 40)
-    sleep(30ms)
-    mouse_click(0)
-[find] explorer: key(f3)
+find town center: key(h)
 find idle military: key(f4)
 toggle game time: key(f5)
 toggle score display: key(f6)
@@ -190,7 +183,6 @@ quick load game: key(f10)
 enable friend or foe colors: key(f11)
 eject: key(ctrl-shift-e)
 # --- Command Hotkeys ---
-stop: key(shift-ctrl-s)
 toggle auto repair: key(shift-ctrl-r)
 eject units: key(shift-ctrl-e)
 garrison unit: key(shift-ctrl-g)

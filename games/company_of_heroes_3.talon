@@ -2,6 +2,7 @@ os: windows
 and app.exe: reliccoh3.exe
 and win.title: /company of heroes 3|coh3/i
 -
+
 #Whilst playing the game the workaround to make this work is to make this file global until we can figure out why the app does not detect when the app is running.
 settings():
     user.mode_indicator_show = 0
@@ -17,15 +18,17 @@ settings():
     tracking.zoom_width = 300
     tracking.zoom_scale = 4
 
-# This is a list of the commands that are specific to the Company of Heroes 2 game
+# This is a list of the commands that are specific to the Company of Heroes 3 game
 game <user.arrow_key>:
     key(arrow_key)
     repeat(4)
 fly <user.arrow_key>:
     key(arrow_key)
     repeat(14)
-[tactical] map: key(m)
-focus selection: key(')
+tactical [map]: key(m)
+[focus] selection: key(')
+follow: key(')
+battleship: key(ctrl-f2)
 take all: key(ctrl-a)
 #[subselect] maximize: key(    #)# Basic commands
 move back: key(down)
@@ -34,10 +37,8 @@ move right: key(right)
 attack [move]:
     key(q)
     mouse_click(0)
-stop:
-    key(w)
-reinforce:
-    key(f:10)
+stop: key(w)
+reinforce: key(f:10)
 fuel:
     key(b)
     sleep(20ms)
@@ -80,71 +81,60 @@ assembly:
     key(d)
     sleep(20ms)
     mouse_click(0)
-headquarters:
-    key(f1)
-infantry:
-    key(f2)
-support:
-    key(f3)
-light [vehicles]:
-    key(f4)
-heavy [vehicles]:
-    key(f5)
+headquarters: key(f1)
+infantry: key(f2)
+support: key(f3)
+light [vehicles]: key(f3)
+heavy [vehicles]: key(f4)
 [set] rally point:
     key(ctrl-a)
     sleep(30ms)
     mouse_click(0)
-toggle map:
-    key(m)
+toggle map: key(m)
 go there:
     mouse_click(0)
     sleep(60ms)
     key(m)
-[next] idle [soldier]:
-    key(,)
-lazy [vehicle]:
-    key(.)
-[all] vehicles:
-    key(ctrl-.)
+[next] idle [soldier]: key(,)
+lazy [vehicle]: key(.)
+[all] vehicles: key(ctrl-.)
 all idle: key(ctrl-alt-,)
 all lazy: key(ctrl-alt-.)
 events: key(n)
-explode:
-    key(ctrl-.)
+explode | pick float:
+    key(0)
     sleep(30ms)
     key(q)
     sleep(30ms)
     mouse_click(0)
-hold shift:
-    key(shift:down)
-release shift:
-    key(shift:up)
-[all] soldiers:
-    key(ctrl-,)
+hold shift: key(shift:down)
+release shift: key(shift:up)
+[all] soldiers: key(ctrl-,)
 [all] invade:
     key(ctrl-,)
     sleep(30ms)
     key(q)
     sleep(30ms)
     mouse_click(0)
-reset camera:
-    key(backspace)
-[game] pause:
-    key(space)
-game stop:
-    key(space)
-pause game:
-    key(pause)
-[game] menu:
-    key(esc)
-take [all]:
+reset camera: key(backspace)
+cash:
+    key(s)
+    sleep(30ms)
+    key(z)
+    sleep(30ms)
+    mouse_click(0)
+[game] pause: key(space)
+game stop: key(space)
+pause game: key(pause)
+[game] menu: key(esc)
+take [screen]:
     mouse_move(60, 40)
     sleep(30ms)
     user.mouse_drag(0)
     sleep(30ms)
-    mouse_move(1670, 250)
+    mouse_move(1600, 250)
     sleep(30ms)
-    mouse_move(1670, 979)
+    mouse_move(1600, 979)
     sleep(30ms)
     mouse_click(0)
 #save game: key(f5)
@@ -158,39 +148,48 @@ unit seven: key(7)
 unit eight: key(8)
 unit nine: key(9)
 unit zero: key(0)
-centre:
-    mouse_move(800, 500)
+centre: mouse_move(800, 500)
 go home: key(home)
 [unit] one view:
     key(1)
-    key(1)
+    sleep(30ms)
+    key(')
 [unit] two view:
     key(2)
-    key(2)
+    sleep(30ms)
+    key(')
 [unit] three view:
     key(3)
-    key(3)
+    sleep(30ms)
+    key(')
 [unit] four view:
     key(4)
-    key(4)
+    sleep(30ms)
+    key(')
 [unit] five view:
     key(5)
-    key(5)
+    sleep(30ms)
+    key(')
 [unit] six view:
     key(6)
-    key(6)
+    sleep(30ms)
+    key(')
 [unit] seven view:
     key(7)
-    key(7)
+    sleep(30ms)
+    key(')
 [unit] eight view:
     key(8)
-    key(8)
+    sleep(30ms)
+    key(')
 [unit] nine view:
     key(9)
-    key(9)
+    sleep(30ms)
+    key(')
 [unit] zero view:
     key(0)
-    key(0)
+    sleep(30ms)
+    key(')
 slot first:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
@@ -229,7 +228,6 @@ slot fifth:
 zoom out: user.mouse_scroll_down()
 zoom: user.mouse_scroll_up()
 touch first:
-    print ("clicking touch first")
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
     mouse_move(383, 997)
@@ -408,26 +406,16 @@ emplacement ninth:
     sleep(30ms)
     mouse_click(0)
     mouse_move(position_x, position_y)
-group one:
-    key(shift-1)
-group two:
-    key(shift-2)
-group three:
-    key(shift-3)
-group four:
-    key(shift-4)
-group five:
-    key(shift-5)
-group six:
-    key(shift-6)
-group seven:
-    key(shift-7)
-group eight:
-    key(shift-8)
-group nine:
-    key(shift-9)
-group zero:
-    key(shift-0)
+group one: key(shift-1)
+group two: key(shift-2)
+group three: key(shift-3)
+group four: key(shift-4)
+group five: key(shift-5)
+group six: key(shift-6)
+group seven: key(shift-7)
+group eight: key(shift-8)
+group nine: key(shift-9)
+group zero: key(shift-0)
 kill tank:
     key(7)
     sleep(30ms)
@@ -442,8 +430,7 @@ retreat:
     key(r)
     sleep(30ms)
     mouse_click(0)
-antitank:
-    key(7)
+antitank: key(7)
 [get] gammon [bomb]:
     position_x = user.query_mouse_position_x()
     position_y = user.query_mouse_position_y()
@@ -704,81 +691,33 @@ ante run:
     key(u)
     sleep(30ms)
     mouse_click(0)
-battle group first: key(ctrl-f1)
-battle group second: key(ctrl-f2)
-battle group third: key(ctrl-f3)
-battle group fourth: key(ctrl-f4)
-battle group fifth: key(ctrl-f5)
-battle group sixth: key(ctrl-f6)
-[open] menu:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_12.42.32.786730.png", 0)
+[battle] group first: key(ctrl-f1)
+[battle] group second: key(ctrl-f2)
+[battle] group third: key(ctrl-f3)
+[battle] group fourth: key(ctrl-f4)
+[battle] group fifth: key(ctrl-f5)
+[battle] group sixth: key(ctrl-f6)
+command [points]:
+    mouse_move(1641, 779)
     sleep(0.05)
     mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-close menu:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_12.45.13.957469.png", 0)
+accept:
+    mouse_move(1439, 776)
     sleep(0.05)
     mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-select menu:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_12.47.34.178364.png", 0)
-    sleep(0.05)
+bombs [away]: key(z)
+set to <user.number_string>:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(383, 997)
+    sleep(30ms)
     mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-back menu:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_12.50.31.394351.png", 0)
-    sleep(0.05)
+    mouse_move(position_x, position_y)
+    key(ctrl:down)
+    sleep(30ms)
+    key(number_string)
+    key(ctrl:up)
+go to:
     mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-confirm menu:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_12.52.47.189665.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-start menu:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_12.54.06.533252.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-continue menu:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_13.10.02.371115.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-click yes:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_13.11.17.879670.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-click no:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_13.12.36.492118.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-understood:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_13.18.56.566783.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-number labels show:
-    user.number_labels_register(360, 990, 55, "left_to_right", "horizontal")
+    sleep(30ms)
+    key(')

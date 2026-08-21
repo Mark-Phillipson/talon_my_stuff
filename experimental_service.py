@@ -10,7 +10,7 @@ API_KEY = os.getenv("OPENAI_API_KEY")
 @mod.action_class
 class Actions:
     def get_result_from_open_ai(value: str,prompt: str) -> str:
-        """Get a simile for the given value using OpenAI"""
+        """Get a response for the given value using OpenAI"""
         print(prompt, value)
         if value is None or value.strip() == "":
             value = actions.edit.selected_text()

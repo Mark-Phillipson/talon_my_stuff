@@ -14,9 +14,9 @@ settings():
     # Only uncomment the line below if you want experimental behavior to parse Talon files
     # tag(): user.gpt_beta
     user.model_shell_default = "cmd"
-    user.listening_timeout_minutes = 3
+    user.listening_timeout_minutes = 6
     user.mouse_continuous_scroll_amount = 5
-    user.snippets_dir = "C:/Users/MPhil/AppData/Roaming/Code/User/snippets"
+    user.snippets_dir = r"C:/Users/MPhil/AppData/Roaming/Code/User/snippets"
     # Zoom Mouse Settings
     tracking.zoom_live = true
     tracking.zoom_height = 200

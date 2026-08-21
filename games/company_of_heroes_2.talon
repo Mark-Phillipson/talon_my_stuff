@@ -86,7 +86,7 @@ heavy [vehicles]: key(f5)
     key(ctrl-a)
     sleep(30ms)
     mouse_click(0)
-tactical map: key(keypad_0)
+tactical [map]: key(keypad_0)
 go there:
     mouse_click(0)
     sleep(60ms)
@@ -107,7 +107,7 @@ next:
     sleep(30ms)
     key(shift:up)
 explode:
-    key(ctrl-/)
+    key(0)
     sleep(30ms)
     key(a)
     sleep(30ms)

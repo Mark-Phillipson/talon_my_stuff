@@ -7,7 +7,7 @@ bob <user.text>: user.bob_cli_send(text)
 ^show taskbar$: user.run_application_csharp_natural("show taskbar")
 ^show desktop$: user.run_application_csharp_natural("show desktop")
 
-^ID <user.text>$:
+^identify <user.text>$:
     print("Identifying: " + text)
     user.run_application_csharp_natural("identify " + text)
 
