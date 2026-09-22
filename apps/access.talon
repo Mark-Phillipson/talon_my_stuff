@@ -27,10 +27,21 @@ toggle (code | coat) [editor]: key(alt-f11)
 zoom box: key(shift-f2)
 zoom in: key(ctrl-alt-+)
 zoom out: key(ctrl-alt--)
-
+duplicate: key(ctrl-@)
 # Find and Replace
 find replace: key(ctrl-h)
 find next: key(shift-f4)
+find next <user.number_string>:
+    key(ctrl-f)
+    sleep(100ms)
+    insert(number_string)
+    sleep(100ms)
+    key(alt-n)
+    sleep(100ms)
+    key(escape)
+
+dropdown [list]: key(alt-down)
+property [sheet]: key(f4)
 
 # Data Entry
 date stamp: key(ctrl-;)
@@ -52,15 +63,16 @@ step into: key(f8)
 step over: key(shift-f8)
 step out: key(ctrl-shift-f8)
 run to cursor: key(ctrl-f8)
+break [in] code: user.break_in_code()
+
 [toggle] breakpoint: key(f9)
 continue: key(f5)
 clear all breakpoints: key(ctrl-shift-f9)
-reset: key(ctrl-break)
 compile [code]:
     key(alt-d)
     sleep(100ms)
     key(c)
-immediate window: key(ctrl-g)
+immediate [window]: key(ctrl-g)
 reset code:
     key(alt-d)
     sleep(100ms)
@@ -182,3 +194,13 @@ previous bookmark:
     key(b)
     sleep(200ms)
     key(p)
+error setting:
+    key(alt-t)
+    sleep(200ms)
+    key(o)
+    sleep(200ms)
+    key(ctrl-tab:2)
+    sleep(200ms)
+    key(alt-b)
+take word: key(ctrl-shift-right)
+take tail: key(shift-end)

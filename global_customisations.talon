@@ -361,3 +361,4 @@ launch music app:
     key(enter)
 grab region clip:
     key(super-shift-t)
+church: mouse_click(0)

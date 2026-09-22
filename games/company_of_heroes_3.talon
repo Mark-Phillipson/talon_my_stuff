@@ -22,13 +22,35 @@ settings():
 game <user.arrow_key>:
     key(arrow_key)
     repeat(4)
+south:
+    key(down)
+    repeat(4)
+north:
+    key(up)
+    repeat(4)
+east:
+    key(right)
+    repeat(4)
+west:
+    key(left)
+    repeat(4)
 fly <user.arrow_key>:
     key(arrow_key)
     repeat(14)
 tactical [map]: key(m)
+test map:
+    key(m)
+    key(shift:down)
+    sleep(1000ms)
+    mouse_click(1)
+    key(shift:up)
+
 [focus] selection: key(')
 follow: key(')
-battleship: key(ctrl-f2)
+capture:
+    mouse_click(0)
+    sleep(100ms)
+    key(')
 take all: key(ctrl-a)
 #[subselect] maximize: key(    #)# Basic commands
 move back: key(down)
@@ -717,7 +739,32 @@ set to <user.number_string>:
     sleep(30ms)
     key(number_string)
     key(ctrl:up)
+group to <user.number_string>:
+    position_x = user.query_mouse_position_x()
+    position_y = user.query_mouse_position_y()
+    mouse_move(383, 997)
+    sleep(30ms)
+    mouse_click(0)
+    mouse_move(position_x, position_y)
+    key(shift:down)
+    sleep(30ms)
+    key(number_string)
+    key(shift:up)
 go to:
     mouse_click(0)
     sleep(30ms)
     key(')
+hold escape: key(esc:down)
+release escape: key(esc:up)
+[lay] mine:
+    key(s)
+    sleep(30ms)
+    key(a)
+    sleep(30ms)
+    mouse_click(0)
+build nest:
+    key(s)
+    sleep(30ms)
+    key(s)
+    sleep(30ms)
+    mouse_click(0)

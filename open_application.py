@@ -1,10 +1,35 @@
-from talon import Module, ui
+from talon import Module, ui, actions
 import os
+import ctypes
+import time
+
+try:
+    import winsound
+except ImportError:
+    winsound = None
+
 
 mod = Module()
 
 @mod.action_class
 class Actions:
+    def play_toggle_chime(sound_path: str = ""):
+        """Play a quick confirmation sound after a successful toggle."""
+        if winsound is None:
+            return
+
+        try:
+            if sound_path and os.path.exists(sound_path):
+                winsound.PlaySound(sound_path, winsound.SND_FILENAME | winsound.SND_ASYNC)
+                return
+        except Exception:
+            pass
+
+        try:
+            winsound.Beep(900, 120)
+        except Exception:
+            pass
+
     def play_music_to_code_by():
         """Launch VLC and play all songs in the music to code by folder in random order"""
         import os
@@ -27,10 +52,10 @@ class Actions:
         ui.launch(path=commandline,args=arguments)
     def run_application_csharp_database_command(searchTerm:  str ):
         "runs the case sharp database command with the given search term"
-        commandline = r'C:\Users\MPhil\source\repos\SpeechRecognitionHelpers\ExecuteCommands_NET\bin\Release\net9.0-windows\ExecuteCommands.exe'
+        commandline = r'C:\Users\MPhil\source\repos\SpeechRecognitionHelpers\ExecuteCommands_NET\bin\Release\net10.0-windows\ExecuteCommands.exe'
         args1 = ' ' + r'/sharp' + ' ' 
         args2 = '' + r'/' + searchTerm + ''
-        arguments=[args1, args2]
+        arguments=["sharp",args1, args2]
         print(commandline)
         print(searchTerm)
         ui.launch(path=commandline,args=arguments)
@@ -59,8 +84,8 @@ class Actions:
                 category = term[len("open "):].strip()
                 args = ["Launcher", category or ""]
             else:
-                # Default to Talon search when not matching launcher patterns
-                args = ["Talon", term]
+                # Default to Display search when not matching launcher patterns
+                args = ["search", term]
         else:
             args = ["Talon", ""]
 
@@ -108,3 +133,33 @@ class Actions:
         print(args)
         ui.launch(path=commandline, args=args)
         return " " + commandline + " " + args
+    def break_in_code():
+        "breaks the code execution in the debugger"
+        print("Breaking in code execution")
+
+        user32 = ctypes.windll.user32
+
+        VK_CONTROL = 0x11
+        VK_PAUSE = 0x13
+        VK_CANCEL = 0x03  # Break key virtual key value used by many debuggers
+        KEYEVENTF_KEYUP = 0x0002
+
+        def send_ctrl_plus(vk_code: int):
+            user32.keybd_event(VK_CONTROL, 0, 0, 0)
+            time.sleep(0.02)
+            user32.keybd_event(vk_code, 0, 0, 0)
+            user32.keybd_event(vk_code, 0, KEYEVENTF_KEYUP, 0)
+            time.sleep(0.02)
+            user32.keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0)
+
+        # Try Ctrl+Break first (VK_CANCEL), then Ctrl+Pause for apps that bind Pause directly.
+        send_ctrl_plus(VK_CANCEL)
+        time.sleep(0.05)
+        send_ctrl_plus(VK_PAUSE)
+
+        # Final fallback through Talon's key dispatcher.
+        try:
+            actions.key("ctrl-pause")
+        except Exception:
+            pass
+        

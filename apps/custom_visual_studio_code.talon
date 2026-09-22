@@ -478,7 +478,7 @@ show notifications: user.vscode("notifications.showList")
 what can I say: user.vscode("talon.searchCommands")
 tree [open] explorer <user.letters>:
     user.open_tree_item_in_explorer(letters)
-dev reload: user.vscode("workbench.action.reloadWindow")
+reload window: user.vscode("workbench.action.reloadWindow")
 activity [bar] hide: user.vscode("workbench.action.activityBarLocation.hide")
 activity [bar] focus: user.vscode("workbench.action.focusActivityBar")
 [show] notifications:

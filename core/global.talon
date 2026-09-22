@@ -45,7 +45,9 @@ total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 #glide [cursor]: key(super-alt-.)
 #zoom it: key(super-ctrl-f8)
 con mouse: tracking.control_toggle()
-control [mass]: tracking.control_toggle()
+control [mass]:
+    tracking.control_toggle()
+    user.play_toggle_chime()
 
 # currently used in Company of Heroes games
 number labels hide: user.hud_set_virtual_keyboard()
@@ -55,3 +57,6 @@ punk <user.text>: user.remove_punctuation_and_insert(text)
 
 # Remove punctuation from current selection using Talon's selection API when available.
 remove punctuation: user.remove_punctuation_from_selection()
+labels show: labels.show(query_all("[is_content_element][rect]"))
+labels hide: labels.hide()
+labels <user.number_string>: labels.select(number_string)
