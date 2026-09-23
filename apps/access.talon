@@ -204,3 +204,4 @@ error setting:
     key(alt-b)
 take word: key(ctrl-shift-right)
 take tail: key(shift-end)
+(enzad | nz) function: user.apply_selection_function("Nz")
