@@ -1,10 +1,14 @@
+import json
+from pathlib import Path
+
 from talon import Module, actions, clip
 
 mod = Module()
 
 _SELECTION_FUNCTIONS = {}
+_SELECTION_FUNCTIONS_PATH = Path(__file__).with_name("selection_functions.json")
 
-print("selection_wrappers imported")
+
 def _get_clip_text():
     try:
         return clip.get()
@@ -31,21 +35,52 @@ def _set_clip_text(text: str):
                 pass
 
 
-def _selection_function_registry():
-    """Registry of selection-wrapping functions."""
-    if not _SELECTION_FUNCTIONS:
-        def _nz(value: str, default_value: str = "0") -> str:
-            token = (value or "").strip()
-            default = (default_value or "0").strip() or "0"
-            return f"Nz({token},{default})"
+def _format_default_value(default_value: str, fallback: str = "0") -> str:
+    if default_value is None:
+        return fallback
 
-        def _nvl(value: str, default_value: str = "0") -> str:
-            token = (value or "").strip()
-            default = (default_value or "0").strip() or "0"
-            return f"Nvl({token},{default})"
+    value = str(default_value).strip()
+    if value == "":
+        return '""'
+    return value or fallback
 
-        _SELECTION_FUNCTIONS["nz"] = _nz
-        _SELECTION_FUNCTIONS["nvl"] = _nvl
+
+def _build_formatter(template: str):
+    def formatter(value: str, default_value: str = "0") -> str:
+        token = (value or "").strip()
+        default = _format_default_value(default_value, "0")
+        return template.format(value=token, default=default)
+
+    return formatter
+
+
+def _load_selection_function_config() -> dict:
+    registry = {}
+
+    try:
+        with open(_SELECTION_FUNCTIONS_PATH, "r", encoding="utf-8") as handle:
+            config = json.load(handle)
+    except Exception:
+        config = {}
+
+    if isinstance(config, dict):
+        for name, template in config.items():
+            if not name or not isinstance(template, str):
+                continue
+            registry[name.strip().lower()] = _build_formatter(template)
+
+    if not registry:
+        registry["nz"] = _build_formatter("Nz({value},{default})")
+        registry["nvl"] = _build_formatter("Nvl({value},{default})")
+
+    return registry
+
+
+def _selection_function_registry(force_reload: bool = False):
+    """Registry of selection-wrapping functions loaded from JSON config."""
+    global _SELECTION_FUNCTIONS
+    if force_reload or not _SELECTION_FUNCTIONS:
+        _SELECTION_FUNCTIONS = _load_selection_function_config()
 
     return _SELECTION_FUNCTIONS
 
@@ -119,3 +154,8 @@ class Actions:
         if not key:
             return
         _selection_function_registry()[key.lower()] = formatter
+
+    def reload_selection_functions() -> str:
+        """Reload function templates from the JSON registry."""
+        _selection_function_registry(force_reload=True)
+        return str(sorted(_selection_function_registry().keys()))

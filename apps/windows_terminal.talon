@@ -32,7 +32,7 @@ export text:
     key(enter)
 [go command] palette: key(ctrl-shift-p)
 hunt this: key(ctrl-shift-f)
-create issue [<user.text>]:
+create Github issue [<user.text>]:
     insert("gh issue create ")
     insert(user.text)
 (dotnet | terminal) restore:
@@ -47,10 +47,6 @@ create issue [<user.text>]:
     insert("dotnet run")
     sleep(100ms)
     key(enter)
-start rails server:
-    insert("rails server")
-    sleep(100ms)
-    key(enter)
-create rails controller: insert("rails generate controller name action ")
 select all: key(ctrl-shift-a)
 copy that: key(ctrl-c)
+get remote: insert("git remote -v")
