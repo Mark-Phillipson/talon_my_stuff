@@ -62,7 +62,3 @@ labels hide: labels.hide()
 labels <user.number_string>: labels.select(number_string)
 on do: key(ctrl-z)
 Hinter: key(enter)
-ampersands in:
-    insert(" &  & ")
-    sleep(200ms)
-    key(left:3)

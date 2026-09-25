@@ -233,3 +233,7 @@ end if back:
     sleep(200ms)
     insert("End If")
 take head: key(shift-home)
+ampersands in:
+    insert(" &  & ")
+    sleep(200ms)
+    key(left:3)
