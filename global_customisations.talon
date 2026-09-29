@@ -190,8 +190,10 @@ voice typing:
 [enter] last name:         insert("Phillipson ")
 [enter] army number:          insert("24593308")
 [enter] my Github:       insert("https://github.com/Mark-Phillipson/")
-key(keypad_plus):           speech.disable()
-key(keypad_minus):          speech.enable()
+key(keypad_plus:down):           speech.enable()
+key(keypad_plus:up):           speech.disable()
+key(keypad_minus):          speech.toggle()
+
 #do nothing calling amazon Echo device
 ziggy <user.text>: 
 #do nothing calling amazon PC app
