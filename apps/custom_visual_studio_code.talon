@@ -148,7 +148,7 @@ zoom out small:
     key(ctrl:down)
     user.mouse_scroll_down()
     key(ctrl:up)
-toggle secondary: user.vscode("workbench.action.closeAuxiliaryBar")
+toggle (secondary | chat): user.vscode("workbench.action.closeAuxiliaryBar")
 
 # Cursorless
 

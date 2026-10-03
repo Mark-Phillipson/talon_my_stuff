@@ -3,17 +3,29 @@ app.exe: msaccess.exe
 
 # Navigation and Views
 datasheet view:
-    key(alt-h)
+    key(alt)
+    sleep(100ms)
+    key(h)
     sleep(100ms)
     key(w)
     sleep(100ms)
     key(h)
 design view:
-    key(alt-h)
+    key(alt)
+    sleep(100ms)
+    key(h)
     sleep(100ms)
     key(w)
     sleep(100ms)
     key(d)
+layout view:
+    key(alt)
+    sleep(100ms)
+    key(h)
+    sleep(100ms)
+    key(w)
+    sleep(100ms)
+    key(y)
 form view: key(f5)
 nav pane | navigation [menu]: key(f11)
 prop sheet: key(f4)
