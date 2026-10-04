@@ -63,3 +63,6 @@ labels <user.number_string>: labels.select(number_string)
 on do: key(ctrl-z)
 Hinter: key(enter)
 key(ctrl-shift-space): user.model_switch()
+improve text:
+    text = user.improve()
+    insert(text)
