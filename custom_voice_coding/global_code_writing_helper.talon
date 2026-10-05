@@ -10,9 +10,7 @@ settings():
 capital smash <user.text>:
     result = user.capital_strip(text)
     insert(result)
-(ad tag) | (add tag) <user.text>:
-    user.run_application_csharp_database_command("add tag " + text)
-search old list <user.text>: user.run_application_search_intellisense(text)
+#search old list <user.text>: user.run_application_search_intellisense(text)
 search list <user.text>: user.run_application_voice_admin_windows_forms(text)
 {user.snippet_language} {user.snippet_category}:
     user.run_application_voice_admin_windows_forms_language_category(snippet_language, snippet_category)
