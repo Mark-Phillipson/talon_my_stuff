@@ -364,3 +364,5 @@ launch music app:
 grab region clip:
     key(super-shift-t)
 church: mouse_click(0)
+open sound settings:
+    user.open_windows_11_sound_settings()

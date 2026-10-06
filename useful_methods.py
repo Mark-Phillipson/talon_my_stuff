@@ -222,6 +222,15 @@ class Actions:
             os.system(f'code "{path}"')
         except Exception as e:
             print(f"Error opening path in VS Code: {e}")
+
+    def open_windows_11_sound_settings():
+        """Open the Windows 11 Sound settings page to switch output devices."""
+        try:
+            subprocess.Popen(["explorer.exe", "ms-settings:sound"])
+            print("Opened Windows 11 Sound settings.")
+        except Exception as e:
+            print(f"Error opening Windows 11 Sound settings: {e}")
+
     def game_click(button: int = 0):
         """Custom click for games that might need the lower-level approach"""
         ctrl.mouse_click(button, hold=16000)
