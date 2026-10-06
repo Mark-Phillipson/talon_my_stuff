@@ -231,6 +231,24 @@ class Actions:
         except Exception as e:
             print(f"Error opening Windows 11 Sound settings: {e}")
 
+    def toggle_windows_sound_output():
+        """Toggle the Windows master audio mute state using the standard volume shortcut."""
+        try:
+            subprocess.run(
+                [
+                    "powershell",
+                    "-NoProfile",
+                    "-Command",
+                    "$obj = New-Object -ComObject WScript.Shell; $obj.SendKeys([char]173)",
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            print("Toggled Windows sound output.")
+        except Exception as e:
+            print(f"Error toggling Windows sound output: {e}")
+
     def game_click(button: int = 0):
         """Custom click for games that might need the lower-level approach"""
         ctrl.mouse_click(button, hold=16000)

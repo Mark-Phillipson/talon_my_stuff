@@ -366,3 +366,5 @@ grab region clip:
 church: mouse_click(0)
 open sound settings:
     user.open_windows_11_sound_settings()
+toggle sound output:
+    user.toggle_windows_sound_output()
