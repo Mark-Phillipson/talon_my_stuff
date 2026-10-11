@@ -116,7 +116,7 @@ go there:
     mouse_click(0)
     sleep(60ms)
     key(m)
-[next] i [soldier]: key(,)
+[next] idle [soldier]: key(,)
 lazy [vehicle]: key(.)
 [all] vehicles: key(ctrl-.)
 all idle: key(ctrl-alt-,)
