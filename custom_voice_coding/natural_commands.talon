@@ -13,7 +13,7 @@ bob <user.text>: user.bob_cli_send(text)
 
 # Mouse movement commands for NaturalCommands
 
-# Basic directional movement
+# Basic directional movement*
 ^mouse left$: user.run_application_csharp_natural("mouse left")
 ^mouse right$: user.run_application_csharp_natural("mouse right")
 ^mouse up$: user.run_application_csharp_natural("mouse up")

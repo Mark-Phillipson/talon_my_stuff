@@ -47,12 +47,11 @@ test map:
 
 [focus] selection: key(')
 follow: key(')
-capture:
+navigate:
     mouse_click(0)
     sleep(100ms)
     key(')
 take all: key(ctrl-a)
-#[subselect] maximize: key(    #)# Basic commands
 move back: key(down)
 move left: key(left)
 move right: key(right)
@@ -117,7 +116,7 @@ go there:
     mouse_click(0)
     sleep(60ms)
     key(m)
-[next] idle [soldier]: key(,)
+[next] i [soldier]: key(,)
 lazy [vehicle]: key(.)
 [all] vehicles: key(ctrl-.)
 all idle: key(ctrl-alt-,)
@@ -149,16 +148,11 @@ cash:
 game stop: key(space)
 pause game: key(pause)
 [game] menu: key(esc)
+event queue: key(n)
 take [screen]:
-    mouse_move(60, 40)
+    key(ctrl-a)
     sleep(30ms)
-    user.mouse_drag(0)
-    sleep(30ms)
-    mouse_move(1600, 250)
-    sleep(30ms)
-    mouse_move(1600, 979)
-    sleep(30ms)
-    mouse_click(0)
+    key(ctrl-a)
 #save game: key(f5)
 unit one: key(1)
 unit two: key(2)

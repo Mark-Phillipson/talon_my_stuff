@@ -1,5 +1,5 @@
 from talon import Module, actions, ctrl
-import random, os, time
+import random, os, time, re
 from datetime import datetime
 import subprocess
 
@@ -33,6 +33,50 @@ class Actions:
     def replaced_text(text: str, old: str, new: str) -> str:
         """Replace text"""
         return text.replace(old, new)
+
+    def add_spaces_to_selection(text: str = "") -> str:
+        """Insert spaces between camel case / Pascal case words.
+
+        Example: `InvoiceNumber` -> `Invoice Number`
+                 `URLValue` -> `URL Value`
+        """
+        value = (text or "").strip()
+        if not value:
+            return ""
+
+        value = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", value)
+        value = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", value)
+        value = re.sub(r"\s+", " ", value).strip()
+        return value
+
+    def add_spaces_to_current_selection() -> str:
+        """Take the current selection, insert spaces between camel-case words, and replace it in place."""
+        try:
+            selected = actions.edit.selected_text()
+        except Exception:
+            selected = None
+
+        if selected is None:
+            try:
+                actions.key("ctrl-c")
+                actions.sleep("50ms")
+                selected = actions.clip.get_text()
+            except Exception:
+                return ""
+
+        if not selected:
+            return ""
+
+        formatted = actions.user.add_spaces_to_selection(selected)
+        try:
+            actions.insert(formatted)
+        except Exception:
+            try:
+                actions.clip.set_text(formatted)
+                actions.key("ctrl-v")
+            except Exception:
+                return formatted
+        return formatted
 
     def cancel_current_speech():
         """Cancel current speech Note this does not work!"""

@@ -368,3 +368,6 @@ open sound settings:
     user.open_windows_11_sound_settings()
 toggle sound output:
     user.toggle_windows_sound_output()
+add spaces:
+    user.add_spaces_to_current_selection()
+semantic start: key(super-alt-.)

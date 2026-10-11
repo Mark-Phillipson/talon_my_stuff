@@ -545,3 +545,4 @@ show copilot:
     sleep(100ms)
     mouse_click(0)
 search sessions: user.vscode("workbench.action.chat.history")    
+run task: user.vscode("workbench.action.tasks.runTask")
