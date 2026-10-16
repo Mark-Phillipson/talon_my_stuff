@@ -249,3 +249,6 @@ ampersands in:
     insert(" &  & ")
     sleep(200ms)
     key(left:3)
+message box: insert("MsgBox \"Prompt\",vbExclamation,\"Title\"")
+enabled false: insert(".Enabled = False")
+enabled true: insert(".Enabled = True")

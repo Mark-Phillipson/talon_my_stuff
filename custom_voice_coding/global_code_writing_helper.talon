@@ -127,5 +127,5 @@ custom launcher categories:
 custom attributes:
     user.open_url("https://github.com/Mark-Phillipson/talon_my_stuff/blob/4492ceb5a75c6d4978d43106bc6a9e351596ef0e/custom_voice_coding/html_attributes.py#L7")
 #face mode: mode.enable("user.face_mode")
-sequel | sql {user.sql_keywords}: insert(user.sql_keywords)
+sequel | sql | SQL {user.sql_keywords}: insert(user.sql_keywords)
 print screen: key(printscr)

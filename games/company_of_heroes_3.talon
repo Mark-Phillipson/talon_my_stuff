@@ -3,20 +3,10 @@ and app.exe: reliccoh3.exe
 and win.title: /company of heroes 3|coh3/i
 -
 
-#Whilst playing the game the workaround to make this work is to make this file global until we can figure out why the app does not detect when the app is running.
 settings():
     user.mode_indicator_show = 0
-    # Choose how pop click should work in 'control mouse' mode
-    # 0 = off
-    # 1 = on with eyetracker but not zoom mouse mode
-    # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 0
     key_hold = 32
-    # Zoom Mouse Options
-    tracking.zoom_live = true
-    tracking.zoom_height = 300
-    tracking.zoom_width = 300
-    tracking.zoom_scale = 4
 
 # This is a list of the commands that are specific to the Company of Heroes 3 game
 game <user.arrow_key>:
@@ -37,17 +27,9 @@ west:
 fly <user.arrow_key>:
     key(arrow_key)
     repeat(14)
-tactical [map]: key(m)
-test map:
-    key(m)
-    key(shift:down)
-    sleep(1000ms)
-    mouse_click(1)
-    key(shift:up)
-
 [focus] selection: key(')
-follow: key(')
-navigate:
+navigate: key(')
+follow:
     mouse_click(0)
     sleep(100ms)
     key(')
@@ -60,46 +42,10 @@ attack [move]:
     mouse_click(0)
 stop: key(w)
 reinforce: key(f:10)
-fuel:
-    key(b)
-    sleep(20ms)
-    key(f)
-    sleep(20ms)
-    mouse_click(0)
-munition:
-    key(b)
-    sleep(20ms)
-    key(m)
-    sleep(20ms)
-    mouse_click(0)
-trench:
-    key(b)
-    sleep(20ms)
-    key(t)
-    sleep(20ms)
-    mouse_click(0)
 wall:
-    key(b)
+    key(s)
     sleep(20ms)
-    key(w)
-    sleep(20ms)
-    mouse_click(0)
-bofors:
-    key(b)
-    sleep(20ms)
-    key(b)
-    sleep(20ms)
-    mouse_click(0)
-mortars:
-    key(b)
-    sleep(20ms)
-    key(r)
-    sleep(20ms)
-    mouse_click(0)
-assembly:
-    key(b)
-    sleep(20ms)
-    key(d)
+    key(q)
     sleep(20ms)
     mouse_click(0)
 headquarters: key(f1)
@@ -107,23 +53,13 @@ infantry: key(f2)
 support: key(f3)
 light [vehicles]: key(f3)
 heavy [vehicles]: key(f4)
-[set] rally point:
-    key(ctrl-a)
-    sleep(30ms)
-    mouse_click(0)
-toggle map: key(m)
-go there:
-    mouse_click(0)
-    sleep(60ms)
-    key(m)
 [next] idle [soldier]: key(,)
 lazy [vehicle]: key(.)
 [all] vehicles: key(ctrl-.)
 all idle: key(ctrl-alt-,)
 all lazy: key(ctrl-alt-.)
-events: key(n)
-explode | pick float:
-    key(0)
+explode:
+    key(ctrl-.)
     sleep(30ms)
     key(q)
     sleep(30ms)
@@ -148,11 +84,8 @@ cash:
 game stop: key(space)
 pause game: key(pause)
 [game] menu: key(esc)
-event queue: key(n)
-take [screen]:
-    key(ctrl-a)
-    sleep(30ms)
-    key(ctrl-a)
+event [queue]: key(n)
+take [screen]: key(ctrl-alt-7)
 #save game: key(f5)
 unit one: key(1)
 unit two: key(2)
@@ -206,41 +139,6 @@ go home: key(home)
     key(0)
     sleep(30ms)
     key(')
-slot first:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(522, 862)
-    sleep(30ms)
-    mouse_click(0)
-    mouse_move(position_x, position_y)
-slot second:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(602, 853)
-    sleep(30ms)
-    mouse_click(0)
-    mouse_move(position_x, position_y)
-slot third:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(680, 852)
-    sleep(30ms)
-    mouse_click(0)
-    mouse_move(position_x, position_y)
-slot fourth:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(766, 856)
-    sleep(30ms)
-    mouse_click(0)
-    mouse_move(position_x, position_y)
-slot fifth:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(852, 859)
-    sleep(30ms)
-    mouse_click(0)
-    mouse_move(position_x, position_y)
 zoom out: user.mouse_scroll_down()
 zoom: user.mouse_scroll_up()
 touch first:
@@ -447,14 +345,6 @@ retreat:
     sleep(30ms)
     mouse_click(0)
 antitank: key(7)
-[get] gammon [bomb]:
-    position_x = user.query_mouse_position_x()
-    position_y = user.query_mouse_position_y()
-    mouse_move(1790, 1025)
-    sleep(30ms)
-    mouse_click(0)
-    sleep(30ms)
-    mouse_move(position_x, position_y)
 one attack:
     key(1)
     sleep(30ms)
@@ -707,12 +597,6 @@ ante run:
     key(u)
     sleep(30ms)
     mouse_click(0)
-[battle] group first: key(ctrl-f1)
-[battle] group second: key(ctrl-f2)
-[battle] group third: key(ctrl-f3)
-[battle] group fourth: key(ctrl-f4)
-[battle] group fifth: key(ctrl-f5)
-[battle] group sixth: key(ctrl-f6)
 command [points]:
     mouse_move(1641, 779)
     sleep(0.05)
@@ -756,9 +640,20 @@ release escape: key(esc:up)
     key(a)
     sleep(30ms)
     mouse_click(0)
-build nest:
+[build] nest:
     key(s)
     sleep(30ms)
     key(s)
     sleep(30ms)
+    mouse_click(0)
+get ground:
+    key(m)
+    sleep(30ms)
+    key(shift:down)
+dismiss:
+    key(shift:up)
+    key(m)
+confirm:
+    mouse_move(1356, 772)
+    sleep(0.05)
     mouse_click(0)
