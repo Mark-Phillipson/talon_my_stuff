@@ -19,7 +19,6 @@ settings():
     tracking.zoom_width = 300
     tracking.zoom_scale = 4
 
-# This is a list of the commands that are specific to the Company of Heroes 2 game
 tag(): user.talon_hud_automatic_hide
 take [all]:
     mouse_move(90, 116)
@@ -44,7 +43,6 @@ move back: key(down)
 move left: key(left)
 move right: key(right)
 # Canonicalized: legacy AoE3 uses `attack move: key(r)` below; removed legacy `attack` mapping.
-stop: key(s)
 ############################################################
 # Age of Empires: Definitive Edition - Full Command Set
 # Source: https://ageofempires.fandom.com/wiki/Hotkey
@@ -123,7 +121,6 @@ attack:
     key(space)
     sleep(30ms)
     mouse_click(0)
-[find] selection: key(ctrl-space)
 go there: key(ctrl-space)
 patrol:    key(ctrl-shift-z)
 drop off resources: key(a)

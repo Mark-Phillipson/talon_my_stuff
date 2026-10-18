@@ -3,6 +3,7 @@ and app.name: Applicatione Frame Host
 and app.name: Applicatione Frame Host
 and win.title: /solitaire|casual games|microsoft solitaire collection/i
 -
+
 bubble:
     user.mouse_helper_position_save()
     user.mouse_helper_move_image_relative("2026-02-17_07.53.17.305616.png", 0)
@@ -45,20 +46,6 @@ back:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
-deck:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_08.05.01.783226.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-deck:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_08.40.23.767032.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
 exit:
     user.mouse_helper_position_save()
     user.mouse_helper_move_image_relative("2026-02-17_08.33.24.416896.png", 0)
@@ -87,15 +74,6 @@ try peaks:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
-#Aces Up Deck
-deal:
-    print ("clicking Aces Up deal")
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_09.23.06.853953.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()    
 two [of] spades:
     user.mouse_helper_position_save()
     user.mouse_helper_move_image_relative("2026-02-17_10.31.21.043276.png", 0)
@@ -215,19 +193,3 @@ undo [last]:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
-#try peaks deal
-deal:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_11.15.00.221433.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
-#klondike deal
-deal:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-17_11.29.23.622785.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()    

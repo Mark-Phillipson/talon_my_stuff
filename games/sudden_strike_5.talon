@@ -314,16 +314,6 @@ reverse:
     sleep(100ms)
     mouse_click(0)
 save game: key(ctrl-f7)
-take [all]:
-    mouse_move(110, 10)
-    sleep(100ms)
-    user.mouse_drag(0)
-    sleep(100ms)
-    mouse_move(1650, 250)
-    sleep(100ms)
-    mouse_move(1650, 979)
-    sleep(100ms)
-    mouse_click(0)
 take one:
     mouse_move(110, 10)
     sleep(100ms)

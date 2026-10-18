@@ -5,7 +5,6 @@ title: /Phone Link|Your Phone/
 -
 
 refresh: key("f5")
-clear all: key("ctrl-alt-k")
 
 # Navigation
 open messages: key("ctrl-1")

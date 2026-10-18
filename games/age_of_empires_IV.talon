@@ -44,7 +44,6 @@ move back: key(down)
 move left: key(left)
 move right: key(right)
 # Canonicalized: legacy AoE3 uses `attack move: key(r)` below; removed legacy `attack` mapping.
-stop: key(s)
 ############################################################
 # Age of Empires: Definitive Edition - Full Command Set
 # Source: https://ageofempires.fandom.com/wiki/Hotkey
@@ -122,7 +121,6 @@ attack:
     key(a)
     sleep(30ms)
     mouse_click(0)
-[find] selection: key(ctrl-space)
 go there: key(ctrl-space)
 patrol:    key(ctrl-shift-z)
 drop off resources: key(a)
