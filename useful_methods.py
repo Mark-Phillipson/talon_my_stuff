@@ -107,6 +107,7 @@ class Actions:
         # Convert to integer
         newValue = int(value) * int(multiply)
         return str(newValue)    
+        
     def calculate_divide(value: str, divide: str) -> str:
         """Calculate Result"""
         # Convert to integer

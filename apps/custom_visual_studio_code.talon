@@ -318,34 +318,18 @@ context last:
 pilot inline: key(ctrl-i)
 pilot completions: user.vscode("github.copilot.completions.toggle")
 pilot new chat:
-    user.copilot_chat("")
+    user.vscode("workbench.action.chat.openagent")
     sleep(100ms)
-    key(ctrl-l)
+    key(ctrl-n)
 pilot ask: key(ctrl-i)
 pilot toggle: user.vscode("github.copilot.toggleCopilot")
 pilot accept [word]: key(ctrl-right)
 pilot edits: user.vscode("workbench.action.chat.openEditSession")
-pilot chat workspace:
-    user.copilot_chat("")
-    sleep(300ms)
-    insert("@workspace ")
-
-pilot chat file:
-    user.copilot_chat("")
-    sleep(300ms)
-    insert("#f")
 pilot chat fix error: user.copilot_chat("#selection How can I /fix this error")
 pilot list commands:
     key(ctrl-shift-p)
     sleep(100ms)
     insert("GitHub Copilot: ")
-pilot voice:
-    user.copilot_chat("")
-    user.vscode("workbench.action.chat.startVoiceChat")
-    speech.disable()
-
-pilot next edit: user.vscode("chatEditor.action.navigateNext")
-pilot previous edit: user.vscode("chatEditor.action.navigatePrevious")
 pilot fix errors:
     key(ctrl-/)
     sleep(200ms)
