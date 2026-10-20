@@ -317,6 +317,7 @@ context last:
     key(enter)
 pilot inline: key(ctrl-i)
 pilot completions: user.vscode("github.copilot.completions.toggle")
+pilot chat: user.vscode("workbench.panel.chat.view.copilot.focus")
 pilot new chat:
     user.vscode("workbench.action.chat.openagent")
     sleep(100ms)
