@@ -359,3 +359,6 @@ toggle sound output:
 add spaces:
     user.add_spaces_to_current_selection()
 semantic start: key(super-alt-.)
+
+computer sleep: speech.disable()
+

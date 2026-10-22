@@ -1,10 +1,77 @@
-from talon import Module, actions, ctrl
+from talon import Module, actions, ctrl, ui, egui
+from talon.egui import Window
+from talon.types import Rect
 import random, os, time, re
 from datetime import datetime
 import subprocess
 
 
 mod = Module()
+_TESTING_WINDOW_WIDTH = 420
+_TESTING_WINDOW_HEIGHT = 220
+_TESTING_PADDING_X = 16
+_TESTING_PADDING_Y = 14
+_TESTING_BUTTON_MIN_WIDTH = 180
+_TESTING_BUTTON_MIN_HEIGHT = 48
+_TESTING_CLOSE_LABEL = "\n      CLOSE      \n"
+
+_testing_window = Window()
+_testing_window.title = "Testing Only"
+_testing_window.autosize = False
+_testing_window.decorated = False
+_testing_window.draggable = True
+
+
+def _get_active_screen():
+    try:
+        return ui.active_window().screen
+    except Exception:
+        return ui.main_screen()
+
+
+def _center_testing_window():
+    screen = _get_active_screen()
+    x = screen.x + max(0, (screen.width - _TESTING_WINDOW_WIDTH) / 2)
+    y = screen.y + max(0, (screen.height - _TESTING_WINDOW_HEIGHT) / 2)
+    _testing_window.rect = Rect(
+        x,
+        y,
+        _TESTING_WINDOW_WIDTH,
+        _TESTING_WINDOW_HEIGHT,
+    )
+
+
+async def _draw_testing_window(ui):
+    async with ui.horizontal() as row:
+        row.add_space(_TESTING_PADDING_X)
+        async with row.vertical() as col:
+            col.add_space(_TESTING_PADDING_Y)
+            if hasattr(egui, "RichText"):
+                col.label(egui.RichText("Hello World!").size(28))
+            elif hasattr(egui, "WidgetText"):
+                col.label(egui.WidgetText.text("Hello World!").heading())
+            else:
+                col.label("Hello World!")
+            col.add_space(10)
+            close_clicked = False
+            if hasattr(egui, "Button"):
+                try:
+                    close_button = egui.Button(_TESTING_CLOSE_LABEL)
+                    if hasattr(egui, "Vec2"):
+                        close_button = close_button.min_size(
+                            egui.Vec2(_TESTING_BUTTON_MIN_WIDTH, _TESTING_BUTTON_MIN_HEIGHT)
+                        )
+                    close_clicked = col.add(close_button).clicked()
+                except Exception:
+                    close_clicked = col.button(_TESTING_CLOSE_LABEL).clicked()
+            else:
+                close_clicked = col.button(_TESTING_CLOSE_LABEL).clicked()
+
+            if close_clicked:
+                _testing_window.hide()
+
+
+_testing_window.set_content(_draw_testing_window)
 
 @mod.action_class
 class Actions:
@@ -336,3 +403,9 @@ class Actions:
                 actions.user.switcher_focus("code.exe")
                 return
         print("VS Code did not start in time.")
+    def testing_only():
+        """Method for testing purposes only."""
+        print("This is a testing-only method.")
+        _center_testing_window()
+        _testing_window.show()
+        _testing_window.focus()
