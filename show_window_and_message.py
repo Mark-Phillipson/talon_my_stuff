@@ -1,4 +1,4 @@
-from talon import Module, ui, egui,axquery
+from talon import Module, actions, ui, egui
 from talon.egui import Window
 from talon.types import Rect
 
@@ -9,16 +9,22 @@ _WINDOW_WIDTH = 420
 _WINDOW_HEIGHT = 220
 _PADDING_X = 16
 _PADDING_Y = 14
-_BUTTON_MIN_WIDTH = 180
-_BUTTON_MIN_HEIGHT = 48
-_CLOSE_LABEL = "\n      CLOSE      \n"
+_BUTTON_MIN_WIDTH = 260
+_BUTTON_MIN_HEIGHT = 72
+_DEFAULT_CLOSE_CAPTION = "Close!"
+_CLOSE_LABEL = "\n    Close!    \n"
 _WINDOW_TEXT = "Hello World!"
 
 _window = Window()
 _window.title = "Talon Message Box"
-_window.autosize = True
+_window.autosize = False
 _window.decorated = True
 _window.draggable = True
+
+
+def _format_close_label(caption: str) -> str:
+    label = (caption or "").strip() or _DEFAULT_CLOSE_CAPTION
+    return f"\n\n      {label}      \n\n"
 
 
 def _get_active_screen():
@@ -77,16 +83,22 @@ _window.set_content(_draw_window)
 
 @mod.action_class
 class Actions:
-    def show_window_and_message(text: str = "Hello World!"):
+    def show_window_and_message(text: str = "Hello World!", title: str = "Talon Message Box", buttonCaption: str = "Close!"):
         """Show the window with custom text."""
-        global _WINDOW_TEXT
+        global _WINDOW_TEXT, _CLOSE_LABEL
 
         _WINDOW_TEXT = (text or "").strip() or "Hello World!"
-        _center_window()
-        _window.show()
-        _window.focus()
-    def print_all_buttons():
-        """Print all window buttons using axquery."""
-        print("All buttons:")
-        for element in axquery.query_all("button"):
-            print(element)
+        window_title = (title or "").strip() or "Talon Message Box"
+        _window.title = window_title
+        _CLOSE_LABEL = _format_close_label(buttonCaption)
+        print(f"show_window_and_message called with text='{_WINDOW_TEXT}' title='{window_title}'")
+        try:
+            _center_window()
+        except Exception as e:
+            print(f"show_window_and_message center error: {e}")
+        try:
+            _window.show()
+            _window.focus()
+        except Exception as e:
+            print(f"show_window_and_message show error: {e}")
+            actions.app.notify(f"show_window_and_message failed: {e}")
