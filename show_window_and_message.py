@@ -1,4 +1,4 @@
-from talon import Module, ui, egui
+from talon import Module, ui, egui,axquery
 from talon.egui import Window
 from talon.types import Rect
 
@@ -85,3 +85,8 @@ class Actions:
         _center_window()
         _window.show()
         _window.focus()
+    def print_all_buttons():
+        """Print all window buttons using axquery."""
+        print("All buttons:")
+        for element in axquery.query_all("button"):
+            print(element)

@@ -1,3 +1,3 @@
 #code.language: csharp
 #-
-keyword {user.keywords}: insert(user.keywords)
+#keyword {user.keywords}: insert(user.keywords)
