@@ -77,12 +77,15 @@ control abbreviation:       insert("ctrl")
     key(u)
     sleep(300ms)
     key(r)
+    user.show_window_and_message("The computer is now restarting.", "Computer Restart", "Close")
+
 ^computer shutdown confirm$:
     key(super-x)
     sleep(300ms)
     key(u)
     sleep(300ms)
     key(s)
+    user.show_window_and_message("The computer is now shutting down.", "Computer Shutdown", "Close")
 ^computer sleep confirm$:
     speech.disable()
     key(super-r)
@@ -95,6 +98,7 @@ control abbreviation:       insert("ctrl")
     insert("rundll32.exe powrprof.dll, SetSuspendState Sleep")
     sleep(300ms)
     key(enter)
+    user.show_window_and_message("The computer is now going to sleep.", "Computer Sleep", "Close")  
 (tabby | push):                     key(tab)
 fluent search:              key(super-ctrl-shift)
 fluent search <user.text>:
