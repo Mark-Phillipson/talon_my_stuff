@@ -657,3 +657,4 @@ confirm:
     mouse_move(1356, 772)
     sleep(0.05)
     mouse_click(0)
+tactical: key(m)
