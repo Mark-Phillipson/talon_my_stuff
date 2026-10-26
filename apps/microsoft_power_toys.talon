@@ -10,3 +10,4 @@
     insert("clipboard history")
     sleep(0.05)
     key(enter)
+^colour picker$: key(super-shift-c)
