@@ -29,12 +29,6 @@ class Actions:
         subprocess.Popen(["start", uri], shell=True)
         # VOICE_LAUNCHER_PUBLISH_PATH
 
-    def launch_talon_voice_command_server():
-        """Launch Talon Voice Command Server (backwards-compatible wrapper)"""
-        project_dir = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\TalonVoiceCommandsServer"
-        uri = "http://localhost:5008/"
-        return Actions.launch_dotnet_project(project_dir=project_dir, port=5008, uri=uri, timeout=10.0)
-
     def launch_dotnet_project(project_dir: str,
                              port: int = 5008,
                              uri: Optional[str] = None,

@@ -59,6 +59,13 @@ lazy [vehicle]: key(.)
 all idle: key(ctrl-alt-,)
 all lazy: key(ctrl-alt-.)
 explode:
+    key(0)
+    sleep(30ms)
+    key(q)
+    sleep(30ms)
+    mouse_click(0)
+
+vehicles:
     key(ctrl-.)
     sleep(30ms)
     key(q)

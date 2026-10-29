@@ -28,12 +28,6 @@ minimise [window]:
     key(n)
 switch [window]:
     key(alt-tab)
-[windows] switch both: 
-    key(super-shift-left)
-    sleep(60ms)
-    key(alt-tab)
-    sleep(60ms)
-    key(super-shift-left)
 window [monitor] switch:      key(super-shift-left)
 move [to] top:                key(ctrl-home)
 move [to] bottom:             key(ctrl-end)
@@ -50,7 +44,7 @@ windows start <user.text>:
     key(super)
     sleep(300ms)
     insert(text)
-open file manager:          key(super-e)
+launch file manager:          key(super-e)
 launch [Visual Studio] (insiders | insides):
     key(super)
     sleep(900ms)
@@ -72,21 +66,22 @@ launch code:
 launch snagit: key(ctrl-alt-=)
 control abbreviation:       insert("ctrl")
 ^computer restart confirm$:
+    user.show_window_and_message("The computer is now restarting.", "Computer Restart", "Close")
     key(super-x)
     sleep(300ms)
     key(u)
     sleep(300ms)
     key(r)
-    user.show_window_and_message("The computer is now restarting.", "Computer Restart", "Close")
 
 ^computer shutdown confirm$:
+    user.show_window_and_message("The computer is now shutting down.", "Computer Shutdown", "Close")
     key(super-x)
     sleep(300ms)
     key(u)
     sleep(300ms)
     key(s)
-    user.show_window_and_message("The computer is now shutting down.", "Computer Shutdown", "Close")
-^computer sleep confirm$:
+^computer device sleep confirm$:
+    user.show_window_and_message("The computer is now going to sleep.", "Computer Sleep", "Close")  
     speech.disable()
     key(super-r)
     sleep(300ms)
@@ -98,7 +93,6 @@ control abbreviation:       insert("ctrl")
     insert("rundll32.exe powrprof.dll, SetSuspendState Sleep")
     sleep(300ms)
     key(enter)
-    user.show_window_and_message("The computer is now going to sleep.", "Computer Sleep", "Close")  
 (tabby | push):                     key(tab)
 fluent search:              key(super-ctrl-shift)
 fluent search <user.text>:
@@ -366,3 +360,5 @@ semantic start: key(super-alt-.)
 
 computer sleep: speech.disable()
 
+clippy: user.run_application_clippy()
+calculator: user.run_application_calculator()
