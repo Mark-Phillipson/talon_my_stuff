@@ -1,6 +1,7 @@
 os: windows
 and hostname: J40L4V3
 -
+tag(): user.are_you_sure
 redo:                       key(ctrl-y)
 undo:                       key(ctrl-z)
 undo <user.number_signed_small>:
@@ -66,33 +67,12 @@ launch code:
 launch snagit: key(ctrl-alt-=)
 control abbreviation:       insert("ctrl")
 ^computer restart confirm$:
-    user.show_window_and_message("The computer is now restarting.", "Computer Restart", "Close")
-    key(super-x)
-    sleep(300ms)
-    key(u)
-    sleep(300ms)
-    key(r)
+    user.confirm_computer_restart()
 
 ^computer shutdown confirm$:
-    user.show_window_and_message("The computer is now shutting down.", "Computer Shutdown", "Close")
-    key(super-x)
-    sleep(300ms)
-    key(u)
-    sleep(300ms)
-    key(s)
+    user.confirm_computer_shutdown()
 ^computer device sleep confirm$:
-    user.show_window_and_message("The computer is now going to sleep.", "Computer Sleep", "Close")  
-    speech.disable()
-    key(super-r)
-    sleep(300ms)
-    insert("cmd")
-    sleep(300ms)
-    key(enter)
-    sleep(600ms)
-    #will hibernate the computer!
-    insert("rundll32.exe powrprof.dll, SetSuspendState Sleep")
-    sleep(300ms)
-    key(enter)
+    user.confirm_computer_sleep()
 (tabby | push):                     key(tab)
 fluent search:              key(super-ctrl-shift)
 fluent search <user.text>:

@@ -1,3 +1,9 @@
+format fragment:
+    result = user.get_result_from_open_ai("", "Grammatically format this text")
+    insert(result)
+format fragment no punctuation:
+    result = user.get_result_from_open_ai("", "Grammatically format this text without punctuation")
+    insert(result)
 ^get simile <user.text>$:
     result = user.get_result_from_open_ai(text, "Please return a single word that is a simile for the given word.")
     insert(result)

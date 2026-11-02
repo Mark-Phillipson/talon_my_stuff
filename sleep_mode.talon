@@ -71,3 +71,4 @@ stop using dictate:
 stop listening: speech.enable()
 lock screen: speech.enable()
 computer wake: speech.enable()
+send it | ask it | over: key(enter)

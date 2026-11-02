@@ -296,6 +296,9 @@ pilot hide nes requests: user.vscode("github.copilot.chat.debug.hideNesRequests"
 pilot show ghost requests: user.vscode("github.copilot.chat.debug.showGhostRequests")
 pilot hide ghost requests: user.vscode("github.copilot.chat.debug.hideGhostRequests")
 pilot show raw request body: user.vscode("github.copilot.chat.debug.showRawRequestBody")
+pilot voice mode: 
+    speech.toggle()
+    key(ctrl-i)
 
 ^pilot (allow | alow)$: 
     user.copilot_chat("")
