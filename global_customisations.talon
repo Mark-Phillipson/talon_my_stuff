@@ -65,24 +65,16 @@ launch code:
     sleep(900ms)
     key(enter)
 launch snagit: key(ctrl-alt-=)
-control abbreviation:       insert("ctrl")
-^computer restart confirm$:
+control abbreviation: insert("ctrl")
+^computer restart$:
     user.confirm_computer_restart()
 
-^computer shutdown confirm$:
+^computer shutdown$:
     user.confirm_computer_shutdown()
-^computer device sleep confirm$:
+^computer device sleep$:
     user.confirm_computer_sleep()
-(tabby | push):                     key(tab)
-fluent search:              key(super-ctrl-shift)
-fluent search <user.text>:
-    key(super-ctrl-shift)
-    sleep(300ms)
-    insert(text)
-    sleep(300ms)
-pause some:                 sleep(500ms)
-rocket:                   key(end)
-base | home:              key(home)
+(tabby | push): key(tab)
+base | home: key(home)
 double (base | home):
     key(home)
     sleep(100ms)

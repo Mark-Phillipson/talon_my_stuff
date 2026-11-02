@@ -9,12 +9,31 @@ _WINDOW_WIDTH = 420
 _WINDOW_HEIGHT = 220
 _PADDING_X = 16
 _PADDING_Y = 14
-_BUTTON_MIN_WIDTH = 260
-_BUTTON_MIN_HEIGHT = 72
+_BUTTON_MIN_WIDTH = 360
+_BUTTON_MIN_HEIGHT = 172
 _YES_NO_WINDOW_WIDTH = 520
 _YES_NO_WINDOW_HEIGHT = 240
-_YES_BUTTON_LABEL = "\n    Yes    \n"
-_NO_BUTTON_LABEL = "\n    No    \n"
+_YES_NO_BUTTON_WIDTH = 280
+_YES_NO_BUTTON_GAP = 300
+_YES_NO_BUTTONS_ROW_WIDTH = (_YES_NO_BUTTON_WIDTH * 2) + _YES_NO_BUTTON_GAP
+_YES_NO_TEXT_ESTIMATED_HEIGHT = 34
+_YES_NO_TEXT_TO_BUTTON_GAP = 12
+_YES_NO_CONTENT_TOP_PADDING = max(
+    _PADDING_Y,
+    int(
+        (
+            _YES_NO_WINDOW_HEIGHT
+            - (_YES_NO_TEXT_ESTIMATED_HEIGHT + _YES_NO_TEXT_TO_BUTTON_GAP + _BUTTON_MIN_HEIGHT)
+        )
+        / 2
+    ),
+)
+_YES_NO_BUTTONS_LEFT_PADDING = max(
+    0,
+    int((_YES_NO_WINDOW_WIDTH - (2 * _PADDING_X) - _YES_NO_BUTTONS_ROW_WIDTH) / 2),
+)
+_YES_BUTTON_LABEL = "\n         Yes         \n"
+_NO_BUTTON_LABEL = "\n         No         \n"
 _DEFAULT_CLOSE_CAPTION = "Close!"
 _CLOSE_LABEL = "\n    Close!    \n"
 _WINDOW_TEXT = "Hello World!"
@@ -148,7 +167,7 @@ async def _draw_yes_no_window(ui):
     async with ui.horizontal() as row:
         row.add_space(_PADDING_X)
         async with row.vertical() as col:
-            col.add_space(_PADDING_Y)
+            col.add_space(_YES_NO_CONTENT_TOP_PADDING)
             if hasattr(egui, "RichText"):
                 col.label(egui.RichText(display_text).size(28))
             elif hasattr(egui, "WidgetText"):
@@ -156,27 +175,28 @@ async def _draw_yes_no_window(ui):
             else:
                 col.label(display_text)
 
-            col.add_space(12)
+            col.add_space(_YES_NO_TEXT_TO_BUTTON_GAP)
             yes_clicked = False
             no_clicked = False
             async with col.horizontal() as buttons_row:
+                buttons_row.add_space(_YES_NO_BUTTONS_LEFT_PADDING)
                 if hasattr(egui, "Button"):
                     try:
                         yes_button = egui.Button(_YES_BUTTON_LABEL)
                         no_button = egui.Button(_NO_BUTTON_LABEL)
                         if hasattr(egui, "Vec2"):
-                            yes_button = yes_button.min_size(egui.Vec2(180, _BUTTON_MIN_HEIGHT))
-                            no_button = no_button.min_size(egui.Vec2(180, _BUTTON_MIN_HEIGHT))
+                            yes_button = yes_button.min_size(egui.Vec2(_YES_NO_BUTTON_WIDTH, _BUTTON_MIN_HEIGHT))
+                            no_button = no_button.min_size(egui.Vec2(_YES_NO_BUTTON_WIDTH, _BUTTON_MIN_HEIGHT))
                         yes_clicked = buttons_row.add(yes_button).clicked()
-                        buttons_row.add_space(20)
+                        buttons_row.add_space(_YES_NO_BUTTON_GAP)
                         no_clicked = buttons_row.add(no_button).clicked()
                     except Exception:
                         yes_clicked = buttons_row.button(_YES_BUTTON_LABEL).clicked()
-                        buttons_row.add_space(20)
+                        buttons_row.add_space(_YES_NO_BUTTON_GAP)
                         no_clicked = buttons_row.button(_NO_BUTTON_LABEL).clicked()
                 else:
                     yes_clicked = buttons_row.button(_YES_BUTTON_LABEL).clicked()
-                    buttons_row.add_space(20)
+                    buttons_row.add_space(_YES_NO_BUTTON_GAP)
                     no_clicked = buttons_row.button(_NO_BUTTON_LABEL).clicked()
 
             if yes_clicked:
