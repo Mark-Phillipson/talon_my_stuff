@@ -20,12 +20,12 @@ class Actions:
             "Authorization": f"Bearer {API_KEY}"
         }
         data = {
-            "model": "gpt-4-turbo",
+            "model": "gpt-5.4-mini",
             "messages": [
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": f"{prompt} '{value}':"}
             ],
-            "max_tokens": 600
+            "max_completion_tokens": 600
         }
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data)
         response_json = response.json()
