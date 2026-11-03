@@ -266,9 +266,9 @@ class DwellEngine:
             )
 
         self.panel = (
-            r.x,
+            x0 - PANEL_PAD,
             y0 - PANEL_PAD,
-            r.width,
+            total_w + 2 * PANEL_PAD,
             BTN_H + 2 * PANEL_PAD
         )
 
