@@ -153,13 +153,13 @@ KB_PAGES = {
 }
 
 KB_LABELS = {
-    "shift": "⇧", "backspace": "⌫", "delword": "⌫w", "enter": "↵",
+    "shift": "Shift", "backspace": "Bksp", "delword": "<-W", "enter": "Enter",
     "ctrl": "Ctrl", "page:symbols": "&123", "page:letters": "ABC",
     "page:fn": "Fn", "nav:esc": "esc", "nav:tab": "tab",
-    "nav:left": "←", "nav:up": "↑", "nav:down": "↓", "nav:right": "→",
+    "nav:left": "<-", "nav:up": "Up", "nav:down": "Down", "nav:right": "->",
     "nav:home": "Home", "nav:end": "End", "nav:pgup": "PgUp",
     "nav:pgdn": "PgDn", "nav:delete": "Del", "nav:super": "Win",
-    "move": "↕", "close": "✕",
+    "move": "Move", "close": "X",
 }
 
 mod = Module()
