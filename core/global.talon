@@ -46,8 +46,9 @@ total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 #zoom it: key(super-ctrl-f8)
 con mouse: tracking.control_toggle()
 control [mass]:
+    user.tts("Toggling Eye Tracker Mouse CONTROL.")
     tracking.control_toggle()
-    user.play_toggle_chime()
+    #user.play_toggle_chime()
 
 # currently used in Company of Heroes games
 number labels hide: user.hud_set_virtual_keyboard()

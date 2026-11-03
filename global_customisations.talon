@@ -67,11 +67,14 @@ launch code:
 launch snagit: key(ctrl-alt-=)
 control abbreviation: insert("ctrl")
 ^computer restart$:
+    user.tts("Are you sure you want to restart the computer?")
     user.confirm_computer_restart()
 
 ^computer shutdown$:
+    user.tts("Are you sure you want to shut down the computer?")
     user.confirm_computer_shutdown()
 ^computer device sleep$:
+    user.tts("Are you sure you want to put the computer to sleep?")
     user.confirm_computer_sleep()
 (tabby | push): key(tab)
 base | home: key(home)
