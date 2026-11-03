@@ -328,6 +328,8 @@ toggle sound output:
     user.toggle_windows_sound_output()
 add spaces:
     user.add_spaces_to_current_selection()
+remove double spaces:
+    user.remove_double_spaces_from_current_selection()
 semantic start: key(super-alt-.)
 
 computer sleep: speech.disable()

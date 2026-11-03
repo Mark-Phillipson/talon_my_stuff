@@ -48,6 +48,31 @@ class Actions:
         value = re.sub(r"\s+", " ", value).strip()
         return value
 
+    def remove_double_spaces(text: str = "") -> str:
+        """Collapse runs of two or more spaces to a single space.
+
+        If `text` is empty, the current selection is used when available.
+        """
+        value = text or ""
+        if not value:
+            try:
+                value = actions.edit.selected_text()
+            except Exception:
+                value = None
+
+            if value is None:
+                try:
+                    actions.key("ctrl-c")
+                    actions.sleep("50ms")
+                    value = actions.clip.get_text()
+                except Exception:
+                    return ""
+
+        if not value:
+            return ""
+
+        return re.sub(r" {2,}", " ", value)
+
     def add_spaces_to_current_selection() -> str:
         """Take the current selection, insert spaces between camel-case words, and replace it in place."""
         try:
@@ -67,6 +92,35 @@ class Actions:
             return ""
 
         formatted = actions.user.add_spaces_to_selection(selected)
+        try:
+            actions.insert(formatted)
+        except Exception:
+            try:
+                actions.clip.set_text(formatted)
+                actions.key("ctrl-v")
+            except Exception:
+                return formatted
+        return formatted
+
+    def remove_double_spaces_from_current_selection() -> str:
+        """Take the current selection, collapse double spaces, and replace it in place."""
+        try:
+            selected = actions.edit.selected_text()
+        except Exception:
+            selected = None
+
+        if selected is None:
+            try:
+                actions.key("ctrl-c")
+                actions.sleep("50ms")
+                selected = actions.clip.get_text()
+            except Exception:
+                return ""
+
+        if not selected:
+            return ""
+
+        formatted = actions.user.remove_double_spaces(selected)
         try:
             actions.insert(formatted)
         except Exception:

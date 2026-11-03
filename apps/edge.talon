@@ -174,3 +174,10 @@ attach file:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
+resize telegraph:
+    key(ctrl-shift-j)
+    sleep(500ms)
+    insert("(() => {{ const candidates = [...document.querySelectorAll('body *')].filter(el => {{ const r = el.getBoundingClientRect(); return r.width >= 550 && r.width <= 700 && r.height >= 300 && Math.abs(r.left + r.width / 2 - window.innerWidth / 2) < 100; }}); if (!candidates.length) return; const target = candidates.sort((a,b) => b.getBoundingClientRect().height - a.getBoundingClientRect().height)[0]; target.style.setProperty('width','calc(100% - 40px)','important'); target.style.setProperty('max-width','1600px','important'); target.style.setProperty('margin-left','auto','important'); target.style.setProperty('margin-right','auto','important'); }})()")
+    key(enter)
+    sleep(300ms)
+    key(ctrl-shift-j)
