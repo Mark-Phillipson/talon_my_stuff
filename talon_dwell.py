@@ -51,11 +51,14 @@ except Exception:  # very old Talon — dwell still works, no visuals
     Canvas = None
 
 try:
-    from talon.types import Point, Rect
+    from talon.types import Rect
 except Exception:
-    Point = None
     Rect = None
 
+try:
+    from talon.types import Point2d as Point
+except Exception:
+    Point = None
 # =====================================================================
 # SETTINGS — edit these, then restart Talon (or reload the script).
 # =====================================================================
@@ -75,9 +78,9 @@ KB_WIDTH_PCT       = 96     # keyboard width (% of screen) — Eye Control is BI
 
 PALETTES = {
      "eyecontrol": {
-    "panel": "000000",
-    "btn": "000000",
-    "btn_edge": "000000",
+    "panel": "0A0A0A",
+    "btn": "0A0A0A",
+    "btn_edge": "0A0A0A",
     "icon": "FFFFFF",
     "accent": "444444",
     "accent_icon": "FFFFFF",
