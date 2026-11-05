@@ -192,6 +192,7 @@ and stop: user.mouse_scroll_stop()
 will stop: user.mouse_scroll_stop()
 we'll stop: user.mouse_scroll_stop()
 (context) | (righty) | (right click):
+    user.tts("right clicking")
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(1)
