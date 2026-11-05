@@ -9,6 +9,11 @@ settings():
     key_hold = 32
 
 # This is a list of the commands that are specific to the Company of Heroes 3 game
+camera forward: key(up:down)
+camera left: key(left:down)
+camera right: key(right:down)
+camera back: key(down:down)
+
 game <user.arrow_key>:
     key(arrow_key)
     repeat(4)
@@ -40,7 +45,12 @@ move right: key(right)
 attack [move]:
     key(q)
     mouse_click(0)
-stop: key(w)
+stop:
+    key(w)
+    key(up:up)
+    key(left:up)
+    key(right:up)
+    key(down:up)
 reinforce: key(f:10)
 wall:
     key(s)
