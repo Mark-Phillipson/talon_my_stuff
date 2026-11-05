@@ -216,12 +216,17 @@ class DwellEngine:
 
     # ------------------------------------------------------------------
     def start(self):
+        """Start the dwell engine and its overlay; safe to call repeatedly."""
+        if self.job is not None:
+            self.enabled = True
+            return
+
         try:
             screen = ui.main_screen()
-            r = screen.rect
-            self.screen_rect = r
+            self.screen_rect = screen.rect
             self._layout_bar()
             self._build_keys()
+
             if Canvas is not None:
                 try:
                     self.canvas = Canvas.from_screen(screen)
@@ -235,12 +240,51 @@ class DwellEngine:
                 except Exception as exc:
                     print("talon_dwell: overlay unavailable (%r) — "
                           "dwell clicking still works." % (exc,))
-                    self.canvas = None
+                    self._close_canvas()
+
+            self.enabled = True
             self.job = cron.interval("16ms", self.tick)
             print("talon_dwell: running (Eye Control style). "
                   "Talon control mouse + dwell + keyboard + speak.")
         except Exception as exc:
+            self.stop()
             print("talon_dwell: failed to start: %r" % (exc,))
+
+    def _close_canvas(self):
+        """Unregister and close the overlay, if one was created."""
+        canvas = self.canvas
+        self.canvas = None
+        self._freeze = None
+        if canvas is None:
+            return
+        _safe(canvas.unregister, "draw", self.draw)
+        _safe(canvas.close)
+
+    def stop(self):
+        """Stop background work and release resources; safe to call repeatedly."""
+        self.enabled = False
+
+        if self.job is not None:
+            job = self.job
+            self.job = None
+            _safe(cron.cancel, job)
+
+        if self.dragging:
+            self._button_up()
+            self.dragging = False
+
+        self.scrolling = False
+        self.dwell_paused = False
+        self.keyboard_open = False
+        self.tts_mode = False
+        self.tts_buffer = ""
+        self.ctrl_armed = False
+        self.anchor = None
+        self.btn_focus = None
+        self.key_focus = None
+        self._close_canvas()
+
+        print("talon_dwell: stopped.")
 
     # ------------------------------------------------------------------
     # layout
@@ -433,7 +477,7 @@ class DwellEngine:
 
     def press_button(self, key):
         if key == "QUIT":
-            self.enabled = False
+            self.stop()
             app.notify("Dwell off — say 'dwell on' to restart it")
         elif key == "PAUSE":
             self.dwell_paused = not self.dwell_paused
@@ -767,21 +811,19 @@ dwell = DwellEngine()
 @mod.action_class
 class Actions:
     def dwell_click_set(enabled: bool):
-        """Enable or disable dwell clicking."""
-        dwell.enabled = enabled
-        app.notify("Dwell clicking " + ("on" if enabled else "off"))
+        """Start or completely stop the dwell engine."""
+        if enabled:
+            dwell.start()
+            app.notify("Dwell on")
+        else:
+            dwell.stop()
+            app.notify("Dwell off")
 
     def dwell_click_toggle():
-        """Toggle dwell clicking."""
-        dwell.enabled = not dwell.enabled
-        app.notify("Dwell clicking " + ("on" if dwell.enabled else "off"))
-
-
-def _on_launch():
-    dwell.start()
-
-
-try:
-    app.register("launch", _on_launch)
-except Exception:
-    dwell.start()
+        """Toggle the dwell engine on or off."""
+        if dwell.job is None:
+            dwell.start()
+            app.notify("Dwell on")
+        else:
+            dwell.stop()
+            app.notify("Dwell off")
