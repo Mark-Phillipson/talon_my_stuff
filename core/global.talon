@@ -7,6 +7,7 @@ pick <user.letters>:
     insert("{letters}")
     key(enter)
 [save to] (disk | disky): key(ctrl-s)
+the disk: key(ctrl-s)
 context menu: key(menu)
 help search selection:
     key(ctrl-c)
