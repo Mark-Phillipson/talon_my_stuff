@@ -341,3 +341,5 @@ computer sleep: speech.disable()
 
 clippy: user.run_application_clippy()
 calculator: user.run_application_calculator()
+global search:
+    user.run_application_global_search()

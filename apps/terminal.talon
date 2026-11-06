@@ -249,3 +249,5 @@ pilot open recent link:
     key(o)
 pilot set model: insert("/model gpt-5-mini")
 pilot prompt [<user.text>]: insert("copilot --prompt \"{user.text}\"")
+kill hybrid:
+    insert("Stop-Process -Name \"WinFormsApp\" -Force -ErrorAction SilentlyContinue")
