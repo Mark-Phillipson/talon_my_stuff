@@ -61,3 +61,9 @@ list calendar events:
     key("enter")
 #This fails ☹️
 #create calendar event: insert("/calendar-create ")
+(would help) | (word help):
+    key(bksp)
+    sleep(100ms)
+    insert("/help")
+    sleep(100ms)
+    key("enter")

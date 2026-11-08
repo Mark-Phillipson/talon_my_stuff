@@ -105,8 +105,8 @@ launch management studio:
 focus edge:                 user.switcher_focus("msedge.exe")
 focus chrome:               user.switcher_focus("chrome.exe")
 dictation <user.text>:      insert(text)
-click:                      
-    user.tts("touching")
+click | dutch:                      
+    user.tts("touched!")
     mouse_click(0)
 move up <number_small>:
     key(up)
