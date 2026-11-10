@@ -47,7 +47,7 @@ total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 #zoom it: key(super-ctrl-f8)
 con mouse: tracking.control_toggle()
 control [mass]:
-    user.tts("Toggling Eye Tracker Mouse CONTROL.")
+    user.tts("Toggle ing")
     tracking.control_toggle()
     #user.play_toggle_chime()
 

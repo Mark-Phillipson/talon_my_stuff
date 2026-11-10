@@ -251,3 +251,8 @@ pilot set model: insert("/model gpt-5-mini")
 pilot prompt [<user.text>]: insert("copilot --prompt \"{user.text}\"")
 kill hybrid:
     insert("Stop-Process -Name \"WinFormsApp\" -Force -ErrorAction SilentlyContinue")
+create pull request:
+    insert("gh pr create --fill --base main")
+    sleep(100ms)
+    key(ctrl-shift-left)
+merge pull request: insert("gh pr merge --merge --delete-branch")
