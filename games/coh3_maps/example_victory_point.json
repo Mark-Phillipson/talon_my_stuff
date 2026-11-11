@@ -1,0 +1,32 @@
+{
+  "mapName": "Example Victory Point Map",
+  "gameMode": "victoryPoint",
+  "tacticalMapBounds": null,
+  "points": {
+    "munitions": [
+      {
+        "id": "M1",
+        "spoken": "mike one",
+        "x": 0.25,
+        "y": 0.4
+      }
+    ],
+    "fuel": [
+      {
+        "id": "F1",
+        "spoken": "fox one",
+        "x": 0.75,
+        "y": 0.35
+      }
+    ],
+    "manpower": [],
+    "victory": [
+      {
+        "id": "V1",
+        "spoken": "victory one",
+        "x": 0.5,
+        "y": 0.7
+      }
+    ]
+  }
+}
