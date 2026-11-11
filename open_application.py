@@ -83,6 +83,12 @@ class Actions:
             elif lower.startswith("open "):
                 category = term[len("open "):].strip()
                 args = ["Launcher", category or ""]
+            elif lower.startswith("folder walker"):
+                category = ""
+                args = ["folder walker", category or ""]
+            elif lower.startswith("speech file search"):
+                category = ""
+                args = ["speech file search", category or ""]
             else:
                 # Default to Display search when not matching launcher patterns
                 args = ["search", term]

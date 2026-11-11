@@ -43,6 +43,8 @@ monospace format: key("ctrl-shift-m")
 
 format normalise: key("ctrl-shift-n")
 
+#Slash Commands
+
 reset session:
     insert("/reset")
     sleep(100ms)
@@ -113,8 +115,7 @@ check clipboard status:
     sleep(100ms)
     key("enter")
 
-search clipboard:
-    insert("/clipboard_search ")
+search clipboard <user.text>: insert("/clipboard_search {text}")
 
 view clipboard today:
     insert("/clipboard_today")
@@ -126,8 +127,7 @@ list calendar events:
     sleep(100ms)
     key("enter")
 
-create calendar event:
-    insert("/calendar_create ")
+create calendar event: insert("/calendar_create ")
 
 authorize google:
     insert("/authorize")
@@ -149,29 +149,15 @@ list podcasts:
     sleep(100ms)
     key("enter")
 
-play podcast:
-    insert("/play_podcast ")
+play podcast <user.text>: insert("/play_podcast {text}")
 
-add podcast:
-    insert("/add_podcast ")
+add podcast <user.text>: insert("/add_podcast {text}")
 
-developer tips:
-    insert("/devtips ")
+developer tips: insert("/devtips ")
 
-natural command:
-    insert("/natural ")
-
-natural commands:
-    insert("/nc ")
+natural command: insert("/natural ")
 
 test text to speech:
     insert("/tts_test")
-    sleep(100ms)
-    key("enter")
-
-(would help) | (word help):
-    key(bksp)
-    sleep(100ms)
-    insert("/help")
     sleep(100ms)
     key("enter")

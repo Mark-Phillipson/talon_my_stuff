@@ -343,3 +343,8 @@ clippy: user.run_application_clippy()
 calculator: user.run_application_calculator()
 global search:
     user.run_application_global_search()
+[open] folder walker:
+    user.run_application_voice_admin_windows_forms("Folder Walker")
+
+[open] speech file search:
+    user.run_application_voice_admin_windows_forms("Speech File Search")
