@@ -135,7 +135,7 @@ def _refresh_labels():
         actions.user.hud_set_virtual_keyboard(KEYBOARD_NAME)
 
 
-@mod.list("user.coh3_map")
+@mod.list("coh3_map")
 def coh3_map():
     """Available map names, spoken as their configured mapName."""
     result = {}
@@ -148,7 +148,7 @@ def coh3_map():
     return result
 
 
-@mod.list("user.coh3_point")
+@mod.list("coh3_point")
 def coh3_point():
     """Configured spoken point phrases mapped to stable point IDs."""
     result = {}
@@ -157,7 +157,7 @@ def coh3_point():
     return result
 
 
-@mod.list("user.coh3_category")
+@mod.list("coh3_category")
 def coh3_category():
     return {category: category for category in CATEGORIES}
 
