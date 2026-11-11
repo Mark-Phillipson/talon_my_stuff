@@ -90,6 +90,8 @@ def _point_entries():
 
 
 def _refresh_labels():
+    # Hide any labels left by the previously loaded map before rebuilding.
+    actions.user.hud_set_virtual_keyboard()
     if not _current_data:
         return
     bounds = _current_data.get("tacticalMapBounds")
