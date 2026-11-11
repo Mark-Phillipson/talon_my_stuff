@@ -7,9 +7,14 @@ import json
 import re
 from pathlib import Path
 
-from talon import Module, actions
+from talon import Context, Module, actions
 
 mod = Module()
+ctx = Context()
+
+mod.list("coh3_map", desc="Available Company of Heroes 3 maps")
+mod.list("coh3_point", desc="Configured spoken phrases for map points")
+mod.list("coh3_category", desc="COH3 map point categories")
 
 MAP_DIR = Path(__file__).parent / "coh3_maps"
 CATEGORIES = ("munitions", "fuel", "manpower", "victory")
@@ -135,31 +140,28 @@ def _refresh_labels():
         actions.user.hud_set_virtual_keyboard(KEYBOARD_NAME)
 
 
-@mod.list("coh3_map")
-def coh3_map():
-    """Available map names, spoken as their configured mapName."""
-    result = {}
+def _update_talon_lists():
+    """Publish the current map and point choices to Talon's voice grammar."""
+    maps = {}
     for path in _map_files():
         try:
             data = _read_map(path)
-            result[data["mapName"]] = path.stem
+            maps[data["mapName"]] = path.stem
         except (OSError, ValueError, json.JSONDecodeError):
             continue
-    return result
 
-
-@mod.list("coh3_point")
-def coh3_point():
-    """Configured spoken point phrases mapped to stable point IDs."""
-    result = {}
+    points = {}
     for point in _point_entries():
-        result[point["spoken"]] = point["id"]
-    return result
+        points[point["spoken"]] = point["id"]
 
-
-@mod.list("coh3_category")
-def coh3_category():
-    return {category: category for category in CATEGORIES}
+    ctx.lists["user.coh3_map"] = maps
+    ctx.lists["user.coh3_point"] = points
+    ctx.lists["user.coh3_category"] = {
+        "munitions": "munitions",
+        "fuel": "fuel",
+        "manpower": "manpower",
+        "victory": "victory",
+    }
 
 
 @mod.action_class
@@ -182,6 +184,7 @@ class Actions:
             "points": {category: [] for category in CATEGORIES},
         }
         _save_current()
+        _update_talon_lists()
         actions.app.notify(f"COH3 map created: {map_name}")
 
     def coh3_load_map(map_slug: str):
@@ -194,6 +197,7 @@ class Actions:
         _current_map = data["mapName"]
         _current_path = path
         _current_data = data
+        _update_talon_lists()
         _refresh_labels()
         actions.app.notify(f"COH3 map loaded: {_current_map}")
 
@@ -261,9 +265,14 @@ class Actions:
             "y": round(normalized_y, 6),
         })
         _save_current()
+        _update_talon_lists()
         _refresh_labels()
         actions.app.notify(f"Saved {point_id} as {spoken}")
 
     def coh3_refresh_map_labels():
         """Refresh the labels for the currently loaded COH3 map."""
         _refresh_labels()
+
+
+# Populate the map-name list as soon as this module loads.
+_update_talon_lists()
