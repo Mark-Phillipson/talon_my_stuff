@@ -675,3 +675,10 @@ confirm:
     sleep(0.05)
     mouse_click(0)
 tactical: key(m)
+
+# Map point tracking
+load coh3 map {user.coh3_map}: user.coh3_load_map(coh3_map)
+map corner top left: user.coh3_set_map_corner("topLeft")
+map corner bottom right: user.coh3_set_map_corner("bottomRight")
+record map point {user.coh3_category} spoken as <user.text>: user.coh3_capture_point(coh3_category, text)
+refresh map labels: user.coh3_refresh_map_labels()
