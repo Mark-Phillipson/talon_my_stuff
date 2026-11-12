@@ -303,7 +303,7 @@ source control:
     key(ctrl-g)
 feature search: key(ctrl-q)
 terminal focus: key(ctrl-')
-take tailb: key(shift-end)
+take tail: key(shift-end)
 take tail file: key(ctrl-shift-end)
 take head: key(shift-home)
 take head file: key(ctrl-shift-home)
