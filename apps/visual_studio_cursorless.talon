@@ -5,6 +5,7 @@ app: visual_studio
 app: devenv.exe
 -
 
+# cursorless_take_target_key = user.letter or user.symbol_key
 take <user.cursorless_take_target_key>:
     key(alt-t)
     sleep(20ms)
