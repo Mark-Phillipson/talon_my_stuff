@@ -176,6 +176,7 @@ def _paint_map_labels(canvas):
 
 
 def _refresh_labels():
+    global _map_label_canvas
     # Hide any labels left by the previously loaded map before rebuilding.
     _clear_map_labels()
     if not _current_data:
@@ -219,6 +220,27 @@ def _update_talon_lists():
         "manpower": "manpower",
         "victory": "victory",
     }
+
+
+def _coh3_point_screen_position(point_id: str):
+    if _current_data is None:
+        raise ValueError("Create or load a map first")
+    print(f"Getting screen position for point {point_id}")
+    bounds = _current_data.get("tacticalMapBounds")
+    if not bounds or not all(key in bounds for key in ("left", "top", "right", "bottom")):
+        raise ValueError("Set tactical-map corners first")
+
+    for category in CATEGORIES:
+        for point in _current_data["points"].get(category, []):
+            if point["id"] == point_id:
+                left, top = bounds["left"], bounds["top"]
+                width = bounds["right"] - left
+                height = bounds["bottom"] - top
+                return (
+                    round(left + point["x"] * width),
+                    round(top + point["y"] * height),
+                )
+    raise ValueError(f"Unknown map point: {point_id}")
 
 
 @mod.action_class
@@ -279,7 +301,7 @@ class Actions:
         _refresh_labels()
         actions.app.notify(f"COH3 tactical map {corner} saved")
 
-    def coh3_capture_point(category: str, spoken: str):
+    def coh3_record_point(category: str, spoken: str):
         """Capture the mouse position as a point using its custom spoken phrase."""
         if _current_data is None:
             raise ValueError("Create or load a map first")
@@ -329,29 +351,12 @@ class Actions:
         _refresh_labels()
         actions.app.notify(f"Saved {point_id} as {spoken}")
 
-    def _coh3_point_screen_position(point_id: str):
-        if _current_data is None:
-            raise ValueError("Create or load a map first")
-        bounds = _current_data.get("tacticalMapBounds")
-        if not bounds or not all(key in bounds for key in ("left", "top", "right", "bottom")):
-            raise ValueError("Set tactical-map corners first")
-
-        for category in CATEGORIES:
-            for point in _current_data["points"].get(category, []):
-                if point["id"] == point_id:
-                    left, top = bounds["left"], bounds["top"]
-                    width = bounds["right"] - left
-                    height = bounds["bottom"] - top
-                    return (
-                        round(left + point["x"] * width),
-                        round(top + point["y"] * height),
-                    )
-        raise ValueError(f"Unknown map point: {point_id}")
-
     def coh3_capture_point(point_id: str):
         """Shift-right-click a single point on the tactical map."""
-        x, y = self._coh3_point_screen_position(point_id)
+        x, y = _coh3_point_screen_position(point_id)
+        print(f"Capturing point {point_id} at screen position ({x}, {y})")
         actions.mouse_move(x, y)
+        actions.sleep("20ms")
         actions.key("shift:down")
         actions.sleep("20ms")
         actions.mouse_click(1)
@@ -366,11 +371,18 @@ class Actions:
         if category not in CATEGORIES:
             raise ValueError(f"Unknown point category: {category}")
         for point in _current_data["points"].get(category, []):
-            self.coh3_capture_point(point["id"])
+            actions.user.coh3_capture_point(point["id"])
 
     def coh3_refresh_map_labels():
         """Refresh the labels for the currently loaded COH3 map."""
         _refresh_labels()
+
+    def coh3_dismiss_overlay():
+        """Hide map point markers and close the command overlay."""
+        _clear_map_labels()
+        if gui_heroes_commands.showing:
+            gui_heroes_commands.hide()
+        actions.app.notify("COH3 overlay dismissed")
 
     def coh3_hide_command_overlay():
         """Hide the Heroes Three commands overlay."""
@@ -393,6 +405,7 @@ def gui_heroes_commands(gui: imgui.GUI):
         "map corner right / bottom right",
         "record map point <category> spoken as <name>",
         "refresh map labels",
+        "dismiss overlay / dismiss markers",
         "create annihilation map <name>",
         "create victory point map <name>",
     ]:
