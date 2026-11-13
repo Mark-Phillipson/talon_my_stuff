@@ -7,7 +7,9 @@ import json
 import re
 from pathlib import Path
 
-from talon import Context, Module, actions
+from talon import Context, Module, actions, imgui, ui
+from talon.canvas import Canvas
+from talon.types import Rect
 
 mod = Module()
 ctx = Context()
@@ -29,6 +31,7 @@ KEYBOARD_NAME = "coh3_map_points"
 _current_map = None
 _current_path = None
 _current_data = None
+_map_label_canvas = None
 
 
 def _slug(value):
@@ -36,6 +39,37 @@ def _slug(value):
     if not value:
         raise ValueError("Map name must contain letters or numbers")
     return value
+
+
+def _number_to_words(value: str):
+    digits = {
+        "0": "zero",
+        "1": "one",
+        "2": "two",
+        "3": "three",
+        "4": "four",
+        "5": "five",
+        "6": "six",
+        "7": "seven",
+        "8": "eight",
+        "9": "nine",
+    }
+    return " ".join(digits[d] for d in value if d in digits)
+
+
+def _normalize_spoken_phrase(spoken: str, point_id: str = ""):
+    if not isinstance(spoken, str):
+        raise ValueError(f"Spoken phrase for {point_id or 'point'} must be a string")
+    phrase = spoken.strip().lower()
+    if not phrase:
+        raise ValueError(f"Spoken phrase for {point_id or 'point'} is required")
+    phrase = phrase.replace("_", " ")
+    if re.fullmatch(r"[a-z]+\d+", phrase):
+        prefix, suffix = re.match(r"([a-z]+)(\d+)", phrase).groups()
+        return f"{prefix} {_number_to_words(suffix)}"
+    if re.fullmatch(r"\d+", phrase):
+        return _number_to_words(phrase)
+    return phrase
 
 
 def _map_files():
@@ -69,6 +103,7 @@ def _validate_map(data):
                 raise ValueError(f"Each {category} point must be an object")
             if not point.get("id") or not point.get("spoken"):
                 raise ValueError(f"Each {category} point requires id and spoken")
+            point["spoken"] = _normalize_spoken_phrase(point["spoken"], point.get("id"))
             if not isinstance(point.get("x"), (int, float)) or not 0 <= point["x"] <= 1:
                 raise ValueError(f"{point['id']} x must be between 0 and 1")
             if not isinstance(point.get("y"), (int, float)) or not 0 <= point["y"] <= 1:
@@ -94,13 +129,25 @@ def _point_entries():
     ]
 
 
-def _refresh_labels():
-    # Hide any labels left by the previously loaded map before rebuilding.
-    actions.user.hud_set_virtual_keyboard()
+def _clear_map_labels():
+    global _map_label_canvas
+    if _map_label_canvas is not None:
+        try:
+            _map_label_canvas.unregister("draw", _paint_map_labels)
+        except Exception:
+            pass
+        try:
+            _map_label_canvas.close()
+        except Exception:
+            pass
+        _map_label_canvas = None
+
+
+def _paint_map_labels(canvas):
     if not _current_data:
         return
     bounds = _current_data.get("tacticalMapBounds")
-    if not bounds:
+    if not bounds or not all(key in bounds for key in ("left", "top", "right", "bottom")):
         return
     left, top = bounds["left"], bounds["top"]
     width = bounds["right"] - left
@@ -108,36 +155,46 @@ def _refresh_labels():
     if width <= 0 or height <= 0:
         return
 
-    labels = []
+    canvas.paint.typeface = "Segoe UI"
+    canvas.paint.textsize = 18
+    canvas.paint.style = canvas.paint.Style.FILL
     for point in _point_entries():
         x = round(left + point["x"] * width)
-        y = round(top + point["y"] * height) - 32
+        y = round(top + point["y"] * height)
+        text = point["id"]
+        text_rect = canvas.paint.measure_text(text)[1]
+        padding = 6
+        box_w = text_rect.width + padding * 2
+        box_h = text_rect.height + padding * 2
+        label_x = x - box_w - 12
+        label_y = y - box_h - 12
 
-        def _noop():
-            return None
+        canvas.paint.color = "000000"
+        canvas.draw_rect(Rect(label_x, label_y, box_w, box_h))
+        canvas.paint.color = "FFFF00"
+        canvas.draw_text(text, label_x + padding, label_y + box_h - padding)
 
-        label = actions.user.hud_create_virtual_key(
-            _noop,
-            text=point["id"],
-            colour="000000",
-            text_colour="FFFF00",
-            x=x,
-            y=y,
-            width=64,
-            height=32,
-        )
-        labels.append(label)
 
-    if labels:
-        actions.user.hud_register_virtual_keyboard(
-            KEYBOARD_NAME,
-            labels,
-            layout_style="full",
-            alignment="top",
-            horizontal_key_amount=len(labels),
-            vertical_key_amount=1,
-        )
-        actions.user.hud_set_virtual_keyboard(KEYBOARD_NAME)
+def _refresh_labels():
+    # Hide any labels left by the previously loaded map before rebuilding.
+    _clear_map_labels()
+    if not _current_data:
+        return
+    bounds = _current_data.get("tacticalMapBounds")
+    if not bounds or not all(key in bounds for key in ("left", "top", "right", "bottom")):
+        return
+    left, top = bounds["left"], bounds["top"]
+    width = bounds["right"] - left
+    height = bounds["bottom"] - top
+    if width <= 0 or height <= 0:
+        return
+
+    screen = ui.active_window().screen if ui.active_window() else ui.screens()[0]
+    canvas = Canvas.from_screen(screen)
+    canvas.blocks_mouse = False
+    canvas.register("draw", _paint_map_labels)
+    canvas.freeze()
+    _map_label_canvas = canvas
 
 
 def _update_talon_lists():
@@ -230,25 +287,28 @@ class Actions:
             raise ValueError(f"Unknown point category: {category}")
         if category == "victory" and _current_data["gameMode"] == "annihilation":
             raise ValueError("Annihilation maps do not have victory points")
-        spoken = spoken.strip().lower()
-        if not spoken:
-            raise ValueError("A spoken phrase is required")
+        spoken = _normalize_spoken_phrase(spoken, "captured point")
         if any(point["spoken"].lower() == spoken for point in _point_entries()):
             raise ValueError(f"That spoken phrase is already in use: {spoken}")
         bounds = _current_data.get("tacticalMapBounds")
         if not bounds or not all(key in bounds for key in ("left", "top", "right", "bottom")):
-            raise ValueError("Capture the tactical-map top-left and bottom-right corners first")
+            actions.app.notify(
+                "Set tactical-map corners first: say 'map corner top left' then 'map corner bottom right'"
+            )
+            return
         width = bounds["right"] - bounds["left"]
         height = bounds["bottom"] - bounds["top"]
         if width <= 0 or height <= 0:
-            raise ValueError("Tactical-map bounds are invalid")
+            actions.app.notify("Tactical-map bounds are invalid; recapture top-left and bottom-right corners")
+            return
 
         x = actions.user.query_mouse_position_x()
         y = actions.user.query_mouse_position_y()
         normalized_x = (x - bounds["left"]) / width
         normalized_y = (y - bounds["top"]) / height
         if not 0 <= normalized_x <= 1 or not 0 <= normalized_y <= 1:
-            raise ValueError("Mouse cursor is outside the calibrated tactical map")
+            actions.app.notify("Mouse cursor is outside the calibrated tactical map")
+            return
 
         entries = _current_data["points"][category]
         prefix = CATEGORY_PREFIX[category]
@@ -269,9 +329,78 @@ class Actions:
         _refresh_labels()
         actions.app.notify(f"Saved {point_id} as {spoken}")
 
+    def _coh3_point_screen_position(point_id: str):
+        if _current_data is None:
+            raise ValueError("Create or load a map first")
+        bounds = _current_data.get("tacticalMapBounds")
+        if not bounds or not all(key in bounds for key in ("left", "top", "right", "bottom")):
+            raise ValueError("Set tactical-map corners first")
+
+        for category in CATEGORIES:
+            for point in _current_data["points"].get(category, []):
+                if point["id"] == point_id:
+                    left, top = bounds["left"], bounds["top"]
+                    width = bounds["right"] - left
+                    height = bounds["bottom"] - top
+                    return (
+                        round(left + point["x"] * width),
+                        round(top + point["y"] * height),
+                    )
+        raise ValueError(f"Unknown map point: {point_id}")
+
+    def coh3_capture_point(point_id: str):
+        """Shift-right-click a single point on the tactical map."""
+        x, y = self._coh3_point_screen_position(point_id)
+        actions.mouse_move(x, y)
+        actions.key("shift:down")
+        actions.sleep("20ms")
+        actions.mouse_click(1)
+        actions.sleep("20ms")
+        actions.key("shift:up")
+        actions.app.notify(f"Shift right-clicked {point_id}")
+
+    def coh3_capture_category(category: str):
+        """Shift-right-click every point in a category on the tactical map."""
+        if _current_data is None:
+            raise ValueError("Create or load a map first")
+        if category not in CATEGORIES:
+            raise ValueError(f"Unknown point category: {category}")
+        for point in _current_data["points"].get(category, []):
+            self.coh3_capture_point(point["id"])
+
     def coh3_refresh_map_labels():
         """Refresh the labels for the currently loaded COH3 map."""
         _refresh_labels()
+
+    def coh3_hide_command_overlay():
+        """Hide the Heroes Three commands overlay."""
+        gui_heroes_commands.hide()
+
+    def coh3_show_command_overlay():
+        """Show the Heroes Three commands overlay without stealing focus."""
+        if gui_heroes_commands.showing:
+            gui_heroes_commands.hide()
+        gui_heroes_commands.show()
+
+
+@imgui.open(y=0, x=0)
+def gui_heroes_commands(gui: imgui.GUI):
+    gui.text("Heroes Three commands")
+    gui.line()
+    for line in [
+        "load heroes three map <map>",
+        "map corner left / top left",
+        "map corner right / bottom right",
+        "record map point <category> spoken as <name>",
+        "refresh map labels",
+        "create annihilation map <name>",
+        "create victory point map <name>",
+    ]:
+        gui.text(line)
+
+    gui.spacer()
+    if gui.button("Close"):
+        actions.user.coh3_hide_command_overlay()
 
 
 # Populate the map-name list as soon as this module loads.

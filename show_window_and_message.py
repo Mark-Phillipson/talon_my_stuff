@@ -225,8 +225,10 @@ class Actions:
         except Exception as e:
             print(f"show_window_and_message center error: {e}")
         try:
+            if hasattr(_window, "always_on_top"):
+                _window.always_on_top = True
             _window.show()
-            _window.focus()
+            # Intentionally do not focus this window; it should remain overlay-only.
         except Exception as e:
             print(f"show_window_and_message show error: {e}")
             actions.app.notify(f"show_window_and_message failed: {e}")
@@ -257,8 +259,10 @@ class Actions:
         except Exception as e:
             print(f"show_yes_no_message_box center error: {e}")
         try:
+            if hasattr(_yes_no_window, "always_on_top"):
+                _yes_no_window.always_on_top = True
             _yes_no_window.show()
-            _yes_no_window.focus()
+            # Intentionally do not focus this window; it should remain overlay-only.
         except Exception as e:
             _YES_NO_PENDING = False
             print(f"show_yes_no_message_box show error: {e}")

@@ -677,10 +677,26 @@ confirm:
 tactical: key(m)
 
 # Map point tracking
-load coh3 map {user.coh3_map}: user.coh3_load_map(coh3_map)
+load heroes three map {user.coh3_map}: user.coh3_load_map(coh3_map)
+map corner left: user.coh3_set_map_corner("topLeft")
 map corner top left: user.coh3_set_map_corner("topLeft")
+map corner right: user.coh3_set_map_corner("bottomRight")
 map corner bottom right: user.coh3_set_map_corner("bottomRight")
-record map point {user.coh3_category} spoken as <user.text>: user.coh3_capture_point(coh3_category, text)
+#example: record map point munitions spoken as mike one
+record map point {user.coh3_category} spoken as <user.text>:
+    user.coh3_capture_point(coh3_category, text)
 refresh map labels: user.coh3_refresh_map_labels()
 create annihilation map <user.text>: user.coh3_create_map(text, "annihilation")
 create victory point map <user.text>: user.coh3_create_map(text, "victoryPoint")
+show heroes three commands: user.coh3_show_command_overlay()
+hide heroes three commands: user.coh3_hide_command_overlay()
+map capture {user.coh3_map}:
+    user.coh3_load_map(coh3_map)
+    key(m)
+    user.coh3_show_command_overlay()
+{number} capture {user.coh3_point}:
+    key(number)
+    sleep(30ms)
+    user.coh3_shift_right_click_point(coh3_point)
+{number} capture all {user.coh3_category}:
+    user.coh3_shift_right_click_category(coh3_category)

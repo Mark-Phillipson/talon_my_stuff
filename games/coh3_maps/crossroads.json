@@ -1,0 +1,53 @@
+{
+  "mapName": "crossroads",
+  "gameMode": "annihilation",
+  "tacticalMapBounds": {
+    "left": 370,
+    "top": 72,
+    "right": 1353,
+    "bottom": 970
+  },
+  "points": {
+    "munitions": [],
+    "fuel": [
+      {
+        "id": "F1",
+        "spoken": "fuel one",
+        "x": 0.282808,
+        "y": 0.483296
+      },
+      {
+        "id": "F2",
+        "spoken": "fuel two",
+        "x": 0.29705,
+        "y": 0.297327
+      },
+      {
+        "id": "F3",
+        "spoken": "fuel three",
+        "x": 0.446592,
+        "y": 0.407572
+      },
+      {
+        "id": "F4",
+        "spoken": "fuel four",
+        "x": 0.503561,
+        "y": 0.611359
+      },
+      {
+        "id": "F5",
+        "spoken": "fuel five",
+        "x": 0.645982,
+        "y": 0.693764
+      },
+      {
+        "id": "F6",
+        "spoken": "fuel six",
+        "x": 0.690743,
+        "y": 0.51559
+      }
+    ],
+    "manpower": [],
+    "victory": []
+  }
+}
