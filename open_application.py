@@ -72,7 +72,7 @@ class Actions:
         ui.launch(path=commandline, args=arguments, cwd=cwd)
     def run_application_voice_admin_windows_forms(searchTerm:  str ):
         "runs the voice admin windows forms application with the given search term"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
         term = (searchTerm or "").strip()
         # Fallback: if user said "launch X" or "open X" treat it as a Launcher category invocation
         if term:
@@ -100,7 +100,7 @@ class Actions:
         ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_voice_admin_windows_forms_talon_search(searchTerm:  str ):
             "runs the voice admin windows forms application with the given search term"
-            commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+            commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
             term = (searchTerm or "").strip()
             args = ["Talon", term]
             cwd = os.path.dirname(commandline)
@@ -108,49 +108,49 @@ class Actions:
             ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_voice_admin_windows_forms_language_category(language:  str,category:  str ):
         "runs the voice admin windows forms application with the given language and category"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
         args = ["SearchIntelliSense", language or "", category or ""]
         cwd = os.path.dirname(commandline)
         print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
         ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_voice_admin_windows_forms_launcher(category:  str ):
         "runs the voice admin windows forms application with the given launcher category"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
         args = ["Launcher", category or ""]
         cwd = os.path.dirname(commandline)
         print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
         ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_voice_admin_windows_forms_launcher_with_parameter(category:  str, parameter: str ):
         "runs the voice admin windows forms application with the given launcher category and an additional parameter"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
         args = ["Launcher", category or "", parameter or ""]
         cwd = os.path.dirname(commandline)
         print(f"Launching WinFormsApp: {commandline} args={args} cwd={cwd}")
         ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_clippy():
         "runs the VoiceAdmin Clippy command (opens clipboard history)"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
         args = ["Clipboard"]
         cwd = os.path.dirname(commandline)
         print(f"Launching Clippy: {commandline} args={args} cwd={cwd}")
         ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_calculator():
             "runs the VoiceAdmin Calculator command (opens calculator)"
-            commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+            commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
             args = ["Calculator","Calculator"]
             cwd = os.path.dirname(commandline)
             print(f"Launching Calculator: {commandline} args={args} cwd={cwd}")
             ui.launch(path=commandline, args=args, cwd=cwd)        
     def run_application_ai_chat():
         "runs the VoiceAdmin AI Chat command (opens AI Chat view)"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
         args = ["AIChat"]
         cwd = os.path.dirname(commandline)
         print(f"Launching AIChat: {commandline} args={args} cwd={cwd}")
         ui.launch(path=commandline, args=args, cwd=cwd)
     def run_application_global_search():
         "runs the VoiceAdmin Global Search command (opens global search view)"
-        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net10.0-windows\\WinFormsApp.exe"
+        commandline = r"C:\\Users\\MPhil\\source\\repos\\VoiceLauncherBlazor\\WinFormsApp\\bin\\Release\\net11.0-windows\\WinFormsApp.exe"
         args = ["Global","Global","Global"]
         cwd = os.path.dirname(commandline)
         print(f"Launching GlobalSearch: {commandline} args={args} cwd={cwd}")

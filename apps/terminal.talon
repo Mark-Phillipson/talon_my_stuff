@@ -209,7 +209,7 @@ kill process:
     insert("Stop-Process -Id (Get-NetTCPConnection -LocalPort 5008).OwningProcess -Force")
     sleep(100ms)
     key(left:23)
-new blazor: insert("dotnet new blazor -o Practice --framework net10.0 ")
+new blazor: insert("dotnet new blazor -o Practice --framework net11.0 ")
 list (directories | folders):
     insert("Get-ChildItem -Directory")
     sleep(100ms)

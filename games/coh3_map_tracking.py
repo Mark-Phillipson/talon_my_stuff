@@ -215,9 +215,13 @@ def _update_talon_lists():
     ctx.lists["user.coh3_map"] = maps
     ctx.lists["user.coh3_point"] = points
     ctx.lists["user.coh3_category"] = {
+        "bullets": "munitions",
         "munitions": "munitions",
         "fuel": "fuel",
         "manpower": "manpower",
+        "man": "manpower",
+        "power": "manpower",
+        "man power": "manpower",
         "victory": "victory",
     }
 

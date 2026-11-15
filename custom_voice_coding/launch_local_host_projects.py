@@ -5,7 +5,7 @@ import webbrowser
 from typing import Optional
 
 # VoiceLauncher publish path variable
-VOICE_LAUNCHER_PUBLISH_PATH = r"C:\Users\MPhil\source\repos\VoiceLauncherBlazor\VoiceAdmin\bin\Release\net10.0\win-x64\publish"
+VOICE_LAUNCHER_PUBLISH_PATH = r"C:\Users\MPhil\source\repos\VoiceLauncherBlazor\VoiceAdmin\bin\Release\net11.0\win-x64\publish"
 VOICE_LAUNCHER_EXE = VOICE_LAUNCHER_PUBLISH_PATH + r"\VoiceAdmin.exe"
 
 mod = Module()

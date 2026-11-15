@@ -693,7 +693,7 @@ map capture {user.coh3_map}:
     user.coh3_load_map(coh3_map)
     key(m)
     user.coh3_show_command_overlay()
-#example capture fuel one with group one
+#example capture fuel one with  group one
 capture {user.coh3_point} [with] group <user.number_string>:
     key(number_string)
     sleep(30ms)
