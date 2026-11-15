@@ -348,3 +348,4 @@ global search:
 
 [open] speech file search:
     user.run_application_voice_admin_windows_forms("Speech File Search")
+task view: key(super-tab)

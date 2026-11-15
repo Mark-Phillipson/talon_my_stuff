@@ -74,13 +74,6 @@ explode:
     key(q)
     sleep(30ms)
     mouse_click(0)
-
-vehicles:
-    key(ctrl-.)
-    sleep(30ms)
-    key(q)
-    sleep(30ms)
-    mouse_click(0)
 hold shift: key(shift:down)
 release shift: key(shift:up)
 [all] soldiers: key(ctrl-,)
@@ -668,6 +661,7 @@ get ground:
     sleep(30ms)
     key(shift:down)
 dismiss:
+    user.coh3_dismiss_overlay()
     key(shift:up)
     key(m)
 confirm:
@@ -683,13 +677,17 @@ map corner top left: user.coh3_set_map_corner("topLeft")
 map corner right: user.coh3_set_map_corner("bottomRight")
 map corner bottom right: user.coh3_set_map_corner("bottomRight")
 #example: record map point munitions spoken as mike one
-record map point {user.coh3_category} spoken as <user.text>:
+record [map] point {user.coh3_category} [spoken] as <user.text>:
     user.coh3_record_point(coh3_category, text)
 refresh map labels: user.coh3_refresh_map_labels()
 create annihilation map <user.text>: user.coh3_create_map(text, "annihilation")
 create victory point map <user.text>: user.coh3_create_map(text, "victoryPoint")
 show heroes three commands: user.coh3_show_command_overlay()
 hide heroes three commands: user.coh3_hide_command_overlay()
+map capture:
+    user.coh3_load_map("crossroads")
+    key(m)
+    user.coh3_show_command_overlay()
 #example map capture crossroads
 map capture {user.coh3_map}:
     user.coh3_load_map(coh3_map)

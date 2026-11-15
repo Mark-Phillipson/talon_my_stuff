@@ -401,13 +401,18 @@ def gui_heroes_commands(gui: imgui.GUI):
     gui.line()
     for line in [
         "load heroes three map <map>",
+        "map capture [<map>]",
         "map corner left / top left",
         "map corner right / bottom right",
         "record map point <category> spoken as <name>",
+        "capture <point> [with group <n>]",
+        "capture <point> and dismiss [with group <n>]",
+        "capture all <category> [with group <n>]",
         "refresh map labels",
         "dismiss overlay / dismiss markers",
         "create annihilation map <name>",
         "create victory point map <name>",
+        "show heroes three commands / hide heroes three commands",
     ]:
         gui.text(line)
 

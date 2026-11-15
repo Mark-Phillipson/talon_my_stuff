@@ -8,7 +8,44 @@
     "bottom": 970
   },
   "points": {
-    "munitions": [],
+    "munitions": [
+      {
+        "id": "M1",
+        "spoken": "am one",
+        "x": 0.377416,
+        "y": 0.555679
+      },
+      {
+        "id": "M2",
+        "spoken": "am two",
+        "x": 0.474059,
+        "y": 0.769488
+      },
+      {
+        "id": "M3",
+        "spoken": "am three",
+        "x": 0.581892,
+        "y": 0.77951
+      },
+      {
+        "id": "M4",
+        "spoken": "am four",
+        "x": 0.589013,
+        "y": 0.463252
+      },
+      {
+        "id": "M5",
+        "spoken": "five",
+        "x": 0.388606,
+        "y": 0.218263
+      },
+      {
+        "id": "M6",
+        "spoken": "am six",
+        "x": 0.467955,
+        "y": 0.190423
+      }
+    ],
     "fuel": [
       {
         "id": "F1",
@@ -47,7 +84,32 @@
         "y": 0.51559
       }
     ],
-    "manpower": [],
+    "manpower": [
+      {
+        "id": "P1",
+        "spoken": "manpower one",
+        "x": 0.44354,
+        "y": 0.655902
+      },
+      {
+        "id": "P2",
+        "spoken": "manpower two",
+        "x": 0.35707,
+        "y": 0.445434
+      },
+      {
+        "id": "P3",
+        "spoken": "manpower three",
+        "x": 0.612411,
+        "y": 0.556793
+      },
+      {
+        "id": "P4",
+        "spoken": "manpower four",
+        "x": 0.504578,
+        "y": 0.353007
+      }
+    ],
     "victory": []
   }
 }
