@@ -336,16 +336,20 @@ add spaces:
 remove double spaces:
     user.remove_double_spaces_from_current_selection()
 semantic start: key(super-alt-.)
-
-computer sleep: speech.disable()
-
+computer sleep: 
+    speech.disable()
+    user.tts("sleeping...")
 clippy: user.run_application_clippy()
 calculator: user.run_application_calculator()
 global search:
-    user.run_application_global_search()
+    user.run_application_voice_admin_windows_forms("Global")
 [open] folder walker:
     user.run_application_voice_admin_windows_forms("Folder Walker")
 
 [open] speech file search:
     user.run_application_voice_admin_windows_forms("Speech File Search")
 task view: key(super-tab)
+slash command <user.text>:
+    insert("/")
+    sleep(20ms)
+    insert(text)

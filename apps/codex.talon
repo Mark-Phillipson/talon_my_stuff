@@ -5,8 +5,9 @@ app: codex
 [command] palette: key(ctrl-k)
 settings: key(ctrl-,)
 open folder: key(ctrl-o)
-new thread: key(ctrl-n)
+new (thread | chat): key(ctrl-n)
 find: key(ctrl-f)
+[toggle] full screen: key(ctrl-shift-f)
 
 # Panels
 sidebar: key(ctrl-b)

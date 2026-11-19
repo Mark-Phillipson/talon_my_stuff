@@ -256,3 +256,7 @@ create pull request:
     sleep(100ms)
     key(ctrl-shift-left)
 merge pull request: insert("gh pr merge --merge --delete-branch")
+copy all:
+    key(ctrl-shift-a)
+    sleep(300ms)
+    key(ctrl-c)

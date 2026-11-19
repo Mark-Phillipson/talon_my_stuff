@@ -6,7 +6,7 @@ settings():
     #   UK:   %d-%m-%Y   -> 26-09-2026
     #   ISO:  %Y-%m-%d   -> 2026-09-26
     # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
-    user.date_format = "%Y-%m-%d"
+    user.date_format = "%d-%m-%Y"
 
 date insert:
     user.deprecate_command("2026-05-10", "date insert", "date today")
@@ -28,9 +28,10 @@ timestamp insert UTC high resolution:
 # Date entry commands using day, month, year lists
 
 # Insert date using the configured default format from settings.
-# Example command: 'date 31 January 2026'
+# Examples: 'date 31 January' or 'date 31 January 2026'
+date {user.day} {user.month}: user.insert_date_from_parts(day, month)
 date {user.day} {user.month} <number>:
-    user.insert_date_from_parts(day, month, number)
+    user.insert_date_from_parts_with_year(day, month, number)
 
 # Relative date commands
 # Today/now uses the configured default format from settings.

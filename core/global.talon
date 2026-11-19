@@ -46,12 +46,11 @@ total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
 #glide [cursor]: key(super-alt-.)
 #zoom it: key(super-ctrl-f8)
 con mouse: tracking.control_toggle()
-control [mass]:
+control:
     user.tts("Toggle ing")
     tracking.control_toggle()
-    #user.play_toggle_chime()
 
-# currently used in Company of Heroes games
+    # currently used in Company of Heroes games
 number labels hide: user.hud_set_virtual_keyboard()
 
 (telegram | telegraph) bob: user.switcher_focus("Telegram")

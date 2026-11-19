@@ -4,6 +4,10 @@
     key(super-alt-space)
     sleep(0.05)
     key(<)
+^window walker$:
+    key(super-alt-space)
+    sleep(0.05)
+    key(<)
 ^clipboard history$:
     key(super-alt-space)
     sleep(0.05)

@@ -70,5 +70,7 @@ stop using dictate:
 #This is used when turning off android voice access while using Phone Link
 stop listening: speech.enable()
 lock screen: speech.enable()
-computer wake: speech.enable()
+computer wake:
+    speech.enable()
+    user.tts("waking...")
 send it | ask it | over: key(enter)
