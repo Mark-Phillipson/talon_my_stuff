@@ -42,7 +42,6 @@ ctx_default.lists["user.snippet_category"] = {
 "Functions":"Functions",
 "Hypertext Helper":"Hypertext Helper",
 "Language Integrated Query":"Language Integrated Query",
-"LaylaCodesIt":"LaylaCodesIt",
 "Logical Functions":"Logical Functions",
 "Migration Commands":"Migration Commands",
 "No Longer Used":"No Longer Used",
@@ -51,6 +50,7 @@ ctx_default.lists["user.snippet_category"] = {
 "Open Objects":"Open Objects",
 "Operators":"Operators",
 "Passwords":"Passwords",
+"Place Names": "Place Names",
 "Property":"Property",
 "Regular Expressions":"Regular Expressions",
 "Return":"Return",
@@ -76,5 +76,6 @@ ctx_default.lists["user.snippet_category"] = {
 "Value":"Value",
 "Words":"Words",
 "Web Links":"Web Links",
+
 }
 

@@ -43,17 +43,17 @@ tab clothes: user.tab_close_wrapper()
     key(enter)
 # Keep getting misrecognitions using title <user.prose>$, so including total
 total <user.prose>$: user.insert_formatted(prose, "CAPITALIZE_ALL_WORDS")
-#glide [cursor]: key(super-alt-.)
-#zoom it: key(super-ctrl-f8)
-con mouse: tracking.control_toggle()
+con mouse:
+    user.tts("Toggle ing")
+    tracking.control_toggle()
 control:
     user.tts("Toggle ing")
     tracking.control_toggle()
 
-    # currently used in Company of Heroes games
+# currently used in Company of Heroes games
 number labels hide: user.hud_set_virtual_keyboard()
 
-(telegram | telegraph) bob: user.switcher_focus("Telegram")
+[focus] (telegram | telegraph): user.switcher_focus("Telegram")
 punk <user.text>: user.remove_punctuation_and_insert(text)
 
 # Remove punctuation from current selection using Talon's selection API when available.
