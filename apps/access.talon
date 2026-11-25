@@ -145,13 +145,7 @@ click design [view]:
     mouse_click(0)
     sleep(0.05)
     user.mouse_helper_position_restore()
-click ellipse:
-    user.mouse_helper_position_save()
-    user.mouse_helper_move_image_relative("2026-02-18_11.07.01.738239.png", 0)
-    sleep(0.05)
-    mouse_click(0)
-    sleep(0.05)
-    user.mouse_helper_position_restore()
+click ellipse: key(ctrl-f2)
 click navigation form:
     user.mouse_helper_position_save()
     user.mouse_helper_move_image_relative("2026-02-18_11.19.17.935005.png", 0)

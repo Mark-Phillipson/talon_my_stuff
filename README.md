@@ -15,6 +15,19 @@ Quick features
 - Utilities and scripts (e.g. `scripts/generate_cheatsheets.py`) for automating repo tasks.
 - Tests and examples at the repo root and `tests/` for validating lists and behaviors.
 
+Virtual desktop voice commands (Windows)
+----------------------------------------
+Defined in `global_customisations.talon`:
+
+- `desktop next` → switch to the next virtual desktop (`Win+Ctrl+Right`)
+- `desktop previous` → switch to the previous virtual desktop (`Win+Ctrl+Left`)
+- `desktop new` → create and switch to a new virtual desktop (`Win+Ctrl+D`)
+- `desktop close` → close the current virtual desktop (`Win+Ctrl+F4`)
+
+Currently disabled (kept commented in `global_customisations.talon`):
+- `window desktop next` (`Win+Ctrl+Shift+Right`)
+- `window desktop previous` (`Win+Ctrl+Shift+Left`)
+
 Notable additions
 -----------------
 - `core/text_helpers.py`: new text utilities including `remove_punctuation()` and `remove_punctuation_from_selection()` which provide a voice-commandable way to remove punctuation and fix sentence-case. These are exposed to Talon and wired into `core/global.talon`.
