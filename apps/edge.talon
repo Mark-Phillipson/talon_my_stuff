@@ -181,3 +181,7 @@ resize telegraph:
     key(enter)
     sleep(300ms)
     key(ctrl-shift-j)
+work issue [in] (clipboard | clip):
+    insert("@Github Work on this issue in a new branch:")
+    sleep(100ms)
+    key(ctrl-v)

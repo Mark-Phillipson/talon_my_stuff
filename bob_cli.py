@@ -1,79 +1,67 @@
 from talon import Module, actions
-import os
-import subprocess
+import json
 import threading
+import urllib.error
+import urllib.request
 
 mod = Module()
 
-# Use the verify DLL path so this works even when apphost is locked.
-ASSISTANT_COMMAND = [
-    "dotnet",
-    r"C:\Users\MPhil\source\repos\personal-assistant\bin\Debug\net10.0\personal-assistant.dll",
-]
+BOB_TALON_API_URL = "http://localhost:5111/api/talon/command"
 
 
-def _run_bob_cli_async(prompt: str, env: dict, startupinfo, creationflags: int):
+def _send_bob_command_async(prompt: str):
     try:
-        result = subprocess.run(
-            ASSISTANT_COMMAND + ["--cli", prompt],
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            timeout=135,
-            startupinfo=startupinfo,
-            creationflags=creationflags,
-            env=env,
+        payload = json.dumps({
+            "command": prompt,
+            "deviceToken": "",
+            "deviceName": "Talon",
+        }).encode("utf-8")
+
+        request = urllib.request.Request(
+            BOB_TALON_API_URL,
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST",
         )
 
-    except FileNotFoundError:
-        _append_log("ERROR: dotnet command not found")
-        actions.app.notify("Bob CLI", "dotnet command not found.")
-        return
-    except subprocess.TimeoutExpired as ex:
-        _append_log(f"ERROR: timeout after {ex.timeout}s")
-        actions.app.notify("Bob CLI", "Assistant timed out.")
-        return
+        with urllib.request.urlopen(request, timeout=135) as response:
+            result = json.loads(response.read().decode("utf-8"))
+
+        if result.get("success"):
+            output = (result.get("textResponse") or "").strip() or "Done."
+            actions.app.notify("Bob", output)
+        else:
+            actions.app.notify(
+                "Bob Error",
+                result.get("textResponse") or "The assistant request failed.",
+            )
+
+    except urllib.error.HTTPError as ex:
+        try:
+            detail = ex.read().decode("utf-8", errors="replace")
+        except Exception:
+            detail = str(ex)
+        actions.app.notify("Bob API Error", detail or str(ex))
+    except urllib.error.URLError as ex:
+        actions.app.notify(
+            "Bob API Unavailable",
+            "Make sure Bob is running in Telegram mode. " + str(ex.reason),
+        )
     except Exception as ex:
-        _append_log(f"ERROR: exception {ex}")
-        actions.app.notify("Bob CLI", f"Failed to run assistant: {ex}")
-        return
-
-    if result.returncode == 0:
-        output = (result.stdout or "").strip() or "Done."
-        actions.app.notify("Bob", output)
-        return
-
-    error_text = (result.stderr or result.stdout or "Unknown error").strip()
-    actions.app.notify("Bob CLI Error", error_text)
+        actions.app.notify("Bob Error", str(ex))
 
 
 @mod.action_class
 class Actions:
     def bob_cli_send(command: str):
-        """Send free-form dictation to personal-assistant CLI mode."""
+        """Send free-form dictation to the running Bob conversation."""
         prompt = (command or "").strip()
         if not prompt:
-            actions.app.notify("Bob CLI", "No command text captured.")
+            actions.app.notify("Bob", "No command text captured.")
             return
 
-        env = os.environ.copy()
-        env["ASSISTANT_TTS_ENABLED"] = "true"  # ensure TTS is enabled for Talon calls
-        env["ASSISTANT_TTS_PREFERRED_GENDER"] = env.get("ASSISTANT_TTS_PREFERRED_GENDER", "male")
-
-        startupinfo = None
-        creationflags = 0
-        if hasattr(subprocess, "STARTUPINFO"):
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            startupinfo.wShowWindow = subprocess.SW_HIDE
-        if hasattr(subprocess, "CREATE_NO_WINDOW"):
-            creationflags = subprocess.CREATE_NO_WINDOW
-
-        thread = threading.Thread(
-            target=_run_bob_cli_async,
-            args=(prompt, env, startupinfo, creationflags),
+        threading.Thread(
+            target=_send_bob_command_async,
+            args=(prompt,),
             daemon=True,
-        )
-        thread.start()
-        actions.app.notify("Bob CLI", "Command sent to assistant; waiting for response...")
-
+        ).start()
